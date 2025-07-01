@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/blog/从自卑到超越，如何逃离原生家庭？.md",
+                "file": "content/blog/分享一下我的博客.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "从自卑到超越，如何逃离原生家庭？"
+              "title": "分享一下我的博客"
             }
           }
         ]
@@ -98,7 +98,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "c7a07587fb080b57",
@@ -190,6 +191,8 @@
   },
   "active": "13bd489dd371d427",
   "lastOpenFiles": [
+    "content/blog/从自卑到超越，如何逃离原生家庭？.md",
+    "content/blog/分享一下我的博客.md",
     "public/css/custom.min.72f50dd6e0c0ed6c5b04c33364af147fa8f14aabfcb83661f8ddf38a32abf32c.css",
     "public/css/custom.min.0cb04aa5db184bb5d63cc2e1532d0d725a5b8594e42c95d20cf808f420da0007.css",
     "public/css/custom.min.d8015d6aad516007739f225d3dd8cf153e52aed9ab9552247e08d39a3dfcf3c3.css",
@@ -200,7 +203,6 @@
     "layouts/_default/_markup/render-image.html",
     "layouts/_default/_markup/新建 文本文档.txt",
     "layouts/_default/_markup",
-    "layouts/_default/新建文件夹",
     "themes/hugo-bearblog/README.md",
     "content/blog/我的终极文章打印方案：不靠插件、软件，只用小书签！.md",
     "content/blog/向你开源我的小确幸.md",
@@ -209,7 +211,6 @@
     "content/blog/一台打印机，干掉我所有稍后读软件.md",
     "content/_index.md",
     "content/blog/markdown-syntax.md",
-    "content/blog/从自卑到超越，如何逃离原生家庭？.md",
     "content/blog/博客搭建成功.md",
     "content/blog/_index.md"
   ]
