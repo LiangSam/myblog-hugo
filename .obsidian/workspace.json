@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/blog/我的终极文章打印方案：不靠插件、软件，只用小书签！.md",
+                "file": "content/blog/从自卑到超越，如何逃离原生家庭？.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "我的终极文章打印方案：不靠插件、软件，只用小书签！"
+              "title": "从自卑到超越，如何逃离原生家庭？"
             }
           }
         ]
@@ -73,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": ".css",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -190,17 +190,22 @@
   },
   "active": "13bd489dd371d427",
   "lastOpenFiles": [
-    "content/blog/向你开源我的小确幸.md",
+    "public/css/custom.min.72f50dd6e0c0ed6c5b04c33364af147fa8f14aabfcb83661f8ddf38a32abf32c.css",
+    "public/css/custom.min.0cb04aa5db184bb5d63cc2e1532d0d725a5b8594e42c95d20cf808f420da0007.css",
+    "public/css/custom.min.d8015d6aad516007739f225d3dd8cf153e52aed9ab9552247e08d39a3dfcf3c3.css",
+    "public/css/custom.min.a13d17341a86a5dfe78efe32f850c98e11c30a412ba52443fc5b4eac21bce41b.css",
+    "public/css/custom.min.38bca83e7caecb8855db3b9e731536cc9909a6b6362df22a0b436925b7c54f78.css",
+    "public/css/custom.min.ef12852a8662232abb5237932bb7e8822c4e547d13540666166cd892bd18ae15.css",
+    "public/css/custom.min.7321eb899c002481cdb883f294501017b3cc9134146bbc6e02523434e1418552.css",
+    "layouts/_default/_markup/render-image.html",
+    "layouts/_default/_markup/新建 文本文档.txt",
+    "layouts/_default/_markup",
+    "layouts/_default/新建文件夹",
+    "themes/hugo-bearblog/README.md",
     "content/blog/我的终极文章打印方案：不靠插件、软件，只用小书签！.md",
+    "content/blog/向你开源我的小确幸.md",
     "content/about.md",
-    "public/about/index.html",
-    "public/about",
     "content/blog/就这么忘记时间.md",
-    "public/blog/小确幸/index.html",
-    "public/blog/小确幸/index.xml",
-    "public/blog/小确幸",
-    "public/250626-happiness/index.html",
-    "public/250626-happiness",
     "content/blog/一台打印机，干掉我所有稍后读软件.md",
     "content/_index.md",
     "content/blog/markdown-syntax.md",

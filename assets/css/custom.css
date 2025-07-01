@@ -1,0 +1,38 @@
+pre {
+    overflow-x: auto;
+}
+
+/*
+ * 自定义引用块 (blockquote) 的样式 - 增加垂直空间
+ */
+blockquote {
+    background: linear-gradient(90deg, #fffaf4, #fff);
+    border-left: 6px solid #ffd600;
+    color: #707070;
+    font-style: normal;
+
+    /* 修改这里：设置上下外边距为 35px，左右为 0 */
+    margin: 15px 0; 
+
+    /* 修改这里：设置上下内边距为 15px，左右为 20px */
+    padding: 5px 20px;
+}
+
+/*
+ * 自定义图片说明 (figcaption) 的样式
+ */
+figure figcaption {
+    text-align: center;  /* 文本居中 */
+    color: #888888;       /* 设置为灰色，你可以换成其他灰色，如 #6c757d */
+
+    /* 下面是两个可选的优化，可以让样式更美观 */
+    font-size: 0.9em;    /* 让说明文字比正文小一点 */
+    margin-top: 0.3em;   /* 在图片和说明文字之间增加一点点间距 */
+}
+
+/*
+ * 备用方案：选中 <main> 标签里的所有图片
+ */
+main img {
+    border-radius: 8px;
+}
