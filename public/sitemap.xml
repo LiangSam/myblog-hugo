@@ -3,19 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-06-15T23:20:00+08:00</lastmod>
+    <lastmod>2025-06-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/hugo/</loc>
   </url><url>
     <loc>http://localhost:1313/timeline/</loc>
   </url><url>
     <loc>http://localhost:1313/blog/</loc>
-    <lastmod>2025-06-15T23:20:00+08:00</lastmod>
+    <lastmod>2025-06-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/%E5%B0%B1%E8%BF%99%E4%B9%88%E5%BF%98%E8%AE%B0%E6%97%B6%E9%97%B4/</loc>
-    <lastmod>2025-06-15T23:20:00+08:00</lastmod>
+    <loc>http://localhost:1313/250626-happiness/</loc>
+    <lastmod>2025-06-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/%E7%94%9F%E6%B4%BB%E8%AE%B0%E4%BA%8B/</loc>
+    <lastmod>2025-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/%E5%B0%B1%E8%BF%99%E4%B9%88%E5%BF%98%E8%AE%B0%E6%97%B6%E9%97%B4/</loc>
     <lastmod>2025-06-15T23:20:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%88%90%E5%8A%9F/</loc>
