@@ -1,81 +1,83 @@
+/* ==========================================================================
+   默认（浅色模式）样式
+   ========================================================================== */
+
+/* 代码块横向滚动 */
 pre {
     overflow-x: auto;
 }
 
-/*
- * 自定义引用块 (blockquote) 的样式 - 增加垂直空间
- */
+/* 引用块样式 */
 blockquote {
     background: linear-gradient(90deg, #fffaf4, #ffffff);
     border-left: 6px solid #ffd600;
     color: #707070;
     font-style: normal;
-    margin: 15px 0; 
-    padding: 5px 20px;
+    margin: 35px 0; 
+    padding: 15px 20px;
 }
 
-@media (prefers-color-scheme: dark) {
-
-    blockquote {
-        background: linear-gradient(90deg, #3a3620, #00000000);
-        border-left-color: #ffd600; 
-        color: #c5c5c5;
-    }
-
-/*
- * 自定义图片说明 (figcaption) 的样式
- */
+/* 图片说明样式 */
 figure figcaption {
-    text-align: center;  /* 文本居中 */
-    color: #888888;       /* 设置为灰色，你可以换成其他灰色，如 #6c757d */
-
-    /* 下面是两个可选的优化，可以让样式更美观 */
-    font-size: 0.9em;    /* 让说明文字比正文小一点 */
-    margin-top: 0.3em;   /* 在图片和说明文字之间增加一点点间距 */
+    text-align: center;
+    color: #888888;
+    font-size: 0.9em;
+    margin-top: 0.5em;
 }
 
-/*
- * 备用方案：选中 <main> 标签里的所有图片
- */
+/* 文章内图片的圆角 */
 main img {
     border-radius: 8px;
 }
 
-/*
- * 自定义文章列表样式 (基于 div，无项目符号)
- */
-
-/* 针对每一个列表项 div，我们让它成为 Flex 容器来实现对齐 */
+/* 自定义文章列表样式 */
 .post-list-custom .post-list-item {
     display: flex;
     align-items: baseline;
-    margin-bottom: 0.8em; /* 列表项之间的垂直间距 */
+    margin-bottom: 0.3em;
 }
 
-/* 日期部分的样式 (灰色，不可点击) */
+/* 自定义文章列表 - 日期部分 */
 .post-list-custom .post-date {
-    font-family: monospace;
-    font-size: 0.8em;
+    font-size: 0.9em;
     color: #888888;
-    min-width: 9em;
+    min-width: 1em;
     margin-right: 1em;
 }
 
-/* 标题部分的链接样式 */
+/* 自定义文章列表 - 标题部分 */
 .post-list-custom .post-title {
     color: var(--text-color);
-    text-decoration: none;
+    text-decoration: underline; /* <--- 修改这里，默认带下划线 */
+    text-decoration-thickness: 1px; /* (可选) 让下划线细一点 */
+    text-underline-offset: 3px;   /* (可选) 让下划线和文字之间有点距离 */
 }
 
-/* 鼠标悬停在链接上时，只改变标题颜色 */
+/* 自定义文章列表 - 标题悬停效果 */
 .post-list-custom .post-list-item a:hover .post-title {
-    color: var(--link-color);
-    text-decoration: underline;
+    color: var(--link-color); /* <--- 设置为你想要的“蓝色” */
+    text-decoration: none; /* <--- 修改这里，悬停时去掉下划线 */
 }
 
-/* 深色模式下日期的颜色 */
+
+/* ==========================================================================
+   深色模式下的覆盖样式
+   ========================================================================== */
+
 @media (prefers-color-scheme: dark) {
+
+    /* 深色模式下的引用块 */
+    blockquote {
+        background: linear-gradient(90deg, #3a3620, #2e2e2e);
+        border-left-color: #ffd600; 
+        color: #c5c5c5;
+    }
+
+    /* 深色模式下的文章列表日期 */
     .post-list-custom .post-date {
         color: #6a6a6a;
     }
+
+    /* 你未来任何其他的深色模式样式，都加在这个大括号里面 */
+
 }
