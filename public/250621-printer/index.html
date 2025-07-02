@@ -17,7 +17,7 @@
 1、把网页文章调整成纯净阅读模式。
 javascript:(function()%7Bjavascript%3A(function()%7Bjavascript%3A(function()%7Bconsole.log(&#39;start&#39;)%3Bvar jsCode%3Ddocument.createElement(&#39;script&#39;)%3BjsCode.setAttribute(&#39;src&#39;%2C&#39;https%3A%2F%2Fgcore.jsdelivr.net%2Fgh%2Fmozilla%2Freadability%2FReadability.js&#39;)%3Bwindow.cleanHtml%3D(function()%7Bvar loc%3Ddocument.location%3Bvar uri%3D%7Bspec%3Aloc.href%2Chost%3Aloc.host%2CprePath%3Aloc.protocol%2B&#39;%2F%2F&#39;%2Bloc.host%2Cscheme%3Aloc.protocol.substr(0%2Cloc.protocol.indexOf(&#39;%3A&#39;))%2CpathBase%3Aloc.protocol%2B&#39;%2F%2F&#39;%2Bloc.host%2Bloc.pathname.substr(0%2Cloc.pathname.lastIndexOf(&#39;%2F&#39;)%2B1)%7D%3Bvar article%3Dnew Readability(uri%2Cdocument).parse()%3Bvar titleElement%3Ddocument.createElement(&#39;h1&#39;)%3BtitleElement.textContent%3Darticle.title%3BtitleElement.style.textAlign%3D&#39;center&#39;%3BtitleElement.style.margin%3D&#39;20px 0&#39;%3BtitleElement.style.backgroundColor%3D&#39;transparent&#39;%3BtitleElement.style.border%3D&#39;none&#39;%3BtitleElement.style.padding%3D&#39;0&#39;%3Bvar metadataElement%3Ddocument.createElement(&#39;p&#39;)%3BmetadataElement.style.textAlign%3D&#39;center&#39;%3BmetadataElement.style.color%3D&#39;%23555&#39;%3BmetadataElement.style.fontSize%3D&#39;12px&#39;%3BmetadataElement.style.margin%3D&#39;-15px 0 25px 0&#39;%3BmetadataElement.style.lineHeight%3D&#39;1.6&#39;%3BmetadataElement.style.wordBreak%3D&#39;break-word&#39;%3Bvar metadataParts%3D%5B%5D%3Bif(article.byline)%7BmetadataParts.push(&#39;作者%3A &#39;%2Barticle.byline)%3B%7Dvar linkHTML%3D&#39;原文%3A &lt;a href%3D&#34;&#39;%2Bloc.href%2B&#39;&#34; target%3D&#34;_blank&#34; style%3D&#34;color%3A%23007bff%3Btext-decoration%3Aunderline%3B&#34;&gt;&#39;%2Bloc.href%2B&#39;&lt;%2Fa&gt;&#39;%3BmetadataParts.push(linkHTML)%3BmetadataElement.innerHTML%3DmetadataParts.join(&#39;&lt;span style%3D&#34;margin%3A0 1em%3B&#34;&gt;%7C&lt;%2Fspan&gt;&#39;)%3Bvar contentDiv%3Ddocument.createElement(&#39;div&#39;)%3BcontentDiv.innerHTML%3Darticle.content%3Bdocument.head.innerHTML%3D&#39;&#39;%3Bvar cleanStyle%3Ddocument.createElement(&#39;link&#39;)%3BcleanStyle.setAttribute(&#39;href&#39;%2C&#39;https%3A%2F%2Fgcore.jsdelivr.net%2Fgh%2Frunningcheese%2FAwesome-Bookmarklets%2Flibs%2Fclean.css&#39;)%3BcleanStyle.setAttribute(&#39;rel&#39;%2C&#39;stylesheet&#39;)%3Bdocument.head.appendChild(cleanStyle)%3Bvar customStyles%3Ddocument.createElement(&#39;style&#39;)%3BcustomStyles.type%3D&#39;text%2Fcss&#39;%3Bvar styleText%3D&#39;blockquote %7B color%3A %23666%3B display%3A block%3B margin%3A 0 0 16px%3B padding%3A 0 20px%3B border-left%3A %23ddd solid 4px%3B %7D h1%2C h2%2C h3%2C h4%2C h5%2C h6 %7B color%3A %23000000 !important%3B %7D body %7B color%3A %23000000 !important%3B font-size%3A 18px !important%3B line-height%3A 1.7 !important%3B %7D&#39;%3BcustomStyles.appendChild(document.createTextNode(styleText))%3Bdocument.head.appendChild(customStyles)%3Bdocument.body.innerHTML%3D&#39;&#39;%3Bdocument.body.appendChild(titleElement)%3Bdocument.body.appendChild(metadataElement)%3Bdocument.body.appendChild(contentDiv)%3B%7D)%3BjsCode.onload%3DcleanHtml%3Bdocument.body.appendChild(jsCode)%3B%7D)()%7D)()%7D)()
 （从左向右，选中复制即可）" />
-<meta name="keywords" content="打印机,方法论," />
+<meta name="keywords" content="打印机,方法论,低技术," />
 
 
 <meta property="og:url" content="http://localhost:1313/250621-printer/">
@@ -37,6 +37,7 @@ javascript:(function()%7Bjavascript%3A(function()%7Bjavascript%3A(function()%7Bc
     <meta property="article:modified_time" content="2025-06-21T00:00:00+00:00">
     <meta property="article:tag" content="打印机">
     <meta property="article:tag" content="方法论">
+    <meta property="article:tag" content="低技术">
     <meta property="og:image" content="http://localhost:1313/images/share.png">
 
 
@@ -68,7 +69,7 @@ javascript:(function()%7Bjavascript%3A(function()%7Bjavascript%3A(function()%7Bc
   <meta itemprop="dateModified" content="2025-06-21T00:00:00+00:00">
   <meta itemprop="wordCount" content="270">
   <meta itemprop="image" content="http://localhost:1313/images/share.png">
-  <meta itemprop="keywords" content="打印机,方法论">
+  <meta itemprop="keywords" content="打印机,方法论,低技术">
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
   <style>
@@ -358,6 +359,8 @@ javascript:(function()%7Bjavascript%3A(function()%7Bjavascript%3A(function()%7Bc
   <a href="http://localhost:1313/blog/%E6%89%93%E5%8D%B0%E6%9C%BA/">#打印机</a>
   
   <a href="http://localhost:1313/blog/%E6%96%B9%E6%B3%95%E8%AE%BA/">#方法论</a>
+  
+  <a href="http://localhost:1313/blog/%E4%BD%8E%E6%8A%80%E6%9C%AF/">#低技术</a>
   
 </p>
 
