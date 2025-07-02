@@ -6,17 +6,21 @@ pre {
  * 自定义引用块 (blockquote) 的样式 - 增加垂直空间
  */
 blockquote {
-    background: linear-gradient(90deg, #fffaf4, #fff);
+    background: linear-gradient(90deg, #fffaf4, #ffffff);
     border-left: 6px solid #ffd600;
     color: #707070;
     font-style: normal;
-
-    /* 修改这里：设置上下外边距为 35px，左右为 0 */
     margin: 15px 0; 
-
-    /* 修改这里：设置上下内边距为 15px，左右为 20px */
     padding: 5px 20px;
 }
+
+@media (prefers-color-scheme: dark) {
+
+    blockquote {
+        background: linear-gradient(90deg, #3a3620, #00000000);
+        border-left-color: #ffd600; 
+        color: #c5c5c5;
+    }
 
 /*
  * 自定义图片说明 (figcaption) 的样式
@@ -35,4 +39,43 @@ figure figcaption {
  */
 main img {
     border-radius: 8px;
+}
+
+/*
+ * 自定义文章列表样式 (基于 div，无项目符号)
+ */
+
+/* 针对每一个列表项 div，我们让它成为 Flex 容器来实现对齐 */
+.post-list-custom .post-list-item {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 0.8em; /* 列表项之间的垂直间距 */
+}
+
+/* 日期部分的样式 (灰色，不可点击) */
+.post-list-custom .post-date {
+    font-family: monospace;
+    font-size: 0.8em;
+    color: #888888;
+    min-width: 9em;
+    margin-right: 1em;
+}
+
+/* 标题部分的链接样式 */
+.post-list-custom .post-title {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+/* 鼠标悬停在链接上时，只改变标题颜色 */
+.post-list-custom .post-list-item a:hover .post-title {
+    color: var(--link-color);
+    text-decoration: underline;
+}
+
+/* 深色模式下日期的颜色 */
+@media (prefers-color-scheme: dark) {
+    .post-list-custom .post-date {
+        color: #6a6a6a;
+    }
 }

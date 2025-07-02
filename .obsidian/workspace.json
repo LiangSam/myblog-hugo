@@ -13,32 +13,54 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/blog/分享一下我的博客.md",
+                "file": "content/blog/​你需要的是「时间限」，而非「时间线」.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "分享一下我的博客"
+              "title": "​你需要的是「时间限」，而非「时间线」"
             }
-          }
-        ]
-      },
-      {
-        "id": "3c82893d5f6b9d03",
-        "type": "tabs",
-        "children": [
+          },
           {
-            "id": "44569f727d312446",
+            "id": "3ac53c25eb27e9bf",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/blog/向你开源我的小确幸.md",
+                "file": "content/blog/我的写作方式.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "向你开源我的小确幸"
+              "title": "我的写作方式"
+            }
+          },
+          {
+            "id": "8c42decab2bbfbc5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/blog/知识管理的诅咒.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "知识管理的诅咒"
+            }
+          },
+          {
+            "id": "62075725c8c9533f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/_index.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "_index"
             }
           }
         ]
@@ -60,7 +82,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical",
+                "sortOrder": "byCreatedTime",
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
@@ -98,8 +120,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "c7a07587fb080b57",
@@ -191,27 +212,37 @@
   },
   "active": "13bd489dd371d427",
   "lastOpenFiles": [
-    "content/blog/从自卑到超越，如何逃离原生家庭？.md",
+    "public/css/custom.min.471208109dd1caef240a19d5a75201ba1ad9d4935461685dbb39bd6b58d6b675.css",
+    "public/css/custom.min.656f62062063efdad484c01fdc9a86cd704c3617f8fc25100de013ed1bfda08c.css",
+    "content/blog/2023年，我想开一个博客.md",
+    "public/css/custom.min.c74999078771018a6a2873595206c2ddded0cc95b98cf6053d88406a5d189d0a.css",
+    "public/css/custom.min.85ffb2929f6e918c35b40fc4afb874647adb87443e3c27ae4775e2af417fa52a.css",
+    "public/css/custom.min.4469a68d46d8b430be2c6451890665d3219b298f2c54d0a43c0b7285aef7f45c.css",
+    "public/css/custom.min.74fac2b306b2da9a551943c00bdaa4cacddac5b96d4af20ceda201102ee9894e.css",
+    "content/blog/当一个男生不抽烟、不喝酒、不出门、不谈对象，他会做什么？.md",
+    "content/blog/​你需要的是「时间限」，而非「时间线」.md",
     "content/blog/分享一下我的博客.md",
-    "public/css/custom.min.72f50dd6e0c0ed6c5b04c33364af147fa8f14aabfcb83661f8ddf38a32abf32c.css",
-    "public/css/custom.min.0cb04aa5db184bb5d63cc2e1532d0d725a5b8594e42c95d20cf808f420da0007.css",
-    "public/css/custom.min.d8015d6aad516007739f225d3dd8cf153e52aed9ab9552247e08d39a3dfcf3c3.css",
-    "public/css/custom.min.a13d17341a86a5dfe78efe32f850c98e11c30a412ba52443fc5b4eac21bce41b.css",
-    "public/css/custom.min.38bca83e7caecb8855db3b9e731536cc9909a6b6362df22a0b436925b7c54f78.css",
-    "public/css/custom.min.ef12852a8662232abb5237932bb7e8822c4e547d13540666166cd892bd18ae15.css",
-    "public/css/custom.min.7321eb899c002481cdb883f294501017b3cc9134146bbc6e02523434e1418552.css",
-    "layouts/_default/_markup/render-image.html",
-    "layouts/_default/_markup/新建 文本文档.txt",
-    "layouts/_default/_markup",
-    "themes/hugo-bearblog/README.md",
-    "content/blog/我的终极文章打印方案：不靠插件、软件，只用小书签！.md",
-    "content/blog/向你开源我的小确幸.md",
+    "public/css/custom.min.b14378476a53a1f06adfc8ed12fdd43456f2c891198648c87c6d956358c6cb61.css",
+    "content/_index.md",
+    "public/css/custom.min.315fe1970a7cad977c98c48d0d101bbf0e49524613dbd1f1e6a6fa88820ff2dd.css",
+    "public/css/custom.min.780c12960b542aa012af5a17958ecf460da7838094cc27d8247ac93ec2d2f91f.css",
+    "public/css/custom.min.3e993185c4868f5d23c326fdb1c61a76337eeef44216dff07352654182500873.css",
+    "layouts/index.html",
     "content/about.md",
     "content/blog/就这么忘记时间.md",
-    "content/blog/一台打印机，干掉我所有稍后读软件.md",
-    "content/_index.md",
-    "content/blog/markdown-syntax.md",
+    "content/blog/从自卑到超越，如何逃离原生家庭？.md",
     "content/blog/博客搭建成功.md",
-    "content/blog/_index.md"
+    "content/blog/连更30天后，我好像摸到了写作的门槛.md",
+    "content/blog/知识管理的诅咒.md",
+    "content/blog/我的写作方式.md",
+    "content/blog/_index.md",
+    "content/timeline.md",
+    "content/blog/markdown-syntax.md",
+    "content/blog/一台打印机，干掉我所有稍后读软件.md",
+    "content/blog/向你开源我的小确幸.md",
+    "content/blog/我的终极文章打印方案：不靠插件、软件，只用小书签！.md",
+    "template/博客模板.md",
+    "2025-07-02.md",
+    "themes/hugo-bearblog/README.md"
   ]
 }

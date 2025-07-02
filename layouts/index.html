@@ -1,0 +1,62 @@
+{{/*
+  自定义主页模板
+  - 显示 _index.md 的内容
+  - 显示所有标签
+  - 显示最近的20篇文章
+*/}}
+{{ define "main" }}
+  
+  {{/* 首先，显示来自 content/_index.md 的主页欢迎内容 */}}
+  <article class="post">
+    <section>
+      {{ .Content }}
+    </section>
+  </article>
+
+{{/* --- 显示所有标签 (竖线分隔) --- */}}
+  {{ if .Site.Taxonomies.tags }}
+    <div class="tag-line">
+      <h2 class="post-list-title">标签</h2>
+      <p>
+        {{/* 循环输出每一个标签，并通过 $index 判断是否要添加分隔符 */}}
+        {{ range $index, $tag := .Site.Taxonomies.tags.Alphabetical }}
+          {{/* 如果不是第一个标签，就在它前面添加一个竖线分隔符 */}}
+          {{ if gt $index 0 }}<span class="separator"> | </span>{{ end }}
+          
+          {{/* 输出标签的链接和名称 */}}
+          <a href="{{ .Page.Permalink }}">{{ .Name }}</a>
+        {{ end }}
+      </p>
+    </div>
+  {{ end }}
+
+  {{/* --- 显示最近20篇文章 --- */}}
+
+  {{/* **第1步：定义变量 (这部分你很可能漏掉了！)** 这两行代码必须在使用 $recent_pages 之前。
+  */}}
+  {{ $pages := where .Site.RegularPages "Section" "in" .Site.Params.mainSections }}
+  {{ $recent_pages := first 20 $pages.ByDate.Reverse }}
+
+
+  {{/* **第2步：使用变量来显示列表** */}}
+  {{ if $recent_pages }}
+  <h2 class="post-list-title">文章</h2>
+  {{/* 用 div 替代 ul，从根源上解决项目符号问题 */}}
+  <div class="post-list-custom">
+    {{ range $recent_pages }}
+      {{/* 用 div 替代 li */}}
+      <div class="post-list-item">
+        <span class="post-date">
+          {{ .Date.Format "2006" }} · {{ .Date.Format "01" }}
+        </span>
+        <a href="{{ .Permalink }}">
+          <span class="post-title">
+            {{ .Title }}
+          </span>
+        </a>
+      </div>
+    {{ end }}
+  </div>
+  {{ end }}
+
+{{ end }}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>知识管理 on 梁某银的Blog</title>
+    <link>http://localhost:1313/blog/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/</link>
+    <description>Recent content in 知识管理 on 梁某银的Blog</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright © 2020, 梁某银</copyright>
+    <lastBuildDate>Wed, 17 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>知识管理的诅咒</title>
+      <link>http://localhost:1313/240417-knowledge-management-curse/</link>
+      <pubDate>Wed, 17 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/240417-knowledge-management-curse/</guid>
+      <description>&lt;p&gt;我曾经特别喜欢看别人的知识管理经验分享，软件之庞杂令人叹为观止，从最开始的印象笔记、OneNote、有道云笔记，到现在的双链笔记Obsidian、思源笔记、Logseq、Roam，然后是All in One 的线上知识库Notion、我来、flowus、语雀。&lt;/p&gt;&#xA;&lt;p&gt;同时笔记方法也不断涌现，有卡片笔记法、P.A.R.A知识管理法、原子化笔记等等，随便一搜关键词，就能找到海量信息。&lt;/p&gt;&#xA;&lt;p&gt;但这非常奇怪，人们对笔记方法的需求，好像是随着互联网兴起而来的。在以前，顶多是谈论康奈尔笔记法，要求记笔记有浓缩有扩展，但现在好多人都变成了知识管理专家，倘若问他们有什么作品，答案往往是知识管理的经验分享。&lt;/p&gt;&#xA;&lt;p&gt;是的，他们用笔记软件，管理的是一堆「知识管理」知识。&lt;/p&gt;&#xA;&lt;p&gt;有段时间，我一刷社交媒体或常见网站，都在说知识管理，让我严重信息过载，因为看不过来了。究其原因，我没有这么多知识需要管理，也没有那么多笔记软件要学习。&lt;/p&gt;&#xA;&lt;p&gt;现在我就选定了一个知识管理方法：INKP笔记法，源自公众号「L先生说」的方法。笔记软件也就一个：Obsidian，本地化的双链笔记软件，手机上会用flomo和微信来收集信息。&lt;/p&gt;&#xA;&lt;p&gt;当简化我的伪需求后，就再也不为这方面苦恼，对别人的笔记方法也不感到羡慕。因为别人的经验，只适用于他，我生搬硬套过来，肯定水土不服，反而浪费注意力和时间。&lt;/p&gt;&#xA;&lt;p&gt;而且当把输出作为检验知识管理的标准，就知道只会「知识管理」有多么不靠谱了。&lt;/p&gt;&#xA;&lt;p&gt;我目前是把公众号作为唯一的输出库，但引用知识库的内容反而少之又少，可见我随大流走了多少弯路。&lt;/p&gt;&#xA;&lt;p&gt;唯有放弃折腾，才能找到属于自己的方法。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
