@@ -41,7 +41,7 @@ main img {
 .post-list-custom .post-date {
     font-size: 0.9em;
     color: #888888;
-    min-width: 1em;
+    min-width: 6em;
     margin-right: 1em;
 }
 
@@ -59,6 +59,13 @@ main img {
     text-decoration: none; /* <--- 修改这里，悬停时去掉下划线 */
 }
 
+/*
+ * 针对标签行的链接，强制其内部不换行，确保 # 和标签名总是在一起
+ */
+.tag-line p a {
+    display: inline-block; /* 确保间距和边距等属性可以正常应用 */
+    white-space: nowrap;   /* 核心：强制链接内部的文本不换行 */
+}
 
 /* ==========================================================================
    深色模式下的覆盖样式

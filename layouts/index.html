@@ -16,7 +16,7 @@
   {{/* --- 显示所有标签 (带#号，竖线分隔) --- */}}
   {{ if .Site.Taxonomies.tags }}
     <div class="tag-line">
-      <h2 class="post-list-title">标签</h2>
+      <h3 class="post-list-title">标签</h3>
       <p>
         {{ range $index, $tag := .Site.Taxonomies.tags.Alphabetical }}
           {{ if gt $index 0 }}<span class="separator"> | </span>{{ end }}
@@ -27,32 +27,34 @@
   {{ end }}
 
   {{/* --- 显示最近10篇文章 --- */}}
-
-  {{/* **第1步：定义变量 (这部分你很可能漏掉了！)** 这两行代码必须在使用 $recent_pages 之前。
-  */}}
   {{ $pages := where .Site.RegularPages "Section" "in" .Site.Params.mainSections }}
   {{ $recent_pages := first 10 $pages.ByDate.Reverse }}
 
 
   {{/* **第2步：使用变量来显示列表** */}}
   {{ if $recent_pages }}
-  <h2 class="post-list-title">最近文章</h2>
+  <h3 class="post-list-title">最近文章</h3>
   {{/* 用 div 替代 ul，从根源上解决项目符号问题 */}}
-  <div class="post-list-custom">
-    {{ range $recent_pages }}
-      {{/* 用 div 替代 li */}}
-      <div class="post-list-item">
-        <span class="post-date">
-          {{ .Date.Format "2006" }}-{{ .Date.Format "01" }}
+{{/* 恢复到 "日期 + 标题" 的简洁布局 */}}
+<div class="post-list-custom">
+  {{ range $recent_pages }}
+    <div class="post-list-item">
+
+      {{/* 日期部分：格式修改为 YYYY-MM-DD */}}
+      <span class="post-date">
+        {{ .Date.Format "2006-01-02" }}
+      </span>
+
+      {{/* 标题链接部分 */}}
+      <a href="{{ .Permalink }}">
+        <span class="post-title">
+          {{ .Title }}
         </span>
-        <a href="{{ .Permalink }}">
-          <span class="post-title">
-            {{ .Title }}
-          </span>
-        </a>
-      </div>
-    {{ end }}
-  </div>
+      </a>
+
+    </div>
+  {{ end }}
+</div>
   {{ end }}
 
 {{ end }}

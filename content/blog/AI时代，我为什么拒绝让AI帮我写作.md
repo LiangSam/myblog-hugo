@@ -6,6 +6,7 @@ tags:
   - 写作
 slug: 250519-ai-write
 draft: false
+description: 最近刷手机，或者看些公众号文章，总有那么些瞬间，让我眉头一皱。
 ---
 ![515258db4eb5214f100b65c8a3441187.png](https://img.liangmouyin.com/2025/07/25c288c2a7d4f704a5fb7dcb2e33989e.png)
 

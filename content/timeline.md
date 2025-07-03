@@ -15,6 +15,6 @@ weight = 20
 
 ## 2025-07-01
 
-为了 [Bear-blog](https://github.com/janraasch/hugo-bearblog) 主题，从 hexo 迁移到 Hugo。
+为了 [Bear-blog](https://github.com/janraasch/hugo-bearblog) 主题，从 Hexo 迁移到 Hugo。
 
 ![](https://img.liangmouyin.com/2025/07/aab5c5d656839734196f71dc4dc6991c.png)

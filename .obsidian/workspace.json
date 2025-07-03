@@ -13,12 +13,40 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/blog/今年上半年我买过的 6 样物件.md",
+                "file": "content/about.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "今年上半年我买过的 6 样物件"
+              "title": "about"
+            }
+          },
+          {
+            "id": "9575c53126bf490e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/_index.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "_index"
+            }
+          },
+          {
+            "id": "887218f5ee7167b9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/blog/我的终极文章打印方案：不靠插件、软件，只用小书签！.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "我的终极文章打印方案：不靠插件、软件，只用小书签！"
             }
           },
           {
@@ -212,41 +240,40 @@
   },
   "active": "13bd489dd371d427",
   "lastOpenFiles": [
-    "content/blog/AI时代，我为什么拒绝让AI帮我写作.md",
-    "content/blog/今年上半年我买过的 6 样物件.md",
-    "public/blog/什么/index.xml",
-    "public/blog/什么/index.html",
-    "public/blog/什么",
-    "public/blog/标签/index.html",
-    "public/blog/标签/index.xml",
-    "public/blog/标签",
-    "public/css/custom.min.025120f92e8317fa02921b9584b628c0b66c5a56fe4322c1010ed57db7b6c346.css",
-    "public/css/custom.min.ba8c1118b1916c73a9736af336fb2541947e5433279937d708cfb6c87e56e742.css",
-    "public/css/custom.min.47d4da9168a69e3483d1d6eaea70d020dd65223c3b5e82781e0ef2bb5b2cca03.css",
-    "public/blog/低技术/index.xml",
+    "content/_index.md",
+    "content/about.md",
+    "content/blog/分享17个私藏的优质信息源.md",
+    "public/blog/信息源/index.html",
+    "public/blog/信息源/index.xml",
+    "public/blog/信息源",
+    "().md",
+    "public/250611-share-my-information-sources/index.html",
+    "public/250611-share-my-information-sources",
+    "public/分享17个私藏的优质信息源/index.html",
+    "public/分享17个私藏的优质信息源",
+    "content/blog/​你需要的是「时间限」，而非「时间线」.md",
+    "content/blog/当一个男生不抽烟、不喝酒、不出门、不谈对象，他会做什么？.md",
     "content/blog/你不写作、不分享，才是真正的浪费.md",
+    "content/blog/我的终极文章打印方案：不靠插件、软件，只用小书签！.md",
+    "public/css/custom.min.782bff4819be686582e6054948372b9462ae516e6b90c38a3e9efe5e7e58937b.css",
+    "public/css/custom.min.46e63a31c99bd06067cb89ee05fdbe679109fd555c62ca7a1be3ddd87443eb38.css",
+    "public/css/custom.min.d282850333cc9186075164fa410c0514ff108a9754b3489dc99daf94138ebe7c.css",
+    "content/blog/2023年，我想开一个博客.md",
     "content/blog/再分享几个也有用的小书签（Bookmarklet）.md",
     "content/blog/日更写作的关键，不是灵感，而是势能.md",
+    "content/blog/AI时代，我为什么拒绝让AI帮我写作.md",
+    "content/blog/今年上半年我买过的 6 样物件.md",
+    "content/blog/连更30天后，我好像摸到了写作的门槛.md",
+    "content/timeline.md",
     "content/blog/一台打印机，干掉我所有稍后读软件.md",
     "content/blog/分享一下我的博客.md",
-    "content/blog/我的终极文章打印方案：不靠插件、软件，只用小书签！.md",
     "content/blog/我的写作方式.md",
     "content/blog/知识管理的诅咒.md",
-    "content/blog/连更30天后，我好像摸到了写作的门槛.md",
-    "content/blog/当一个男生不抽烟、不喝酒、不出门、不谈对象，他会做什么？.md",
-    "content/blog/​你需要的是「时间限」，而非「时间线」.md",
-    "content/blog/2023年，我想开一个博客.md",
     "content/blog/就这么忘记时间.md",
     "content/blog/博客搭建成功.md",
     "content/blog/从自卑到超越，如何逃离原生家庭？.md",
     "content/blog/向你开源我的小确幸.md",
-    "content/_index.md",
-    "content/about.md",
     "content/blog/_index.md",
-    "content/timeline.md",
-    "content/blog/markdown-syntax.md",
-    "template/博客模板.md",
-    "2025-07-02.md",
-    "themes/hugo-bearblog/README.md"
+    "content/blog/markdown-syntax.md"
   ]
 }
