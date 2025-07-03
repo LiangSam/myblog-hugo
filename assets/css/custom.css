@@ -9,12 +9,20 @@ pre {
 
 /* 引用块样式 */
 blockquote {
+    color: #666;
+    display: block;
+    margin: 16px 0;
+    padding: 0 20px;
+    border-left: #ddd solid 4px;
+    font-style: normal;
+
+    /* utgd 版本样式，将来也许能用上，先保留吧
     background: linear-gradient(90deg, #fffaf4, #ffffff);
     border-left: 6px solid #ffd600;
     color: #707070;
     font-style: normal;
     margin: 20px 0; 
-    padding: 10px 20px;
+    padding: 10px 20px;*/
 }
 
 /* 图片说明样式 */
@@ -73,11 +81,17 @@ main img {
 
 @media (prefers-color-scheme: dark) {
 
-    /* 深色模式下的引用块 */
+    /* 方案A：新样式 (style-new) 在深色模式下的表现 */
     blockquote {
+        border-left-color: #555555; /* 左侧边框变为深灰色 */
+        color: #cccccc;           /* 文字颜色变为更亮的浅灰色 */
+    }
+
+    /* 深色模式下的引用块 */旧版
+    /*blockquote {
         background: linear-gradient(90deg, #3a3620, #2e2e2e);
         border-left-color: #ffd600; 
-        color: #c5c5c5;
+        color: #c5c5c5;*/
     }
 
     /* 深色模式下的文章列表日期 */

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>读书记 on 梁某银的Blog</title>
+    <link>http://localhost:1313/blog/%E8%AF%BB%E4%B9%A6%E8%AE%B0/</link>
+    <description>Recent content in 读书记 on 梁某银的Blog</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright © 2025, 梁某银</copyright>
+    <lastBuildDate>Thu, 03 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/%E8%AF%BB%E4%B9%A6%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>李笑来《思考的真相》读后</title>
+      <link>http://localhost:1313/250703-lixiaolai/</link>
+      <pubDate>Thu, 03 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/250703-lixiaolai/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
