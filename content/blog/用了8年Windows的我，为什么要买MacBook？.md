@@ -3,7 +3,7 @@ title: 用了8年Windows的我，为什么要买MacBook？
 date: 2025-07-21
 categories: 
 tags: 
-slug: 250721-windows-to-macbook
+slug: macbook-after-8-years-windows
 draft: false
 description:
 ---
