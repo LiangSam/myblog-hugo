@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/blog/那些彪悍的年轻人.md",
+                "file": "content/blog/工具是手段，而非目的.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "那些彪悍的年轻人"
+              "title": "工具是手段，而非目的"
             }
           },
           {
@@ -241,11 +241,20 @@
   },
   "active": "c4a12e2c5fb05fd4",
   "lastOpenFiles": [
+    "content/blog/我的写作方式.md",
+    "content/blog/我的终极文章打印方案：不靠插件、软件，只用小书签！.md",
+    "content/blog/向你开源我的小确幸.md",
+    "content/blog/一台打印机，干掉我所有稍后读软件.md",
+    "content/blog/就这么忘记时间.md",
+    "content/blog/从自卑到超越，如何逃离原生家庭？.md",
+    "content/blog/博客搭建成功.md",
+    "content/blog/断网后，我第一次真正拥有了阅读的自由.md",
+    "content/blog/我为什么不再计较一顿饭贵几块？.md",
+    "content/blog/退网一小时：我发现自己并没那么重要.md",
+    "content/blog/那些彪悍的年轻人.md",
     "content/blog/美丽的废物.md",
     "content/blog/没房的生活.md",
     "content/blog/合租的难题：跟室友交涉.md",
-    "content/blog/退网一小时：我发现自己并没那么重要.md",
-    "content/blog/那些彪悍的年轻人.md",
     "content/blog/逛完购物中心后，真心劝你不要随便凑热闹.md",
     "content/blog/老剧新看：《龙门镖局》1.5.md",
     "content/blog/用了8年Windows的我，为什么要买MacBook？.md",
@@ -258,12 +267,6 @@
     "content/blog/周末随笔 01.md",
     "content/blog/《如何读过每天的24小时》读后.md",
     "content/blog/日更是不是在勉强自己？.md",
-    "content/blog/新玩具：静电白板墙贴.md",
-    "content/blog/为什么我开始把所有杂事都安排在周五？.md",
-    "content/blog/译本难等又难读？用 DeepSeek 自翻原著，快速制作双语对照电子书.md",
-    "content/now.md",
-    "content/blog/提升语言表达能力的方法（续）.md",
-    "content/blog/推荐几首适合一个人听的歌.md",
     "public/240413-feynman-technique/index.html",
     "public/240413-feynman-technique",
     "public/blog/音乐/index.xml",
@@ -273,9 +276,6 @@
     "public/250411-continue-to-create",
     "public/250413-music/index.html",
     "public/250413-music",
-    "public/250415-expression-ability-method/index.html",
-    "content/blog/一种让我灵魂震颤，提升表达能力的方法.md",
-    "content/blog/你人生中太晚明白的道理是什么？.md",
-    "content/blog/持续创作会遇到的问题.md"
+    "public/250415-expression-ability-method/index.html"
   ]
 }
