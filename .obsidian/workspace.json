@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/blog/工具是手段，而非目的.md",
+                "file": "content/blog/成为那样的人.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "工具是手段，而非目的"
+              "title": "成为那样的人"
             }
           },
           {
@@ -241,6 +241,7 @@
   },
   "active": "c4a12e2c5fb05fd4",
   "lastOpenFiles": [
+    "content/blog/工具是手段，而非目的.md",
     "content/blog/成为那样的人.md",
     "content/blog/我的写作方式.md",
     "content/blog/我的终极文章打印方案：不靠插件、软件，只用小书签！.md",
@@ -266,7 +267,6 @@
     "content/blog/你用什么输入法？.md",
     "content/blog/用画布梳理我的设备后.md",
     "content/blog/周末随笔 01.md",
-    "content/blog/《如何读过每天的24小时》读后.md",
     "public/240413-feynman-technique/index.html",
     "public/240413-feynman-technique",
     "public/blog/音乐/index.xml",
