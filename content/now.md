@@ -1,7 +1,7 @@
 +++
 title = "Now"
 menu = "main"
-weight = 20
+weight = 15
 slug = "now"
 +++
 # 此刻

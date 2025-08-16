@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="http://localhost:1313/images/favicon.png" />
+<title>译本难等又难读？用 DeepSeek 自翻原著，快速制作双语对照电子书 | 梁某银的博客</title>
+<meta name="title" content="译本难等又难读？用 DeepSeek 自翻原著，快速制作双语对照电子书" />
+<meta name="description" content="按理来说，自从 ChatGPT 在 2022 年横空出世，最不起眼的英文原著翻译，应该早就解决了。但国外的翻译服务，离我们太远太贵，更别说谷歌都推出 Gemini 了，也没有提升谷歌翻译的质量，读下来仍是浓浓的机翻感。
+其实在国内，已经有成熟的翻译方案。
+比如微信读书自带翻译。只需导入一本英文原著，点击工具栏上的「译」，你就得到一本双语对照的电子书，翻译质量还不低。
+但这么做，其实仍有一些问题：部分敏感内容（包括脏话）会被它略过，并且译本只存在于微信读书，没法在其他设备（如 Kindle，PC 端本地）上阅读。
+那么，有没有一种办法，可以自由地翻译本地英文电子书，选择喜欢的翻译模型，甚至用 AI 来提高翻译质量呢？
+当然有！
+我前段时间想读《超越感觉》，可上豆瓣一查，发现一堆人骂译本差 —— 虽然在英语水平差的时候，是不足以谈什么译本好的，但在如今 AI 翻译成熟的情况下，就不必依赖出版社翻译的版本，甚至能比别人更早读到书籍。
+下面，我边说一下自己所使用的方法吧。
+需要工具：电脑浏览器，沉浸式翻译扩展。
+1、获取 DeepSeek API（这一步并不强求，沉浸式翻译预设的免费翻译也足矣，但假设你有这方面的需求）。
+打开 DeepSeek 开放平台（https://platform.deepseek.com/）→登录→预先充值 10 块钱（能翻译好几本书了）→侧栏 API keys→创建 API key→输入名称→能得到一长串代码→点击复制→贴到别处保存（如本地 txt，聊天对话框）。
+
+
+    
+    
+    
+
+2、安装【沉浸式翻译】扩展，点击图标，进入左下角【设置】。
+3、点击侧栏【翻译服务】→添加自定义翻译服务→选择【DeepSeek】。
+
+
+    
+    
+    
+
+4、这时会跳转到 DeepSeek 页面，在【APIKEY】处，粘贴第一步得到的代码。并可点击左上角测试服务，可用后需在左下角开启 DeepSeek。
+
+
+    
+    
+    
+
+（这里的模型选择上，点击后会有两个选项，deepseek-chat 是 V3 模型（已经够用了），deepseek-reasoner 是 R1 模型，消耗会更多）
+5、进入文档翻译页面：点击扩展图标，左下角【PDF/ePub】，进入文档翻译页面，这时把你想翻译的电子书，拖入此处。
+
+
+    
+    
+    
+
+6、选择【翻译服务】，可用刚才配置好的【DeepSeek】，我发现预设的普通模型里，硅基流动翻译和智谱 GLM 翻译也不错，最后点击【开始翻译】。这里我找来《动物庄园》的原著，以它为例。
+
+
+    
+    
+    
+
+7、当翻译完成后，浏览器会下载文件，这时你就制作出了自己的译本双语对照翻译电子书。
+我同时用 DeepSeek 和 智谱 GLM 来翻译，两者在翻译上，其实都有些小问题。比如「popholes」，指的是「鸡舍通向室外的小门」，而前者译成「墙洞」，后者为「灯洞」；「the scullery」指「杂物间、洗碗间」，而非厨房。
+
+
+    
+    
+    
+        左：DeepSeek 翻译；右：智谱 GLM 翻译
+    
+" />
+<meta name="keywords" content="" />
+
+
+<meta property="og:url" content="http://localhost:1313/250706-translate_ebook/">
+  <meta property="og:site_name" content="梁某银的博客">
+  <meta property="og:title" content="译本难等又难读？用 DeepSeek 自翻原著，快速制作双语对照电子书">
+  <meta property="og:description" content="按理来说，自从 ChatGPT 在 2022 年横空出世，最不起眼的英文原著翻译，应该早就解决了。但国外的翻译服务，离我们太远太贵，更别说谷歌都推出 Gemini 了，也没有提升谷歌翻译的质量，读下来仍是浓浓的机翻感。
+其实在国内，已经有成熟的翻译方案。
+比如微信读书自带翻译。只需导入一本英文原著，点击工具栏上的「译」，你就得到一本双语对照的电子书，翻译质量还不低。
+但这么做，其实仍有一些问题：部分敏感内容（包括脏话）会被它略过，并且译本只存在于微信读书，没法在其他设备（如 Kindle，PC 端本地）上阅读。
+那么，有没有一种办法，可以自由地翻译本地英文电子书，选择喜欢的翻译模型，甚至用 AI 来提高翻译质量呢？
+当然有！
+我前段时间想读《超越感觉》，可上豆瓣一查，发现一堆人骂译本差 —— 虽然在英语水平差的时候，是不足以谈什么译本好的，但在如今 AI 翻译成熟的情况下，就不必依赖出版社翻译的版本，甚至能比别人更早读到书籍。
+下面，我边说一下自己所使用的方法吧。
+需要工具：电脑浏览器，沉浸式翻译扩展。
+1、获取 DeepSeek API（这一步并不强求，沉浸式翻译预设的免费翻译也足矣，但假设你有这方面的需求）。
+打开 DeepSeek 开放平台（https://platform.deepseek.com/）→登录→预先充值 10 块钱（能翻译好几本书了）→侧栏 API keys→创建 API key→输入名称→能得到一长串代码→点击复制→贴到别处保存（如本地 txt，聊天对话框）。
+2、安装【沉浸式翻译】扩展，点击图标，进入左下角【设置】。
+3、点击侧栏【翻译服务】→添加自定义翻译服务→选择【DeepSeek】。
+4、这时会跳转到 DeepSeek 页面，在【APIKEY】处，粘贴第一步得到的代码。并可点击左上角测试服务，可用后需在左下角开启 DeepSeek。
+（这里的模型选择上，点击后会有两个选项，deepseek-chat 是 V3 模型（已经够用了），deepseek-reasoner 是 R1 模型，消耗会更多）
+5、进入文档翻译页面：点击扩展图标，左下角【PDF/ePub】，进入文档翻译页面，这时把你想翻译的电子书，拖入此处。
+6、选择【翻译服务】，可用刚才配置好的【DeepSeek】，我发现预设的普通模型里，硅基流动翻译和智谱 GLM 翻译也不错，最后点击【开始翻译】。这里我找来《动物庄园》的原著，以它为例。
+7、当翻译完成后，浏览器会下载文件，这时你就制作出了自己的译本双语对照翻译电子书。
+我同时用 DeepSeek 和 智谱 GLM 来翻译，两者在翻译上，其实都有些小问题。比如「popholes」，指的是「鸡舍通向室外的小门」，而前者译成「墙洞」，后者为「灯洞」；「the scullery」指「杂物间、洗碗间」，而非厨房。
+左：DeepSeek 翻译；右：智谱 GLM 翻译">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2025-07-06T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-07-06T00:00:00+00:00">
+    <meta property="og:image" content="http://localhost:1313/images/share.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/images/share.png">
+  <meta name="twitter:title" content="译本难等又难读？用 DeepSeek 自翻原著，快速制作双语对照电子书">
+  <meta name="twitter:description" content="按理来说，自从 ChatGPT 在 2022 年横空出世，最不起眼的英文原著翻译，应该早就解决了。但国外的翻译服务，离我们太远太贵，更别说谷歌都推出 Gemini 了，也没有提升谷歌翻译的质量，读下来仍是浓浓的机翻感。
+其实在国内，已经有成熟的翻译方案。
+比如微信读书自带翻译。只需导入一本英文原著，点击工具栏上的「译」，你就得到一本双语对照的电子书，翻译质量还不低。
+但这么做，其实仍有一些问题：部分敏感内容（包括脏话）会被它略过，并且译本只存在于微信读书，没法在其他设备（如 Kindle，PC 端本地）上阅读。
+那么，有没有一种办法，可以自由地翻译本地英文电子书，选择喜欢的翻译模型，甚至用 AI 来提高翻译质量呢？
+当然有！
+我前段时间想读《超越感觉》，可上豆瓣一查，发现一堆人骂译本差 —— 虽然在英语水平差的时候，是不足以谈什么译本好的，但在如今 AI 翻译成熟的情况下，就不必依赖出版社翻译的版本，甚至能比别人更早读到书籍。
+下面，我边说一下自己所使用的方法吧。
+需要工具：电脑浏览器，沉浸式翻译扩展。
+1、获取 DeepSeek API（这一步并不强求，沉浸式翻译预设的免费翻译也足矣，但假设你有这方面的需求）。
+打开 DeepSeek 开放平台（https://platform.deepseek.com/）→登录→预先充值 10 块钱（能翻译好几本书了）→侧栏 API keys→创建 API key→输入名称→能得到一长串代码→点击复制→贴到别处保存（如本地 txt，聊天对话框）。
+2、安装【沉浸式翻译】扩展，点击图标，进入左下角【设置】。
+3、点击侧栏【翻译服务】→添加自定义翻译服务→选择【DeepSeek】。
+4、这时会跳转到 DeepSeek 页面，在【APIKEY】处，粘贴第一步得到的代码。并可点击左上角测试服务，可用后需在左下角开启 DeepSeek。
+（这里的模型选择上，点击后会有两个选项，deepseek-chat 是 V3 模型（已经够用了），deepseek-reasoner 是 R1 模型，消耗会更多）
+5、进入文档翻译页面：点击扩展图标，左下角【PDF/ePub】，进入文档翻译页面，这时把你想翻译的电子书，拖入此处。
+6、选择【翻译服务】，可用刚才配置好的【DeepSeek】，我发现预设的普通模型里，硅基流动翻译和智谱 GLM 翻译也不错，最后点击【开始翻译】。这里我找来《动物庄园》的原著，以它为例。
+7、当翻译完成后，浏览器会下载文件，这时你就制作出了自己的译本双语对照翻译电子书。
+我同时用 DeepSeek 和 智谱 GLM 来翻译，两者在翻译上，其实都有些小问题。比如「popholes」，指的是「鸡舍通向室外的小门」，而前者译成「墙洞」，后者为「灯洞」；「the scullery」指「杂物间、洗碗间」，而非厨房。
+左：DeepSeek 翻译；右：智谱 GLM 翻译">
+
+
+
+
+  <meta itemprop="name" content="译本难等又难读？用 DeepSeek 自翻原著，快速制作双语对照电子书">
+  <meta itemprop="description" content="按理来说，自从 ChatGPT 在 2022 年横空出世，最不起眼的英文原著翻译，应该早就解决了。但国外的翻译服务，离我们太远太贵，更别说谷歌都推出 Gemini 了，也没有提升谷歌翻译的质量，读下来仍是浓浓的机翻感。
+其实在国内，已经有成熟的翻译方案。
+比如微信读书自带翻译。只需导入一本英文原著，点击工具栏上的「译」，你就得到一本双语对照的电子书，翻译质量还不低。
+但这么做，其实仍有一些问题：部分敏感内容（包括脏话）会被它略过，并且译本只存在于微信读书，没法在其他设备（如 Kindle，PC 端本地）上阅读。
+那么，有没有一种办法，可以自由地翻译本地英文电子书，选择喜欢的翻译模型，甚至用 AI 来提高翻译质量呢？
+当然有！
+我前段时间想读《超越感觉》，可上豆瓣一查，发现一堆人骂译本差 —— 虽然在英语水平差的时候，是不足以谈什么译本好的，但在如今 AI 翻译成熟的情况下，就不必依赖出版社翻译的版本，甚至能比别人更早读到书籍。
+下面，我边说一下自己所使用的方法吧。
+需要工具：电脑浏览器，沉浸式翻译扩展。
+1、获取 DeepSeek API（这一步并不强求，沉浸式翻译预设的免费翻译也足矣，但假设你有这方面的需求）。
+打开 DeepSeek 开放平台（https://platform.deepseek.com/）→登录→预先充值 10 块钱（能翻译好几本书了）→侧栏 API keys→创建 API key→输入名称→能得到一长串代码→点击复制→贴到别处保存（如本地 txt，聊天对话框）。
+2、安装【沉浸式翻译】扩展，点击图标，进入左下角【设置】。
+3、点击侧栏【翻译服务】→添加自定义翻译服务→选择【DeepSeek】。
+4、这时会跳转到 DeepSeek 页面，在【APIKEY】处，粘贴第一步得到的代码。并可点击左上角测试服务，可用后需在左下角开启 DeepSeek。
+（这里的模型选择上，点击后会有两个选项，deepseek-chat 是 V3 模型（已经够用了），deepseek-reasoner 是 R1 模型，消耗会更多）
+5、进入文档翻译页面：点击扩展图标，左下角【PDF/ePub】，进入文档翻译页面，这时把你想翻译的电子书，拖入此处。
+6、选择【翻译服务】，可用刚才配置好的【DeepSeek】，我发现预设的普通模型里，硅基流动翻译和智谱 GLM 翻译也不错，最后点击【开始翻译】。这里我找来《动物庄园》的原著，以它为例。
+7、当翻译完成后，浏览器会下载文件，这时你就制作出了自己的译本双语对照翻译电子书。
+我同时用 DeepSeek 和 智谱 GLM 来翻译，两者在翻译上，其实都有些小问题。比如「popholes」，指的是「鸡舍通向室外的小门」，而前者译成「墙洞」，后者为「灯洞」；「the scullery」指「杂物间、洗碗间」，而非厨房。
+左：DeepSeek 翻译；右：智谱 GLM 翻译">
+  <meta itemprop="datePublished" content="2025-07-06T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-07-06T00:00:00+00:00">
+  <meta itemprop="wordCount" content="90">
+  <meta itemprop="image" content="http://localhost:1313/images/share.png">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+    --width: 720px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --code-background-color: #f2f2f2;
+    --code-color: #222;
+    --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #eee;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --code-background-color: #000;
+      --code-color: #ddd;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  time {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  main {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    font-family: monospace;
+    padding: 2px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--code-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight,
+  .code {
+    padding: 1px 15px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+
+</style>
+
+
+
+
+
+<link rel="stylesheet" href="http://localhost:1313/css/custom.min.ede37763dba15eafb80a74d34ab5ba8b7cc64c73be08cc260f281bcd7d37968d.css" integrity="sha256-7eN3Y9uhXq&#43;4CnTTSrW6i3zGTHO&#43;CMwmDygbzX03lo0=" crossorigin="anonymous"></head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>梁某银的博客</h2>
+</a>
+<nav>
+<a href="/">Home</a>
+
+<a href="/about/">About</a>
+
+<a href="/now/">Now</a>
+
+<a href="/blog/">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<h1>译本难等又难读？用 DeepSeek 自翻原著，快速制作双语对照电子书</h1>
+<p>
+  <i>
+    <time datetime='2025-07-06'>
+      2025-07-06
+    </time>
+  </i>
+</p>
+
+<content>
+  <p>按理来说，自从 ChatGPT 在 2022 年横空出世，最不起眼的英文原著翻译，应该早就解决了。但国外的翻译服务，离我们太远太贵，更别说谷歌都推出 Gemini 了，也没有提升谷歌翻译的质量，读下来仍是浓浓的机翻感。</p>
+<p>其实在国内，已经有成熟的翻译方案。</p>
+<p>比如微信读书自带翻译。只需导入一本英文原著，点击工具栏上的「译」，你就得到一本双语对照的电子书，翻译质量还不低。</p>
+<p>但这么做，其实仍有一些问题：部分敏感内容（包括脏话）会被它略过，并且译本只存在于微信读书，没法在其他设备（如 Kindle，PC 端本地）上阅读。</p>
+<p>那么，有没有一种办法，可以自由地翻译本地英文电子书，选择喜欢的翻译模型，甚至用 AI 来提高翻译质量呢？</p>
+<p>当然有！</p>
+<p>我前段时间想读《超越感觉》，可上豆瓣一查，发现一堆人骂译本差 —— 虽然在英语水平差的时候，是不足以谈什么译本好的，但在如今 AI 翻译成熟的情况下，就不必依赖出版社翻译的版本，甚至能比别人更早读到书籍。</p>
+<p>下面，我边说一下自己所使用的方法吧。</p>
+<p>需要工具：电脑浏览器，沉浸式翻译扩展。</p>
+<p>1、获取 DeepSeek API（这一步并不强求，沉浸式翻译预设的免费翻译也足矣，但假设你有这方面的需求）。</p>
+<p>打开 DeepSeek 开放平台（https://platform.deepseek.com/）→登录→预先充值 10 块钱（能翻译好几本书了）→侧栏 API keys→创建 API key→输入名称→能得到一长串代码→点击复制→贴到别处保存（如本地 txt，聊天对话框）。</p>
+<p>
+<figure>
+    <img src="https://img.liangmouyin.com/2025/07/bac2a02b376a58a1ed5cb8db34d808c5.png" alt="image.png" />
+    
+    
+</figure></p>
+<p>2、安装【沉浸式翻译】扩展，点击图标，进入左下角【设置】。</p>
+<p>3、点击侧栏【翻译服务】→添加自定义翻译服务→选择【DeepSeek】。</p>
+<p>
+<figure>
+    <img src="https://img.liangmouyin.com/2025/07/3b55e9be486ee23e467523b47fa8b93e.png" alt="image.png" />
+    
+    
+</figure></p>
+<p>4、这时会跳转到 DeepSeek 页面，在【APIKEY】处，粘贴第一步得到的代码。并可点击左上角测试服务，可用后需在左下角开启 DeepSeek。</p>
+<p>
+<figure>
+    <img src="https://img.liangmouyin.com/2025/07/d54ad1eb56e81263755d008686c94ac0.png" alt="image.png" />
+    
+    
+</figure></p>
+<p>（这里的模型选择上，点击后会有两个选项，deepseek-chat 是 V3 模型（已经够用了），deepseek-reasoner 是 R1 模型，消耗会更多）</p>
+<p>5、进入文档翻译页面：点击扩展图标，左下角【PDF/ePub】，进入文档翻译页面，这时把你想翻译的电子书，拖入此处。</p>
+<p>
+<figure>
+    <img src="https://img.liangmouyin.com/2025/07/c49ecf262b05fb380ed35e80d900b1ae.png" alt="image.png" />
+    
+    
+</figure></p>
+<p>6、选择【翻译服务】，可用刚才配置好的【DeepSeek】，我发现预设的普通模型里，硅基流动翻译和智谱 GLM 翻译也不错，最后点击【开始翻译】。这里我找来《动物庄园》的原著，以它为例。</p>
+<p>
+<figure>
+    <img src="https://img.liangmouyin.com/2025/07/c1c69672c08c9382977f8b3bcfd5d360.png" alt="image.png" />
+    
+    
+</figure></p>
+<p>7、当翻译完成后，浏览器会下载文件，这时你就制作出了自己的译本双语对照翻译电子书。</p>
+<p>我同时用 DeepSeek 和 智谱 GLM 来翻译，两者在翻译上，其实都有些小问题。比如「popholes」，指的是「鸡舍通向室外的小门」，而前者译成「墙洞」，后者为「灯洞」；「the scullery」指「杂物间、洗碗间」，而非厨房。</p>
+<p>
+<figure>
+    <img src="https://img.liangmouyin.com/2025/07/3956fbde8a256f04105fcdb2729fd9ae.png" alt="image.png" />
+    
+    
+        <figcaption>左：DeepSeek 翻译；右：智谱 GLM 翻译</figcaption>
+    
+</figure></p>
+<p>总体而言，DeepSeek 的翻译更优秀，准确性上虽不完美，但整体节奏、韵味比较贴近原文，文学性充足。</p>
+<p>最后回到 DeepSeek 开放平台，就能看到消费金额。整本《动物庄园》翻译下来也只是 4 毛钱，性价比可见一斑 —— 我还用 R1 翻译对比，花费 1.85 元。</p>
+<p>当然，如果有机会，读原著自然更好，但我英语较差，还需借助外物来辅助理解。以及诸君翻译时，不必太纠结哪个翻译质量最好，一来都看译本了，纠结细枝末节意义不大，重点是理解并吸收知识，二来容易陷入工具焦虑，总想找到最完美的，结果徒耗时间和精力。</p>
+<p>最省事的方法，还是直接拖进微信读书翻译（我不知道这一功能是否需要会员）；我所写的这篇文章，只是提供另一个思路罢了。</p>
+<p>而对于绝大多数只想通过原著，来汲取信息的人来说，方便省事、翻译质量尚可就够了。</p>
+<p>归根结底，用什么翻译只是小事，阅读 —— 乃至学好英语 —— 才是真正需要下功夫的地方。</p>
+<p>【后记】</p>
+<p>为什么我在这个时间点发布？</p>
+<p>因为我想试试早起写作，看看跟晚上写作有什么区别。结果我今天早上九点才起，然后构思选题，开始梳理流程，于是一边写，一边截图，中间还去吃肠粉，最后发布时间就到了中午。</p>
+<p>这类方法论文章，写的人比较多，但因为知识的诅咒，我觉得可能还有人不知道，因此有必要分享一下思路，希望对你有帮助。</p>
+
+</content>
+<p>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+  
+</body>
+
+</html>
