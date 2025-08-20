@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/blog/你喜欢纸质书还是电子书？.md",
+                "file": "content/blog/一年之期已到，你通关《黑神话》了吗？.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "你喜欢纸质书还是电子书？"
+              "title": "一年之期已到，你通关《黑神话》了吗？"
             }
           },
           {
@@ -213,8 +213,9 @@
   },
   "active": "887218f5ee7167b9",
   "lastOpenFiles": [
-    "content/blog/如果你最近过得不开心，请立刻点开这3个B站UP主.md",
     "content/blog/你喜欢纸质书还是电子书？.md",
+    "content/blog/一年之期已到，你通关《黑神话》了吗？.md",
+    "content/blog/如果你最近过得不开心，请立刻点开这3个B站UP主.md",
     "content/blog/我的终极文章打印方案：不靠插件、软件，只用小书签！.md",
     "content/blog/《人性的迷雾》读后.md",
     "content/blog/第一次办港澳通行证：悬而未决的事，一定要趁早做.md",
@@ -257,7 +258,6 @@
     "hugo-bearblog/archetypes/blog.md",
     "hugo-bearblog/README.md",
     "hugo-bearblog/CONTRIBUTING.md",
-    "themes/hugo-bearneo/exampleSite/content/blog/_index.md",
-    "themes/hugo-bearneo/exampleSite/content/blog/markdown-syntax.md"
+    "themes/hugo-bearneo/exampleSite/content/blog/_index.md"
   ]
 }
