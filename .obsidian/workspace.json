@@ -211,8 +211,9 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "887218f5ee7167b9",
+  "active": "375e38a930e3ced7",
   "lastOpenFiles": [
+    "content/blog/读到一本有趣的小书，原来我一直在正确的路上.md",
     "content/blog/旧书去，新书来.md",
     "content/blog/一年之期已到，你通关《黑神话》了吗？.md",
     "content/blog/不被读，毋宁死.md",
@@ -257,7 +258,6 @@
     "hugo-bearblog/exampleSite/content/_index.md",
     "hugo-bearblog/exampleSite/content/hugo.md",
     "hugo-bearblog/exampleSite/content/bear.md",
-    "hugo-bearblog/archetypes/default.md",
-    "hugo-bearblog/archetypes/blog.md"
+    "hugo-bearblog/archetypes/default.md"
   ]
 }
