@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/_index.md",
+                "file": "content/blog/人生的刻舟求剑.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "_index"
+              "title": "人生的刻舟求剑"
             }
           }
         ],
@@ -214,6 +214,9 @@
   },
   "active": "62075725c8c9533f",
   "lastOpenFiles": [
+    "content/blog/大环境成这样了？.md",
+    "content/blog/动态血糖仪实测：仅花200元，我“偷看”了自己身体14天的后台数据.md",
+    "content/_index.md",
     "content/blog/读到一本有趣的小书，原来我一直在正确的路上.md",
     "content/blog/旧书去，新书来.md",
     "content/blog/一年之期已到，你通关《黑神话》了吗？.md",
@@ -256,9 +259,6 @@
     "hugo-bearblog/exampleSite/static/images/favicon.png",
     "hugo-bearblog/exampleSite/content/blog/_index.md",
     "hugo-bearblog/exampleSite/content/blog/markdown-syntax.md",
-    "hugo-bearblog/exampleSite/content/_index.md",
-    "hugo-bearblog/exampleSite/content/hugo.md",
-    "hugo-bearblog/exampleSite/content/bear.md",
-    "hugo-bearblog/archetypes/default.md"
+    "hugo-bearblog/exampleSite/content/_index.md"
   ]
 }
