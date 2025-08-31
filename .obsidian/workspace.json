@@ -63,7 +63,8 @@
               "title": "_index"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -211,7 +212,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "375e38a930e3ced7",
+  "active": "62075725c8c9533f",
   "lastOpenFiles": [
     "content/blog/读到一本有趣的小书，原来我一直在正确的路上.md",
     "content/blog/旧书去，新书来.md",
