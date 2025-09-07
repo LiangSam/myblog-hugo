@@ -3,14 +3,128 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-08-16T00:00:00+00:00</lastmod>
+    <lastmod>2025-09-07T09:26:07+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/about/</loc>
   </url><url>
     <loc>http://localhost:1313/now/</loc>
   </url><url>
     <loc>http://localhost:1313/blog/</loc>
-    <lastmod>2025-08-16T00:00:00+00:00</lastmod>
+    <lastmod>2025-09-07T09:26:07+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/my-new-article/</loc>
+    <lastmod>2025-09-07T09:26:07+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/now/</loc>
+    <lastmod>2025-09-07T09:26:07+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/%E4%BD%8E%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2025-09-07T09:26:07+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/%E4%BF%A1%E6%81%AF%E6%BA%90/</loc>
+    <lastmod>2025-09-07T09:26:07+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/%E5%86%99%E4%BD%9C/</loc>
+    <lastmod>2025-09-07T09:26:07+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2025-09-07T09:26:07+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/%E5%8E%9F%E7%94%9F%E5%AE%B6%E5%BA%AD/</loc>
+    <lastmod>2025-09-07T09:26:07+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/</loc>
+    <lastmod>2025-09-07T09:26:07+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/%E5%B0%8F%E7%A1%AE%E5%B9%B8/</loc>
+    <lastmod>2025-09-07T09:26:07+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/%E6%89%93%E5%8D%B0%E6%9C%BA/</loc>
+    <lastmod>2025-09-07T09:26:07+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/%E6%96%B9%E6%B3%95%E8%AE%BA/</loc>
+    <lastmod>2025-09-07T09:26:07+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/</loc>
+    <lastmod>2025-09-07T09:26:07+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/%E6%B7%B1%E5%BA%A6%E7%B3%BB%E5%88%97/</loc>
+    <lastmod>2025-09-07T09:26:07+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/%E7%89%A9%E5%93%81/</loc>
+    <lastmod>2025-09-07T09:26:07+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/%E7%94%9F%E6%B4%BB%E8%AE%B0%E4%BA%8B/</loc>
+    <lastmod>2025-09-07T09:26:07+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/</loc>
+    <lastmod>2025-09-07T09:26:07+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/%E8%AF%BB%E4%B9%A6%E8%AE%B0/</loc>
+    <lastmod>2025-09-07T09:26:07+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/%E9%9F%B3%E4%B9%90/</loc>
+    <lastmod>2025-09-07T09:26:07+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/happy-birthday-liangmouyin/</loc>
+    <lastmod>2025-09-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/redundancy-the-fig-leaf-of-articles/</loc>
+    <lastmod>2025-09-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/military-parade-caffeine-intolerance/</loc>
+    <lastmod>2025-09-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/shenzhen-office-worker-edc/</loc>
+    <lastmod>2025-09-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/when-an-excavator-operator-flees-from-guizhou/</loc>
+    <lastmod>2025-09-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/life-marking-the-boat-to-find-the-lost-sword/</loc>
+    <lastmod>2025-08-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/has-the-overall-situation-turned-out-like-this/</loc>
+    <lastmod>2025-08-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/unlocking-my-body-dashboard-14-day-cgm-trial/</loc>
+    <lastmod>2025-08-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/read-show-your-work-i-am-right/</loc>
+    <lastmod>2025-08-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/google-gemini-flash-image-to-sticker/</loc>
+    <lastmod>2025-08-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/luck-an-acquirable-skill/</loc>
+    <lastmod>2025-08-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/reader-soul-searching-question/</loc>
+    <lastmod>2025-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/meetup-shenzhen-friend/</loc>
+    <lastmod>2025-08-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/old-book-go-new-book-come/</loc>
+    <lastmod>2025-08-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/no-read-book-died/</loc>
+    <lastmod>2025-08-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/900yuan-macbook-cockroach/</loc>
+    <lastmod>2025-08-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/black-myth-wukong-one-year-later/</loc>
+    <lastmod>2025-08-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/paper-book-or-ebook/</loc>
+    <lastmod>2025-08-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/recommend-three-video-bloggers/</loc>
+    <lastmod>2025-08-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/after-reading-the-fog-of-human-nature/</loc>
+    <lastmod>2025-08-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/first-time-applying-hong-kong-macau-travel-permit/</loc>
     <lastmod>2025-08-16T00:00:00+00:00</lastmod>
@@ -120,17 +234,11 @@
     <loc>http://localhost:1313/%E5%A6%82%E4%BD%95%E8%AF%BB%E8%BF%87%E6%AF%8F%E5%A4%A9%E7%9A%8424%E5%B0%8F%E6%97%B6%E8%AF%BB%E5%90%8E/</loc>
     <lastmod>2025-07-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/%E8%AF%BB%E4%B9%A6%E8%AE%B0/</loc>
-    <lastmod>2025-07-07T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/250706-translate_ebook/</loc>
     <lastmod>2025-07-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/%E5%91%A8%E6%9C%AB%E9%9A%8F%E7%AC%94-01/</loc>
     <lastmod>2025-07-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/now/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/250704-now/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
@@ -141,19 +249,10 @@
     <loc>http://localhost:1313/250702-bought-six-items/</loc>
     <lastmod>2025-07-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/%E7%89%A9%E5%93%81/</loc>
-    <lastmod>2025-07-02T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/250701-share-my-blog/</loc>
     <lastmod>2025-07-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2025-07-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/250626-happiness/</loc>
-    <lastmod>2025-06-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/%E5%B0%8F%E7%A1%AE%E5%B9%B8/</loc>
     <lastmod>2025-06-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/%E7%94%9F%E6%B4%BB%E8%AE%B0%E4%BA%8B/</loc>
@@ -162,16 +261,7 @@
     <loc>http://localhost:1313/250623-writing/</loc>
     <lastmod>2025-06-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/%E5%86%99%E4%BD%9C/</loc>
-    <lastmod>2025-06-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/%E4%BD%8E%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2025-06-22T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/%E5%86%8D%E5%88%86%E4%BA%AB%E5%87%A0%E4%B8%AA%E4%B9%9F%E8%AE%B8%E6%9C%89%E7%94%A8%E7%9A%84%E5%B0%8F%E4%B9%A6%E7%AD%BEbookmarklet/</loc>
-    <lastmod>2025-06-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/%E6%96%B9%E6%B3%95%E8%AE%BA/</loc>
     <lastmod>2025-06-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/%E6%96%B9%E6%B3%95%E8%AE%BA/</loc>
@@ -180,17 +270,11 @@
     <loc>http://localhost:1313/250621-printer/</loc>
     <lastmod>2025-06-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/%E6%89%93%E5%8D%B0%E6%9C%BA/</loc>
-    <lastmod>2025-06-21T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/250620-writing/</loc>
     <lastmod>2025-06-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/%E5%B0%B1%E8%BF%99%E4%B9%88%E5%BF%98%E8%AE%B0%E6%97%B6%E9%97%B4/</loc>
     <lastmod>2025-06-15T23:20:00+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/%E4%BF%A1%E6%81%AF%E6%BA%90/</loc>
-    <lastmod>2025-06-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/250611-share-my-information-sources/</loc>
     <lastmod>2025-06-11T00:00:00+00:00</lastmod>
@@ -210,9 +294,6 @@
     <loc>http://localhost:1313/250413-music/</loc>
     <lastmod>2025-04-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/%E9%9F%B3%E4%B9%90/</loc>
-    <lastmod>2025-04-13T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/250412-life-principle/</loc>
     <lastmod>2025-04-12T00:00:00+00:00</lastmod>
   </url><url>
@@ -222,13 +303,7 @@
     <loc>http://localhost:1313/240509-tools-and-purposes/</loc>
     <lastmod>2024-05-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/</loc>
-    <lastmod>2024-05-09T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/240425-time-management/</loc>
-    <lastmod>2024-04-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/</loc>
     <lastmod>2024-04-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/240422-man/</loc>
@@ -243,9 +318,6 @@
     <loc>http://localhost:1313/240416-first-sentence-write/</loc>
     <lastmod>2024-04-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/</loc>
-    <lastmod>2024-04-13T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/240413-feynman-technique/</loc>
     <lastmod>2024-04-13T00:00:00+00:00</lastmod>
   </url><url>
@@ -256,9 +328,6 @@
     <lastmod>2024-03-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/240128-family/</loc>
-    <lastmod>2024-01-28T18:00:00+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/%E5%8E%9F%E7%94%9F%E5%AE%B6%E5%BA%AD/</loc>
     <lastmod>2024-01-28T18:00:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/%E6%B7%B1%E5%BA%A6%E7%B3%BB%E5%88%97/</loc>
