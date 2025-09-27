@@ -2,15 +2,15 @@
 title: 2025年，为什么我还在用 Kindle？
 date: 2025-09-19
 tags:
-slug:
+slug: why-am-I-still-using-a-Kindle-in-2025
 author:
   - 梁某银
 categories:
 description:
 ---
-![Uploading file...t228t]()
+![loop_on_3D_isometric_view_of_A_Kindle_words_floating_in_the_air_02f57dd8-3c39-4569-ba7d-4a4c9c89af8e.png](https://img.liangmouyin.com/2025/09/a18b2b5c010b4d0729363003fcc2cebe.png)
 
-前天写完[《重启 Kindle》](https://mp.weixin.qq.com/s/HbdRJN1STslGLGKOW5Xs8A)的文章后，不少网友分享心得，有 Kindle 吃灰很长时间的，也有用旧 iPhone 打造成阅读器兼 Anki 工具，还有人早就转投国产电纸书。
+前天写完[《重启 Kindle》](/reuse-Kindle/)的文章后，不少网友分享心得，有 Kindle 吃灰很长时间的，也有用旧 iPhone 打造成阅读器兼 Anki 工具，还有人早就转投国产电纸书。
 
 为什么用 Kindle 的人越来越少？
 

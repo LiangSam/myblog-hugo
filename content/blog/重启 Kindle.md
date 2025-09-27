@@ -3,7 +3,7 @@ title: 重启 Kindle
 date: 2025-09-17
 tags:
   - Kindle
-slug:
+slug: reuse-Kindle
 author:
   - 梁某银
 categories:
