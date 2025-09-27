@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/blog/人生的刻舟求剑.md",
+                "file": "content/blog/我为什么放弃了清单App，重新用回便利贴.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "人生的刻舟求剑"
+              "title": "我为什么放弃了清单App，重新用回便利贴"
             }
           }
         ],
@@ -87,7 +87,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "文件列表"
+              "title": "Files"
             }
           },
           {
@@ -203,17 +203,26 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:创建新数据库": false,
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
     }
   },
   "active": "62075725c8c9533f",
   "lastOpenFiles": [
+    "content/blog/那些“总有一天会用到”的杂物，如何吞噬你的房间和精力？.md",
+    "content/blog/为什么我说 Kindle 还能再用 8 年？.md",
+    "content/blog/台风教会我的事：别去墙上挂“厚德载物”的公司.md",
+    "content/blog/从青旅到出租屋，我独自迎接一场17级台风.md",
+    "content/blog/台风天，一个打工人对米饭的执念.md",
+    "content/blog/我为什么放弃了清单App，重新用回便利贴.md",
+    "content/blog/第一次写出10万+之后，我才发现自己什么都不懂.md",
+    "content/blog/《重新发现泉州》：记第一次参加新书分享会.md",
+    "content/blog/人生的刻舟求剑.md",
     "content/blog/大环境成这样了？.md",
     "content/blog/动态血糖仪实测：仅花200元，我“偷看”了自己身体14天的后台数据.md",
     "content/_index.md",
@@ -243,22 +252,13 @@
     "themes/hugo-bearblog/layouts/_default/single.html",
     "themes/hugo-bearblog/layouts/_default/baseof.html",
     "themes/hugo-bearblog/exampleSite/content/_index.md",
-    "themes/hugo-bearblog/exampleSite/content/hugo.md",
-    "themes/hugo-bearblog/exampleSite/content/bear.md",
     "themes/hugo-bearblog/images/tn.png",
     "themes/hugo-bearblog/images/screenshot-dark.png",
     "themes/hugo-bearblog/images/screenshot.png",
-    "themes/hugo-bearblog/archetypes/default.md",
-    "themes/hugo-bearblog/archetypes/blog.md",
-    "themes/hugo-bearblog/README.md",
-    "themes/hugo-bearblog/CONTRIBUTING.md",
     "hugo-bearblog/images/tn.png",
     "hugo-bearblog/images/screenshot.png",
     "hugo-bearblog/images/screenshot-dark.png",
     "hugo-bearblog/exampleSite/static/images/share.png",
-    "hugo-bearblog/exampleSite/static/images/favicon.png",
-    "hugo-bearblog/exampleSite/content/blog/_index.md",
-    "hugo-bearblog/exampleSite/content/blog/markdown-syntax.md",
-    "hugo-bearblog/exampleSite/content/_index.md"
+    "hugo-bearblog/exampleSite/static/images/favicon.png"
   ]
 }
