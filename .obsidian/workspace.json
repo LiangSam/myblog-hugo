@@ -27,30 +27,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/blog/我的写作方式.md",
+                "file": "content/blog/第一次独自旅行准备指南：1个核心心法与10条实用建议.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "我的写作方式"
-            }
-          },
-          {
-            "id": "8c42decab2bbfbc5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/blog/当一个不喜欢做计划的人决定去旅行.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "当一个不喜欢做计划的人决定去旅行"
+              "title": "第一次独自旅行准备指南：1个核心心法与10条实用建议"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -198,14 +184,16 @@
       "bases:Create new base": false
     }
   },
-  "active": "8c42decab2bbfbc5",
+  "active": "3ac53c25eb27e9bf",
   "lastOpenFiles": [
+    "content/blog/我的写作方式.md",
+    "content/blog/第一次独自旅行准备指南：1个核心心法与10条实用建议.md",
+    "content/blog/当一个不喜欢做计划的人决定去旅行.md",
     "content/blog/国庆游记：泉州（1）.md",
     "content/blog/知识管理的诅咒.md",
     "content/blog/国庆游记（4）：告别泉州，我在厦门的日落下吃了碗漳州卤面.md",
     "content/blog/国庆游记（5）：鼓浪屿的琴声，与厦大的青春气息.md",
     "content/blog/国庆游记（终）：为了看一眼对岸的标语，我改变了所有计划.md",
-    "content/blog/当一个不喜欢做计划的人决定去旅行.md",
     "content/blog/除了没拿住黄金，我的九月堪称完美.md",
     "content/blog/国庆前两天，我的心早已飞到福建.md",
     "content/blog/真正的自由，是选择戴上自己的“樊笼”.md",
@@ -224,8 +212,6 @@
     "content/blog/读到一本有趣的小书，原来我一直在正确的路上.md",
     "content/blog/旧书去，新书来.md",
     "content/blog/一年之期已到，你通关《黑神话》了吗？.md",
-    "content/blog/不被读，毋宁死.md",
-    "content/blog/我亏了900块，才从一台二手MacBook里的蟑螂身上，学到了3个惨痛教训.md",
     "themes/hugo-bearblog/exampleSite/static/images/favicon.png",
     "themes/hugo-bearblog/exampleSite/static/images/share.png",
     "themes/hugo-bearblog/layouts/partials/seo_tags.html",
