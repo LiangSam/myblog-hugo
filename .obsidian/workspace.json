@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/blog/我是如何在闲鱼上，淘到一台近乎完美的二手 Kindle？.md",
+                "file": "content/blog/垃圾时间里，普通人最好的自救，是“熬下去”.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "我是如何在闲鱼上，淘到一台近乎完美的二手 Kindle？"
+              "title": "垃圾时间里，普通人最好的自救，是“熬下去”"
             }
           }
         ],
@@ -184,8 +184,11 @@
       "bases:Create new base": false
     }
   },
-  "active": "3ac53c25eb27e9bf",
+  "active": "375e38a930e3ced7",
   "lastOpenFiles": [
+    "content/blog/像个广东人一样.md",
+    "content/blog/我是如何在闲鱼上，淘到一台近乎完美的二手 Kindle？.md",
+    "content/blog/垃圾时间里，普通人最好的自救，是“熬下去”.md",
     "content/blog/与泉州顺风车师傅的一次长谈.md",
     "content/blog/又买一条原道耳机.md",
     "content/blog/我是米粉还是米黑？.md",
@@ -193,7 +196,6 @@
     "content/blog/关于推荐手机，我的建议是：放下助人情结，尊重他人命运.md",
     "content/blog/大大方方承认别人的成功，为什么这么难？.md",
     "content/blog/第一次独自旅行准备指南：1个核心心法与10条实用建议.md",
-    "content/blog/我是如何在闲鱼上，淘到一台近乎完美的二手 Kindle？.md",
     "content/blog/Untitled.md",
     "content/blog/我的写作方式.md",
     "content/blog/当一个不喜欢做计划的人决定去旅行.md",
@@ -210,8 +212,6 @@
     "content/blog/为什么我说 Kindle 还能再用 8 年？.md",
     "content/blog/台风教会我的事：别去墙上挂“厚德载物”的公司.md",
     "content/blog/从青旅到出租屋，我独自迎接一场17级台风.md",
-    "content/blog/台风天，一个打工人对米饭的执念.md",
-    "content/blog/第一次写出10万+之后，我才发现自己什么都不懂.md",
     "themes/hugo-bearblog/exampleSite/static/images/favicon.png",
     "themes/hugo-bearblog/exampleSite/static/images/share.png",
     "themes/hugo-bearblog/layouts/partials/seo_tags.html",
