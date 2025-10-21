@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/now.md",
+                "file": "content/blog/从湿冷到干冷，再到深圳的“假秋天”.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "now"
+              "title": "从湿冷到干冷，再到深圳的“假秋天”"
             }
           }
         ],
@@ -186,8 +186,9 @@
   },
   "active": "3ac53c25eb27e9bf",
   "lastOpenFiles": [
-    "content/blog/《金钱的艺术》读后：别只想着赚钱，学会“花钱”才能更幸福.md",
     "content/now.md",
+    "content/blog/从湿冷到干冷，再到深圳的“假秋天”.md",
+    "content/blog/《金钱的艺术》读后：别只想着赚钱，学会“花钱”才能更幸福.md",
     "content/blog/如何心安理得地“宅”？.md",
     "content/blog/像个广东人一样.md",
     "content/blog/垃圾时间里，普通人最好的自救，是“熬下去”.md",
@@ -211,7 +212,6 @@
     "content/blog/国庆前两天，我的心早已飞到福建.md",
     "content/blog/真正的自由，是选择戴上自己的“樊笼”.md",
     "content/blog/我为什么放弃了清单App，重新用回便利贴.md",
-    "content/blog/那些“总有一天会用到”的杂物，如何吞噬你的房间和精力？.md",
     "themes/hugo-bearblog/exampleSite/static/images/favicon.png",
     "themes/hugo-bearblog/exampleSite/static/images/share.png",
     "themes/hugo-bearblog/layouts/partials/seo_tags.html",
