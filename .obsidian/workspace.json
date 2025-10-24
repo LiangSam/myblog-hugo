@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/blog/幸运，是一种可习得的能力.md",
+                "file": "content/blog/要不要换枕头？.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "幸运，是一种可习得的能力"
+              "title": "要不要换枕头？"
             }
           }
         ]
@@ -171,6 +171,8 @@
   },
   "active": "887218f5ee7167b9",
   "lastOpenFiles": [
+    "content/blog/幸运，是一种可习得的能力.md",
+    "content/blog/写在室友搬走之后.md",
     "content/blog/要不要换枕头？.md",
     "content/blog/从湿冷到干冷，再到深圳的“假秋天”.md",
     "content/blog/我的终极梦想，是成为一个扑街网文写手.md",
@@ -195,8 +197,6 @@
     "content/blog/知识管理的诅咒.md",
     "content/blog/国庆游记（4）：告别泉州，我在厦门的日落下吃了碗漳州卤面.md",
     "content/blog/国庆游记（5）：鼓浪屿的琴声，与厦大的青春气息.md",
-    "content/blog/国庆游记（终）：为了看一眼对岸的标语，我改变了所有计划.md",
-    "content/blog/除了没拿住黄金，我的九月堪称完美.md",
     "themes/hugo-bearblog/exampleSite/static/images/favicon.png",
     "themes/hugo-bearblog/exampleSite/static/images/share.png",
     "themes/hugo-bearblog/layouts/partials/seo_tags.html",
