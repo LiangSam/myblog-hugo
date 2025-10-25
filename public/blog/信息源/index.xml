@@ -7,15 +7,8 @@
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <copyright>Copyright © 2025, 梁某银</copyright>
-    <lastBuildDate>Sun, 07 Sep 2025 09:26:07 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 11 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/%E4%BF%A1%E6%81%AF%E6%BA%90/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>My New Article</title>
-      <link>http://localhost:1313/my-new-article/</link>
-      <pubDate>Sun, 07 Sep 2025 09:26:07 +0800</pubDate>
-      <guid>http://localhost:1313/my-new-article/</guid>
-      <description>&lt;p&gt;This is a page about »My New Article«.&lt;/p&gt;</description>
-    </item>
     <item>
       <title>分享17个私藏的优质信息源</title>
       <link>http://localhost:1313/250611-share-my-information-sources/</link>

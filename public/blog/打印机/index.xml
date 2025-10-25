@@ -7,15 +7,8 @@
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <copyright>Copyright © 2025, 梁某银</copyright>
-    <lastBuildDate>Sun, 07 Sep 2025 09:26:07 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 21 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/%E6%89%93%E5%8D%B0%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>My New Article</title>
-      <link>http://localhost:1313/my-new-article/</link>
-      <pubDate>Sun, 07 Sep 2025 09:26:07 +0800</pubDate>
-      <guid>http://localhost:1313/my-new-article/</guid>
-      <description>&lt;p&gt;This is a page about »My New Article«.&lt;/p&gt;</description>
-    </item>
     <item>
       <title>我的终极文章打印方案：不靠插件、软件，只用小书签！</title>
       <link>http://localhost:1313/250621-printer/</link>
