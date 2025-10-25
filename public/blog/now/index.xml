@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Now on 梁某银的博客</title>
-    <link>http://localhost:1313/blog/now/</link>
+    <link>https://liangmouyin.com/blog/now/</link>
     <description>Recent content in Now on 梁某银的博客</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <copyright>Copyright © 2025, 梁某银</copyright>
     <lastBuildDate>Fri, 04 Jul 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/now/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://liangmouyin.com/blog/now/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>我现在在做什么？</title>
-      <link>http://localhost:1313/250704-now/</link>
+      <link>https://liangmouyin.com/250704-now/</link>
       <pubDate>Fri, 04 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/250704-now/</guid>
+      <guid>https://liangmouyin.com/250704-now/</guid>
       <description>&lt;p&gt;我最近在折腾博客，同时参考他人是怎么搭建博客的，我就像个土匪，哪些好用就准备拷贝到我的博客上。&lt;/p&gt;&#xA;&lt;p&gt;过程中，我发现一些博客导航栏都有一个「now」页面，点进去后，发现他们都用寥寥几句话介绍近况，&lt;a href=&#34;https://moranfong.com/now/&#34;&gt;有人回到江西&lt;/a&gt;，&lt;a href=&#34;https://yinji.org/now.html&#34;&gt;有人考驾照&lt;/a&gt;，&lt;a href=&#34;https://huangyang.me/now/&#34;&gt;还有人在读健康领域的书籍&lt;/a&gt;。&lt;/p&gt;&#xA;&lt;p&gt;无独有偶，他们都会说灵感源于&lt;a href=&#34;https://sive.rs/&#34; title=&#34;Derek Sivers&#34;&gt;Derek Sivers&lt;/a&gt;的&lt;a href=&#34;https://nownownow.com/about&#34;&gt;nownownow.com&lt;/a&gt;。我顺着网址过去，原来是一篇提倡在博客里建立「now」页面的文章。&lt;/p&gt;&#xA;&lt;p&gt;作者指出，许多博客都会在导航栏设有「about」和「contact」页面，旨在让人通过他们来了解并联系自己，但没法告诉他们自己最近在做什么。&lt;/p&gt;&#xA;&lt;p&gt;以往，大家需要通过询问，或查看社交媒体（朋友圈、微博、抖音、小红书）才知道你近况如何，但有时主动发问稍显冒昧，查看朋友圈又三天可见。这些问题，在博客里新增一页「now」就能解决——这么来看，朋友圈置顶貌似也能起到类似作用，但它只局限于社交圈子，微博、抖音、小红书等平台，又太过纷扰。&lt;/p&gt;&#xA;&lt;p&gt;博客里的「now」，好处在于网址是固定的，你可以定期更新近况：住在哪，看什么电影，读什么书，听什么音乐，玩什么游戏，思考什么问题，准备做什么。因此它除了能展现你的近况，还能帮你聚焦于公开发表的目标上，感到迷茫没方向时，就能打开看看。&lt;/p&gt;&#xA;&lt;p&gt;而这件事对我的启发，不仅仅是知道博客需要一页「now」，更是知道对于我们日更写作的人，还能把这作为选题，告诉读者我最近在做什么。&lt;/p&gt;&#xA;&lt;p&gt;「now」的提倡者 Derek Sivers 鼓励大家不断更新，只保留最新状况。但我认为被替换前的文字仍有价值，因此把它作为一个系列文章，不定期更新，那么一年半载过去，我们回看之时，就知道那时我在思考哪些问题，其中哪些还没解决，哪些是杞人忧天，哪些最有价值。&lt;/p&gt;&#xA;&lt;p&gt;从某种角度来说，这也是复盘，通过当下与过去的对比，就知道我们有多少成长和收获。&lt;/p&gt;&#xA;&lt;p&gt;那么，我可以告诉你我现在在做什么了。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;目前我在深圳移民留学行业做新媒体，每天工作是产出内容，包括短视频、公众号文章、长视频，目的是获客。&lt;/p&gt;&#xA;&lt;p&gt;今天下班后，我在地铁口附近买 8 块钱的酱香饼当晚餐，没想到分量比我想象的要多，于是在坐在公交站台，看路上的行人来往，车流不息，天空一角有飞机掠过。我喜欢这样的时刻。&lt;/p&gt;&#xA;&lt;p&gt;最近在折腾博客，上个月买好域名后，用 Hexo 搭建好博客，但发现主题没有很喜欢的。而前几天看到朋友 DC  分享一个 Bear Blog，但它绑定域名每月要 5 美刀，但有 Hugo 主题完美复刻，因此我从 Hexo 迁移到 Hugo，最近在装修主页，添加了原来没有的标签和最近文章。&lt;/p&gt;&#xA;&lt;p&gt;书籍：昨天刚读完李笑来的《思考的真相》，里面的定义、流程、三张表，让我有些启发。同时还看了几本网文：《LOL：才满18，让我逆袭重生》，里面的操作让我佩服；《路明非，不卷你屠什么龙！》，《龙族》同人文，没想到路明非改性子后这么帅。&lt;/p&gt;&#xA;&lt;p&gt;音乐：上周看 HOPICO 对蔡徐坤的专访，打破了我对他的刻板印象，并且听了新歌《Deadman》后，发现居然不错；以及重听李健的歌，依然让人感到舒缓宁静。&lt;/p&gt;&#xA;&lt;p&gt;后续：1、想优化我的工作和生活流程，让它更清晰统一，希望能改善我经常性的迷茫；2、完善博客页面，并搬运有价值的旧文；3、持续日更，写我想写的东西；4、读一些批判性思维的书籍，锻炼大脑。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;以上，就是我的近况。&lt;/p&gt;</description>
     </item>
   </channel>
