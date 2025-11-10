@@ -14,7 +14,7 @@ description:
 
 当然，芒格是美国人，所以他说的是美元。不过换成人民币，其实也很适用。
 
-我去年重申[10万元的目标](https://liangmouyin.com/goal-of-100k-yuan/)，并希望自己早日达成；今年 5 月看到一个自媒体博主的视频，感叹《为什么你连 1 万元都存不下？》。
+我去年重申[10万元的目标](https://liangmouyin.com/goal-of-100k-yuan/)，并希望自己早日达成；今年 5 月看到一个自媒体博主的视频，感叹为[什么你连 1 万元都存不下？](https://liangmouyin.com/why-cant-you-save-10k/)。
 
 本以为我能按部就班攒钱，谁知道我换个出租屋后，每月要缴更多房租，三餐花费比以前更多。后来对 MacBook 蠢蠢欲动，先[亏损九百块](https://liangmouyin.com/900yuan-macbook-cockroach/)不说，又在[国庆去福建旅游](https://liangmouyin.com/national-day-fujian-travelogue-part-6/)，导致攒钱之旅愈发艰难。
 
