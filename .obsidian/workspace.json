@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/blog/我等了一年半，终于被洗稿了.md",
+                "file": "content/blog/琐事几则：买饼，游戏，打电话和散步.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "我等了一年半，终于被洗稿了"
+              "title": "琐事几则：买饼，游戏，打电话和散步"
             }
           }
         ]
@@ -169,8 +169,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "375e38a930e3ced7",
+  "active": "887218f5ee7167b9",
   "lastOpenFiles": [
+    "content/blog/从搜索能力说起.md",
+    "content/blog/我等了一年半，终于被洗稿了.md",
     "content/blog/琐事几则：买饼，游戏，打电话和散步.md",
     "content/blog/为IDM付费后.md",
     "content/blog/看完T1夺冠，我出门找了趟枕套.md",
@@ -180,7 +182,6 @@
     "content/blog/高效总在加班时.md",
     "content/blog/“平衡工作与生活”，是一个有害的想法.md",
     "content/blog/一个“招蚊体质”的血泪反抗史.md",
-    "content/blog/我等了一年半，终于被洗稿了.md",
     "content/blog/三十岁还没结婚生子就算失败吗？.md",
     "content/blog/《李诞脱口秀工作手册》读后：事情永远不是目的，你是你的目的.md",
     "content/blog/语言的来处，与我的归途.md",
@@ -196,7 +197,6 @@
     "content/blog/从湿冷到干冷，再到深圳的“假秋天”.md",
     "content/blog/我的终极梦想，是成为一个扑街网文写手.md",
     "content/blog/周一不卷，聊聊 Apple Music 这点小事.md",
-    "content/now.md",
     "themes/hugo-bearblog/exampleSite/static/images/favicon.png",
     "themes/hugo-bearblog/exampleSite/static/images/share.png",
     "themes/hugo-bearblog/layouts/partials/seo_tags.html",
