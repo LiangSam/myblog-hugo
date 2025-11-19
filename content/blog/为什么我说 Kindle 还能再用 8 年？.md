@@ -2,6 +2,7 @@
 title: 为什么我说 Kindle 还能再用 8 年？
 date: 2025-09-21
 tags:
+  - Kindle
 slug: why-do-I-say-the-Kindle-can-still-last-another-8-years
 author:
   - 梁某银

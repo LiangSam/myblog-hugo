@@ -2,6 +2,7 @@
 title: 买完MacBook和旅游回来，我决定老老实实攒钱
 date: 2025-11-10
 tags:
+  - MacBook
 slug: after-macbook-travel-save-money
 author:
   - 梁某银

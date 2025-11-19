@@ -2,6 +2,7 @@
 title: 我亏了900块，才从一台二手MacBook里的蟑螂身上，学到了3个惨痛教训
 date: 2025-08-21
 tags:
+  - MacBook
 slug: 900yuan-macbook-cockroach
 author:
   - 梁某银

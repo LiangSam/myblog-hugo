@@ -2,482 +2,581 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://liangmouyin.com/</loc>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-11-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/about/</loc>
+  </url><url>
+    <loc>http://localhost:1313/now/</loc>
+  </url><url>
+    <loc>http://localhost:1313/blog/</loc>
+    <lastmod>2025-11-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/a-chat-with-a-child/</loc>
+    <lastmod>2025-11-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/kb-sized-souvenir/</loc>
+    <lastmod>2025-11-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/%E6%B8%B8%E8%AE%B0/</loc>
+    <lastmod>2025-11-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/one-day-in-hong-kong/</loc>
+    <lastmod>2025-11-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/how-51s-clip-besieged-mediastorm-in-72h/</loc>
+    <lastmod>2025-11-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/learning-dialectics-from-zhangge/</loc>
+    <lastmod>2025-11-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/writing-tools-and-writing-itself/</loc>
+    <lastmod>2025-11-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/search-ability-talk/</loc>
+    <lastmod>2025-11-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/daily-trifles-pancake-gaming-call-walking/</loc>
+    <lastmod>2025-11-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/after-macbook-travel-save-money/</loc>
+    <lastmod>2025-11-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/t1-win-pillowcase/</loc>
+    <lastmod>2025-11-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/writing-for-the-universe/</loc>
+    <lastmod>2025-11-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/going-to-zhongshan-on-friday/</loc>
+    <lastmod>2025-11-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/overtime-productivity/</loc>
+    <lastmod>2025-11-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/work-life-balance-harmful-idea/</loc>
+    <lastmod>2025-11-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/finally-got-article-spun/</loc>
+    <lastmod>2025-11-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/mosquito-magnet-resistance/</loc>
+    <lastmod>2025-11-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/failure-unmarried-childfree-by-thirty/</loc>
+    <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/lidan-work-manual-review/</loc>
+    <lastmod>2025-11-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/%E8%AF%BB%E4%B9%A6%E8%AE%B0/</loc>
+    <lastmod>2025-11-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/%E8%AF%BB%E5%90%8E%E6%84%9F/</loc>
+    <lastmod>2025-11-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/a-aicada-song-a-lol-autumn/</loc>
+    <lastmod>2025-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/why-always-change-phones/</loc>
+    <lastmod>2025-10-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/%E8%A7%82%E7%82%B9/</loc>
+    <lastmod>2025-10-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/the-source-of-my-language/</loc>
+    <lastmod>2025-10-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/when-you-have-no-topic-ideas/</loc>
+    <lastmod>2025-10-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/from-earth-to-the-flu-vaccine/</loc>
+    <lastmod>2025-10-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/the-cost-of-retiring-back-home/</loc>
+    <lastmod>2025-10-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2025-10-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/add-comments-to-blog/</loc>
+    <lastmod>2025-10-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/after-my-roommate-moved-out/</loc>
     <lastmod>2025-10-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/about/</loc>
-  </url><url>
-    <loc>https://liangmouyin.com/now/</loc>
-  </url><url>
-    <loc>https://liangmouyin.com/blog/</loc>
-    <lastmod>2025-10-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://liangmouyin.com/after-my-roommate-moved-out/</loc>
-    <lastmod>2025-10-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://liangmouyin.com/should-i-change-my-pillow/</loc>
+    <loc>http://localhost:1313/should-i-change-my-pillow/</loc>
     <lastmod>2025-10-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/failed-web-novel-writer-dream/</loc>
+    <loc>http://localhost:1313/failed-web-novel-writer-dream/</loc>
     <lastmod>2025-10-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/wet-cold-dry-cold-shenzhen/</loc>
+    <loc>http://localhost:1313/wet-cold-dry-cold-shenzhen/</loc>
     <lastmod>2025-10-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/monday-apple-music/</loc>
+    <loc>http://localhost:1313/monday-apple-music/</loc>
     <lastmod>2025-10-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/the-art-of-spending-money-review/</loc>
+    <loc>http://localhost:1313/the-art-of-spending-money-review/</loc>
     <lastmod>2025-10-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/blog/%E8%AF%BB%E4%B9%A6%E8%AE%B0/</loc>
-    <lastmod>2025-10-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://liangmouyin.com/guilt-free-staying-home/</loc>
+    <loc>http://localhost:1313/guilt-free-staying-home/</loc>
     <lastmod>2025-10-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/surviving-garbage-time/</loc>
+    <loc>http://localhost:1313/surviving-garbage-time/</loc>
     <lastmod>2025-10-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/living-like-a-cantonese/</loc>
+    <loc>http://localhost:1313/living-like-a-cantonese/</loc>
     <lastmod>2025-10-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/talk-with-quanzhou-driver/</loc>
+    <loc>http://localhost:1313/talk-with-quanzhou-driver/</loc>
     <lastmod>2025-10-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/bought-another-yuandao-earphone/</loc>
+    <loc>http://localhost:1313/bought-another-yuandao-earphone/</loc>
     <lastmod>2025-10-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/mi-fan-or-mi-critic/</loc>
+    <loc>http://localhost:1313/mi-fan-or-mi-critic/</loc>
     <lastmod>2025-10-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/why-i-stopped-recommending-phones/</loc>
+    <loc>http://localhost:1313/why-i-stopped-recommending-phones/</loc>
     <lastmod>2025-10-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/holiday-hotel-price-shock/</loc>
+    <loc>http://localhost:1313/holiday-hotel-price-shock/</loc>
     <lastmod>2025-10-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/tim-luoyonghao-talk/</loc>
+    <loc>http://localhost:1313/tim-luoyonghao-talk/</loc>
     <lastmod>2025-10-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/blog/kindle/</loc>
+    <loc>http://localhost:1313/blog/kindle/</loc>
     <lastmod>2025-10-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/how-to-buy-second-hand-kindle/</loc>
+    <loc>http://localhost:1313/how-to-buy-second-hand-kindle/</loc>
     <lastmod>2025-10-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/first-solo-trip-preparation-and-tips/</loc>
+    <loc>http://localhost:1313/first-solo-trip-preparation-and-tips/</loc>
     <lastmod>2025-10-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/national-day-fujian-travelogue-part-6/</loc>
+    <loc>http://localhost:1313/national-day-fujian-travelogue-part-6/</loc>
     <lastmod>2025-10-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/blog/%E6%B8%B8%E8%AE%B0/</loc>
-    <lastmod>2025-10-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://liangmouyin.com/national-day-fujian-travelogue-part-5/</loc>
+    <loc>http://localhost:1313/national-day-fujian-travelogue-part-5/</loc>
     <lastmod>2025-10-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/national-day-fujian-travelogue-part-4/</loc>
+    <loc>http://localhost:1313/national-day-fujian-travelogue-part-4/</loc>
     <lastmod>2025-10-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/national-day-fujian-travelogue-part-3/</loc>
+    <loc>http://localhost:1313/national-day-fujian-travelogue-part-3/</loc>
     <lastmod>2025-10-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/national-day-fujian-travelogue-part-2/</loc>
+    <loc>http://localhost:1313/national-day-fujian-travelogue-part-2/</loc>
     <lastmod>2025-10-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/national-day-fujian-travelogue-part-1/</loc>
+    <loc>http://localhost:1313/national-day-fujian-travelogue-part-1/</loc>
     <lastmod>2025-10-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/when-someone-who-dislikes-making-plans-decides-to-travel/</loc>
+    <loc>http://localhost:1313/when-someone-who-dislikes-making-plans-decides-to-travel/</loc>
     <lastmod>2025-10-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/except-for-not-holding-onto-gold-my-september-was-nearly-perfect/</loc>
+    <loc>http://localhost:1313/except-for-not-holding-onto-gold-my-september-was-nearly-perfect/</loc>
     <lastmod>2025-09-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/two-days-before-national-day-my-heart-had-already-flown-to-fujian/</loc>
+    <loc>http://localhost:1313/two-days-before-national-day-my-heart-had-already-flown-to-fujian/</loc>
     <lastmod>2025-09-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/true-freedom-is-choosing-to-wear-ones-own-cage/</loc>
+    <loc>http://localhost:1313/true-freedom-is-choosing-to-wear-ones-own-cage/</loc>
     <lastmod>2025-09-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/%E5%9C%A8%E9%98%B3%E5%85%89%E5%92%8C%E6%99%9A%E9%9C%9E%E9%87%8C%E8%99%9A%E5%BA%A6%E4%B8%80%E4%B8%AA%E5%91%A8%E5%85%AD/</loc>
+    <loc>http://localhost:1313/%E5%9C%A8%E9%98%B3%E5%85%89%E5%92%8C%E6%99%9A%E9%9C%9E%E9%87%8C%E8%99%9A%E5%BA%A6%E4%B8%80%E4%B8%AA%E5%91%A8%E5%85%AD/</loc>
     <lastmod>2025-09-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/after-writing-an-article-with-100000-reads/</loc>
+    <loc>http://localhost:1313/after-writing-an-article-with-100000-reads/</loc>
     <lastmod>2025-09-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/why-i-gave-up-on-to-do-list-apps-and-went-back-to-using-sticky-notes/</loc>
+    <loc>http://localhost:1313/why-i-gave-up-on-to-do-list-apps-and-went-back-to-using-sticky-notes/</loc>
     <lastmod>2025-09-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/a-worker-obsession-with-rice-during-a-typhoon-day/</loc>
+    <loc>http://localhost:1313/a-worker-obsession-with-rice-during-a-typhoon-day/</loc>
     <lastmod>2025-09-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/preparations-before-the-typhoon/</loc>
+    <loc>http://localhost:1313/preparations-before-the-typhoon/</loc>
     <lastmod>2025-09-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/what-the-typhoon-taught-me-avoid-companies-that-hang-virtue-bears-all-things-on-their-walls/</loc>
+    <loc>http://localhost:1313/what-the-typhoon-taught-me-avoid-companies-that-hang-virtue-bears-all-things-on-their-walls/</loc>
     <lastmod>2025-09-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/why-do-i-say-the-kindle-can-still-last-another-8-years/</loc>
+    <loc>http://localhost:1313/why-do-i-say-the-kindle-can-still-last-another-8-years/</loc>
     <lastmod>2025-09-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/attended-my-first-book-sharing-event/</loc>
+    <loc>http://localhost:1313/attended-my-first-book-sharing-event/</loc>
     <lastmod>2025-09-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/why-am-i-still-using-a-kindle-in-2025/</loc>
+    <loc>http://localhost:1313/why-am-i-still-using-a-kindle-in-2025/</loc>
     <lastmod>2025-09-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/setting-out-at-twenty-eight/</loc>
+    <loc>http://localhost:1313/setting-out-at-twenty-eight/</loc>
     <lastmod>2025-09-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/reuse-kindle/</loc>
+    <loc>http://localhost:1313/reuse-kindle/</loc>
     <lastmod>2025-09-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/how-can-self-media-ride-the-wave-of-trending-topics/</loc>
+    <loc>http://localhost:1313/how-can-self-media-ride-the-wave-of-trending-topics/</loc>
     <lastmod>2025-09-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/writer-monday-blues/</loc>
+    <loc>http://localhost:1313/writer-monday-blues/</loc>
     <lastmod>2025-09-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/how-does-clutter-devour-your-room-and-energy/</loc>
+    <loc>http://localhost:1313/how-does-clutter-devour-your-room-and-energy/</loc>
     <lastmod>2025-09-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/driving-from-hongfa-temple-towards-the-void/</loc>
+    <loc>http://localhost:1313/driving-from-hongfa-temple-towards-the-void/</loc>
     <lastmod>2025-09-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/do-serious-people-still-keep-diaries/</loc>
+    <loc>http://localhost:1313/do-serious-people-still-keep-diaries/</loc>
     <lastmod>2025-09-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/should-i-buy-an-iphone/</loc>
+    <loc>http://localhost:1313/should-i-buy-an-iphone/</loc>
     <lastmod>2025-09-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/mbti-is-a-delicious-electronic-opium/</loc>
+    <loc>http://localhost:1313/mbti-is-a-delicious-electronic-opium/</loc>
     <lastmod>2025-09-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/why-do-young-people-go-to-big-cities/</loc>
+    <loc>http://localhost:1313/why-do-young-people-go-to-big-cities/</loc>
     <lastmod>2025-09-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/categories/%E7%9F%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/</loc>
+    <loc>http://localhost:1313/categories/%E7%9F%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/</loc>
     <lastmod>2025-09-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/lianhua-north-code/</loc>
+    <loc>http://localhost:1313/lianhua-north-code/</loc>
     <lastmod>2025-09-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/my-great-former-colleague/</loc>
+    <loc>http://localhost:1313/my-great-former-colleague/</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/happy-birthday-liangmouyin/</loc>
+    <loc>http://localhost:1313/happy-birthday-liangmouyin/</loc>
     <lastmod>2025-09-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/redundancy-the-fig-leaf-of-articles/</loc>
+    <loc>http://localhost:1313/redundancy-the-fig-leaf-of-articles/</loc>
     <lastmod>2025-09-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/military-parade-caffeine-intolerance/</loc>
+    <loc>http://localhost:1313/military-parade-caffeine-intolerance/</loc>
     <lastmod>2025-09-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/shenzhen-office-worker-edc/</loc>
+    <loc>http://localhost:1313/shenzhen-office-worker-edc/</loc>
     <lastmod>2025-09-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/when-an-excavator-operator-flees-from-guizhou/</loc>
+    <loc>http://localhost:1313/when-an-excavator-operator-flees-from-guizhou/</loc>
     <lastmod>2025-09-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/life-marking-the-boat-to-find-the-lost-sword/</loc>
+    <loc>http://localhost:1313/life-marking-the-boat-to-find-the-lost-sword/</loc>
     <lastmod>2025-08-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/has-the-overall-situation-turned-out-like-this/</loc>
+    <loc>http://localhost:1313/has-the-overall-situation-turned-out-like-this/</loc>
     <lastmod>2025-08-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/unlocking-my-body-dashboard-14-day-cgm-trial/</loc>
+    <loc>http://localhost:1313/unlocking-my-body-dashboard-14-day-cgm-trial/</loc>
     <lastmod>2025-08-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/read-show-your-work-i-am-right/</loc>
+    <loc>http://localhost:1313/read-show-your-work-i-am-right/</loc>
     <lastmod>2025-08-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/google-gemini-flash-image-to-sticker/</loc>
+    <loc>http://localhost:1313/google-gemini-flash-image-to-sticker/</loc>
     <lastmod>2025-08-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/luck-an-acquirable-skill/</loc>
+    <loc>http://localhost:1313/luck-an-acquirable-skill/</loc>
     <lastmod>2025-08-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/reader-soul-searching-question/</loc>
+    <loc>http://localhost:1313/reader-soul-searching-question/</loc>
     <lastmod>2025-08-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/meetup-shenzhen-friend/</loc>
+    <loc>http://localhost:1313/meetup-shenzhen-friend/</loc>
     <lastmod>2025-08-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/old-book-go-new-book-come/</loc>
+    <loc>http://localhost:1313/old-book-go-new-book-come/</loc>
     <lastmod>2025-08-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/no-read-book-died/</loc>
+    <loc>http://localhost:1313/no-read-book-died/</loc>
     <lastmod>2025-08-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/900yuan-macbook-cockroach/</loc>
+    <loc>http://localhost:1313/900yuan-macbook-cockroach/</loc>
     <lastmod>2025-08-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/black-myth-wukong-one-year-later/</loc>
+    <loc>http://localhost:1313/black-myth-wukong-one-year-later/</loc>
     <lastmod>2025-08-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/paper-book-or-ebook/</loc>
+    <loc>http://localhost:1313/paper-book-or-ebook/</loc>
     <lastmod>2025-08-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/recommend-three-video-bloggers/</loc>
+    <loc>http://localhost:1313/recommend-three-video-bloggers/</loc>
     <lastmod>2025-08-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/after-reading-the-fog-of-human-nature/</loc>
+    <loc>http://localhost:1313/after-reading-the-fog-of-human-nature/</loc>
     <lastmod>2025-08-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/first-time-applying-hong-kong-macau-travel-permit/</loc>
+    <loc>http://localhost:1313/first-time-applying-hong-kong-macau-travel-permit/</loc>
     <lastmod>2025-08-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/mediastorm-tim-100-hours/</loc>
+    <loc>http://localhost:1313/mediastorm-tim-100-hours/</loc>
     <lastmod>2025-08-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/phone-computer-first-response/</loc>
+    <loc>http://localhost:1313/phone-computer-first-response/</loc>
     <lastmod>2025-08-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/why-do-we-write/</loc>
+    <loc>http://localhost:1313/why-do-we-write/</loc>
     <lastmod>2025-08-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/when-peers-get-married/</loc>
+    <loc>http://localhost:1313/when-peers-get-married/</loc>
     <lastmod>2025-08-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/shenzhen-2-years/</loc>
+    <loc>http://localhost:1313/shenzhen-2-years/</loc>
     <lastmod>2025-08-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/weekend-cold/</loc>
+    <loc>http://localhost:1313/weekend-cold/</loc>
     <lastmod>2025-08-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/make-money-buy-books/</loc>
+    <loc>http://localhost:1313/make-money-buy-books/</loc>
     <lastmod>2025-08-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/you-not-friend/</loc>
+    <loc>http://localhost:1313/you-not-friend/</loc>
     <lastmod>2025-08-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/work-bring-own-devices/</loc>
+    <loc>http://localhost:1313/work-bring-own-devices/</loc>
     <lastmod>2025-08-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/reread-jiangnan/</loc>
+    <loc>http://localhost:1313/reread-jiangnan/</loc>
     <lastmod>2025-08-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/a-smartphone-spell/</loc>
+    <loc>http://localhost:1313/a-smartphone-spell/</loc>
     <lastmod>2025-08-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/back-to-the-floor/</loc>
+    <loc>http://localhost:1313/back-to-the-floor/</loc>
     <lastmod>2025-08-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/weekend-haircut/</loc>
+    <loc>http://localhost:1313/weekend-haircut/</loc>
     <lastmod>2025-08-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/reunion-on-a-rain-day/</loc>
+    <loc>http://localhost:1313/reunion-on-a-rain-day/</loc>
     <lastmod>2025-08-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/to-be-that-person/</loc>
+    <loc>http://localhost:1313/to-be-that-person/</loc>
     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/reading-after-offline/</loc>
+    <loc>http://localhost:1313/reading-after-offline/</loc>
     <lastmod>2025-07-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/meal-price-shift/</loc>
+    <loc>http://localhost:1313/meal-price-shift/</loc>
     <lastmod>2025-07-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/one-hour-offline/</loc>
+    <loc>http://localhost:1313/one-hour-offline/</loc>
     <lastmod>2025-07-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/the-fearless-young/</loc>
+    <loc>http://localhost:1313/the-fearless-young/</loc>
     <lastmod>2025-07-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/reader-yuehui-meetup-shenzhen/</loc>
+    <loc>http://localhost:1313/reader-yuehui-meetup-shenzhen/</loc>
     <lastmod>2025-07-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/life-without-a-house/</loc>
+    <loc>http://localhost:1313/life-without-a-house/</loc>
     <lastmod>2025-07-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/my-first-room/</loc>
+    <loc>http://localhost:1313/my-first-room/</loc>
     <lastmod>2025-07-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/the-problem-of-sharing-a-house/</loc>
+    <loc>http://localhost:1313/the-problem-of-sharing-a-house/</loc>
     <lastmod>2025-07-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/beautiful-waste/</loc>
+    <loc>http://localhost:1313/beautiful-waste/</loc>
     <lastmod>2025-07-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/macbook-after-8-years-windows/</loc>
+    <loc>http://localhost:1313/macbook-after-8-years-windows/</loc>
     <lastmod>2025-07-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/%E7%94%A8%E7%94%BB%E5%B8%83%E6%A2%B3%E7%90%86%E6%88%91%E7%9A%84%E8%AE%BE%E5%A4%87%E5%90%8E/</loc>
+    <loc>http://localhost:1313/%E7%94%A8%E7%94%BB%E5%B8%83%E6%A2%B3%E7%90%86%E6%88%91%E7%9A%84%E8%AE%BE%E5%A4%87%E5%90%8E/</loc>
     <lastmod>2025-07-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/%E4%BD%A0%E7%94%A8%E4%BB%80%E4%B9%88%E8%BE%93%E5%85%A5%E6%B3%95/</loc>
+    <loc>http://localhost:1313/%E4%BD%A0%E7%94%A8%E4%BB%80%E4%B9%88%E8%BE%93%E5%85%A5%E6%B3%95/</loc>
     <lastmod>2025-07-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/%E5%8F%88%E8%A7%81%E5%A3%81%E8%99%8E/</loc>
+    <loc>http://localhost:1313/%E5%8F%88%E8%A7%81%E5%A3%81%E8%99%8E/</loc>
     <lastmod>2025-07-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/%E4%BD%A0%E7%B4%AF%E6%98%AF%E5%9B%A0%E4%B8%BA%E7%9D%A1%E4%B8%8D%E5%A4%9F/</loc>
+    <loc>http://localhost:1313/%E4%BD%A0%E7%B4%AF%E6%98%AF%E5%9B%A0%E4%B8%BA%E7%9D%A1%E4%B8%8D%E5%A4%9F/</loc>
     <lastmod>2025-07-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/%E9%80%9B%E5%AE%8C%E8%B4%AD%E7%89%A9%E4%B8%AD%E5%BF%83%E5%90%8E%E7%9C%9F%E5%BF%83%E5%8A%9D%E4%BD%A0%E4%B8%8D%E8%A6%81%E9%9A%8F%E4%BE%BF%E5%87%91%E7%83%AD%E9%97%B9/</loc>
+    <loc>http://localhost:1313/%E9%80%9B%E5%AE%8C%E8%B4%AD%E7%89%A9%E4%B8%AD%E5%BF%83%E5%90%8E%E7%9C%9F%E5%BF%83%E5%8A%9D%E4%BD%A0%E4%B8%8D%E8%A6%81%E9%9A%8F%E4%BE%BF%E5%87%91%E7%83%AD%E9%97%B9/</loc>
     <lastmod>2025-07-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/rewatch-longmen-express/</loc>
+    <loc>http://localhost:1313/rewatch-longmen-express/</loc>
     <lastmod>2025-07-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E5%BC%80%E5%A7%8B%E6%8A%8A%E6%89%80%E6%9C%89%E6%9D%82%E4%BA%8B%E9%83%BD%E5%AE%89%E6%8E%92%E5%9C%A8%E5%91%A8%E4%BA%94/</loc>
+    <loc>http://localhost:1313/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E5%BC%80%E5%A7%8B%E6%8A%8A%E6%89%80%E6%9C%89%E6%9D%82%E4%BA%8B%E9%83%BD%E5%AE%89%E6%8E%92%E5%9C%A8%E5%91%A8%E4%BA%94/</loc>
     <lastmod>2025-07-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/%E6%96%B0%E7%8E%A9%E5%85%B7%E9%9D%99%E7%94%B5%E7%99%BD%E6%9D%BF%E5%A2%99%E8%B4%B4/</loc>
+    <loc>http://localhost:1313/%E6%96%B0%E7%8E%A9%E5%85%B7%E9%9D%99%E7%94%B5%E7%99%BD%E6%9D%BF%E5%A2%99%E8%B4%B4/</loc>
     <lastmod>2025-07-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/%E6%97%A5%E6%9B%B4%E6%98%AF%E4%B8%8D%E6%98%AF%E5%9C%A8%E5%8B%89%E5%BC%BA%E8%87%AA%E5%B7%B1/</loc>
+    <loc>http://localhost:1313/%E6%97%A5%E6%9B%B4%E6%98%AF%E4%B8%8D%E6%98%AF%E5%9C%A8%E5%8B%89%E5%BC%BA%E8%87%AA%E5%B7%B1/</loc>
     <lastmod>2025-07-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/%E5%A6%82%E4%BD%95%E5%BA%A6%E8%BF%87%E6%AF%8F%E5%A4%A9%E7%9A%8424%E5%B0%8F%E6%97%B6%E8%AF%BB%E5%90%8E/</loc>
+    <loc>http://localhost:1313/%E5%A6%82%E4%BD%95%E5%BA%A6%E8%BF%87%E6%AF%8F%E5%A4%A9%E7%9A%8424%E5%B0%8F%E6%97%B6%E8%AF%BB%E5%90%8E/</loc>
     <lastmod>2025-07-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/250706-translate_ebook/</loc>
+    <loc>http://localhost:1313/250706-translate_ebook/</loc>
     <lastmod>2025-07-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/%E5%91%A8%E6%9C%AB%E9%9A%8F%E7%AC%94-01/</loc>
+    <loc>http://localhost:1313/%E5%91%A8%E6%9C%AB%E9%9A%8F%E7%AC%94-01/</loc>
     <lastmod>2025-07-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/blog/now/</loc>
+    <loc>http://localhost:1313/blog/now/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/250704-now/</loc>
+    <loc>http://localhost:1313/250704-now/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/250703-lixiaolai/</loc>
+    <loc>http://localhost:1313/250703-lixiaolai/</loc>
     <lastmod>2025-07-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/250702-bought-six-items/</loc>
+    <loc>http://localhost:1313/250702-bought-six-items/</loc>
     <lastmod>2025-07-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/blog/%E7%89%A9%E5%93%81/</loc>
+    <loc>http://localhost:1313/blog/%E7%89%A9%E5%93%81/</loc>
     <lastmod>2025-07-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/250701-share-my-blog/</loc>
+    <loc>http://localhost:1313/250701-share-my-blog/</loc>
     <lastmod>2025-07-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/blog/%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2025-07-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://liangmouyin.com/250626-happiness/</loc>
+    <loc>http://localhost:1313/250626-happiness/</loc>
     <lastmod>2025-06-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/blog/%E5%B0%8F%E7%A1%AE%E5%B9%B8/</loc>
+    <loc>http://localhost:1313/blog/%E5%B0%8F%E7%A1%AE%E5%B9%B8/</loc>
     <lastmod>2025-06-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/categories/%E7%94%9F%E6%B4%BB%E8%AE%B0%E4%BA%8B/</loc>
+    <loc>http://localhost:1313/categories/%E7%94%9F%E6%B4%BB%E8%AE%B0%E4%BA%8B/</loc>
     <lastmod>2025-06-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/250623-writing/</loc>
+    <loc>http://localhost:1313/250623-writing/</loc>
     <lastmod>2025-06-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/blog/%E5%86%99%E4%BD%9C/</loc>
+    <loc>http://localhost:1313/blog/%E5%86%99%E4%BD%9C/</loc>
     <lastmod>2025-06-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/blog/%E4%BD%8E%E6%8A%80%E6%9C%AF/</loc>
+    <loc>http://localhost:1313/blog/%E4%BD%8E%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2025-06-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/%E5%86%8D%E5%88%86%E4%BA%AB%E5%87%A0%E4%B8%AA%E4%B9%9F%E8%AE%B8%E6%9C%89%E7%94%A8%E7%9A%84%E5%B0%8F%E4%B9%A6%E7%AD%BEbookmarklet/</loc>
+    <loc>http://localhost:1313/%E5%86%8D%E5%88%86%E4%BA%AB%E5%87%A0%E4%B8%AA%E4%B9%9F%E8%AE%B8%E6%9C%89%E7%94%A8%E7%9A%84%E5%B0%8F%E4%B9%A6%E7%AD%BEbookmarklet/</loc>
     <lastmod>2025-06-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/categories/%E6%96%B9%E6%B3%95%E8%AE%BA/</loc>
+    <loc>http://localhost:1313/categories/%E6%96%B9%E6%B3%95%E8%AE%BA/</loc>
     <lastmod>2025-06-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/blog/%E6%96%B9%E6%B3%95%E8%AE%BA/</loc>
+    <loc>http://localhost:1313/blog/%E6%96%B9%E6%B3%95%E8%AE%BA/</loc>
     <lastmod>2025-06-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/250621-printer/</loc>
+    <loc>http://localhost:1313/250621-printer/</loc>
     <lastmod>2025-06-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/blog/%E6%89%93%E5%8D%B0%E6%9C%BA/</loc>
+    <loc>http://localhost:1313/blog/%E6%89%93%E5%8D%B0%E6%9C%BA/</loc>
     <lastmod>2025-06-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/250620-writing/</loc>
+    <loc>http://localhost:1313/250620-writing/</loc>
     <lastmod>2025-06-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/%E5%B0%B1%E8%BF%99%E4%B9%88%E5%BF%98%E8%AE%B0%E6%97%B6%E9%97%B4/</loc>
+    <loc>http://localhost:1313/%E5%B0%B1%E8%BF%99%E4%B9%88%E5%BF%98%E8%AE%B0%E6%97%B6%E9%97%B4/</loc>
     <lastmod>2025-06-15T23:20:00+08:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/blog/%E4%BF%A1%E6%81%AF%E6%BA%90/</loc>
+    <loc>http://localhost:1313/blog/%E4%BF%A1%E6%81%AF%E6%BA%90/</loc>
     <lastmod>2025-06-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/250611-share-my-information-sources/</loc>
+    <loc>http://localhost:1313/250611-share-my-information-sources/</loc>
     <lastmod>2025-06-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/250608-printer-read-later/</loc>
+    <loc>http://localhost:1313/250608-printer-read-later/</loc>
     <lastmod>2025-06-08T23:52:00+08:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/250519-ai-write/</loc>
+    <loc>http://localhost:1313/250519-ai-write/</loc>
     <lastmod>2025-05-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/250415-expression-ability-method/</loc>
+    <loc>http://localhost:1313/why-cant-you-save-10k/</loc>
+    <lastmod>2025-05-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/250415-expression-ability-method/</loc>
     <lastmod>2025-04-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/250414-expression-ability-method/</loc>
+    <loc>http://localhost:1313/250414-expression-ability-method/</loc>
     <lastmod>2025-04-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/250413-music/</loc>
+    <loc>http://localhost:1313/250413-music/</loc>
     <lastmod>2025-04-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/blog/%E9%9F%B3%E4%B9%90/</loc>
+    <loc>http://localhost:1313/blog/%E9%9F%B3%E4%B9%90/</loc>
     <lastmod>2025-04-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/250412-life-principle/</loc>
+    <loc>http://localhost:1313/250412-life-principle/</loc>
     <lastmod>2025-04-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/250411-continue-to-create/</loc>
+    <loc>http://localhost:1313/250411-continue-to-create/</loc>
     <lastmod>2025-04-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/240509-tools-and-purposes/</loc>
+    <loc>http://localhost:1313/goal-of-100k-yuan/</loc>
+    <lastmod>2024-12-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/working-from-home-on-weekend/</loc>
+    <lastmod>2024-11-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/after-paying-for-idm/</loc>
+    <lastmod>2024-11-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/self-repetition-in-writing/</loc>
+    <lastmod>2024-11-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/knowledge-beyond-finance/</loc>
+    <lastmod>2024-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/240509-tools-and-purposes/</loc>
     <lastmod>2024-05-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/blog/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/</loc>
+    <loc>http://localhost:1313/blog/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/</loc>
     <lastmod>2024-05-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/240425-time-management/</loc>
+    <loc>http://localhost:1313/240425-time-management/</loc>
     <lastmod>2024-04-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/blog/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/</loc>
+    <loc>http://localhost:1313/blog/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/</loc>
     <lastmod>2024-04-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/240422-man/</loc>
+    <loc>http://localhost:1313/240422-man/</loc>
     <lastmod>2024-04-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/240420-write/</loc>
+    <loc>http://localhost:1313/240420-write/</loc>
     <lastmod>2024-04-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/240417-knowledge-management-curse/</loc>
+    <loc>http://localhost:1313/240417-knowledge-management-curse/</loc>
     <lastmod>2024-04-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/240416-first-sentence-write/</loc>
+    <loc>http://localhost:1313/240416-first-sentence-write/</loc>
     <lastmod>2024-04-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/blog/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/</loc>
+    <loc>http://localhost:1313/blog/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2024-04-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/240413-feynman-technique/</loc>
+    <loc>http://localhost:1313/240413-feynman-technique/</loc>
     <lastmod>2024-04-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/240409-confusion-in-writing/</loc>
+    <loc>http://localhost:1313/240409-confusion-in-writing/</loc>
     <lastmod>2024-04-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/240326-write/</loc>
+    <loc>http://localhost:1313/240326-write/</loc>
     <lastmod>2024-03-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/240128-family/</loc>
+    <loc>http://localhost:1313/240128-family/</loc>
     <lastmod>2024-01-28T18:00:00+08:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/blog/%E5%8E%9F%E7%94%9F%E5%AE%B6%E5%BA%AD/</loc>
+    <loc>http://localhost:1313/blog/%E5%8E%9F%E7%94%9F%E5%AE%B6%E5%BA%AD/</loc>
     <lastmod>2024-01-28T18:00:00+08:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/categories/%E6%B7%B1%E5%BA%A6%E7%B3%BB%E5%88%97/</loc>
+    <loc>http://localhost:1313/categories/%E6%B7%B1%E5%BA%A6%E7%B3%BB%E5%88%97/</loc>
     <lastmod>2024-01-28T18:00:00+08:00</lastmod>
   </url><url>
-    <loc>https://liangmouyin.com/230702-blog/</loc>
+    <loc>http://localhost:1313/230702-blog/</loc>
     <lastmod>2023-07-02T00:00:00+00:00</lastmod>
   </url>
 </urlset>

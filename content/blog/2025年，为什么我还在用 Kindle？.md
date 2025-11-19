@@ -2,7 +2,8 @@
 title: 2025年，为什么我还在用 Kindle？
 date: 2025-09-19
 tags:
-slug: why-am-I-still-using-a-Kindle-in-2025
+  - Kindle
+slug: still-using-kindle-2025
 author:
   - 梁某银
 categories:

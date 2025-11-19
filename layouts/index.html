@@ -7,24 +7,9 @@
     </section>
   </article>
 
-  {{/* --- 显示所有标签 (带#号，竖线分隔) --- */}}
-  {{ if .Site.Taxonomies.tags }}
-    <div class="tag-line">
-      <h3 class="post-list-title">标签</h3>
-      <p>
-        {{ range $index, $tag := .Site.Taxonomies.tags.Alphabetical }}
-          {{ if gt $index 0 }}<span class="separator"> | </span>{{ end }}
-          <a href="{{ .Page.Permalink }}">#{{ .Name }}</a>
-        {{ end }}
-      </p>
-    </div>
-  {{ end }}
-
-  {{/* --- 显示最近10篇文章 --- */}}
+  {{/* --- 显示最近15篇文章 (数量从10增加到15) --- */}}
   {{ $pages := where .Site.RegularPages "Section" "in" .Site.Params.mainSections }}
-  {{ $recent_pages := first 10 $pages.ByDate.Reverse }}
-
-  {{ if $recent_pages }}
+  {{ $recent_pages := first 15 $pages.ByDate.Reverse }} {{ if $recent_pages }}
   <h3 class="post-list-title">最近文章</h3>
   <div class="post-list-custom">
     {{ range $recent_pages }}
@@ -43,5 +28,17 @@
     {{ end }}
   </div>
   {{ end }}
-</content>
+  
+  {{/* --- 显示所有标签 (带#号，竖线分隔) --- */}}
+  {{ if .Site.Taxonomies.tags }}
+    <div class="tag-line">
+      <h3 class="post-list-title">标签</h3>
+      <p>
+        {{ range $index, $tag := .Site.Taxonomies.tags.Alphabetical }}
+          {{ if gt $index 0 }}<span class="separator"> | </span>{{ end }}
+          <a href="{{ .Page.Permalink }}">#{{ .Name }}</a>
+        {{ end }}
+      </p>
+    </div>
+  {{ end }} </content>
 {{ end }}
