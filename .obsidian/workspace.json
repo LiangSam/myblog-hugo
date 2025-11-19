@@ -256,8 +256,7 @@
               "title": "书签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -352,8 +351,9 @@
       "bases:Create new base": false
     }
   },
-  "active": "887218f5ee7167b9",
+  "active": "375e38a930e3ced7",
   "lastOpenFiles": [
+    "content/blog/凌晨6点，我被深圳的冬天冻醒了.md",
     "content/blog/2025年，为什么我还在用 Kindle？.md",
     "content/_index.md",
     "public/still-using-kindle-2025/index.html",
