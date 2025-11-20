@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/_index.md",
+                "file": "content/blog/为什么我劝你，对自己差一点？.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "_index"
+              "title": "为什么我劝你，对自己差一点？"
             }
           },
           {
@@ -226,7 +226,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "文件列表"
             }
           },
           {
@@ -235,7 +235,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Kindle",
+                "query": "温度",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -243,7 +243,7 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Search"
+              "title": "搜索"
             }
           },
           {
@@ -342,25 +342,26 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:创建新数据库": false
     }
   },
-  "active": "375e38a930e3ced7",
+  "active": "887218f5ee7167b9",
   "lastOpenFiles": [
+    "content/blog/用了8年Windows的我，为什么要买MacBook？.md",
+    "content/blog/为什么我劝你，对自己差一点？.md",
+    "content/_index.md",
     "content/blog/凌晨6点，我被深圳的冬天冻醒了.md",
     "content/blog/2025年，为什么我还在用 Kindle？.md",
-    "content/_index.md",
     "public/still-using-kindle-2025/index.html",
     "public/still-using-kindle-2025",
     "content/blog/买完MacBook和旅游回来，我决定老老实实攒钱.md",
     "content/blog/我亏了900块，才从一台二手MacBook里的蟑螂身上，学到了3个惨痛教训.md",
-    "content/blog/用了8年Windows的我，为什么要买MacBook？.md",
     "public/blog/macbook/index.xml",
     "public/blog/macbook/index.html",
     "public/blog/macbook",
@@ -383,7 +384,6 @@
     "content/blog/我的旅行纪念品，只占几KB.md",
     "content/blog/香港一日.md",
     "content/blog/跟张哥学唯物辩证法.md",
-    "content/blog/51秒的切片视频，如何围剿影视飓风72小时？.md",
     "themes/hugo-bearblog/exampleSite/static/images/favicon.png",
     "themes/hugo-bearblog/exampleSite/static/images/share.png",
     "themes/hugo-bearblog/layouts/partials/seo_tags.html",
