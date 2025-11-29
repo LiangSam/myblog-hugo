@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/blog/那年喝醉后，我花118块钱从大梅沙打车回来上班.md",
+                "file": "content/blog/既然都看短剧了，还要什么脑子？.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "那年喝醉后，我花118块钱从大梅沙打车回来上班"
+              "title": "既然都看短剧了，还要什么脑子？"
             }
           },
           {
@@ -353,11 +353,12 @@
   },
   "active": "887218f5ee7167b9",
   "lastOpenFiles": [
-    "content/blog/从一分钟平板支撑说起.md",
+    "content/blog/咻地一下，我就做了1分钟平板支撑.md",
+    "content/blog/既然都看短剧了，还要什么脑子？.md",
+    "content/blog/那年喝醉后，我花118块钱从大梅沙打车回来上班.md",
     "content/_index.md",
     "content/blog/没有存稿.md",
     "content/blog/哆啦A梦漫画：从自卑到超越，如何摆脱原生家庭？.md",
-    "content/blog/那年喝醉后，我花118块钱从大梅沙打车回来上班.md",
     "content/blog/哥们喝了点，随便聊.md",
     "content/blog/离开键盘，你还会写作吗？.md",
     "content/blog/看到井上雄彦画得这么痛苦，我也就放心了.md",
@@ -383,7 +384,6 @@
     "content/blog/我是如何在闲鱼上，淘到一台近乎完美的二手 Kindle？.md",
     "content/blog/一台打印机，干掉我所有稍后读软件.md",
     "content/blog/我的终极文章打印方案：不靠插件、软件，只用小书签！.md",
-    "content/blog/​你需要的是「时间限」，而非「时间线」.md",
     "themes/hugo-bearblog/exampleSite/static/images/favicon.png",
     "themes/hugo-bearblog/exampleSite/static/images/share.png",
     "themes/hugo-bearblog/layouts/partials/seo_tags.html",
