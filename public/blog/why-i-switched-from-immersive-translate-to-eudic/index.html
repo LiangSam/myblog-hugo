@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="http://localhost:1313/images/favicon.png" />
+<title>我为什么放弃了沉浸式翻译，转投“欧路”的怀抱？ | 梁某银的博客</title>
+<meta name="title" content="我为什么放弃了沉浸式翻译，转投“欧路”的怀抱？" />
+<meta name="description" content="
+
+    
+    
+    
+
+我一直在寻找「沉浸式翻译」插件的平替，终于在这周我看到了由欧路词典出的「欧路翻译」插件，体验下来，效果良好，我毫不犹豫把它作为主力翻译插件。
+曾几何时，沉浸式翻译带动双语对照翻译的潮流，那我又是因为什么，而临阵倒戈？
+从沉浸式翻译说起
+先说说「沉浸式翻译」。
+它的逻辑是抓取网页里的正文，复制一份，再按段落分成一块块数据包，再交由翻译服务来翻译，所以你使用时，它并非直接翻译全文，而是从上至下（有时是自下而上）逐步翻译，最后你就能得到一份有双语对照的网页文章。至于 AI 翻译、会员服务，就是之后的事了。
+不过，沉浸式翻译并非独创，更早一些，应该能追溯到 Minja 在 2022 年 8 月发布的文章《一种几乎永不失效的网页中英对照翻译方案》。Minja 把「对照」和「翻译」分而治之，通过 JavaScript 脚本把网页正文段落复制一份，再直接用浏览器自带的翻译服务，就能让浏览器只翻译其中一份，也就得到中英文对照的网页。
+最开始我用 Windows 时，偶尔会借助小书签（Bookmarklet）来实现，点一下后再翻译原文即可；有 MacBook 后，我把 Safari 为主力浏览器，配合上面文章提及的动作，不靠插件就能轻松对照翻译英语文章，极其方便。
+虽然作者 Owen 后来在采访中，提到过类似的灵感来源，不过 Minja 这篇文章确实是该技术路线的早期公开实践者。
+Minja 那种低技术的胜在通用，瑕疵是只能用浏览器自带的翻译引擎，翻译质量不如 AI 好1。而沉浸式翻译后来引入的大模型翻译服务，让我一直用到现在。
+为什么是欧路翻译？
+如今我开始摆脱对沉浸式翻译的依赖，因为我觉得它越发臃肿，前段时间还有不少负面新闻（如某版本升级删除第三方 API，复又添加回来），而且还喜欢往网页上塞悬浮按钮2。
+好在此等对照翻译并非专利，还有不少插件也支持此等功能。但我之前并未留意，如今看到欧路软件推出「欧路翻译」的浏览器插件，加上我已经用了很多年的欧路词典 App，几乎没有任何心理负担，安装即用。
+功能上，欧路翻译和沉浸式翻译没什么区别，一样支持双语对照翻译，支持添加 AI 大模型翻译引擎，文档、视频字幕翻译，以及连敲三次空格的输入框翻译。
+欧陆翻译基于欧路词典来展开，其优势在于：
+1）查词后顺手加入生词本，如此在手机欧陆词典 App 就能复习；
+2）按照英语水平，自定义你需要高亮的重点单词，如高中、四级、六级、考研、雅思、托福等词汇，这让你阅读时能潜意识关注重点词汇，划词后 AI 能结合语境来解释；
+
+
+    
+    
+    
+
+3）欧路翻译的交互更加克制。按 Shift 键翻译段落时，它直接将译文安静地嵌入原文下方；而沉浸式翻译默认方式是悬浮弹窗，视觉上更醒目；
+
+
+    
+    
+    
+
+4）不默认开启悬浮图标。
+简言之，沉浸式翻译更侧重于阅读，而欧路翻译进一步到生词复习，您可按需取用。工具而已，重点是谁最能帮助您解决问题，我也不会把自己归类到某一阵营，眼里只有党同伐异。
+结语
+就我个人而言，一般在读文章、翻译字幕、EPUB，或者需要截图给他人看原文和翻译时，才会用到这类工具。所以对 AI 工具的折腾，也应适可而止，我并不想成为知道一箩筐工具，结果文章没有读几篇的人，那简直是本末倒置。
+
+
+    
+    
+    
+        仅为翻译举例（翻译引擎为后文的 DeepSeek）
+    
+
+我挑选工具的核心，是尽量不过分依赖，即便一家倒了，也不会影响我现有数据，或者能够顺利迁移到其他服务上。如果需要某个理论来佐证，塔勒布的「反脆弱」是其一，许多圈子里的工具，也许时隔多年，随着公司倒闭而消亡，以前主打稍后读的收趣和轻芒，早已烟消云散，很快就被新工具盖过。
+这也是我转向欧路的原因之一，作为一个存活多年的老牌软件（笔者从大学用到现在），它比许多网红插件更具稳定性。更重要的是，它的交互足够克制：安静地嵌入译文，不弹窗、不悬浮，不试图抢夺我的注意力。
+好的工具应该是这样，不会时刻提醒你它的存在，但在你需要时就老实本分3。
+从问题出发，不执着某种工具，而是关注阅读内容本身，这样你会减少非常多的烦恼（顺带省下空间和金钱）。
+
+附注：如何用 DeepSeek 协助翻译？
+无论欧陆翻译，还是沉浸式翻译，如果想用他们自带的 AI 翻译，大多需要付费开通会员。但实际上，你完全可以用 DeepSeek 来代劳，价格非常便宜，取决于你的 token 消耗量，下面给不了解的读者说说方法：" />
+<meta name="keywords" content="" />
+
+
+<meta property="og:url" content="http://localhost:1313/blog/why-i-switched-from-immersive-translate-to-eudic/">
+  <meta property="og:site_name" content="梁某银的博客">
+  <meta property="og:title" content="我为什么放弃了沉浸式翻译，转投“欧路”的怀抱？">
+  <meta property="og:description" content="我一直在寻找「沉浸式翻译」插件的平替，终于在这周我看到了由欧路词典出的「欧路翻译」插件，体验下来，效果良好，我毫不犹豫把它作为主力翻译插件。
+曾几何时，沉浸式翻译带动双语对照翻译的潮流，那我又是因为什么，而临阵倒戈？
+从沉浸式翻译说起 先说说「沉浸式翻译」。
+它的逻辑是抓取网页里的正文，复制一份，再按段落分成一块块数据包，再交由翻译服务来翻译，所以你使用时，它并非直接翻译全文，而是从上至下（有时是自下而上）逐步翻译，最后你就能得到一份有双语对照的网页文章。至于 AI 翻译、会员服务，就是之后的事了。
+不过，沉浸式翻译并非独创，更早一些，应该能追溯到 Minja 在 2022 年 8 月发布的文章《一种几乎永不失效的网页中英对照翻译方案》。Minja 把「对照」和「翻译」分而治之，通过 JavaScript 脚本把网页正文段落复制一份，再直接用浏览器自带的翻译服务，就能让浏览器只翻译其中一份，也就得到中英文对照的网页。
+最开始我用 Windows 时，偶尔会借助小书签（Bookmarklet）来实现，点一下后再翻译原文即可；有 MacBook 后，我把 Safari 为主力浏览器，配合上面文章提及的动作，不靠插件就能轻松对照翻译英语文章，极其方便。
+虽然作者 Owen 后来在采访中，提到过类似的灵感来源，不过 Minja 这篇文章确实是该技术路线的早期公开实践者。
+Minja 那种低技术的胜在通用，瑕疵是只能用浏览器自带的翻译引擎，翻译质量不如 AI 好1。而沉浸式翻译后来引入的大模型翻译服务，让我一直用到现在。
+为什么是欧路翻译？ 如今我开始摆脱对沉浸式翻译的依赖，因为我觉得它越发臃肿，前段时间还有不少负面新闻（如某版本升级删除第三方 API，复又添加回来），而且还喜欢往网页上塞悬浮按钮2。
+好在此等对照翻译并非专利，还有不少插件也支持此等功能。但我之前并未留意，如今看到欧路软件推出「欧路翻译」的浏览器插件，加上我已经用了很多年的欧路词典 App，几乎没有任何心理负担，安装即用。
+功能上，欧路翻译和沉浸式翻译没什么区别，一样支持双语对照翻译，支持添加 AI 大模型翻译引擎，文档、视频字幕翻译，以及连敲三次空格的输入框翻译。
+欧陆翻译基于欧路词典来展开，其优势在于：
+1）查词后顺手加入生词本，如此在手机欧陆词典 App 就能复习；
+2）按照英语水平，自定义你需要高亮的重点单词，如高中、四级、六级、考研、雅思、托福等词汇，这让你阅读时能潜意识关注重点词汇，划词后 AI 能结合语境来解释；
+3）欧路翻译的交互更加克制。按 Shift 键翻译段落时，它直接将译文安静地嵌入原文下方；而沉浸式翻译默认方式是悬浮弹窗，视觉上更醒目；
+4）不默认开启悬浮图标。
+简言之，沉浸式翻译更侧重于阅读，而欧路翻译进一步到生词复习，您可按需取用。工具而已，重点是谁最能帮助您解决问题，我也不会把自己归类到某一阵营，眼里只有党同伐异。
+结语 就我个人而言，一般在读文章、翻译字幕、EPUB，或者需要截图给他人看原文和翻译时，才会用到这类工具。所以对 AI 工具的折腾，也应适可而止，我并不想成为知道一箩筐工具，结果文章没有读几篇的人，那简直是本末倒置。
+仅为翻译举例（翻译引擎为后文的 DeepSeek） 我挑选工具的核心，是尽量不过分依赖，即便一家倒了，也不会影响我现有数据，或者能够顺利迁移到其他服务上。如果需要某个理论来佐证，塔勒布的「反脆弱」是其一，许多圈子里的工具，也许时隔多年，随着公司倒闭而消亡，以前主打稍后读的收趣和轻芒，早已烟消云散，很快就被新工具盖过。
+这也是我转向欧路的原因之一，作为一个存活多年的老牌软件（笔者从大学用到现在），它比许多网红插件更具稳定性。更重要的是，它的交互足够克制：安静地嵌入译文，不弹窗、不悬浮，不试图抢夺我的注意力。
+好的工具应该是这样，不会时刻提醒你它的存在，但在你需要时就老实本分3。
+从问题出发，不执着某种工具，而是关注阅读内容本身，这样你会减少非常多的烦恼（顺带省下空间和金钱）。
+附注：如何用 DeepSeek 协助翻译？ 无论欧陆翻译，还是沉浸式翻译，如果想用他们自带的 AI 翻译，大多需要付费开通会员。但实际上，你完全可以用 DeepSeek 来代劳，价格非常便宜，取决于你的 token 消耗量，下面给不了解的读者说说方法：">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2025-11-23T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-11-23T00:00:00+00:00">
+    <meta property="og:image" content="http://localhost:1313/images/share.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/images/share.png">
+  <meta name="twitter:title" content="我为什么放弃了沉浸式翻译，转投“欧路”的怀抱？">
+  <meta name="twitter:description" content="我一直在寻找「沉浸式翻译」插件的平替，终于在这周我看到了由欧路词典出的「欧路翻译」插件，体验下来，效果良好，我毫不犹豫把它作为主力翻译插件。
+曾几何时，沉浸式翻译带动双语对照翻译的潮流，那我又是因为什么，而临阵倒戈？
+从沉浸式翻译说起 先说说「沉浸式翻译」。
+它的逻辑是抓取网页里的正文，复制一份，再按段落分成一块块数据包，再交由翻译服务来翻译，所以你使用时，它并非直接翻译全文，而是从上至下（有时是自下而上）逐步翻译，最后你就能得到一份有双语对照的网页文章。至于 AI 翻译、会员服务，就是之后的事了。
+不过，沉浸式翻译并非独创，更早一些，应该能追溯到 Minja 在 2022 年 8 月发布的文章《一种几乎永不失效的网页中英对照翻译方案》。Minja 把「对照」和「翻译」分而治之，通过 JavaScript 脚本把网页正文段落复制一份，再直接用浏览器自带的翻译服务，就能让浏览器只翻译其中一份，也就得到中英文对照的网页。
+最开始我用 Windows 时，偶尔会借助小书签（Bookmarklet）来实现，点一下后再翻译原文即可；有 MacBook 后，我把 Safari 为主力浏览器，配合上面文章提及的动作，不靠插件就能轻松对照翻译英语文章，极其方便。
+虽然作者 Owen 后来在采访中，提到过类似的灵感来源，不过 Minja 这篇文章确实是该技术路线的早期公开实践者。
+Minja 那种低技术的胜在通用，瑕疵是只能用浏览器自带的翻译引擎，翻译质量不如 AI 好1。而沉浸式翻译后来引入的大模型翻译服务，让我一直用到现在。
+为什么是欧路翻译？ 如今我开始摆脱对沉浸式翻译的依赖，因为我觉得它越发臃肿，前段时间还有不少负面新闻（如某版本升级删除第三方 API，复又添加回来），而且还喜欢往网页上塞悬浮按钮2。
+好在此等对照翻译并非专利，还有不少插件也支持此等功能。但我之前并未留意，如今看到欧路软件推出「欧路翻译」的浏览器插件，加上我已经用了很多年的欧路词典 App，几乎没有任何心理负担，安装即用。
+功能上，欧路翻译和沉浸式翻译没什么区别，一样支持双语对照翻译，支持添加 AI 大模型翻译引擎，文档、视频字幕翻译，以及连敲三次空格的输入框翻译。
+欧陆翻译基于欧路词典来展开，其优势在于：
+1）查词后顺手加入生词本，如此在手机欧陆词典 App 就能复习；
+2）按照英语水平，自定义你需要高亮的重点单词，如高中、四级、六级、考研、雅思、托福等词汇，这让你阅读时能潜意识关注重点词汇，划词后 AI 能结合语境来解释；
+3）欧路翻译的交互更加克制。按 Shift 键翻译段落时，它直接将译文安静地嵌入原文下方；而沉浸式翻译默认方式是悬浮弹窗，视觉上更醒目；
+4）不默认开启悬浮图标。
+简言之，沉浸式翻译更侧重于阅读，而欧路翻译进一步到生词复习，您可按需取用。工具而已，重点是谁最能帮助您解决问题，我也不会把自己归类到某一阵营，眼里只有党同伐异。
+结语 就我个人而言，一般在读文章、翻译字幕、EPUB，或者需要截图给他人看原文和翻译时，才会用到这类工具。所以对 AI 工具的折腾，也应适可而止，我并不想成为知道一箩筐工具，结果文章没有读几篇的人，那简直是本末倒置。
+仅为翻译举例（翻译引擎为后文的 DeepSeek） 我挑选工具的核心，是尽量不过分依赖，即便一家倒了，也不会影响我现有数据，或者能够顺利迁移到其他服务上。如果需要某个理论来佐证，塔勒布的「反脆弱」是其一，许多圈子里的工具，也许时隔多年，随着公司倒闭而消亡，以前主打稍后读的收趣和轻芒，早已烟消云散，很快就被新工具盖过。
+这也是我转向欧路的原因之一，作为一个存活多年的老牌软件（笔者从大学用到现在），它比许多网红插件更具稳定性。更重要的是，它的交互足够克制：安静地嵌入译文，不弹窗、不悬浮，不试图抢夺我的注意力。
+好的工具应该是这样，不会时刻提醒你它的存在，但在你需要时就老实本分3。
+从问题出发，不执着某种工具，而是关注阅读内容本身，这样你会减少非常多的烦恼（顺带省下空间和金钱）。
+附注：如何用 DeepSeek 协助翻译？ 无论欧陆翻译，还是沉浸式翻译，如果想用他们自带的 AI 翻译，大多需要付费开通会员。但实际上，你完全可以用 DeepSeek 来代劳，价格非常便宜，取决于你的 token 消耗量，下面给不了解的读者说说方法：">
+
+
+
+
+  <meta itemprop="name" content="我为什么放弃了沉浸式翻译，转投“欧路”的怀抱？">
+  <meta itemprop="description" content="我一直在寻找「沉浸式翻译」插件的平替，终于在这周我看到了由欧路词典出的「欧路翻译」插件，体验下来，效果良好，我毫不犹豫把它作为主力翻译插件。
+曾几何时，沉浸式翻译带动双语对照翻译的潮流，那我又是因为什么，而临阵倒戈？
+从沉浸式翻译说起 先说说「沉浸式翻译」。
+它的逻辑是抓取网页里的正文，复制一份，再按段落分成一块块数据包，再交由翻译服务来翻译，所以你使用时，它并非直接翻译全文，而是从上至下（有时是自下而上）逐步翻译，最后你就能得到一份有双语对照的网页文章。至于 AI 翻译、会员服务，就是之后的事了。
+不过，沉浸式翻译并非独创，更早一些，应该能追溯到 Minja 在 2022 年 8 月发布的文章《一种几乎永不失效的网页中英对照翻译方案》。Minja 把「对照」和「翻译」分而治之，通过 JavaScript 脚本把网页正文段落复制一份，再直接用浏览器自带的翻译服务，就能让浏览器只翻译其中一份，也就得到中英文对照的网页。
+最开始我用 Windows 时，偶尔会借助小书签（Bookmarklet）来实现，点一下后再翻译原文即可；有 MacBook 后，我把 Safari 为主力浏览器，配合上面文章提及的动作，不靠插件就能轻松对照翻译英语文章，极其方便。
+虽然作者 Owen 后来在采访中，提到过类似的灵感来源，不过 Minja 这篇文章确实是该技术路线的早期公开实践者。
+Minja 那种低技术的胜在通用，瑕疵是只能用浏览器自带的翻译引擎，翻译质量不如 AI 好1。而沉浸式翻译后来引入的大模型翻译服务，让我一直用到现在。
+为什么是欧路翻译？ 如今我开始摆脱对沉浸式翻译的依赖，因为我觉得它越发臃肿，前段时间还有不少负面新闻（如某版本升级删除第三方 API，复又添加回来），而且还喜欢往网页上塞悬浮按钮2。
+好在此等对照翻译并非专利，还有不少插件也支持此等功能。但我之前并未留意，如今看到欧路软件推出「欧路翻译」的浏览器插件，加上我已经用了很多年的欧路词典 App，几乎没有任何心理负担，安装即用。
+功能上，欧路翻译和沉浸式翻译没什么区别，一样支持双语对照翻译，支持添加 AI 大模型翻译引擎，文档、视频字幕翻译，以及连敲三次空格的输入框翻译。
+欧陆翻译基于欧路词典来展开，其优势在于：
+1）查词后顺手加入生词本，如此在手机欧陆词典 App 就能复习；
+2）按照英语水平，自定义你需要高亮的重点单词，如高中、四级、六级、考研、雅思、托福等词汇，这让你阅读时能潜意识关注重点词汇，划词后 AI 能结合语境来解释；
+3）欧路翻译的交互更加克制。按 Shift 键翻译段落时，它直接将译文安静地嵌入原文下方；而沉浸式翻译默认方式是悬浮弹窗，视觉上更醒目；
+4）不默认开启悬浮图标。
+简言之，沉浸式翻译更侧重于阅读，而欧路翻译进一步到生词复习，您可按需取用。工具而已，重点是谁最能帮助您解决问题，我也不会把自己归类到某一阵营，眼里只有党同伐异。
+结语 就我个人而言，一般在读文章、翻译字幕、EPUB，或者需要截图给他人看原文和翻译时，才会用到这类工具。所以对 AI 工具的折腾，也应适可而止，我并不想成为知道一箩筐工具，结果文章没有读几篇的人，那简直是本末倒置。
+仅为翻译举例（翻译引擎为后文的 DeepSeek） 我挑选工具的核心，是尽量不过分依赖，即便一家倒了，也不会影响我现有数据，或者能够顺利迁移到其他服务上。如果需要某个理论来佐证，塔勒布的「反脆弱」是其一，许多圈子里的工具，也许时隔多年，随着公司倒闭而消亡，以前主打稍后读的收趣和轻芒，早已烟消云散，很快就被新工具盖过。
+这也是我转向欧路的原因之一，作为一个存活多年的老牌软件（笔者从大学用到现在），它比许多网红插件更具稳定性。更重要的是，它的交互足够克制：安静地嵌入译文，不弹窗、不悬浮，不试图抢夺我的注意力。
+好的工具应该是这样，不会时刻提醒你它的存在，但在你需要时就老实本分3。
+从问题出发，不执着某种工具，而是关注阅读内容本身，这样你会减少非常多的烦恼（顺带省下空间和金钱）。
+附注：如何用 DeepSeek 协助翻译？ 无论欧陆翻译，还是沉浸式翻译，如果想用他们自带的 AI 翻译，大多需要付费开通会员。但实际上，你完全可以用 DeepSeek 来代劳，价格非常便宜，取决于你的 token 消耗量，下面给不了解的读者说说方法：">
+  <meta itemprop="datePublished" content="2025-11-23T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-11-23T00:00:00+00:00">
+  <meta itemprop="wordCount" content="108">
+  <meta itemprop="image" content="http://localhost:1313/images/share.png">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+    --width: 720px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --code-background-color: #f2f2f2;
+    --code-color: #222;
+    --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #eee;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --code-background-color: #000;
+      --code-color: #ddd;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  time {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  main {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    font-family: monospace;
+    padding: 2px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--code-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight,
+  .code {
+    padding: 1px 15px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+
+</style>
+
+
+
+
+
+<link rel="stylesheet" href="http://localhost:1313/css/custom.min.25828ced91652617450cf235e151cc4a5736fa44bada500c65e73f53c3f93ba2.css" integrity="sha256-JYKM7ZFlJhdFDPI14VHMSlc2&#43;kS62lAMZec/U8P5O6I=" crossorigin="anonymous"></head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>梁某银的博客</h2>
+</a>
+<nav>
+<a href="/">Home</a>
+
+<a href="/about/">About</a>
+
+<a href="/now/">Now</a>
+
+<a href="/blog/">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<h1>我为什么放弃了沉浸式翻译，转投“欧路”的怀抱？</h1>
+<p>
+  <i>
+    <time datetime='2025-11-23'>
+      2025-11-23
+    </time>
+  </i>
+</p>
+
+<content>
+  <p>
+<figure>
+    <img src="https://img.liangmouyin.com/2025/11/613ac20f305206f24248bb1f1e5ce992.png" alt="loop_on_A_magnifying_glass_aimed_at_a_computer_screen_displayin_6028cfcc-effc-4cc3-800d-07a8dedd8d8b.png" />
+    
+    
+</figure></p>
+<p>我一直在寻找「沉浸式翻译」插件的平替，终于在这周我看到了由欧路词典出的「欧路翻译」插件，体验下来，效果良好，我毫不犹豫把它作为主力翻译插件。</p>
+<p><strong>曾几何时，沉浸式翻译带动双语对照翻译的潮流，那我又是因为什么，而临阵倒戈？</strong></p>
+<h2 id="从沉浸式翻译说起">从沉浸式翻译说起</h2>
+<p>先说说「沉浸式翻译」。</p>
+<p>它的逻辑是抓取网页里的正文，复制一份，再按段落分成一块块数据包，再交由翻译服务来翻译，所以你使用时，它并非直接翻译全文，而是从上至下（有时是自下而上）逐步翻译，最后你就能得到一份有双语对照的网页文章。至于 AI 翻译、会员服务，就是之后的事了。</p>
+<p>不过，沉浸式翻译并非独创，更早一些，应该能追溯到 Minja 在 2022 年 8 月发布的文章《<a href="https://utgd.net/article/4991">一种几乎永不失效的网页中英对照翻译方案</a>》。Minja 把「对照」和「翻译」分而治之，通过 JavaScript 脚本把网页正文段落复制一份，再直接用浏览器自带的翻译服务，就能让浏览器只翻译其中一份，也就得到中英文对照的网页。</p>
+<p>最开始我用 Windows 时，偶尔会借助小书签（Bookmarklet）来实现，点一下后再翻译原文即可；有 MacBook 后，我把 Safari 为主力浏览器，配合上面文章提及的动作，不靠插件就能轻松对照翻译英语文章，极其方便。</p>
+<p>虽然作者 Owen 后来在采访中，提到过类似的灵感来源，不过 Minja 这篇文章确实是该技术路线的早期公开实践者。</p>
+<p>Minja 那种低技术的胜在通用，瑕疵是只能用浏览器自带的翻译引擎，翻译质量不如 AI 好<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>。而沉浸式翻译后来引入的大模型翻译服务，让我一直用到现在。</p>
+<h2 id="为什么是欧路翻译">为什么是欧路翻译？</h2>
+<p>如今我开始摆脱对沉浸式翻译的依赖，因为我觉得它越发臃肿，前段时间还有不少负面新闻（如某版本升级删除第三方 API，复又添加回来），而且还喜欢往网页上塞悬浮按钮<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>。</p>
+<p>好在此等对照翻译并非专利，还有不少插件也支持此等功能。但我之前并未留意，如今看到欧路软件推出「欧路翻译」的浏览器插件，加上我已经用了很多年的欧路词典 App，几乎没有任何心理负担，安装即用。</p>
+<p><strong>功能上，欧路翻译和沉浸式翻译没什么区别</strong>，一样支持双语对照翻译，支持添加 AI 大模型翻译引擎，文档、视频字幕翻译，以及连敲三次空格的输入框翻译。</p>
+<p>欧陆翻译基于欧路词典来展开，其优势在于：</p>
+<p>1）查词后顺手加入生词本，如此在手机欧陆词典 App 就能复习；</p>
+<p>2）按照英语水平，自定义你需要高亮的重点单词，如高中、四级、六级、考研、雅思、托福等词汇，这让你阅读时能潜意识关注重点词汇，划词后 AI 能结合语境来解释；</p>
+<p>
+<figure>
+    <img src="https://img.liangmouyin.com/2025/11/fc8d0272ca860a9382ecb18ff4bb82cd.png" alt="PixPin_2025-11-23_14-32-56.png" />
+    
+    
+</figure></p>
+<p>3）欧路翻译的交互更加克制。按 Shift 键翻译段落时，它直接将译文安静地嵌入原文下方；而沉浸式翻译默认方式是悬浮弹窗，视觉上更醒目；</p>
+<p>
+<figure>
+    <img src="https://img.liangmouyin.com/2025/11/235fa43ca7ef89771ed7ad6eabc5225c.png" alt="222.png" />
+    
+    
+</figure></p>
+<p>4）不默认开启悬浮图标。</p>
+<p>简言之，沉浸式翻译更侧重于阅读，而欧路翻译进一步到生词复习，您可按需取用。工具而已，重点是谁最能帮助您解决问题，我也不会把自己归类到某一阵营，眼里只有党同伐异。</p>
+<h2 id="结语">结语</h2>
+<p>就我个人而言，一般在读文章、翻译字幕、EPUB，或者需要截图给他人看原文和翻译时，才会用到这类工具。所以对 AI 工具的折腾，也应适可而止，我并不想成为知道一箩筐工具，结果文章没有读几篇的人，那简直是本末倒置。</p>
+<p>
+<figure>
+    <img src="https://img.liangmouyin.com/2025/11/3469e615200b1d4a2377c9cbea43709d.png" alt="image.png" />
+    
+    
+        <figcaption>仅为翻译举例（翻译引擎为后文的 DeepSeek）</figcaption>
+    
+</figure></p>
+<p>我挑选工具的核心，是尽量不过分依赖，即便一家倒了，也不会影响我现有数据，或者能够顺利迁移到其他服务上。如果需要某个理论来佐证，塔勒布的「反脆弱」是其一，许多圈子里的工具，也许时隔多年，随着公司倒闭而消亡，以前主打稍后读的收趣和轻芒，早已烟消云散，很快就被新工具盖过。</p>
+<p>这也是我转向欧路的原因之一，作为一个存活多年的老牌软件（笔者从大学用到现在），它比许多网红插件更具稳定性。更重要的是，它的交互足够克制：安静地嵌入译文，不弹窗、不悬浮，不试图抢夺我的注意力。</p>
+<p>好的工具应该是这样，不会时刻提醒你它的存在，但在你需要时就老实本分<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>。</p>
+<p><strong>从问题出发，不执着某种工具，而是关注阅读内容本身，这样你会减少非常多的烦恼（顺带省下空间和金钱）。</strong></p>
+<hr>
+<h2 id="附注如何用-deepseek-协助翻译">附注：如何用 DeepSeek 协助翻译？</h2>
+<p>无论欧陆翻译，还是沉浸式翻译，如果想用他们自带的 AI 翻译，大多需要付费开通会员。但实际上，你完全可以用 DeepSeek 来代劳，价格非常便宜，取决于你的 token 消耗量，下面给不了解的读者说说方法：</p>
+<p>1、打开 <a href="https://platform.deepseek.com/usage">DeepSeek 开放平台</a>，并登录；</p>
+<p>2、侧栏「充值」，充值 10 块钱足矣，可以用很久；</p>
+<p>3、侧栏「API keys」-「创建 API keys」-输入你要使用的软件（比如欧路翻译），然后你就得到一个「sk-」开头的 API key，复制它；</p>
+<p>
+<figure>
+    <img src="https://img.liangmouyin.com/2025/11/b74af6ebf581946282f46dcdaac775e5.png" alt="PixPin_2025-11-23_15-19-09.png" />
+    
+    
+</figure></p>
+<p>4、打开欧路翻译插件的设置（插件图标-右上角「设置」），侧栏「翻译引擎」-「添加翻译引擎」，找到 DeepSeek，选择「自定义翻译 API Key」，进入把上面的 API Key 粘贴进去，模型默认的「deepseek-chat」够用，最后保存；</p>
+<p>
+<figure>
+    <img src="https://img.liangmouyin.com/2025/11/d1358a2cd0b8986c1c1008928ca7e09b.png" alt="PixPin_2025-11-23_16-46-07.png" />
+    
+    
+</figure></p>
+<p>5、打开一篇英语文章，点击插件，翻译引擎选择 DeepSeek，就能享受 AI 翻译了。</p>
+<p>这个方法并不囿于欧路翻译和 DeepSeek，举凡支持 AI API 大模型的工具，你都能用这个方法来调用已有的 AI 服务（ChatGPT、Gemini、Cloude 等等，但价格也是千差万别，DeepSeek 是性价比最高的），又能帮你省下很多会员费。</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>虽然已经用翻译了，不该苛求那点翻译质量。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>当然，它可以关，但自从某次打印文章，发现小册子右下角都被某插件的悬浮按钮占用，让我加倍讨厌默认开启悬浮按钮的插件。&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>删除沉浸式翻译插件后，浏览器会跳转到一个网页，问你为什么这么做。&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+</content>
+<p>
+  
+</p>
+<script src="https://giscus.app/client.js"
+        data-repo="LiangSam/myblog-hugo"
+        data-repo-id="R_kgDOPFANrA"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOPFANrM4CxC-2"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+  
+</body>
+
+</html>

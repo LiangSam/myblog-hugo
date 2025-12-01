@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="http://localhost:1313/images/favicon.png" />
+<title>我终于给博客加上评论功能 | 梁某银的博客</title>
+<meta name="title" content="我终于给博客加上评论功能" />
+<meta name="description" content="
+
+    
+    
+    
+
+今天，突然看到网友问博客为什么不开评论。于是，明明只需要 10 分钟就能搞定的小事，我硬是花了 3 个小时。
+这个过程非常曲折，我从要不要迁移博客，到研究 VPS，最后又回到原点。但事后回想，发现这 3 个小时非常值得，也让我一步步理清思路。
+不过接下来的内容，如果你对网站和博客不感兴趣，估计就是读起来一头雾水，那就直接拉到结尾，看我今天的生活分享吧。
+首先，那位网友问我开评论时，我说自己的博客是用 Hugo &#43; GitHub &#43; Cloudflare 来搭建的，完全是静态博客，压根不知道如何开评论功能。
+网友便推荐我试试 Twikoo 和 Waline，我在网上搜索相关教程，还需要部署云端，注册什么账号，引入 HTML，等等，看得非常头疼。
+最后我干脆一想，既然都要折腾了，我为什么不一步到位，干脆直接从 Hugo 迁移到动态博客 WordPress.org 呢？毕竟 WordPress 功能齐全（也可以说是臃肿），教程丰富，想必能实现非常多的功能，甚至还能插入广告增加收入（也许就几块钱）。
+但是 WordPress.org 需要 VPS 才能运行，我在 Gemini 的辅助下，研究市面上的主流方法，可以说是五花八门，具体有以下三类：
+1、「营销陷阱」的主机 (如 SiteGround, Hostinger)。价格 3 美刀/月，便宜到令人发指，可需要一次性付清两年后三年，然后用高到离谱的续费价来套牢你，因此 Pass。
+2、「省心但贵」的托管式VPS (如 Cloudways)。价格 14 美刀/月，性能强，功能齐全，省心；但成本实在太高，一个月就是 100 块钱（且不说我能不能靠文字转到赚么多钱），性价比太低，Pass。
+3、「高性价比但高门槛」的非托管VPS (如 CloudCone)。我是看一位博主推荐的，价格 25 美刀/月，性价比最高，但需要自己手把手操作，还要折腾宝塔面板、Nginx 和数据库安全（这一堆词我都看不懂）；但我目前的目标是安心写作，顺便把内容同步到博客，而不是建站，精力成本太高。
+就在我快要下单 CloudCone 的前一刻，我突然清醒：
+「罢了罢了，先不折腾了。」
+我今天只想加个评论框，为什么要把自己搞得这么累？
+于是我从自建博客的坑里爬出来，回到最初的起点：Hugo 评论系统。
+我本想选 Utterances (基于 GitHub Issues)，跟着教程，5分钟搞定收工。
+但我又多看了一眼，发现了它的「升级版」—— Giscus (基于 GitHub Discussions)，支持点赞、回复、自定义主题，体验完胜。" />
+<meta name="keywords" content="博客," />
+
+
+<meta property="og:url" content="http://localhost:1313/blog/add-comments-to-blog/">
+  <meta property="og:site_name" content="梁某银的博客">
+  <meta property="og:title" content="我终于给博客加上评论功能">
+  <meta property="og:description" content="今天，突然看到网友问博客为什么不开评论。于是，明明只需要 10 分钟就能搞定的小事，我硬是花了 3 个小时。
+这个过程非常曲折，我从要不要迁移博客，到研究 VPS，最后又回到原点。但事后回想，发现这 3 个小时非常值得，也让我一步步理清思路。
+不过接下来的内容，如果你对网站和博客不感兴趣，估计就是读起来一头雾水，那就直接拉到结尾，看我今天的生活分享吧。
+首先，那位网友问我开评论时，我说自己的博客是用 Hugo &#43; GitHub &#43; Cloudflare 来搭建的，完全是静态博客，压根不知道如何开评论功能。
+网友便推荐我试试 Twikoo 和 Waline，我在网上搜索相关教程，还需要部署云端，注册什么账号，引入 HTML，等等，看得非常头疼。
+最后我干脆一想，既然都要折腾了，我为什么不一步到位，干脆直接从 Hugo 迁移到动态博客 WordPress.org 呢？毕竟 WordPress 功能齐全（也可以说是臃肿），教程丰富，想必能实现非常多的功能，甚至还能插入广告增加收入（也许就几块钱）。
+但是 WordPress.org 需要 VPS 才能运行，我在 Gemini 的辅助下，研究市面上的主流方法，可以说是五花八门，具体有以下三类：
+1、「营销陷阱」的主机 (如 SiteGround, Hostinger)。价格 3 美刀/月，便宜到令人发指，可需要一次性付清两年后三年，然后用高到离谱的续费价来套牢你，因此 Pass。
+2、「省心但贵」的托管式VPS (如 Cloudways)。价格 14 美刀/月，性能强，功能齐全，省心；但成本实在太高，一个月就是 100 块钱（且不说我能不能靠文字转到赚么多钱），性价比太低，Pass。
+3、「高性价比但高门槛」的非托管VPS (如 CloudCone)。我是看一位博主推荐的，价格 25 美刀/月，性价比最高，但需要自己手把手操作，还要折腾宝塔面板、Nginx 和数据库安全（这一堆词我都看不懂）；但我目前的目标是安心写作，顺便把内容同步到博客，而不是建站，精力成本太高。
+就在我快要下单 CloudCone 的前一刻，我突然清醒：
+「罢了罢了，先不折腾了。」
+我今天只想加个评论框，为什么要把自己搞得这么累？
+于是我从自建博客的坑里爬出来，回到最初的起点：Hugo 评论系统。
+我本想选 Utterances (基于 GitHub Issues)，跟着教程，5分钟搞定收工。
+但我又多看了一眼，发现了它的「升级版」—— Giscus (基于 GitHub Discussions)，支持点赞、回复、自定义主题，体验完胜。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2025-10-25T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-10-25T00:00:00+00:00">
+    <meta property="article:tag" content="博客">
+    <meta property="og:image" content="http://localhost:1313/images/share.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/images/share.png">
+  <meta name="twitter:title" content="我终于给博客加上评论功能">
+  <meta name="twitter:description" content="今天，突然看到网友问博客为什么不开评论。于是，明明只需要 10 分钟就能搞定的小事，我硬是花了 3 个小时。
+这个过程非常曲折，我从要不要迁移博客，到研究 VPS，最后又回到原点。但事后回想，发现这 3 个小时非常值得，也让我一步步理清思路。
+不过接下来的内容，如果你对网站和博客不感兴趣，估计就是读起来一头雾水，那就直接拉到结尾，看我今天的生活分享吧。
+首先，那位网友问我开评论时，我说自己的博客是用 Hugo &#43; GitHub &#43; Cloudflare 来搭建的，完全是静态博客，压根不知道如何开评论功能。
+网友便推荐我试试 Twikoo 和 Waline，我在网上搜索相关教程，还需要部署云端，注册什么账号，引入 HTML，等等，看得非常头疼。
+最后我干脆一想，既然都要折腾了，我为什么不一步到位，干脆直接从 Hugo 迁移到动态博客 WordPress.org 呢？毕竟 WordPress 功能齐全（也可以说是臃肿），教程丰富，想必能实现非常多的功能，甚至还能插入广告增加收入（也许就几块钱）。
+但是 WordPress.org 需要 VPS 才能运行，我在 Gemini 的辅助下，研究市面上的主流方法，可以说是五花八门，具体有以下三类：
+1、「营销陷阱」的主机 (如 SiteGround, Hostinger)。价格 3 美刀/月，便宜到令人发指，可需要一次性付清两年后三年，然后用高到离谱的续费价来套牢你，因此 Pass。
+2、「省心但贵」的托管式VPS (如 Cloudways)。价格 14 美刀/月，性能强，功能齐全，省心；但成本实在太高，一个月就是 100 块钱（且不说我能不能靠文字转到赚么多钱），性价比太低，Pass。
+3、「高性价比但高门槛」的非托管VPS (如 CloudCone)。我是看一位博主推荐的，价格 25 美刀/月，性价比最高，但需要自己手把手操作，还要折腾宝塔面板、Nginx 和数据库安全（这一堆词我都看不懂）；但我目前的目标是安心写作，顺便把内容同步到博客，而不是建站，精力成本太高。
+就在我快要下单 CloudCone 的前一刻，我突然清醒：
+「罢了罢了，先不折腾了。」
+我今天只想加个评论框，为什么要把自己搞得这么累？
+于是我从自建博客的坑里爬出来，回到最初的起点：Hugo 评论系统。
+我本想选 Utterances (基于 GitHub Issues)，跟着教程，5分钟搞定收工。
+但我又多看了一眼，发现了它的「升级版」—— Giscus (基于 GitHub Discussions)，支持点赞、回复、自定义主题，体验完胜。">
+
+
+
+
+  <meta itemprop="name" content="我终于给博客加上评论功能">
+  <meta itemprop="description" content="今天，突然看到网友问博客为什么不开评论。于是，明明只需要 10 分钟就能搞定的小事，我硬是花了 3 个小时。
+这个过程非常曲折，我从要不要迁移博客，到研究 VPS，最后又回到原点。但事后回想，发现这 3 个小时非常值得，也让我一步步理清思路。
+不过接下来的内容，如果你对网站和博客不感兴趣，估计就是读起来一头雾水，那就直接拉到结尾，看我今天的生活分享吧。
+首先，那位网友问我开评论时，我说自己的博客是用 Hugo &#43; GitHub &#43; Cloudflare 来搭建的，完全是静态博客，压根不知道如何开评论功能。
+网友便推荐我试试 Twikoo 和 Waline，我在网上搜索相关教程，还需要部署云端，注册什么账号，引入 HTML，等等，看得非常头疼。
+最后我干脆一想，既然都要折腾了，我为什么不一步到位，干脆直接从 Hugo 迁移到动态博客 WordPress.org 呢？毕竟 WordPress 功能齐全（也可以说是臃肿），教程丰富，想必能实现非常多的功能，甚至还能插入广告增加收入（也许就几块钱）。
+但是 WordPress.org 需要 VPS 才能运行，我在 Gemini 的辅助下，研究市面上的主流方法，可以说是五花八门，具体有以下三类：
+1、「营销陷阱」的主机 (如 SiteGround, Hostinger)。价格 3 美刀/月，便宜到令人发指，可需要一次性付清两年后三年，然后用高到离谱的续费价来套牢你，因此 Pass。
+2、「省心但贵」的托管式VPS (如 Cloudways)。价格 14 美刀/月，性能强，功能齐全，省心；但成本实在太高，一个月就是 100 块钱（且不说我能不能靠文字转到赚么多钱），性价比太低，Pass。
+3、「高性价比但高门槛」的非托管VPS (如 CloudCone)。我是看一位博主推荐的，价格 25 美刀/月，性价比最高，但需要自己手把手操作，还要折腾宝塔面板、Nginx 和数据库安全（这一堆词我都看不懂）；但我目前的目标是安心写作，顺便把内容同步到博客，而不是建站，精力成本太高。
+就在我快要下单 CloudCone 的前一刻，我突然清醒：
+「罢了罢了，先不折腾了。」
+我今天只想加个评论框，为什么要把自己搞得这么累？
+于是我从自建博客的坑里爬出来，回到最初的起点：Hugo 评论系统。
+我本想选 Utterances (基于 GitHub Issues)，跟着教程，5分钟搞定收工。
+但我又多看了一眼，发现了它的「升级版」—— Giscus (基于 GitHub Discussions)，支持点赞、回复、自定义主题，体验完胜。">
+  <meta itemprop="datePublished" content="2025-10-25T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-10-25T00:00:00+00:00">
+  <meta itemprop="wordCount" content="113">
+  <meta itemprop="image" content="http://localhost:1313/images/share.png">
+  <meta itemprop="keywords" content="博客">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+    --width: 720px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --code-background-color: #f2f2f2;
+    --code-color: #222;
+    --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #eee;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --code-background-color: #000;
+      --code-color: #ddd;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  time {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  main {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    font-family: monospace;
+    padding: 2px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--code-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight,
+  .code {
+    padding: 1px 15px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+
+</style>
+
+
+
+
+
+<link rel="stylesheet" href="http://localhost:1313/css/custom.min.25828ced91652617450cf235e151cc4a5736fa44bada500c65e73f53c3f93ba2.css" integrity="sha256-JYKM7ZFlJhdFDPI14VHMSlc2&#43;kS62lAMZec/U8P5O6I=" crossorigin="anonymous"></head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>梁某银的博客</h2>
+</a>
+<nav>
+<a href="/">Home</a>
+
+<a href="/about/">About</a>
+
+<a href="/now/">Now</a>
+
+<a href="/blog/">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<h1>我终于给博客加上评论功能</h1>
+<p>
+  <i>
+    <time datetime='2025-10-25'>
+      2025-10-25
+    </time>
+  </i>
+</p>
+
+<content>
+  <p>
+<figure>
+    <img src="https://img.liangmouyin.com/2025/10/6a9d65864de261a4c872e358900f0768.png" alt="loop_on_a_painting_of_a_little_white_programmer_puppy_tech-savv_b8624a4e-8d31-4d90-84d8-b9c316a67957.png" />
+    
+    
+</figure></p>
+<p>今天，突然看到网友问博客为什么不开评论。于是，明明只需要 10 分钟就能搞定的小事，我硬是花了 3 个小时。</p>
+<p>这个过程非常曲折，我从要不要迁移博客，到研究 VPS，最后又回到原点。但事后回想，发现这 3 个小时非常值得，也让我一步步理清思路。</p>
+<p>不过接下来的内容，如果你对网站和博客不感兴趣，估计就是读起来一头雾水，那就直接拉到结尾，看我今天的生活分享吧。</p>
+<p>首先，那位网友问我开评论时，我说自己的博客是用 Hugo + GitHub + Cloudflare 来搭建的，完全是静态博客，压根不知道如何开评论功能。</p>
+<p>网友便推荐我试试 Twikoo 和 Waline，我在网上搜索相关教程，还需要部署云端，注册什么账号，引入 HTML，等等，看得非常头疼。</p>
+<p>最后我干脆一想，既然都要折腾了，我为什么不一步到位，干脆直接从 Hugo 迁移到动态博客 WordPress.org 呢？毕竟 WordPress 功能齐全（也可以说是臃肿），教程丰富，想必能实现非常多的功能，甚至还能插入广告增加收入（也许就几块钱）。</p>
+<p>但是 WordPress.org 需要 VPS 才能运行，我在 Gemini 的辅助下，研究市面上的主流方法，可以说是五花八门，具体有以下三类：</p>
+<p>1、「营销陷阱」的主机 (如 SiteGround, Hostinger)。价格 3 美刀/月，便宜到令人发指，可需要一次性付清两年后三年，然后用高到离谱的续费价来套牢你，因此 Pass。</p>
+<p>2、「省心但贵」的托管式VPS (如 Cloudways)。价格 14 美刀/月，性能强，功能齐全，省心；但成本实在太高，一个月就是 100 块钱（且不说我能不能靠文字转到赚么多钱），性价比太低，Pass。</p>
+<p>3、「高性价比但高门槛」的非托管VPS (如 CloudCone)。我是看一位博主推荐的，价格 25 美刀/月，性价比最高，但需要自己手把手操作，还要折腾宝塔面板、Nginx 和数据库安全（这一堆词我都看不懂）；但我目前的目标是安心写作，顺便把内容同步到博客，而不是建站，精力成本太高。</p>
+<p>就在我快要下单 CloudCone 的前一刻，我突然清醒：</p>
+<p>「罢了罢了，先不折腾了。」</p>
+<p>我今天只想加个评论框，为什么要把自己搞得这么累？</p>
+<p>于是我从自建博客的坑里爬出来，回到最初的起点：Hugo 评论系统。</p>
+<p>我本想选 Utterances (基于 GitHub Issues)，跟着教程，5分钟搞定收工。</p>
+<p>但我又多看了一眼，发现了它的「升级版」—— Giscus (基于 GitHub Discussions)，支持点赞、回复、自定义主题，体验完胜。</p>
+<p>于是，10 分钟不到，我立刻把评论系统改成 Giscus。我配置好脚本，粘贴到 Hugo 的模板里，本地预览一气呵成，十分完美。</p>
+<p>So easy！于是我自信地通过git push 部署。</p>
+<p>然后，「史诗级」的折腾开始了。</p>
+<p>我打开我的网站 <a href="https://liangmouyin.com">https://liangmouyin.com</a> ，强制刷新、换浏览器、用手机看……但评论框就是不出来。</p>
+<p>本地预览一切正常，于是我再次跟 Gemini 展开激烈探讨，过程非常复杂，从排查 public 文件夹，到清理 Cloudflare 缓存，查看网页源代码。</p>
+<p>最后在绝望之下，我点开 Cloudflare 的部署日志，让 Gemini 检查，发现问题出在 Hugo 的模板渲染，它一个有「SOP优先级」系统，会优先引用主题里面的文件，于是重新建一个文件夹，再次部署。</p>
+<p>这回，我就在自己的博客看到了评论。</p>
+<p>这过程非常折腾，但我从中领悟出一点乐趣来，从提出需求，到发散思维，回到原点，最后遇到一堆问题，再不断去解决，简直太过瘾了。</p>
+<p>至于为什么要添加博客，还是用 GitHub 的方式来实现。因为我虽然一直在同步，可缺乏反馈，导致我不知道有没有读者在看博客，最后同步的积极性都没了；而选用 GitHub 的方式，是因为这对目前的我来说，是最简单的，有一个评论功能总比没有好，以后不排除会迁移到 WordPress，来体验更全面的功能。</p>
+<p>当然，评论功能虽然有了，但有没有人愿意阅读并留言，这也是个问题。</p>
+<p>但，这不是我能掌控的，我把架子搭好就行，其他随缘。</p>
+<hr>
+<p>晚上和朋友纪遇吃饭，他约了我两次，再不赴约恐怕会得罪人了。最开始想吃深圳特色椰子鸡，但门口排了一堆人，最后选择吃烤羊排，我吃得一本满足。</p>
+<p>饭前饭后我们聊了不少，可问我具体聊了什么，我还真记不清。我的感受是，他比以前阳光了些。作为一个大学刚毕业，就跑来深圳打工的年轻人，就感受到资本家的剥削，经常加班，没有生活，所以之前吐槽不少；现在好多了，最起码分享了他那无疾而终的暗恋（？我瞎猜的），还聊未来规划，人生思考，哲学观点。</p>
+<p>返程时我看到有人在路边摆摊，地上有只刚开始在嚼东西，后来被老板抓起来营业，戴上帽子，非常可爱。</p>
+<p>
+<figure>
+    <img src="https://img.liangmouyin.com/2025/10/165678218b69e6615135fbbc8ced5ca6.jpg" alt="f9eee6585dd702d2bd5361f96bf263d6.jpg" />
+    
+    
+</figure></p>
+
+</content>
+<p>
+  
+  <a href="http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2/">#博客</a>
+  
+</p>
+<script src="https://giscus.app/client.js"
+        data-repo="LiangSam/myblog-hugo"
+        data-repo-id="R_kgDOPFANrA"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOPFANrM4CxC-2"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+  
+</body>
+
+</html>

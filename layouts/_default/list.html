@@ -1,0 +1,57 @@
+{{ define "main" }}
+<content>
+  {{ if .Data.Singular }}
+  <h3 style="margin-bottom:0">Filtering for "{{ .Title }}"</h3>
+  <small>
+    <a href="{{ "blog" | relURL }}">Remove filter</a>
+  </small>
+  {{ end }}
+
+  <ul class="blog-posts">
+    {{/* 变量初始化 */}}
+    {{ $lastYear := "" }}
+    
+    {{ range .Pages }}
+      {{/* 获取当前文章的年份 */}}
+      {{ $currentYear := .Date.Format "2006" }}
+      
+      {{/* --- 年份分组 (大标题) --- */}}
+      {{ if ne $currentYear $lastYear }}
+        {{/* 年份标题：上边距大一点，下边距小一点，带分割线 */}}
+        <h2 class="archive-year-header" style="margin-top: 2em; margin-bottom: 0.5em; border-bottom: 2px solid var(--text-color);">
+          {{ $currentYear }}
+        </h2>
+        {{ $lastYear = $currentYear }}
+      {{ end }}
+
+      {{/* --- 文章列表项 (无额外间距) --- */}}
+      <li style="display: flex; align-items: baseline; margin-bottom: 0.1em;">
+        <span style="
+            min-width: 5.2ch;       /* 保持您满意的对齐宽度 */
+            margin-right: -50px;     /* 保持紧凑的间距 */
+            font-family: monospace; /* 等宽字体 */
+            color: #999; 
+            flex-shrink: 0;
+            ">
+          {{ .Date.Format "01-02" }}
+        </span>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </li>
+    {{ else }}
+    <li>
+      No posts yet
+    </li>
+    {{ end }}
+  </ul>
+  
+  {{ if not .Data.Singular }}
+  <small>
+    <div style="margin-top: 2em;">
+      {{ range .Site.Taxonomies.tags }}
+      <a href="{{ .Page.Permalink }}">#{{ .Page.Title }}</a>&nbsp;
+      {{ end }}
+    </div>
+  </small>
+  {{ end }}
+</content>
+{{ end }}
