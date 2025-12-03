@@ -226,7 +226,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "文件列表"
             }
           },
           {
@@ -342,17 +342,18 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:创建新数据库": false
     }
   },
   "active": "887218f5ee7167b9",
   "lastOpenFiles": [
+    "content/blog/用了三个月 MacBook 后，我的 Windows 电脑成了“吉祥物”.md",
     "content/blog/两瓶怡宝，就是我的“极简主义”哑铃.md",
     "content/blog/既然都看短剧了，还要什么脑子？.md",
     "content/blog/下班在公司门口，我被一位“野路子”求职者拦住了.md",
@@ -383,7 +384,6 @@
     "content/blog/深漂两年：小县城出身的我，是如何看待深圳的？.md",
     "content/blog/为什么我说 Kindle 还能再用 8 年？.md",
     "content/blog/你喜欢纸质书还是电子书？.md",
-    "content/blog/重启 Kindle.md",
     "themes/hugo-bearblog/exampleSite/static/images/favicon.png",
     "themes/hugo-bearblog/exampleSite/static/images/share.png",
     "themes/hugo-bearblog/layouts/partials/seo_tags.html",
