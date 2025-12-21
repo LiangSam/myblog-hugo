@@ -226,7 +226,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "文件列表"
             }
           },
           {
@@ -342,17 +342,18 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:创建新数据库": false
     }
   },
   "active": "887218f5ee7167b9",
   "lastOpenFiles": [
+    "content/blog/喝到位.md",
     "content/blog/解决纠结的工具：二维四象限.md",
     "content/blog/无法接受的“精神止痛药”.md",
     "content/blog/把生活当成项目管理：从改变晚饭顺序开始.md",
@@ -378,7 +379,6 @@
     "content/blog/那年喝醉后，我花118块钱从大梅沙打车回来上班.md",
     "content/_index.md",
     "content/blog/没有存稿.md",
-    "content/blog/哆啦A梦漫画：从自卑到超越，如何摆脱原生家庭？.md",
     "public/still-using-kindle-2025/index.html",
     "public/still-using-kindle-2025",
     "public/blog/macbook/index.xml",
