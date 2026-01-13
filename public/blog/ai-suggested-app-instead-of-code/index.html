@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="http://localhost:1313/images/favicon.png" />
+<title>本想找 AI 写代码，它却甩给我一个软件 | 梁某银的博客</title>
+<meta name="title" content="本想找 AI 写代码，它却甩给我一个软件" />
+<meta name="description" content="
+
+    
+    
+    
+
+自从用 MacBook 以来，我很喜欢它的触控板设计，起码比我几年前用的笔记本好，动作多，操作丝滑，有时你感觉按下去，其实是马达在震动。可一旦连上显示器、鼠标和键盘时，触控板自然无用武之地，只能依赖鼠标滚动。
+然而 macOS 一切都是跟 Windows 相反的，窗口管理的交通灯、内侧的 Command 承担 Ctrl功能、上下任务栏，乃至鼠标的滚动也截然相反。触控板胜在符合直觉，用起来无感，可一旦接入鼠标，当我习惯性往下滑，页面却往下滚，在 Windows 上是往上面的，这很难适应。
+后来才知道，需要去系统设置的触控板里，关掉自然滚动（Natural scrolling）。如此鼠标滚动方向逆转，然则关掉蓝牙，断开鼠标只用触控板，又需要重新调一次。我找到最好的方法，就是唤出 LaunchBar，输入 Tra，进入触控板设置，再手动开关。
+就这样适应两三个月，其间反复切换，直到这周，我想到解决方案：即让 Gemini 帮我写一个 Keyboard Maestro 动作，当蓝牙连上我的鼠标时，就把自然滚动关闭，如果蓝牙断开，就打开。
+我自认为开启 Vibe Coding，也准备好跟它反复切磋试错，谁知道 Gemini 直接甩出一个开源软件给我，说这个可能会更好，当然，如果您想用 KM，那也行，按我下面的教程来。
+这个开源软件是 Mos，专门用来实现触控板和鼠标方向分离，而且还能让鼠标的滚动像触控板一样丝滑，不管蓝牙断联几次，它依然运行。很明显，这一听就比我那灵机一动的方案好几倍。
+我立即下载安装，除了开机自启和隐藏状态栏图标，其他不需要额外设置。让我惊讶的是，鼠标滚动居然丝滑了起来，原来会偶有卡顿，可不得其法，只能将就，如今觉得腿脚利索了。
+
+
+    
+    
+    
+
+Mos 这样的轻便软件，也许是某些人的装机必备。但我这个门外汉一无所知，觉得有 Keyboard Maestro 这等神器足矣，遇到问题也是想着它能不能解决；岂不知，很多基础性问题，在我遇到前想必已成为共识，那么解决方案也很多样，只是如今有 AI，我猜想着该用牛刀来杀鸡。
+事实上，我连鸡也不用亲自宰，去沙县就能吃上鸡腿饭。" />
+<meta name="keywords" content="工具," />
+
+
+<meta property="og:url" content="http://localhost:1313/blog/ai-suggested-app-instead-of-code/">
+  <meta property="og:site_name" content="梁某银的博客">
+  <meta property="og:title" content="本想找 AI 写代码，它却甩给我一个软件">
+  <meta property="og:description" content="自从用 MacBook 以来，我很喜欢它的触控板设计，起码比我几年前用的笔记本好，动作多，操作丝滑，有时你感觉按下去，其实是马达在震动。可一旦连上显示器、鼠标和键盘时，触控板自然无用武之地，只能依赖鼠标滚动。
+然而 macOS 一切都是跟 Windows 相反的，窗口管理的交通灯、内侧的 Command 承担 Ctrl功能、上下任务栏，乃至鼠标的滚动也截然相反。触控板胜在符合直觉，用起来无感，可一旦接入鼠标，当我习惯性往下滑，页面却往下滚，在 Windows 上是往上面的，这很难适应。
+后来才知道，需要去系统设置的触控板里，关掉自然滚动（Natural scrolling）。如此鼠标滚动方向逆转，然则关掉蓝牙，断开鼠标只用触控板，又需要重新调一次。我找到最好的方法，就是唤出 LaunchBar，输入 Tra，进入触控板设置，再手动开关。
+就这样适应两三个月，其间反复切换，直到这周，我想到解决方案：即让 Gemini 帮我写一个 Keyboard Maestro 动作，当蓝牙连上我的鼠标时，就把自然滚动关闭，如果蓝牙断开，就打开。
+我自认为开启 Vibe Coding，也准备好跟它反复切磋试错，谁知道 Gemini 直接甩出一个开源软件给我，说这个可能会更好，当然，如果您想用 KM，那也行，按我下面的教程来。
+这个开源软件是 Mos，专门用来实现触控板和鼠标方向分离，而且还能让鼠标的滚动像触控板一样丝滑，不管蓝牙断联几次，它依然运行。很明显，这一听就比我那灵机一动的方案好几倍。
+我立即下载安装，除了开机自启和隐藏状态栏图标，其他不需要额外设置。让我惊讶的是，鼠标滚动居然丝滑了起来，原来会偶有卡顿，可不得其法，只能将就，如今觉得腿脚利索了。
+Mos 这样的轻便软件，也许是某些人的装机必备。但我这个门外汉一无所知，觉得有 Keyboard Maestro 这等神器足矣，遇到问题也是想着它能不能解决；岂不知，很多基础性问题，在我遇到前想必已成为共识，那么解决方案也很多样，只是如今有 AI，我猜想着该用牛刀来杀鸡。
+事实上，我连鸡也不用亲自宰，去沙县就能吃上鸡腿饭。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2025-12-11T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-12-11T00:00:00+00:00">
+    <meta property="article:tag" content="工具">
+    <meta property="og:image" content="http://localhost:1313/images/share.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/images/share.png">
+  <meta name="twitter:title" content="本想找 AI 写代码，它却甩给我一个软件">
+  <meta name="twitter:description" content="自从用 MacBook 以来，我很喜欢它的触控板设计，起码比我几年前用的笔记本好，动作多，操作丝滑，有时你感觉按下去，其实是马达在震动。可一旦连上显示器、鼠标和键盘时，触控板自然无用武之地，只能依赖鼠标滚动。
+然而 macOS 一切都是跟 Windows 相反的，窗口管理的交通灯、内侧的 Command 承担 Ctrl功能、上下任务栏，乃至鼠标的滚动也截然相反。触控板胜在符合直觉，用起来无感，可一旦接入鼠标，当我习惯性往下滑，页面却往下滚，在 Windows 上是往上面的，这很难适应。
+后来才知道，需要去系统设置的触控板里，关掉自然滚动（Natural scrolling）。如此鼠标滚动方向逆转，然则关掉蓝牙，断开鼠标只用触控板，又需要重新调一次。我找到最好的方法，就是唤出 LaunchBar，输入 Tra，进入触控板设置，再手动开关。
+就这样适应两三个月，其间反复切换，直到这周，我想到解决方案：即让 Gemini 帮我写一个 Keyboard Maestro 动作，当蓝牙连上我的鼠标时，就把自然滚动关闭，如果蓝牙断开，就打开。
+我自认为开启 Vibe Coding，也准备好跟它反复切磋试错，谁知道 Gemini 直接甩出一个开源软件给我，说这个可能会更好，当然，如果您想用 KM，那也行，按我下面的教程来。
+这个开源软件是 Mos，专门用来实现触控板和鼠标方向分离，而且还能让鼠标的滚动像触控板一样丝滑，不管蓝牙断联几次，它依然运行。很明显，这一听就比我那灵机一动的方案好几倍。
+我立即下载安装，除了开机自启和隐藏状态栏图标，其他不需要额外设置。让我惊讶的是，鼠标滚动居然丝滑了起来，原来会偶有卡顿，可不得其法，只能将就，如今觉得腿脚利索了。
+Mos 这样的轻便软件，也许是某些人的装机必备。但我这个门外汉一无所知，觉得有 Keyboard Maestro 这等神器足矣，遇到问题也是想着它能不能解决；岂不知，很多基础性问题，在我遇到前想必已成为共识，那么解决方案也很多样，只是如今有 AI，我猜想着该用牛刀来杀鸡。
+事实上，我连鸡也不用亲自宰，去沙县就能吃上鸡腿饭。">
+
+
+
+
+  <meta itemprop="name" content="本想找 AI 写代码，它却甩给我一个软件">
+  <meta itemprop="description" content="自从用 MacBook 以来，我很喜欢它的触控板设计，起码比我几年前用的笔记本好，动作多，操作丝滑，有时你感觉按下去，其实是马达在震动。可一旦连上显示器、鼠标和键盘时，触控板自然无用武之地，只能依赖鼠标滚动。
+然而 macOS 一切都是跟 Windows 相反的，窗口管理的交通灯、内侧的 Command 承担 Ctrl功能、上下任务栏，乃至鼠标的滚动也截然相反。触控板胜在符合直觉，用起来无感，可一旦接入鼠标，当我习惯性往下滑，页面却往下滚，在 Windows 上是往上面的，这很难适应。
+后来才知道，需要去系统设置的触控板里，关掉自然滚动（Natural scrolling）。如此鼠标滚动方向逆转，然则关掉蓝牙，断开鼠标只用触控板，又需要重新调一次。我找到最好的方法，就是唤出 LaunchBar，输入 Tra，进入触控板设置，再手动开关。
+就这样适应两三个月，其间反复切换，直到这周，我想到解决方案：即让 Gemini 帮我写一个 Keyboard Maestro 动作，当蓝牙连上我的鼠标时，就把自然滚动关闭，如果蓝牙断开，就打开。
+我自认为开启 Vibe Coding，也准备好跟它反复切磋试错，谁知道 Gemini 直接甩出一个开源软件给我，说这个可能会更好，当然，如果您想用 KM，那也行，按我下面的教程来。
+这个开源软件是 Mos，专门用来实现触控板和鼠标方向分离，而且还能让鼠标的滚动像触控板一样丝滑，不管蓝牙断联几次，它依然运行。很明显，这一听就比我那灵机一动的方案好几倍。
+我立即下载安装，除了开机自启和隐藏状态栏图标，其他不需要额外设置。让我惊讶的是，鼠标滚动居然丝滑了起来，原来会偶有卡顿，可不得其法，只能将就，如今觉得腿脚利索了。
+Mos 这样的轻便软件，也许是某些人的装机必备。但我这个门外汉一无所知，觉得有 Keyboard Maestro 这等神器足矣，遇到问题也是想着它能不能解决；岂不知，很多基础性问题，在我遇到前想必已成为共识，那么解决方案也很多样，只是如今有 AI，我猜想着该用牛刀来杀鸡。
+事实上，我连鸡也不用亲自宰，去沙县就能吃上鸡腿饭。">
+  <meta itemprop="datePublished" content="2025-12-11T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-12-11T00:00:00+00:00">
+  <meta itemprop="wordCount" content="39">
+  <meta itemprop="image" content="http://localhost:1313/images/share.png">
+  <meta itemprop="keywords" content="工具">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+    --width: 720px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --code-background-color: #f2f2f2;
+    --code-color: #222;
+    --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #eee;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --code-background-color: #000;
+      --code-color: #ddd;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  time {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  main {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    font-family: monospace;
+    padding: 2px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--code-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight,
+  .code {
+    padding: 1px 15px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+
+</style>
+
+
+
+
+
+<link rel="stylesheet" href="http://localhost:1313/css/custom.min.68eeb3d0579624ab0e393e821b3ed7037994f6f6e194cea0ea5990442ecd0971.css" integrity="sha256-aO6z0FeWJKsOOT6CGz7XA3mU9vbhlM6g6lmQRC7NCXE=" crossorigin="anonymous"></head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>梁某银的博客</h2>
+</a>
+<nav>
+<a href="/">Home</a>
+
+<a href="/now/">Now</a>
+
+<a href="/blog/">Archives</a>
+
+<a href="/about/">About</a>
+
+<a href="/search/">Search</a>
+
+</nav>
+</header>
+  <main>
+
+<h1>本想找 AI 写代码，它却甩给我一个软件</h1>
+<p>
+  <i>
+    <time datetime='2025-12-11'>
+      2025-12-11
+    </time>
+  </i>
+</p>
+
+<content>
+  <p>
+<figure>
+    <img src="https://img.liangmouyin.com/2025/12/0cfc3616c138f8f2da6e6d1aecc299f4.png" alt="loop_on_A_MacBook_a_computer_mouse_d12ddf11-2db1-474f-9c6b-cb093168e305.png" />
+    
+    
+</figure></p>
+<p>自从用 MacBook 以来，我很喜欢它的触控板设计，起码比我几年前用的笔记本好，动作多，操作丝滑，有时你感觉按下去，其实是马达在震动。可一旦连上显示器、鼠标和键盘时，触控板自然无用武之地，只能依赖鼠标滚动。</p>
+<p>然而 macOS 一切都是跟 Windows 相反的，窗口管理的交通灯、内侧的 Command 承担 Ctrl功能、上下任务栏，乃至鼠标的滚动也截然相反。触控板胜在符合直觉，用起来无感，可一旦接入鼠标，当我习惯性往下滑，页面却往下滚，在 Windows 上是往上面的，这很难适应。</p>
+<p>后来才知道，需要去系统设置的触控板里，关掉自然滚动（Natural scrolling）。如此鼠标滚动方向逆转，然则关掉蓝牙，断开鼠标只用触控板，又需要重新调一次。我找到最好的方法，就是唤出 LaunchBar，输入 Tra，进入触控板设置，再手动开关。</p>
+<p>就这样适应两三个月，其间反复切换，直到这周，我想到解决方案：即让 Gemini 帮我写一个 Keyboard Maestro 动作，当蓝牙连上我的鼠标时，就把自然滚动关闭，如果蓝牙断开，就打开。</p>
+<p>我自认为开启 Vibe Coding，也准备好跟它反复切磋试错，谁知道 Gemini 直接甩出一个开源软件给我，说这个可能会更好，当然，如果您想用 KM，那也行，按我下面的教程来。</p>
+<p>这个开源软件是 <a href="https://mos.caldis.me">Mos</a>，专门用来实现触控板和鼠标方向分离，而且还能让鼠标的滚动像触控板一样丝滑，不管蓝牙断联几次，它依然运行。很明显，这一听就比我那灵机一动的方案好几倍。</p>
+<p>我立即下载安装，除了开机自启和隐藏状态栏图标，其他不需要额外设置。让我惊讶的是，鼠标滚动居然丝滑了起来，原来会偶有卡顿，可不得其法，只能将就，如今觉得腿脚利索了。</p>
+<p>
+<figure>
+    <img src="https://img.liangmouyin.com/2025/12/9ea91ba4597a3a3e74ad1feadbafaf4d.jpeg" alt="Screenshot 2025-12-11 at 22.26.08.jpeg" />
+    
+    
+</figure></p>
+<p>Mos 这样的轻便软件，也许是某些人的装机必备。但我这个门外汉一无所知，觉得有 Keyboard Maestro 这等神器足矣，遇到问题也是想着它能不能解决；岂不知，很多基础性问题，在我遇到前想必已成为共识，那么解决方案也很多样，只是如今有 AI，我猜想着该用牛刀来杀鸡。</p>
+<p>事实上，我连鸡也不用亲自宰，去沙县就能吃上鸡腿饭。</p>
+
+</content>
+<p>
+  
+  <a href="http://localhost:1313/tags/%E5%B7%A5%E5%85%B7/">#工具</a>
+  
+</p>
+<script src="https://giscus.app/client.js"
+        data-repo="LiangSam/myblog-hugo"
+        data-repo-id="R_kgDOPFANrA"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOPFANrM4CxC-2"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+  
+</body>
+
+</html>

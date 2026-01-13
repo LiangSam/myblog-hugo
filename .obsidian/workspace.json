@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/blog/解决纠结的工具：二维四象限.md",
+                "file": "content/search.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "解决纠结的工具：二维四象限"
+              "title": "search"
             }
           }
         ]
@@ -169,13 +169,19 @@
       "bases:Create new base": false
     }
   },
-  "active": "375e38a930e3ced7",
+  "active": "887218f5ee7167b9",
   "lastOpenFiles": [
+    "content/about.md",
+    "content/search.md",
+    "layouts/_default/search.html",
+    "layouts/_default/list copy.html",
+    "layouts/_default/index.json",
+    "content/_index.md",
+    "content/blog/解决纠结的工具：二维四象限.md",
     "content/blog/23岁之前，我没有过自己的房间.md",
     "content/blog/喝到位.md",
     "content/blog/写了 7 个月才有 100 个关注，我不觉得自己有天赋.md",
     "content/blog/我的 2025：用 40 个问题，复盘这一年.md",
-    "content/blog/解决纠结的工具：二维四象限.md",
     "content/blog/无法接受的“精神止痛药”.md",
     "content/blog/把生活当成项目管理：从改变晚饭顺序开始.md",
     "content/blog/失败只是一种状态，重点是你如何描述它.md",
@@ -194,9 +200,6 @@
     "content/blog/用了三个月 MacBook 后，我的 Windows 电脑成了“吉祥物”.md",
     "content/blog/两瓶怡宝，就是我的“极简主义”哑铃.md",
     "content/blog/既然都看短剧了，还要什么脑子？.md",
-    "content/blog/我的桌面编年史：从青旅阳台到4K大屏.md",
-    "content/blog/咻地一下，我就做了1分钟平板支撑.md",
-    "content/blog/那年喝醉后，我花118块钱从大梅沙打车回来上班.md",
     "public/still-using-kindle-2025/index.html",
     "public/still-using-kindle-2025",
     "public/blog/macbook/index.xml",
@@ -206,9 +209,6 @@
     "themes/hugo-bearblog/exampleSite/static/images/share.png",
     "themes/hugo-bearblog/layouts/partials/seo_tags.html",
     "themes/hugo-bearblog/layouts/partials/style.html",
-    "themes/hugo-bearblog/layouts/partials/nav.html",
-    "themes/hugo-bearblog/layouts/partials/header.html",
-    "themes/hugo-bearblog/layouts/partials/favicon.html",
     "themes/hugo-bearblog/images/tn.png",
     "themes/hugo-bearblog/images/screenshot-dark.png",
     "themes/hugo-bearblog/images/screenshot.png",

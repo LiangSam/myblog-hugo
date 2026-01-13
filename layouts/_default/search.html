@@ -1,0 +1,72 @@
+{{ define "main" }}
+<content>
+  <h1 style="margin-bottom: 20px;">文章搜索</h1>
+  
+  <div class="search-container" style="margin-bottom: 40px;">
+    <input id="search-query" type="text" placeholder="输入关键词查找..." style="width: 100%; padding: 15px; font-size: 1.1em; border: 2px solid #eee; border-radius: 8px; background: var(--bg-color); color: var(--text-color);">
+  </div>
+
+  <div id="search-results" class="blog-posts"></div>
+</content>
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+
+<script>
+  var fuse; // 全局变量
+  var searchInput = document.getElementById('search-query');
+  var searchResults = document.getElementById('search-results');
+
+  // 页面加载时获取索引数据
+  window.onload = function() {
+    fetch('/index.json')
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        // 初始化 Fuse.js
+        var options = {
+          shouldSort: true,
+          includeMatches: true,
+          threshold: 0.3, // 阈值：0.0 需要完美匹配，1.0 匹配任何内容
+          tokenize: true,
+          location: 0,
+          distance: 100,
+          maxPatternLength: 32,
+          minMatchCharLength: 1,
+          keys: [
+            {name: "title", weight: 0.8},
+            {name: "content", weight: 0.5},
+            {name: "tags", weight: 0.3}
+          ]
+        };
+        fuse = new Fuse(data, options); // 数据加载完成
+      });
+  };
+
+  // 监听输入事件
+  searchInput.addEventListener('input', function(e) {
+    var query = e.target.value;
+    
+    if (query.length > 0) {
+      var results = fuse.search(query);
+      var htmlContent = '';
+
+      if (results.length > 0) {
+        results.forEach(function(item) {
+          var post = item.item;
+          // 生成结果列表项 (保持和您的 list.html 风格一致)
+          htmlContent += '<div class="post-list-item" style="margin-bottom:1em;">' +
+            '<span class="post-date" style="color:#888; margin-right:1em; font-family:monospace;">' + post.date + '</span>' +
+            '<a href="' + post.permalink + '">' + post.title + '</a>' +
+            '</div>';
+        });
+      } else {
+        htmlContent = '<p>没有找到相关文章。</p>';
+      }
+      searchResults.innerHTML = htmlContent;
+    } else {
+      searchResults.innerHTML = ''; // 清空结果
+    }
+  });
+</script>
+{{ end }}

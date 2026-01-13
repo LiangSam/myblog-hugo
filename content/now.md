@@ -1,7 +1,5 @@
 +++
 title = "Now"
-menu = "main"
-weight = 15
 slug = "now"
 +++
 # 此刻
