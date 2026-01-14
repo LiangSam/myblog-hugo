@@ -35,31 +35,31 @@ enableRobotsTXT = true
     identifier = "home"
     name = "Home"
     url = "/"
-    weight = 10
-
-  [[menu.main]]
-    identifier = "now"
-    name = "Now"
-    url = "/now/"
-    weight = 20
+    weight = 10    # 1. 首页永远在最左边
 
   [[menu.main]]
     identifier = "blog"
-    name = "Archives"   # 已改名为 Archives
+    name = "Archives"
     url = "/blog/"
-    weight = 30
-
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
-    weight = 40
+    weight = 20    # 2. 归档：最重要的内容入口
 
   [[menu.main]]
     identifier = "search"
     name = "Search"
     url = "/search/"
-    weight = 50
+    weight = 30    # 3. 搜索：紧跟归档，方便查找
+
+  [[menu.main]]
+    identifier = "now"
+    name = "Now"
+    url = "/now/"
+    weight = 40    # 4. 状态：博主的近况
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 50    # 5. 关于：博主的详情
 
 # ============================================================
 # 参数配置 (Params)
