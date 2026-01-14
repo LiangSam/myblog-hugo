@@ -137,3 +137,133 @@ header a.title {
     font-weight: 900; /* 加粗 */
     letter-spacing: -0.5px; /* 收紧字间距，更精致 */
 }
+
+/* ==========================================================================
+   2. 搜索页：回归极简风格 (Minimalist)
+   ========================================================================== */
+
+/* 标题微调 */
+.page-title {
+    margin-bottom: 20px;
+}
+
+/* 搜索框容器 */
+.search-container {
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+/* 输入框本体 */
+input#search-query {
+    width: 100%;
+    /* 核心：这一行确保 padding 不会撑爆手机屏幕宽度 */
+    box-sizing: border-box; 
+    
+    /* 样式：纯粹的黑白风格，无阴影，无动画 */
+    padding: 10px 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    
+    color: var(--text-color);
+    background: var(--bg-color);
+    
+    /* 边框：跟随主题颜色的细实线 */
+    border: 2px solid var(--text-color);
+    border-radius: 4px; /* 只有极其微小的圆角 */
+    
+    /* 去掉浏览器默认的蓝色高亮框 */
+    outline: none;
+}
+
+/* 获得焦点时：仅加粗边框或改变透明度，不做位移 */
+input#search-query:focus {
+    opacity: 0.8;
+}
+
+/* ==========================================================================
+   热门标签建议 (Search Suggestions) - 极简优雅版
+   ========================================================================== */
+
+.search-suggestions {
+    margin-bottom: 40px;
+    /* 移除位移动画，只保留极淡的显现，或者干脆静止，保持稳重 */
+    animation: fadeIn 0.8s ease; 
+}
+
+.suggestions-label {
+    font-size: 0.85rem;
+    color: #999; /* 标签标题改用浅灰色，不再喧宾夺主 */
+    margin-bottom: 12px;
+    font-weight: normal; /* 去掉粗体，更清秀 */
+}
+
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; /* 间距微调，更紧凑一点 */
+}
+
+/* 标签本体：微圆角、素雅 */
+.tag-chip {
+    display: inline-flex;
+    align-items: baseline; /* 文字基线对齐 */
+    padding: 5px 10px;     /* 内边距适中 */
+    
+    /* 默认状态：极淡的边框，像空气一样 */
+    border: 1px solid rgba(136, 136, 136, 0.3); 
+    border-radius: 4px;    /* 4px 微圆角，呼应搜索框 */
+    
+    text-decoration: none;
+    font-size: 0.85rem;
+    color: var(--text-color);
+    background-color: transparent; /* 无背景 */
+    
+    transition: all 0.2s ease; /* 平滑过渡 */
+}
+
+/* 标签名 */
+.tag-name {
+    margin-right: 4px;
+    opacity: 0.9;
+}
+
+/* 数量：纯数字，无背景 */
+.tag-count {
+    font-size: 0.75em;
+    color: #aaa;           /* 浅灰色数字 */
+    font-family: monospace; /* 等宽数字，更有极客感 */
+    position: relative;
+    top: -1px;             /* 微调垂直位置 */
+}
+
+/* --- 鼠标悬停交互 (Hover) --- */
+/* 不再变黑，而是变得“清晰” */
+.tag-chip:hover {
+    border-color: var(--text-color); /* 边框变实 */
+    background-color: rgba(125, 125, 125, 0.05); /* 只有极淡的一层灰底，甚至看不出来 */
+    color: var(--text-color);
+    transform: none; /* 去掉上浮动画，保持稳重 */
+}
+
+.tag-chip:hover .tag-count {
+    color: #666; /* 悬停时数字稍微变深一点点 */
+}
+
+/* 深色模式微调 */
+@media (prefers-color-scheme: dark) {
+    .tag-chip {
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+    .tag-chip:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-color: #fff;
+    }
+    .suggestions-label, .tag-count {
+        color: #666;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

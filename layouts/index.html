@@ -1,44 +1,47 @@
+{{/*
+  自定义主页模板 (Clean Version)
+  - 核心逻辑：自我介绍 (Curated) + 最新动态 (News)
+*/}}
 {{ define "main" }}
-<content>
-  {{/* 首先，显示来自 content/_index.md 的主页欢迎内容 */}}
-  <article>
+  
+  {{/* 1. 上半部分：来自 content/_index.md 的“策展内容” */}}
+  <article class="post" style="margin-bottom: 3rem;">
     <section>
       {{ .Content }}
     </section>
   </article>
 
-  {{/* --- 显示最近15篇文章 (数量从10增加到15) --- */}}
+  {{/* 2. 下半部分：最近 10 篇流水账 */}}
   {{ $pages := where .Site.RegularPages "Section" "in" .Site.Params.mainSections }}
-  {{ $recent_pages := first 15 $pages.ByDate.Reverse }} {{ if $recent_pages }}
-  <h3 class="post-list-title">最近文章</h3>
-  <div class="post-list-custom">
-    {{ range $recent_pages }}
-      <div class="post-list-item">
-        {{/* 日期部分：格式修改为 YYYY-MM-DD */}}
-        <span class="post-date">
-          {{ .Date.Format "2006-01-02" }}
-        </span>
-        {{/* 标题链接部分 */}}
-        <a href="{{ .Permalink }}">
-          <span class="post-title">
-            {{ .Title }}
+  {{ $recent_pages := first 10 $pages.ByDate.Reverse }}
+
+  {{ if $recent_pages }}
+    <h2 class="post-list-title" style="margin-top: 3rem; margin-bottom: 1rem;">最新文章</h2>
+    
+    <div class="post-list-custom">
+      {{ range $recent_pages }}
+        <div class="post-list-item">
+
+          {{/* 日期：首页适合显示完整日期，强调时效性 */}}
+          <span class="post-date">
+            {{ .Date.Format "2006-01-02" }}
           </span>
-        </a>
-      </div>
-    {{ end }}
-  </div>
-  {{ end }}
-  
-  {{/* --- 显示所有标签 (带#号，竖线分隔) --- */}}
-  {{ if .Site.Taxonomies.tags }}
-    <div class="tag-line">
-      <h3 class="post-list-title">标签</h3>
-      <p>
-        {{ range $index, $tag := .Site.Taxonomies.tags.Alphabetical }}
-          {{ if gt $index 0 }}<span class="separator"> | </span>{{ end }}
-          <a href="{{ .Page.Permalink }}">#{{ .Name }}</a>
-        {{ end }}
-      </p>
+
+          {{/* 标题 */}}
+          <a href="{{ .Permalink }}">
+            <span class="post-title">
+              {{ .Title }}
+            </span>
+          </a>
+
+        </div>
+      {{ end }}
     </div>
-  {{ end }} </content>
+    
+    {{/* 可选：加一个“查看全部”的入口，引导去归档页 */}}
+    <div style="margin-top: 2rem; text-align: right;">
+        <small><a href="/blog/">查看归档 (Archives) →</a></small>
+    </div>
+  {{ end }}
+
 {{ end }}

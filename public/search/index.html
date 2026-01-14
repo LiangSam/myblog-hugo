@@ -203,7 +203,7 @@
 
 
 
-<link rel="stylesheet" href="http://localhost:1313/css/custom.min.51e3892f0f20543b67cee9b8e04c47c4a6abdc65d724cf17be5dfd98f3a85cbd.css" integrity="sha256-UeOJLw8gVDtnzum44ExHxKar3GXXJM8Xvl39mPOoXL0=" crossorigin="anonymous"></head>
+<link rel="stylesheet" href="http://localhost:1313/css/custom.min.7e1542a127979428a8f585098c5712a0f49381734f37e5eab008aca107c01546.css" integrity="sha256-fhVCoSeXlCio9YUJjFcSoPSTgXNPN&#43;XqsAisoQfAFUY=" crossorigin="anonymous"></head>
 
 <body>
   <header><a href="/" class="title">
@@ -224,34 +224,182 @@
 </header>
   <main>
 <content>
-  <h1 style="margin-bottom: 20px;">文章搜索</h1>
+  <h1 class="page-title">文章搜索</h1>
   
-  <div class="search-container" style="margin-bottom: 40px;">
-    <input id="search-query" type="text" placeholder="输入关键词查找..." style="width: 100%; padding: 15px; font-size: 1.1em; border: 2px solid #eee; border-radius: 8px; background: var(--bg-color); color: var(--text-color);">
+  <div class="search-container">
+    <input id="search-query" type="text" placeholder="Type to search..." autocomplete="off">
+  </div>
+
+  <div class="search-suggestions">
+    <div class="tag-cloud">
+      
+      
+        
+        <a href="http://localhost:1313/tags/%E5%86%99%E4%BD%9C/" class="tag-chip">
+          <span class="tag-name">#写作</span>
+          <span class="tag-count">9</span>
+        </a>
+      
+        
+        <a href="http://localhost:1313/tags/%E6%B8%B8%E8%AE%B0/" class="tag-chip">
+          <span class="tag-name">#游记</span>
+          <span class="tag-count">7</span>
+        </a>
+      
+        
+        <a href="http://localhost:1313/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/" class="tag-chip">
+          <span class="tag-name">#方法论</span>
+          <span class="tag-count">6</span>
+        </a>
+      
+        
+        <a href="http://localhost:1313/tags/kindle/" class="tag-chip">
+          <span class="tag-name">#Kindle</span>
+          <span class="tag-count">5</span>
+        </a>
+      
+        
+        <a href="http://localhost:1313/tags/%E8%AF%BB%E4%B9%A6%E8%AE%B0/" class="tag-chip">
+          <span class="tag-name">#读书记</span>
+          <span class="tag-count">4</span>
+        </a>
+      
+        
+        <a href="http://localhost:1313/tags/macbook/" class="tag-chip">
+          <span class="tag-name">#MacBook</span>
+          <span class="tag-count">3</span>
+        </a>
+      
+        
+        <a href="http://localhost:1313/tags/%E4%BD%8E%E6%8A%80%E6%9C%AF/" class="tag-chip">
+          <span class="tag-name">#低技术</span>
+          <span class="tag-count">3</span>
+        </a>
+      
+        
+        <a href="http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2/" class="tag-chip">
+          <span class="tag-name">#博客</span>
+          <span class="tag-count">3</span>
+        </a>
+      
+        
+        <a href="http://localhost:1313/tags/%E6%89%93%E5%8D%B0%E6%9C%BA/" class="tag-chip">
+          <span class="tag-name">#打印机</span>
+          <span class="tag-count">2</span>
+        </a>
+      
+        
+        <a href="http://localhost:1313/tags/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/" class="tag-chip">
+          <span class="tag-name">#知识管理</span>
+          <span class="tag-count">2</span>
+        </a>
+      
+        
+        <a href="http://localhost:1313/tags/now/" class="tag-chip">
+          <span class="tag-name">#Now</span>
+          <span class="tag-count">1</span>
+        </a>
+      
+        
+        <a href="http://localhost:1313/tags/%E4%BF%A1%E6%81%AF%E6%BA%90/" class="tag-chip">
+          <span class="tag-name">#信息源</span>
+          <span class="tag-count">1</span>
+        </a>
+      
+        
+        <a href="http://localhost:1313/tags/%E5%8E%9F%E7%94%9F%E5%AE%B6%E5%BA%AD/" class="tag-chip">
+          <span class="tag-name">#原生家庭</span>
+          <span class="tag-count">1</span>
+        </a>
+      
+        
+        <a href="http://localhost:1313/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/" class="tag-chip">
+          <span class="tag-name">#学习方法</span>
+          <span class="tag-count">1</span>
+        </a>
+      
+        
+        <a href="http://localhost:1313/tags/%E5%B0%8F%E7%A1%AE%E5%B9%B8/" class="tag-chip">
+          <span class="tag-name">#小确幸</span>
+          <span class="tag-count">1</span>
+        </a>
+      
+        
+        <a href="http://localhost:1313/tags/%E5%B7%A5%E5%85%B7/" class="tag-chip">
+          <span class="tag-name">#工具</span>
+          <span class="tag-count">1</span>
+        </a>
+      
+        
+        <a href="http://localhost:1313/tags/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/" class="tag-chip">
+          <span class="tag-name">#年度总结</span>
+          <span class="tag-count">1</span>
+        </a>
+      
+        
+        <a href="http://localhost:1313/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/" class="tag-chip">
+          <span class="tag-name">#时间管理</span>
+          <span class="tag-count">1</span>
+        </a>
+      
+        
+        <a href="http://localhost:1313/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" class="tag-chip">
+          <span class="tag-name">#浏览器</span>
+          <span class="tag-count">1</span>
+        </a>
+      
+        
+        <a href="http://localhost:1313/tags/%E7%89%A9%E5%93%81/" class="tag-chip">
+          <span class="tag-name">#物品</span>
+          <span class="tag-count">1</span>
+        </a>
+      
+        
+        <a href="http://localhost:1313/tags/%E7%90%86%E8%B4%A2/" class="tag-chip">
+          <span class="tag-name">#理财</span>
+          <span class="tag-count">1</span>
+        </a>
+      
+        
+        <a href="http://localhost:1313/tags/%E8%A7%82%E5%90%8E%E6%84%9F/" class="tag-chip">
+          <span class="tag-name">#观后感</span>
+          <span class="tag-count">1</span>
+        </a>
+      
+        
+        <a href="http://localhost:1313/tags/%E8%A7%82%E7%82%B9/" class="tag-chip">
+          <span class="tag-name">#观点</span>
+          <span class="tag-count">1</span>
+        </a>
+      
+        
+        <a href="http://localhost:1313/tags/%E9%9F%B3%E4%B9%90/" class="tag-chip">
+          <span class="tag-name">#音乐</span>
+          <span class="tag-count">1</span>
+        </a>
+      
+    </div>
   </div>
 
   <div id="search-results" class="blog-posts"></div>
 </content>
 
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
-
 <script>
-  var fuse; 
+  var fuse;
   var searchInput = document.getElementById('search-query');
   var searchResults = document.getElementById('search-results');
 
   
+  
   window.onload = function() {
     fetch('/index.json')
-      .then(function(response) {
-        return response.json();
-      })
+      .then(function(response) { return response.json(); })
       .then(function(data) {
-        
         var options = {
           shouldSort: true,
           includeMatches: true,
-          threshold: 0.3, 
+          threshold: 0.3,
           tokenize: true,
           location: 0,
           distance: 100,
@@ -263,24 +411,26 @@
             {name: "tags", weight: 0.3}
           ]
         };
-        fuse = new Fuse(data, options); 
+        fuse = new Fuse(data, options);
       });
   };
 
-  
   searchInput.addEventListener('input', function(e) {
     var query = e.target.value;
-    
+    var suggestionsBox = document.querySelector('.search-suggestions'); 
+
     if (query.length > 0) {
+      
+      if(suggestionsBox) suggestionsBox.style.display = 'none';
+
       var results = fuse.search(query);
       var htmlContent = '';
 
       if (results.length > 0) {
         results.forEach(function(item) {
           var post = item.item;
-          
-          htmlContent += '<div class="post-list-item" style="margin-bottom:1em;">' +
-            '<span class="post-date" style="color:#888; margin-right:1em; font-family:monospace;">' + post.date + '</span>' +
+          htmlContent += '<div class="post-list-item" style="margin-bottom:1em; display:flex; align-items:baseline;">' +
+            '<span class="post-date" style="color:#999; margin-right:12px; font-family:monospace; min-width:6em;">' + post.date + '</span>' +
             '<a href="' + post.permalink + '">' + post.title + '</a>' +
             '</div>';
         });
@@ -289,7 +439,9 @@
       }
       searchResults.innerHTML = htmlContent;
     } else {
-      searchResults.innerHTML = ''; 
+      
+      if(suggestionsBox) suggestionsBox.style.display = 'block';
+      searchResults.innerHTML = '';
     }
   });
 </script>

@@ -1,33 +1,43 @@
 {{ define "main" }}
 <content>
-  <h1 style="margin-bottom: 20px;">文章搜索</h1>
+  <h1 class="page-title">文章搜索</h1>
   
-  <div class="search-container" style="margin-bottom: 40px;">
-    <input id="search-query" type="text" placeholder="输入关键词查找..." style="width: 100%; padding: 15px; font-size: 1.1em; border: 2px solid #eee; border-radius: 8px; background: var(--bg-color); color: var(--text-color);">
+  <div class="search-container">
+    <input id="search-query" type="text" placeholder="Type to search..." autocomplete="off">
+  </div>
+
+  <div class="search-suggestions">
+    <div class="tag-cloud">
+      {{/* 获取所有标签，并按文章数量(Count)倒序排列 */}}
+      {{ range .Site.Taxonomies.tags.ByCount }}
+        {{/* 这里的 .Page.Title 是标签名， .Count 是文章数 */}}
+        <a href="{{ .Page.Permalink }}" class="tag-chip">
+          <span class="tag-name">#{{ .Page.Title }}</span>
+          <span class="tag-count">{{ .Count }}</span>
+        </a>
+      {{ end }}
+    </div>
   </div>
 
   <div id="search-results" class="blog-posts"></div>
 </content>
 
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
-
 <script>
-  var fuse; // 全局变量
+  var fuse;
   var searchInput = document.getElementById('search-query');
   var searchResults = document.getElementById('search-results');
 
-  // 页面加载时获取索引数据
+  // ... (这里保留您原有的 JS 逻辑，不需要变) ...
+  
   window.onload = function() {
     fetch('/index.json')
-      .then(function(response) {
-        return response.json();
-      })
+      .then(function(response) { return response.json(); })
       .then(function(data) {
-        // 初始化 Fuse.js
         var options = {
           shouldSort: true,
           includeMatches: true,
-          threshold: 0.3, // 阈值：0.0 需要完美匹配，1.0 匹配任何内容
+          threshold: 0.3,
           tokenize: true,
           location: 0,
           distance: 100,
@@ -39,24 +49,26 @@
             {name: "tags", weight: 0.3}
           ]
         };
-        fuse = new Fuse(data, options); // 数据加载完成
+        fuse = new Fuse(data, options);
       });
   };
 
-  // 监听输入事件
   searchInput.addEventListener('input', function(e) {
     var query = e.target.value;
-    
+    var suggestionsBox = document.querySelector('.search-suggestions'); // 获取标签区域
+
     if (query.length > 0) {
+      // 💡 体验优化：输入文字时，隐藏标签建议，避免干扰视线
+      if(suggestionsBox) suggestionsBox.style.display = 'none';
+
       var results = fuse.search(query);
       var htmlContent = '';
 
       if (results.length > 0) {
         results.forEach(function(item) {
           var post = item.item;
-          // 生成结果列表项 (保持和您的 list.html 风格一致)
-          htmlContent += '<div class="post-list-item" style="margin-bottom:1em;">' +
-            '<span class="post-date" style="color:#888; margin-right:1em; font-family:monospace;">' + post.date + '</span>' +
+          htmlContent += '<div class="post-list-item" style="margin-bottom:1em; display:flex; align-items:baseline;">' +
+            '<span class="post-date" style="color:#999; margin-right:12px; font-family:monospace; min-width:6em;">' + post.date + '</span>' +
             '<a href="' + post.permalink + '">' + post.title + '</a>' +
             '</div>';
         });
@@ -65,7 +77,9 @@
       }
       searchResults.innerHTML = htmlContent;
     } else {
-      searchResults.innerHTML = ''; // 清空结果
+      // 💡 体验优化：清空输入时，重新显示标签建议
+      if(suggestionsBox) suggestionsBox.style.display = 'block';
+      searchResults.innerHTML = '';
     }
   });
 </script>
