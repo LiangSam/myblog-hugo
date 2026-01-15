@@ -67,7 +67,7 @@ enableRobotsTXT = true
 [params]
   description = "记录，分享，成长"
   favicon = "images/favicon.png"
-  images = ["images/share.png"]
+  images = ["images/favicon.png"]
   author = "梁某银"
   avatar = "images/favicon.png"
   title = "梁某银的博客"
