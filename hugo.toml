@@ -68,6 +68,8 @@ enableRobotsTXT = true
   description = "记录，分享，成长"
   favicon = "images/favicon.png"
   images = ["images/share.png"]
+  author = "梁某银"
+  avatar = "images/favicon.png"
   title = "梁某银的博客"
   dateFormat = "2006-01-02"
 

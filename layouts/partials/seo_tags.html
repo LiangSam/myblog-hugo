@@ -1,0 +1,19 @@
+<meta name="title" content="{{ .Title }} | {{ .Site.Title }}" />
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}" />
+<meta name="author" content="{{ .Site.Params.author }}" />
+
+<meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}" />
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ .Permalink }}" />
+
+{{ if .Params.images }}
+  <meta property="og:image" content="{{ index .Params.images 0 | absURL }}" />
+{{ else if .Site.Params.images }}
+  <meta property="og:image" content="{{ index .Site.Params.images 0 | absURL }}" />
+{{ end }}
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ .Title }} | {{ .Site.Title }}" />
+<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+<meta name="twitter:image" content="{{ index .Site.Params.images 0 | absURL }}" />
