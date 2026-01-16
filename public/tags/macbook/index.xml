@@ -1,18 +1,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    
     <title>MacBook - 梁某银</title>
     <link>http://localhost:1313/tags/macbook/</link>
     <description>Recent content on 梁某银的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    
-    
     <copyright>Copyright © 2026, 梁某银</copyright>
     <lastBuildDate>Mon, 10 Nov 2025 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://localhost:1313/tags/macbook/index.xml" rel="self" type="application/rss+xml" />
-    
     
     
     
@@ -24,13 +20,11 @@
     
     
     
-    
     <item>
       <title>买完MacBook和旅游回来，我决定老老实实攒钱</title>
       <link>http://localhost:1313/blog/after-macbook-travel-save-money/</link>
       <pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/after-macbook-travel-save-money/</guid>
-      
       <description>&lt;p&gt;
 &lt;figure&gt;
     &lt;img src=&#34;https://img.liangmouyin.com/2025/11/a4eeb83969e92581b94b92f2b0e507b5.png&#34; alt=&#34;loop_on_A_cat_is_sitting_on_the_sofa_counting_money_23917b46-5487-4613-ad93-d186aaac5142.png&#34; /&gt;
@@ -67,7 +61,6 @@
       <link>http://localhost:1313/blog/900yuan-macbook-cockroach/</link>
       <pubDate>Thu, 21 Aug 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/900yuan-macbook-cockroach/</guid>
-      
       <description>&lt;p&gt;
 &lt;figure&gt;
     &lt;img src=&#34;https://img.liangmouyin.com/2025/08/38bcb7284a3f3ae8830541961809831c.jpg&#34; alt=&#34;MacBook.jpg&#34; /&gt;
@@ -104,7 +97,6 @@
       <link>http://localhost:1313/blog/macbook-after-8-years-windows/</link>
       <pubDate>Mon, 21 Jul 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/macbook-after-8-years-windows/</guid>
-      
       <description>&lt;p&gt;上周，我还信誓旦旦跟朋友说，尽管心动，但我绝不会买 MacBook。但打脸来得如此之快，次日我就线下找闲鱼卖家，自提一台二手 MacBook。&lt;/p&gt;
 &lt;p&gt;我买的这台是 MacBook Pro，14 英寸，M1 Pro 芯片，16 + 512 内存，于四年前发售，但卖家买在 2022 年，电池容量也竟然有 90% 以上。卖家还是个原教旨主义者，坚决不升级 macOS，还是 12.5 系统，我拿到手就更新到 14.7，因为要用 OneDrive 同步资料。&lt;/p&gt;
 &lt;p&gt;那我为什么不买新版 MacBook Air 呢？价格这么实惠？这是因为深圳国补在七月份就停掉，刚好我下定决心要买一台，最后发现买老款 Pro 可能还要好一点，有120 赫兹刷新率，HDMI 接口，六扬声器，除了续航稍弱、重量比 Air 还沉，其他的确挑不出毛病。&lt;/p&gt;

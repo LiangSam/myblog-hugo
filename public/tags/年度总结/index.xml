@@ -1,18 +1,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    
     <title>年度总结 - 梁某银</title>
     <link>http://localhost:1313/tags/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
     <description>Recent content on 梁某银的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    
-    
     <copyright>Copyright © 2026, 梁某银</copyright>
     <lastBuildDate>Sun, 14 Dec 2025 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://localhost:1313/tags/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/index.xml" rel="self" type="application/rss+xml" />
-    
     
     
     
@@ -24,13 +20,11 @@
     
     
     
-    
     <item>
       <title>我的 2025：用 40 个问题，复盘这一年</title>
       <link>http://localhost:1313/blog/2025-year-in-review-40-questions/</link>
       <pubDate>Sun, 14 Dec 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/2025-year-in-review-40-questions/</guid>
-      
       <description>&lt;p&gt;
 &lt;figure&gt;
     &lt;img src=&#34;https://img.liangmouyin.com/2025/12/b414bc53e934f987427289057af6209a.png&#34; alt=&#34;loop_on_a_calendar_a_pencil_a_macbook_9791531d-90af-449e-9e76-cd0f77a95d90.png&#34; /&gt;

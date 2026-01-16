@@ -1,18 +1,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    
     <title>学习方法 - 梁某银</title>
     <link>http://localhost:1313/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/</link>
     <description>Recent content on 梁某银的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    
-    
     <copyright>Copyright © 2026, 梁某银</copyright>
     <lastBuildDate>Sat, 13 Apr 2024 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://localhost:1313/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
-    
     
     
     
@@ -24,13 +20,11 @@
     
     
     
-    
     <item>
       <title>这可能是最好的学习方法</title>
       <link>http://localhost:1313/blog/240413-feynman-technique/</link>
       <pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/240413-feynman-technique/</guid>
-      
       <description>&lt;p&gt;我认为，最好的学习方法，应该是费曼学习法。&lt;/p&gt;
 &lt;p&gt;费曼是谁？&lt;/p&gt;
 &lt;p&gt;原名理查德·费曼（Richard Feynman），履历不凡。他是物理学大牛，拿过诺尔贝物理学奖，参与过曼哈顿计划（没错，就是诺兰那部《奥本海默》），后面去大学当老师，教学风格独树一帜，风趣幽默，能深入浅出地讲述知识概念。&lt;/p&gt;

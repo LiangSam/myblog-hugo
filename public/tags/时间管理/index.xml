@@ -1,18 +1,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    
     <title>时间管理 - 梁某银</title>
     <link>http://localhost:1313/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/</link>
     <description>Recent content on 梁某银的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    
-    
     <copyright>Copyright © 2026, 梁某银</copyright>
     <lastBuildDate>Thu, 25 Apr 2024 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://localhost:1313/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
-    
     
     
     
@@ -24,13 +20,11 @@
     
     
     
-    
     <item>
       <title>你需要的是「时间限」，而非「时间线」</title>
       <link>http://localhost:1313/blog/240425-time-management/</link>
       <pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/240425-time-management/</guid>
-      
       <description>&lt;p&gt;过去，我一直认为时间管理就是要把每天要做的事情，列出一个精确到分钟的时间线，几时几分该做什么。就像网上很多人的时间表，排得满满当当，事无巨细。&lt;/p&gt;
 &lt;p&gt;后来看了李笑来的《把时间当做朋友》，里面开宗明义地阐述一个道理：「时间无法管理，需要管理的是自己。」要管理的是自己做事的方式，而非时间。&lt;/p&gt;
 &lt;p&gt;而问题出现了，我明白这个道理，可仍然还是十分懵懂，不知道该怎么去做。这就是那句「听过很多道理，依然过不好这一生」的意思。&lt;/p&gt;

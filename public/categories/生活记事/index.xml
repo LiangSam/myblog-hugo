@@ -1,18 +1,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    
     <title>生活记事 - 梁某银</title>
     <link>http://localhost:1313/categories/%E7%94%9F%E6%B4%BB%E8%AE%B0%E4%BA%8B/</link>
     <description>Recent content on 梁某银的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    
-    
     <copyright>Copyright © 2026, 梁某银</copyright>
     <lastBuildDate>Thu, 26 Jun 2025 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://localhost:1313/categories/%E7%94%9F%E6%B4%BB%E8%AE%B0%E4%BA%8B/index.xml" rel="self" type="application/rss+xml" />
-    
     
     
     
@@ -24,13 +20,11 @@
     
     
     
-    
     <item>
       <title>向你开源我的小确幸</title>
       <link>http://localhost:1313/blog/250626-happiness/</link>
       <pubDate>Thu, 26 Jun 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/250626-happiness/</guid>
-      
       <description>&lt;p&gt;最近，我偶尔会感到苦闷，每天日复一日，好像没什么变化，再加上状态如昨天提到的那样，不太好。&lt;/p&gt;
 &lt;p&gt;之前我认为，想要恢复状态，需要去积累一份成就清单，但这件事尚需时间，眼下我更需要一口喘息的空间，一点可以立刻握住的力量。&lt;/p&gt;
 &lt;p&gt;这时候，我忽然想起，早些年写日记的时候，我会给让我感到幸福的时刻打上一个「小确幸」的标签。于是，我立刻翻开 Obsidian 搜索这个标签。果然，那里还静静地躺着一些，零零碎碎，但一看就让人心头一热。&lt;/p&gt;
@@ -69,7 +63,6 @@
       <link>http://localhost:1313/blog/%E5%B0%B1%E8%BF%99%E4%B9%88%E5%BF%98%E8%AE%B0%E6%97%B6%E9%97%B4/</link>
       <pubDate>Sun, 15 Jun 2025 23:20:00 +0800</pubDate>
       <guid>http://localhost:1313/blog/%E5%B0%B1%E8%BF%99%E4%B9%88%E5%BF%98%E8%AE%B0%E6%97%B6%E9%97%B4/</guid>
-      
       <description>&lt;p&gt;昨天我在散步时，脑海里突然窜出一个念头：当我们专注于一件事时，注意力和时间自然会投入其中。&lt;/p&gt;
 &lt;p&gt;这是我对李笑来「注意力&amp;gt;时间&amp;gt;金钱」的思考。之前我想不通，知道了这个道理，但又没有明显改善我的生活，那么我知道和不知道，并没有区别。&lt;/p&gt;
 &lt;p&gt;于是我想到，纠结注意力和时间放在哪里，其实并不重要，当你忧心忡忡浪费一天时，你的注意力又放在焦虑上，最后又浪费了时间。&lt;/p&gt;

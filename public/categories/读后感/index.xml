@@ -1,18 +1,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    
     <title>读后感 - 梁某银</title>
     <link>http://localhost:1313/categories/%E8%AF%BB%E5%90%8E%E6%84%9F/</link>
     <description>Recent content on 梁某银的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    
-    
     <copyright>Copyright © 2026, 梁某银</copyright>
     <lastBuildDate>Sat, 01 Nov 2025 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://localhost:1313/categories/%E8%AF%BB%E5%90%8E%E6%84%9F/index.xml" rel="self" type="application/rss+xml" />
-    
     
     
     
@@ -24,13 +20,11 @@
     
     
     
-    
     <item>
       <title>《李诞脱口秀工作手册》读后：事情永远不是目的，你是你的目的</title>
       <link>http://localhost:1313/blog/lidan-work-manual-review/</link>
       <pubDate>Sat, 01 Nov 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/lidan-work-manual-review/</guid>
-      
       <description>&lt;p&gt;
 &lt;figure&gt;
     &lt;img src=&#34;https://img.liangmouyin.com/2025/11/c435d02d77f61d25c50b20f71a7b23b1.png&#34; alt=&#34;loop_on_An_egg_wearing_glasses_and_headphones_1c6d0032-9a02-4ce8-bdd9-4500e6dd40a6.png&#34; /&gt;

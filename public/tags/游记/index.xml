@@ -1,18 +1,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    
     <title>游记 - 梁某银</title>
     <link>http://localhost:1313/tags/%E6%B8%B8%E8%AE%B0/</link>
     <description>Recent content on 梁某银的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    
-    
     <copyright>Copyright © 2026, 梁某银</copyright>
     <lastBuildDate>Sun, 16 Nov 2025 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://localhost:1313/tags/%E6%B8%B8%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
-    
     
     
     
@@ -24,13 +20,11 @@
     
     
     
-    
     <item>
       <title>香港一日</title>
       <link>http://localhost:1313/blog/one-day-in-hong-kong/</link>
       <pubDate>Sun, 16 Nov 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/one-day-in-hong-kong/</guid>
-      
       <description>&lt;p&gt;
 &lt;figure&gt;
     &lt;img src=&#34;https://img.liangmouyin.com/2025/11/43032851b014279db01925b5a1967819.jpg&#34; alt=&#34;MVIMG_20251116_150014.jpg&#34; /&gt;
@@ -92,7 +86,6 @@
       <link>http://localhost:1313/blog/national-day-fujian-travelogue-part-6/</link>
       <pubDate>Tue, 07 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/national-day-fujian-travelogue-part-6/</guid>
-      
       <description>&lt;p&gt;你好，我是梁某银。&lt;/p&gt;
 &lt;p&gt;今天是我在厦门的最后一天，虽然假期还有一天，但我并不打算继续游下去，下午我就乘高铁回深圳。&lt;/p&gt;
 &lt;p&gt;那么，最后一天能玩什么呢？时间不宽裕，但也不紧张，好在可以体验没感受过的东西。我吃过早餐，就背着行囊往第一码头走，坐 29 路公交，这趟车会沿着海边行驶，前半部分的站点几乎都是码头，我透过窗户，能看到大海的景色，还有沙滩、游客和车辆，不晒不热，非常惬意。&lt;/p&gt;
@@ -149,7 +142,6 @@
       <link>http://localhost:1313/blog/national-day-fujian-travelogue-part-5/</link>
       <pubDate>Mon, 06 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/national-day-fujian-travelogue-part-5/</guid>
-      
       <description>&lt;p&gt;今天我起了个大早，就为赶鼓浪屿的渡轮——8 点钟启程，我近七点起床洗漱，在酒店吃完早餐，就打车到东渡码头。&lt;/p&gt;
 &lt;p&gt;码头的游客特别多，好在渡轮航班也多，我在里面待一会儿，跟着人群上船。这让我觉得很新鲜，作为内陆人，几乎没怎么坐过船，看着船尾的水泛出水花，突突突地走，岸边的建筑越来越远。&lt;/p&gt;
 &lt;p&gt;
@@ -216,7 +208,6 @@
       <link>http://localhost:1313/blog/national-day-fujian-travelogue-part-4/</link>
       <pubDate>Sun, 05 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/national-day-fujian-travelogue-part-4/</guid>
-      
       <description>&lt;p&gt;今天是我在泉州的最后一天，不过什么时候离开我并未定下，所以准备再多逛逛，我就把最后一站选在承天寺。&lt;/p&gt;
 &lt;p&gt;承天寺不大，香火也没有开元寺和关岳庙鼎盛，但它就坐落在街道旁，门前车流不息，寺内三两行人，可以说是闹中取静。&lt;/p&gt;
 &lt;p&gt;
@@ -283,7 +274,6 @@
       <link>http://localhost:1313/blog/national-day-fujian-travelogue-part-3/</link>
       <pubDate>Sat, 04 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/national-day-fujian-travelogue-part-3/</guid>
-      
       <description>&lt;p&gt;
 &lt;figure&gt;
     &lt;img src=&#34;https://img.liangmouyin.com/2025/10/8365c882479c3e0a9cf230f7965e92f1.png&#34; alt=&#34;image.png&#34; /&gt;
@@ -382,7 +372,6 @@
       <link>http://localhost:1313/blog/national-day-fujian-travelogue-part-2/</link>
       <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/national-day-fujian-travelogue-part-2/</guid>
-      
       <description>&lt;p&gt;今天深度逛了一下开元寺，我听着《来去泉州》关于开元寺的这一期足足有 4.5 个小时的播客，我中间歇息一下，差不多花了六个小时在开元寺。&lt;/p&gt;
 &lt;p&gt;
 &lt;figure&gt;
@@ -478,7 +467,6 @@
       <link>http://localhost:1313/blog/national-day-fujian-travelogue-part-1/</link>
       <pubDate>Thu, 02 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/national-day-fujian-travelogue-part-1/</guid>
-      
       <description>&lt;p&gt;我在今天下午抵达泉州，背着几斤重的双肩包去逛中山路和西街，最后感觉累得不行，又走半个多小时去酒店，放下东西，然后去天后宫附近转。&lt;/p&gt;
 &lt;p&gt;图一是开元寺的塔，据说已存千年，我不清楚是东塔还是西塔。&lt;/p&gt;
 &lt;p&gt;

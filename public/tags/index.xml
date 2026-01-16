@@ -1,18 +1,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    
     <title>Tags - 梁某银</title>
     <link>http://localhost:1313/tags/</link>
     <description>Recent content on 梁某银的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    
-    
     <copyright>Copyright © 2026, 梁某银</copyright>
     <lastBuildDate>Wed, 14 Jan 2026 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
-    
     
     
     
@@ -24,13 +20,11 @@
     
     
     
-    
     <item>
       <title>博客</title>
       <link>http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Wed, 14 Jan 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2/</guid>
-      
       <description></description>
     </item>
     
@@ -39,7 +33,6 @@
       <link>http://localhost:1313/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/</link>
       <pubDate>Tue, 13 Jan 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/</guid>
-      
       <description></description>
     </item>
     
@@ -48,7 +41,6 @@
       <link>http://localhost:1313/tags/%E7%90%86%E8%B4%A2/</link>
       <pubDate>Sun, 11 Jan 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/%E7%90%86%E8%B4%A2/</guid>
-      
       <description></description>
     </item>
     
@@ -57,7 +49,6 @@
       <link>http://localhost:1313/tags/%E8%A7%82%E5%90%8E%E6%84%9F/</link>
       <pubDate>Sat, 27 Dec 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/%E8%A7%82%E5%90%8E%E6%84%9F/</guid>
-      
       <description></description>
     </item>
     
@@ -66,7 +57,6 @@
       <link>http://localhost:1313/tags/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
       <pubDate>Sun, 14 Dec 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
-      
       <description></description>
     </item>
     
@@ -75,7 +65,6 @@
       <link>http://localhost:1313/tags/%E5%B7%A5%E5%85%B7/</link>
       <pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/%E5%B7%A5%E5%85%B7/</guid>
-      
       <description></description>
     </item>
     
@@ -84,7 +73,6 @@
       <link>http://localhost:1313/tags/%E6%B8%B8%E8%AE%B0/</link>
       <pubDate>Sun, 16 Nov 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/%E6%B8%B8%E8%AE%B0/</guid>
-      
       <description></description>
     </item>
     
@@ -93,7 +81,6 @@
       <link>http://localhost:1313/tags/macbook/</link>
       <pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/macbook/</guid>
-      
       <description></description>
     </item>
     
@@ -102,7 +89,6 @@
       <link>http://localhost:1313/tags/%E8%AF%BB%E4%B9%A6%E8%AE%B0/</link>
       <pubDate>Sat, 01 Nov 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/%E8%AF%BB%E4%B9%A6%E8%AE%B0/</guid>
-      
       <description></description>
     </item>
     
@@ -111,7 +97,6 @@
       <link>http://localhost:1313/tags/%E8%A7%82%E7%82%B9/</link>
       <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/%E8%A7%82%E7%82%B9/</guid>
-      
       <description></description>
     </item>
     
@@ -120,7 +105,6 @@
       <link>http://localhost:1313/tags/kindle/</link>
       <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/kindle/</guid>
-      
       <description></description>
     </item>
     
@@ -129,7 +113,6 @@
       <link>http://localhost:1313/tags/now/</link>
       <pubDate>Fri, 04 Jul 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/now/</guid>
-      
       <description></description>
     </item>
     
@@ -138,7 +121,6 @@
       <link>http://localhost:1313/tags/%E7%89%A9%E5%93%81/</link>
       <pubDate>Wed, 02 Jul 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/%E7%89%A9%E5%93%81/</guid>
-      
       <description></description>
     </item>
     
@@ -147,7 +129,6 @@
       <link>http://localhost:1313/tags/%E5%B0%8F%E7%A1%AE%E5%B9%B8/</link>
       <pubDate>Thu, 26 Jun 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/%E5%B0%8F%E7%A1%AE%E5%B9%B8/</guid>
-      
       <description></description>
     </item>
     
@@ -156,7 +137,78 @@
       <link>http://localhost:1313/tags/%E5%86%99%E4%BD%9C/</link>
       <pubDate>Mon, 23 Jun 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/%E5%86%99%E4%BD%9C/</guid>
-      
+      <description></description>
+    </item>
+    
+    <item>
+      <title>低技术</title>
+      <link>http://localhost:1313/tags/%E4%BD%8E%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E4%BD%8E%E6%8A%80%E6%9C%AF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>方法论</title>
+      <link>http://localhost:1313/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/</link>
+      <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>打印机</title>
+      <link>http://localhost:1313/tags/%E6%89%93%E5%8D%B0%E6%9C%BA/</link>
+      <pubDate>Sat, 21 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E6%89%93%E5%8D%B0%E6%9C%BA/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>信息源</title>
+      <link>http://localhost:1313/tags/%E4%BF%A1%E6%81%AF%E6%BA%90/</link>
+      <pubDate>Wed, 11 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E4%BF%A1%E6%81%AF%E6%BA%90/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>音乐</title>
+      <link>http://localhost:1313/tags/%E9%9F%B3%E4%B9%90/</link>
+      <pubDate>Sun, 13 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E9%9F%B3%E4%B9%90/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>知识管理</title>
+      <link>http://localhost:1313/tags/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/</link>
+      <pubDate>Thu, 09 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>时间管理</title>
+      <link>http://localhost:1313/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/</link>
+      <pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>学习方法</title>
+      <link>http://localhost:1313/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>原生家庭</title>
+      <link>http://localhost:1313/tags/%E5%8E%9F%E7%94%9F%E5%AE%B6%E5%BA%AD/</link>
+      <pubDate>Sun, 28 Jan 2024 18:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E5%8E%9F%E7%94%9F%E5%AE%B6%E5%BA%AD/</guid>
       <description></description>
     </item>
     

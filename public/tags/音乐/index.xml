@@ -1,18 +1,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    
     <title>音乐 - 梁某银</title>
     <link>http://localhost:1313/tags/%E9%9F%B3%E4%B9%90/</link>
     <description>Recent content on 梁某银的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    
-    
     <copyright>Copyright © 2026, 梁某银</copyright>
     <lastBuildDate>Sun, 13 Apr 2025 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://localhost:1313/tags/%E9%9F%B3%E4%B9%90/index.xml" rel="self" type="application/rss+xml" />
-    
     
     
     
@@ -24,13 +20,11 @@
     
     
     
-    
     <item>
       <title>推荐几首适合一个人听的歌</title>
       <link>http://localhost:1313/blog/250413-music/</link>
       <pubDate>Sun, 13 Apr 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/250413-music/</guid>
-      
       <description>&lt;p&gt;此前我在公众号上推荐过不少视频博主，音乐倒是很少聊，今天听着听着，突然想推荐几首我比较喜欢，也不算大众的歌。&lt;/p&gt;
 &lt;p&gt;（事先声明：我对音乐一窍不通，单纯是主观感受，所以聊起来也会很业余。）&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;1、《追》张国荣。&lt;/strong&gt;&lt;/p&gt;

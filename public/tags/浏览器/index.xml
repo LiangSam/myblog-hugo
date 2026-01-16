@@ -1,18 +1,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    
     <title>浏览器 - 梁某银</title>
     <link>http://localhost:1313/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/</link>
     <description>Recent content on 梁某银的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    
-    
     <copyright>Copyright © 2026, 梁某银</copyright>
     <lastBuildDate>Tue, 13 Jan 2026 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://localhost:1313/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
-    
     
     
     
@@ -24,13 +20,11 @@
     
     
     
-    
     <item>
       <title>你用什么浏览器？</title>
       <link>http://localhost:1313/blog/what-browser-do-you-use/</link>
       <pubDate>Tue, 13 Jan 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/what-browser-do-you-use/</guid>
-      
       <description>&lt;p&gt;
 &lt;figure&gt;
     &lt;img src=&#34;https://img.liangmouyin.com/2026/01/51390a1c79f4048ce91ba78b32a7384f.png&#34; alt=&#34;loop_on_On_the_mountaintop_a_giant_browser_frame_encloses_a_flo_a012a1e6-c997-4d0a-9e44-f77ff15f0093.png&#34; /&gt;

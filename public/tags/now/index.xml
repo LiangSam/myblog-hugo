@@ -1,18 +1,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    
     <title>Now - 梁某银</title>
     <link>http://localhost:1313/tags/now/</link>
     <description>Recent content on 梁某银的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    
-    
     <copyright>Copyright © 2026, 梁某银</copyright>
     <lastBuildDate>Fri, 04 Jul 2025 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://localhost:1313/tags/now/index.xml" rel="self" type="application/rss+xml" />
-    
     
     
     
@@ -24,13 +20,11 @@
     
     
     
-    
     <item>
       <title>我现在在做什么？</title>
       <link>http://localhost:1313/blog/250704-now/</link>
       <pubDate>Fri, 04 Jul 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/250704-now/</guid>
-      
       <description>&lt;p&gt;我最近在折腾博客，同时参考他人是怎么搭建博客的，我就像个土匪，哪些好用就准备拷贝到我的博客上。&lt;/p&gt;
 &lt;p&gt;过程中，我发现一些博客导航栏都有一个「now」页面，点进去后，发现他们都用寥寥几句话介绍近况，&lt;a href=&#34;https://moranfong.com/now/&#34;&gt;有人回到江西&lt;/a&gt;，&lt;a href=&#34;https://yinji.org/now.html&#34;&gt;有人考驾照&lt;/a&gt;，&lt;a href=&#34;https://huangyang.me/now/&#34;&gt;还有人在读健康领域的书籍&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;无独有偶，他们都会说灵感源于&lt;a href=&#34;https://sive.rs/&#34; title=&#34;Derek Sivers&#34;&gt;Derek Sivers&lt;/a&gt;的&lt;a href=&#34;https://nownownow.com/about&#34;&gt;nownownow.com&lt;/a&gt;。我顺着网址过去，原来是一篇提倡在博客里建立「now」页面的文章。&lt;/p&gt;

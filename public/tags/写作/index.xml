@@ -1,18 +1,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    
     <title>写作 - 梁某银</title>
     <link>http://localhost:1313/tags/%E5%86%99%E4%BD%9C/</link>
     <description>Recent content on 梁某银的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    
-    
     <copyright>Copyright © 2026, 梁某银</copyright>
     <lastBuildDate>Mon, 23 Jun 2025 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://localhost:1313/tags/%E5%86%99%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
-    
     
     
     
@@ -24,13 +20,11 @@
     
     
     
-    
     <item>
       <title>你不写作、不分享，才是真正的浪费</title>
       <link>http://localhost:1313/blog/250623-writing/</link>
       <pubDate>Mon, 23 Jun 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/250623-writing/</guid>
-      
       <description>&lt;p&gt;你有没有过这样的时刻，有一刻突然解决了困扰很久的问题，明明想分享出来，可因为觉得思考不周、方法不是原创、技巧也不够成熟，而放弃了分享。&lt;/p&gt;
 &lt;p&gt;过去我也有这样的心态，什么事情都想做到完美，最好方法完备、思路清晰、完全原创，才有资格分享。&lt;/p&gt;
 &lt;p&gt;可这样是不现实的。如果追求原创，那么很多通俗易懂的入门书，都是在解读艰涩难懂的经典，也就拦掉了一批想登堂入室的人；而追求思路清晰和方法完备，就会无限延长分享的时间，最后半途而废。&lt;/p&gt;
@@ -67,7 +61,6 @@
       <link>http://localhost:1313/blog/250620-writing/</link>
       <pubDate>Fri, 20 Jun 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/250620-writing/</guid>
-      
       <description>&lt;p&gt;可能会有人好奇，我是怎么做到日更的？并且一更就是一年多？&lt;/p&gt;
 &lt;p&gt;其实答案不复杂——因为我的生活，实在太单调了。&lt;/p&gt;
 &lt;p&gt;每天两点一线上班，此外我不喝酒、不抽烟、不研究车、也不敢期待房、更没有太多社交，因此当一个人下班回来，蜷缩在小小的卧室里，剩下的选择，无非刷视频和看网文了，后面慢慢拓展到了写作这件事。&lt;/p&gt;
@@ -98,7 +91,6 @@
       <link>http://localhost:1313/blog/250519-ai-write/</link>
       <pubDate>Thu, 29 May 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/250519-ai-write/</guid>
-      
       <description>&lt;p&gt;最近刷手机，或者看些公众号文章，总有那么些瞬间，让我眉头一皱。倒不是内容有什么惊世骇俗，而是那行文风格，怎么说呢，四平八稳，滴水不漏，但又感觉像是隔着一层什么。后来琢磨了一下，哦，这大概就是现在大家常说的「AI 味儿」吧。工整是工整，但少了点活人的烟火气，甚至有点……嗯，让我不太舒服。&lt;/p&gt;
 &lt;p&gt;说起来也怪，这AI家伙，虽说问世有些年头了，但从去年开始，讨论它的声音就没停过，简直是现象级的。从学生论文，到公司周报，甚至一些大爷大妈，也开始用 AI 来发朋友圈，或抖音短视频。&lt;/p&gt;
 &lt;p&gt;每当这时候，有人兴致勃勃地跟我展示AI几秒钟生成的「雄文」，或是劝我也该「与时俱进」，用AI来「赋能」我的写作时，我心里总泛起一股子莫名的疙瘩。&lt;/p&gt;
@@ -146,7 +138,6 @@
       <link>http://localhost:1313/blog/250411-continue-to-create/</link>
       <pubDate>Fri, 11 Apr 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/250411-continue-to-create/</guid>
-      
       <description>&lt;p&gt;我一直认为，持续创作是比创作更重要的能力——是否发表是另一回事。&lt;/p&gt;
 &lt;p&gt;笔者目前连更一年有余，文章质量参差不齐，好在能持续地写。不过，也只有这样，才能找到一些问题。&lt;/p&gt;
 &lt;p&gt;因为一时兴起的创作是轻松的，今天想到一个点就能洋洋洒洒写几千字，但明天就一个字都崩不出来，时间长了也会懈怠。持续创作则是把一时兴起日常化，每天都写一点，如果我不给自己定下一个标准的话，一天不去写，就很容易延伸到一个月都不动笔。&lt;/p&gt;
@@ -180,7 +171,6 @@
       <link>http://localhost:1313/blog/240420-write/</link>
       <pubDate>Sat, 20 Apr 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/240420-write/</guid>
-      
       <description>&lt;p&gt;我的写作时间总是在晚上。严格来说，是为自己写作的时间。&lt;/p&gt;
 &lt;p&gt;在工作日时，会为工作写长稿短稿，或者在网上发表看法，或者写点朋友圈，这些从广义上都属于写作。只是我们会把写作想得太高大上，认为必须正襟危坐、冥思苦想、洋洋洒洒、长篇大论才算写作，这种理解当然太过偏狭。&lt;/p&gt;
 &lt;p&gt;我过去在想着要认真地写作，要写出有理有据的文章。其实我做的读书笔记，寥寥几句书评、影评也算是写作，它们零碎散乱，不成体系，但也是在一点一滴地积累着。我当初萌生要写原生家庭的文章，然后列大纲，查阅资料，最后也写出了5500字的长文&lt;a href=&#34;http://localhost:1313/240128-family/&#34;&gt;《从自卑到超越，如何逃离原生家庭？》&lt;/a&gt;。&lt;/p&gt;
@@ -208,7 +198,6 @@
       <link>http://localhost:1313/blog/240416-first-sentence-write/</link>
       <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/240416-first-sentence-write/</guid>
-      
       <description>&lt;p&gt;迈开写作的第一步就是写你想写，而非「应该」写。其实我认为写作的真谛也是这样，但按我现在的水平，谈真谛为时尚早。&lt;/p&gt;
 &lt;p&gt;学生之所以不乐意写作文，就是因为那不是他们「想写的东西」。&lt;/p&gt;
 &lt;p&gt;在我创作于爆棚的中学时代，我经常写不合时宜、拿不了高分的作文，总是想批判一二，对老师对学校对教育。后面开始改写小说，写过一篇调侃学校的短篇，当时写在笔记本上，被全班传阅，小说里我给老师们都安排了一个绰号，当时有个老师惹人嫌恶，就安排了一个非常不雅的绰号，没想到范围从班级辐射全校，从此大家都叫他「二狗」。&lt;/p&gt;
@@ -237,7 +226,6 @@
       <link>http://localhost:1313/blog/240409-confusion-in-writing/</link>
       <pubDate>Tue, 09 Apr 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/240409-confusion-in-writing/</guid>
-      
       <description>&lt;p&gt;目前我已经连续日更15天，但对写作有了更多的困惑。&lt;/p&gt;
 &lt;p&gt;首先是我对写作感到轻微焦虑。当我连续日更7天时，我想的是再写一天；而连续日更15天后，我开始怀疑自己。尽管之前说我会捕捉一些信息来写作，但我并非每天都能这么轻松，今天我就陷入一种灵感枯竭，不知道该表达什么，不知道自己的写作能力和思想能不能支撑起一篇文章。&lt;/p&gt;
 &lt;p&gt;我还有一些选题可以写，但当想动笔时，我会问自己：自己的表达是否全面，思路是否清晰，观点是否独有，会不会在捡着别人的口香糖咀嚼，让自己的大脑称为别人观点的跑马场？&lt;/p&gt;
@@ -260,7 +248,6 @@
       <link>http://localhost:1313/blog/240326-write/</link>
       <pubDate>Tue, 26 Mar 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/240326-write/</guid>
-      
       <description>&lt;p&gt;目前我自己的写作方式大致可以分为随心所欲式和大纲式。&lt;/p&gt;
 &lt;p&gt;随心所欲就是让思绪信马由缰，其实也可以叫灵感式写作，先捕捉一个念头，经由键盘输出为屏幕上的文字，然后边写边想，一句接着一句。这样的写作好处是不受束缚，任由想法拼凑成文，但缺点是比较零散，质量堪忧。&lt;/p&gt;
 &lt;p&gt;日常来说，我的写作还是比较随心所欲。因为我没有确定一个明确的选题，只是脑海有个模糊的概念，最后通过文字让它逐渐变得清晰。这样会让你的思路变得更清晰，而不是混沌含糊，也有种把大脑缓存清理掉的快感。&lt;/p&gt;
@@ -282,7 +269,6 @@
       <link>http://localhost:1313/blog/230702-blog/</link>
       <pubDate>Sun, 02 Jul 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/230702-blog/</guid>
-      
       <description>&lt;p&gt;最近逛即刻，看到大黑天分享&lt;a href=&#34;https://guzey.com/personal/why-have-a-blog/&#34;&gt;Why You Should Start a Blog Right Now&lt;/a&gt;这篇文章，用&lt;a href=&#34;https://immersivetranslate.com/&#34;&gt;沉浸式翻译&lt;/a&gt;插件看完。很多人（包括我）常常犹豫要不要开一个公众号写写东西，怕没人看怎么办？感觉没有原创，都是在粘贴别人的话？写作太难了，怕坚持不下去？作者说：It doesn&amp;rsquo;t matter。别急，不妨先写写。&lt;/p&gt;
 &lt;p&gt;那就开一个博客吧。建立一个自己的数码花园，先要撒点种子，有空就来浇浇水，一些意义就会自然而然地生长。&lt;/p&gt;
 &lt;p&gt;这就是第一篇博文，先写写看。&lt;/p&gt;

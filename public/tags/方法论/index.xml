@@ -1,18 +1,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    
     <title>方法论 - 梁某银</title>
     <link>http://localhost:1313/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/</link>
     <description>Recent content on 梁某银的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    
-    
     <copyright>Copyright © 2026, 梁某银</copyright>
     <lastBuildDate>Sun, 22 Jun 2025 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://localhost:1313/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
-    
     
     
     
@@ -24,13 +20,11 @@
     
     
     
-    
     <item>
       <title>再分享几个也许有用的小书签（Bookmarklet）</title>
       <link>http://localhost:1313/blog/%E5%86%8D%E5%88%86%E4%BA%AB%E5%87%A0%E4%B8%AA%E4%B9%9F%E8%AE%B8%E6%9C%89%E7%94%A8%E7%9A%84%E5%B0%8F%E4%B9%A6%E7%AD%BEbookmarklet/</link>
       <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/%E5%86%8D%E5%88%86%E4%BA%AB%E5%87%A0%E4%B8%AA%E4%B9%9F%E8%AE%B8%E6%9C%89%E7%94%A8%E7%9A%84%E5%B0%8F%E4%B9%A6%E7%AD%BEbookmarklet/</guid>
-      
       <description>&lt;blockquote&gt;
 &lt;p&gt;能帮得上忙的小书签，当然如韩信点兵，多多益善。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;昨天的文章&lt;a href=&#34;https://mp.weixin.qq.com/s/7zqhldAirvLqeaAYTSBHjA&#34;&gt;我的打印终极方法论&lt;/a&gt;受到不少欢迎，这让我意识到，很多人都没用过小书签，也不知道它能发挥这么大的作用。&lt;/p&gt;
@@ -58,7 +52,6 @@
       <link>http://localhost:1313/blog/250621-printer/</link>
       <pubDate>Sat, 21 Jun 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/250621-printer/</guid>
-      
       <description>&lt;p&gt;没错，我的文章打印方案更新了！这次更强大、更简单、更快速！&lt;/p&gt;
 &lt;p&gt;我回想之前的文章打印方案，发现工具实在繁琐，尤其是需要 Obsidian 这一项，就拦掉了一批没用过软件的人。&lt;/p&gt;
 &lt;p&gt;今天我就思考，有没有更好的解决方法。一开始我折腾 Microsoft Edge 的阅读模式，又下载插件，换浏览器，最后逛 UTGD 时，看到了一个完美的解决思路：借助小书签（Bookmarklet）来调整文章格式！&lt;/p&gt;
@@ -155,7 +148,6 @@
       <link>http://localhost:1313/blog/250608-printer-read-later/</link>
       <pubDate>Sun, 08 Jun 2025 23:52:00 +0800</pubDate>
       <guid>http://localhost:1313/blog/250608-printer-read-later/</guid>
-      
       <description>&lt;blockquote&gt;
 &lt;p&gt;本文又名：怎么把文章打印成格式统一、可翻阅的小册子&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;打印机昨天到货后，今天我还在折腾怎么打印文章，让比例和格式更适合纸质阅读，目前算是折腾出几点小经验。&lt;/p&gt;
@@ -222,7 +214,6 @@
       <link>http://localhost:1313/blog/250415-expression-ability-method/</link>
       <pubDate>Tue, 15 Apr 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/250415-expression-ability-method/</guid>
-      
       <description>&lt;p&gt;昨天写了&lt;a href=&#34;http://localhost:1313/250414-expression-ability-method/&#34;&gt;一种让我灵魂震颤，提升表达能力的方法&lt;/a&gt;，今天又收获两个技巧，特此撰文补充。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;1、利用闲暇时间练习。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;在昨天的文章里，我的赛博朋友@林声 留言说：&lt;/p&gt;
@@ -251,7 +242,6 @@
       <link>http://localhost:1313/blog/250414-expression-ability-method/</link>
       <pubDate>Mon, 14 Apr 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/250414-expression-ability-method/</guid>
-      
       <description>&lt;p&gt;长久以来，我一直困于不知道如何提升自己的语言表达能力。一件事到我手上，我能通过大脑、纸笔、键盘来梳理清楚，但要让我讲出来，我反而做不到。&lt;/p&gt;
 &lt;p&gt;但是，我昨天看到了一个转机，或许能帮助我提升语言表达能力。&lt;/p&gt;
 &lt;p&gt;昨天微博@tombkeeper 介绍两种提升表达能力的方法。一个是他以前就介绍过，通过设计周末的活动，来规划交通、物资、人数、地点、过程，再反复朗读反复修改，同时还能找家人来指出文稿的疑问之处。但我不具备这个条件，所以作罢。&lt;/p&gt;
@@ -282,7 +272,6 @@
       <link>http://localhost:1313/blog/250412-life-principle/</link>
       <pubDate>Sat, 12 Apr 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/250412-life-principle/</guid>
-      
       <description>&lt;p&gt;在知乎刷到这个问题，有两万多个回答，遂感兴趣，也站在 27 岁的年纪来回答一下。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;1、在吃的方面不要太省钱。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;并非是说奢侈浪费，而是可以多花钱吃营养健康的。&lt;/p&gt;

@@ -1,18 +1,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    
     <title>小确幸 - 梁某银</title>
     <link>http://localhost:1313/tags/%E5%B0%8F%E7%A1%AE%E5%B9%B8/</link>
     <description>Recent content on 梁某银的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    
-    
     <copyright>Copyright © 2026, 梁某银</copyright>
     <lastBuildDate>Thu, 26 Jun 2025 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://localhost:1313/tags/%E5%B0%8F%E7%A1%AE%E5%B9%B8/index.xml" rel="self" type="application/rss+xml" />
-    
     
     
     
@@ -24,13 +20,11 @@
     
     
     
-    
     <item>
       <title>向你开源我的小确幸</title>
       <link>http://localhost:1313/blog/250626-happiness/</link>
       <pubDate>Thu, 26 Jun 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/250626-happiness/</guid>
-      
       <description>&lt;p&gt;最近，我偶尔会感到苦闷，每天日复一日，好像没什么变化，再加上状态如昨天提到的那样，不太好。&lt;/p&gt;
 &lt;p&gt;之前我认为，想要恢复状态，需要去积累一份成就清单，但这件事尚需时间，眼下我更需要一口喘息的空间，一点可以立刻握住的力量。&lt;/p&gt;
 &lt;p&gt;这时候，我忽然想起，早些年写日记的时候，我会给让我感到幸福的时刻打上一个「小确幸」的标签。于是，我立刻翻开 Obsidian 搜索这个标签。果然，那里还静静地躺着一些，零零碎碎，但一看就让人心头一热。&lt;/p&gt;

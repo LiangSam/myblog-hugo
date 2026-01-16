@@ -1,18 +1,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    
     <title>读书记 - 梁某银</title>
     <link>http://localhost:1313/tags/%E8%AF%BB%E4%B9%A6%E8%AE%B0/</link>
     <description>Recent content on 梁某银的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    
-    
     <copyright>Copyright © 2026, 梁某银</copyright>
     <lastBuildDate>Sat, 01 Nov 2025 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://localhost:1313/tags/%E8%AF%BB%E4%B9%A6%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
-    
     
     
     
@@ -24,13 +20,11 @@
     
     
     
-    
     <item>
       <title>《李诞脱口秀工作手册》读后：事情永远不是目的，你是你的目的</title>
       <link>http://localhost:1313/blog/lidan-work-manual-review/</link>
       <pubDate>Sat, 01 Nov 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/lidan-work-manual-review/</guid>
-      
       <description>&lt;p&gt;
 &lt;figure&gt;
     &lt;img src=&#34;https://img.liangmouyin.com/2025/11/c435d02d77f61d25c50b20f71a7b23b1.png&#34; alt=&#34;loop_on_An_egg_wearing_glasses_and_headphones_1c6d0032-9a02-4ce8-bdd9-4500e6dd40a6.png&#34; /&gt;
@@ -71,7 +65,6 @@
       <link>http://localhost:1313/blog/the-art-of-spending-money-review/</link>
       <pubDate>Sun, 19 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/the-art-of-spending-money-review/</guid>
-      
       <description>&lt;p&gt;
 &lt;figure&gt;
     &lt;img src=&#34;https://img.liangmouyin.com/2025/10/3c625f5c10942bb62a738b071abff2d1.png&#34; alt=&#34;loop_on_A_cat_is_sitting_on_the_sofa_counting_money_005f7b6d-f44f-4947-9ee6-5013ddf97acf.png&#34; /&gt;
@@ -112,7 +105,6 @@
       <link>http://localhost:1313/blog/%E5%A6%82%E4%BD%95%E5%BA%A6%E8%BF%87%E6%AF%8F%E5%A4%A9%E7%9A%8424%E5%B0%8F%E6%97%B6%E8%AF%BB%E5%90%8E/</link>
       <pubDate>Mon, 07 Jul 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/%E5%A6%82%E4%BD%95%E5%BA%A6%E8%BF%87%E6%AF%8F%E5%A4%A9%E7%9A%8424%E5%B0%8F%E6%97%B6%E8%AF%BB%E5%90%8E/</guid>
-      
       <description>&lt;p&gt;我们应该如何度过一天的 24 小时呢？&lt;/p&gt;
 &lt;p&gt;上周我看到@宇子 在文章推荐一本书，《如何度过每天的24小时》。刚好我最近为这件事感到困惑，因此周末去图书馆借来，昨天就一口气读完（其实断了好几口气）。&lt;/p&gt;
 &lt;p&gt;读完后，我感觉这本书应该叫《如何读过我们的一生》。因为他不仅仅回答如何安排一天，更是传递一种乐观、积极、自洽的思想，让我们去度过一生。&lt;/p&gt;
@@ -138,7 +130,6 @@
       <link>http://localhost:1313/blog/250703-lixiaolai/</link>
       <pubDate>Thu, 03 Jul 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/250703-lixiaolai/</guid>
-      
       <description>&lt;p&gt;最近磨磨蹭蹭，总算把李笑来的《思考的真相》读完了。&lt;/p&gt;
 &lt;p&gt;这本书的装帧设计，跟《财富的真相》《专注的真相》一样，又薄又硬，薄是指全书共有 5.8 万字（而评论尸的&lt;a href=&#34;https://1q43.blog/post/5322/&#34;&gt;幸福的积分&lt;/a&gt;有 6.3 万字，我用打印成 A5 小册子也勉强能装订），硬指封皮硬，内容也硬。&lt;/p&gt;
 &lt;p&gt;《思考的真相》结构不复杂，李笑来先从基础开始，比如我们定义一个概念时，如何判断是否准确？定义后如何给概念分类？分类了又如何比较？其中的因果关系如何？&lt;/p&gt;

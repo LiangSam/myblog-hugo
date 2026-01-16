@@ -1,18 +1,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    
     <title>工具 - 梁某银</title>
     <link>http://localhost:1313/tags/%E5%B7%A5%E5%85%B7/</link>
     <description>Recent content on 梁某银的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    
-    
     <copyright>Copyright © 2026, 梁某银</copyright>
     <lastBuildDate>Thu, 11 Dec 2025 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://localhost:1313/tags/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
-    
     
     
     
@@ -24,13 +20,11 @@
     
     
     
-    
     <item>
       <title>本想找 AI 写代码，它却甩给我一个软件</title>
       <link>http://localhost:1313/blog/ai-suggested-app-instead-of-code/</link>
       <pubDate>Thu, 11 Dec 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/ai-suggested-app-instead-of-code/</guid>
-      
       <description>&lt;p&gt;
 &lt;figure&gt;
     &lt;img src=&#34;https://img.liangmouyin.com/2025/12/0cfc3616c138f8f2da6e6d1aecc299f4.png&#34; alt=&#34;loop_on_A_MacBook_a_computer_mouse_d12ddf11-2db1-474f-9c6b-cb093168e305.png&#34; /&gt;

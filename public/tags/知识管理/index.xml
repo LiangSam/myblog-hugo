@@ -1,18 +1,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    
     <title>知识管理 - 梁某银</title>
     <link>http://localhost:1313/tags/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/</link>
     <description>Recent content on 梁某银的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    
-    
     <copyright>Copyright © 2026, 梁某银</copyright>
     <lastBuildDate>Thu, 09 May 2024 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://localhost:1313/tags/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
-    
     
     
     
@@ -24,13 +20,11 @@
     
     
     
-    
     <item>
       <title>工具是手段，而非目的</title>
       <link>http://localhost:1313/blog/240509-tools-and-purposes/</link>
       <pubDate>Thu, 09 May 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/240509-tools-and-purposes/</guid>
-      
       <description>&lt;p&gt;我是一个狂热的工具党，信奉「工欲善其事，必先利其器」，因此我曾经会不厌其烦地折腾各种新工具，例如时间管理app，从最初的奇妙清单，到Microsoft To Do、滴答清单、Things等待办应用。&lt;/p&gt;
 &lt;p&gt;尤其是手机，我用的还是Android系统，以前会折腾应用桌面、图标包、小组件，后面换到小米手机之后，也会购买各种主题。而现在，一切都是默认，包括字体、图标，因为年岁渐长，没有太多精力折腾这些事了。&lt;/p&gt;
 &lt;p&gt;拥有电脑之后，我上steam购买的第一个软件就是 Wallpaper Engine，这是一个动态壁纸软件，用很多用户在创意工坊里上传视频素材，下载之后就能应用到桌面，让你的桌面动起来。同时还会折腾界面美化，光标样式，声音主题等等。但我目前的电脑桌面，就只留着一个回收站，其他什么都没有。&lt;/p&gt;
@@ -56,7 +50,6 @@
       <link>http://localhost:1313/blog/240417-knowledge-management-curse/</link>
       <pubDate>Wed, 17 Apr 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/240417-knowledge-management-curse/</guid>
-      
       <description>&lt;p&gt;我曾经特别喜欢看别人的知识管理经验分享，软件之庞杂令人叹为观止，从最开始的印象笔记、OneNote、有道云笔记，到现在的双链笔记Obsidian、思源笔记、Logseq、Roam，然后是All in One 的线上知识库Notion、我来、flowus、语雀。&lt;/p&gt;
 &lt;p&gt;同时笔记方法也不断涌现，有卡片笔记法、P.A.R.A知识管理法、原子化笔记等等，随便一搜关键词，就能找到海量信息。&lt;/p&gt;
 &lt;p&gt;但这非常奇怪，人们对笔记方法的需求，好像是随着互联网兴起而来的。在以前，顶多是谈论康奈尔笔记法，要求记笔记有浓缩有扩展，但现在好多人都变成了知识管理专家，倘若问他们有什么作品，答案往往是知识管理的经验分享。&lt;/p&gt;

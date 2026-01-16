@@ -1,18 +1,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    
     <title>博客 - 梁某银</title>
     <link>http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2/</link>
     <description>Recent content on 梁某银的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    
-    
     <copyright>Copyright © 2026, 梁某银</copyright>
     <lastBuildDate>Wed, 14 Jan 2026 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
-    
     
     
     
@@ -24,13 +20,11 @@
     
     
     
-    
     <item>
       <title>这两天我在折腾博客</title>
       <link>http://localhost:1313/blog/tweaking-my-blog-search-and-archives/</link>
       <pubDate>Wed, 14 Jan 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/tweaking-my-blog-search-and-archives/</guid>
-      
       <description>&lt;p&gt;
 &lt;figure&gt;
     &lt;img src=&#34;https://img.liangmouyin.com/2026/01/8a6a0d7c0257094338cb38341dfee99b.png&#34; alt=&#34;loop_on_a_writers_blog_cd124b8b-5b55-4a7f-bf33-7f649d4d16e2.png&#34; /&gt;
@@ -86,7 +80,6 @@
       <link>http://localhost:1313/blog/add-comments-to-blog/</link>
       <pubDate>Sat, 25 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/add-comments-to-blog/</guid>
-      
       <description>&lt;p&gt;
 &lt;figure&gt;
     &lt;img src=&#34;https://img.liangmouyin.com/2025/10/6a9d65864de261a4c872e358900f0768.png&#34; alt=&#34;loop_on_a_painting_of_a_little_white_programmer_puppy_tech-savv_b8624a4e-8d31-4d90-84d8-b9c316a67957.png&#34; /&gt;
@@ -138,7 +131,6 @@
       <link>http://localhost:1313/blog/250701-share-my-blog/</link>
       <pubDate>Tue, 01 Jul 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/250701-share-my-blog/</guid>
-      
       <description>&lt;p&gt;今晚本来想写一篇文章，叫作《悬浮的人》。&lt;/p&gt;
 &lt;p&gt;我今天搭乘地铁时，在《多谈谈问题》读到项飙的采访文章，他说现在很多人的状态处于「悬浮」，就像蜂鸟一样，拼命拍打翅膀，就为了不掉下去，跟那些卷又卷不动，躺又躺不平的年轻人一样。&lt;/p&gt;
 &lt;p&gt;
@@ -176,7 +168,6 @@
       <link>http://localhost:1313/blog/230702-blog/</link>
       <pubDate>Sun, 02 Jul 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/230702-blog/</guid>
-      
       <description>&lt;p&gt;最近逛即刻，看到大黑天分享&lt;a href=&#34;https://guzey.com/personal/why-have-a-blog/&#34;&gt;Why You Should Start a Blog Right Now&lt;/a&gt;这篇文章，用&lt;a href=&#34;https://immersivetranslate.com/&#34;&gt;沉浸式翻译&lt;/a&gt;插件看完。很多人（包括我）常常犹豫要不要开一个公众号写写东西，怕没人看怎么办？感觉没有原创，都是在粘贴别人的话？写作太难了，怕坚持不下去？作者说：It doesn&amp;rsquo;t matter。别急，不妨先写写。&lt;/p&gt;
 &lt;p&gt;那就开一个博客吧。建立一个自己的数码花园，先要撒点种子，有空就来浇浇水，一些意义就会自然而然地生长。&lt;/p&gt;
 &lt;p&gt;这就是第一篇博文，先写写看。&lt;/p&gt;
