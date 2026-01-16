@@ -1,20 +1,67 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>浏览器 on 梁某银的博客</title>
+    
+    <title>浏览器 - 梁某银</title>
     <link>http://localhost:1313/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/</link>
-    <description>Recent content in 浏览器 on 梁某银的博客</description>
-    <generator>Hugo</generator>
+    <description>Recent content on 梁某银的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
+    
+    
     <copyright>Copyright © 2026, 梁某银</copyright>
     <lastBuildDate>Tue, 13 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
+    
+        <atom:link href="http://localhost:1313/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
     <item>
       <title>你用什么浏览器？</title>
       <link>http://localhost:1313/blog/what-browser-do-you-use/</link>
       <pubDate>Tue, 13 Jan 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/what-browser-do-you-use/</guid>
-      <description>&lt;p&gt;&#xA;&lt;figure&gt;&#xA;    &lt;img src=&#34;https://img.liangmouyin.com/2026/01/51390a1c79f4048ce91ba78b32a7384f.png&#34; alt=&#34;loop_on_On_the_mountaintop_a_giant_browser_frame_encloses_a_flo_a012a1e6-c997-4d0a-9e44-f77ff15f0093.png&#34; /&gt;&#xA;    &#xA;    &#xA;&lt;/figure&gt;&lt;/p&gt;&#xA;&lt;p&gt;你用什么浏览器？&lt;/p&gt;&#xA;&lt;p&gt;早年混迹酷安时，大家都热衷于讨论手机浏览器，一定要找个功能最多，更新最快，还能下载资源的浏览器。最开始他们聊夸克，那时还是小而美，后来功能越来越多，体积越来越大，评价直线下滑。&lt;/p&gt;&#xA;&lt;p&gt;现在我反而很少看人讨论手机浏览器。一是因为我不逛酷安，二是我有了电脑，可以在电脑端做更多事，而不是把全部时间和精力铺在手机上。因为一部手机能做的事，实在太少，以前我还会用手机来码字，后来发现打字速度没有电脑快，所以现在极少用手机码一长串的字来。&lt;/p&gt;&#xA;&lt;p&gt;如今我在用的有三台设备，每台的浏览器都不一样，这里可以谈谈我的思路。&lt;/p&gt;&#xA;&lt;h2 id=&#34;安卓手机via&#34;&gt;安卓手机：Via&lt;/h2&gt;&#xA;&lt;p&gt;Via 以小而美著称，安装包仅有 3MB，保持一贯简洁的同时，功能还非常齐全。我日常作为手机主力浏览器，查资料，检查网速，不能在微信打开的网站（鉴于微信的极度包容），就会放在 Via 里打开。&lt;/p&gt;&#xA;&lt;p&gt;为什么不用手机自带的浏览器？&lt;/p&gt;&#xA;&lt;p&gt;笔者用的是小米 15，自带浏览器刚开始打开时，你顿时就被震惊到，弹窗、新闻、无处不在的狗皮膏药广告，完全沦为了一个资讯工具。好不容易从枪林弹雨中关掉广告，可如果某天突然访问国外网站，它居然会给你拦截，死活打不开。&lt;/p&gt;&#xA;&lt;p&gt;这也是我非常困惑的是，以开源著称的 Android 手机（严格来说是安卓），在各个厂商手下，反而广告横行，四处限制；而以封闭闻名的 iOS 却克制简练，Safari 不见广告，顶多是有些书签，明明它是最有资格这么做的。&lt;/p&gt;&#xA;&lt;p&gt;此外，我特别喜欢每次更新完 Via 后冒出来的诗，现在 6.9.0 版本的是「片云天共远，永夜月同孤。」&lt;/p&gt;&#xA;&lt;h2 id=&#34;macbooksafari&#34;&gt;MacBook：Safari&lt;/h2&gt;&#xA;&lt;p&gt;我在 MacBook 上装了几个浏览器，Google Chrome、Dia、ChatGPT Atlas，但是最常用的，还是 Safari。&lt;/p&gt;&#xA;&lt;p&gt;没有什么原因，只是我暂时不需要同步书签，也不用什么扩展插件，这反倒是难得的自由。&lt;/p&gt;&#xA;&lt;p&gt;我就是把它当作一个单纯的浏览器来用，有时读文章会打开阅读模式，需要导出网页的 PDF 时，会点开小书签修剪一二，如果要用 AI，那我会打开已经保存为应用的 Gemini。此外还坚持用 Safari 的一个原因，是几个 Keyboard Maestro 动作都和它绑定，如摘抄网页段落到 Anki，对照翻译，查看 YouTube/哔哩哔哩视频缩略图。&lt;/p&gt;&#xA;&lt;p&gt;Dia 我也尝试过，但还没体会出它的好来。就我体验下来，是可以在网页之中，多出一个侧边栏，即右上角的 Chat 按钮，可以对当前网页内容来询问，甚至会出现让 AI 来问 AI，这挺像 Microsoft Edge 的 Copilot。&lt;/p&gt;&#xA;&lt;h2 id=&#34;windowsmicrosoft-edge&#34;&gt;Windows：Microsoft Edge&lt;/h2&gt;&#xA;&lt;p&gt;在使用 Windows 这么多年的经历里，我换过不少浏览器，百分、Vivaldi、Firefox、Opera 等等，最后用到现在的，是 Microsoft Edge 和 Google Chrome。&lt;/p&gt;&#xA;&lt;p&gt;无他，稳定。&lt;/p&gt;&#xA;&lt;p&gt;早些年 Microsoft Edge 还能打开 EPUB 电子书，可惜它把内核改成 Chromium 后，需要花费一些功夫才能找回当年的功能，这是我不太理解的。但是国区 Microsoft Edge 也会低人一等，偶有广告，不胜其烦，可它的垂直标签页我非常喜欢（Vivaldi 也有），Copilot 也可堪一用——要知道当初微软的 New Bing 赶上了 AI 浪潮，内置 ChatGPT，对话也很有用，现在倒是没什么水花。&lt;/p&gt;</description>
+      
+      <description>&lt;p&gt;
+&lt;figure&gt;
+    &lt;img src=&#34;https://img.liangmouyin.com/2026/01/51390a1c79f4048ce91ba78b32a7384f.png&#34; alt=&#34;loop_on_On_the_mountaintop_a_giant_browser_frame_encloses_a_flo_a012a1e6-c997-4d0a-9e44-f77ff15f0093.png&#34; /&gt;
+    
+    
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;你用什么浏览器？&lt;/p&gt;
+&lt;p&gt;早年混迹酷安时，大家都热衷于讨论手机浏览器，一定要找个功能最多，更新最快，还能下载资源的浏览器。最开始他们聊夸克，那时还是小而美，后来功能越来越多，体积越来越大，评价直线下滑。&lt;/p&gt;
+&lt;p&gt;现在我反而很少看人讨论手机浏览器。一是因为我不逛酷安，二是我有了电脑，可以在电脑端做更多事，而不是把全部时间和精力铺在手机上。因为一部手机能做的事，实在太少，以前我还会用手机来码字，后来发现打字速度没有电脑快，所以现在极少用手机码一长串的字来。&lt;/p&gt;
+&lt;p&gt;如今我在用的有三台设备，每台的浏览器都不一样，这里可以谈谈我的思路。&lt;/p&gt;
+&lt;h2 id=&#34;安卓手机via&#34;&gt;安卓手机：Via&lt;/h2&gt;
+&lt;p&gt;Via 以小而美著称，安装包仅有 3MB，保持一贯简洁的同时，功能还非常齐全。我日常作为手机主力浏览器，查资料，检查网速，不能在微信打开的网站（鉴于微信的极度包容），就会放在 Via 里打开。&lt;/p&gt;
+&lt;p&gt;为什么不用手机自带的浏览器？&lt;/p&gt;
+&lt;p&gt;笔者用的是小米 15，自带浏览器刚开始打开时，你顿时就被震惊到，弹窗、新闻、无处不在的狗皮膏药广告，完全沦为了一个资讯工具。好不容易从枪林弹雨中关掉广告，可如果某天突然访问国外网站，它居然会给你拦截，死活打不开。&lt;/p&gt;
+&lt;p&gt;这也是我非常困惑的是，以开源著称的 Android 手机（严格来说是安卓），在各个厂商手下，反而广告横行，四处限制；而以封闭闻名的 iOS 却克制简练，Safari 不见广告，顶多是有些书签，明明它是最有资格这么做的。&lt;/p&gt;
+&lt;p&gt;此外，我特别喜欢每次更新完 Via 后冒出来的诗，现在 6.9.0 版本的是「片云天共远，永夜月同孤。」&lt;/p&gt;
+&lt;h2 id=&#34;macbooksafari&#34;&gt;MacBook：Safari&lt;/h2&gt;
+&lt;p&gt;我在 MacBook 上装了几个浏览器，Google Chrome、Dia、ChatGPT Atlas，但是最常用的，还是 Safari。&lt;/p&gt;
+&lt;p&gt;没有什么原因，只是我暂时不需要同步书签，也不用什么扩展插件，这反倒是难得的自由。&lt;/p&gt;
+&lt;p&gt;我就是把它当作一个单纯的浏览器来用，有时读文章会打开阅读模式，需要导出网页的 PDF 时，会点开小书签修剪一二，如果要用 AI，那我会打开已经保存为应用的 Gemini。此外还坚持用 Safari 的一个原因，是几个 Keyboard Maestro 动作都和它绑定，如摘抄网页段落到 Anki，对照翻译，查看 YouTube/哔哩哔哩视频缩略图。&lt;/p&gt;
+&lt;p&gt;Dia 我也尝试过，但还没体会出它的好来。就我体验下来，是可以在网页之中，多出一个侧边栏，即右上角的 Chat 按钮，可以对当前网页内容来询问，甚至会出现让 AI 来问 AI，这挺像 Microsoft Edge 的 Copilot。&lt;/p&gt;
+&lt;h2 id=&#34;windowsmicrosoft-edge&#34;&gt;Windows：Microsoft Edge&lt;/h2&gt;
+&lt;p&gt;在使用 Windows 这么多年的经历里，我换过不少浏览器，百分、Vivaldi、Firefox、Opera 等等，最后用到现在的，是 Microsoft Edge 和 Google Chrome。&lt;/p&gt;
+&lt;p&gt;无他，稳定。&lt;/p&gt;
+&lt;p&gt;早些年 Microsoft Edge 还能打开 EPUB 电子书，可惜它把内核改成 Chromium 后，需要花费一些功夫才能找回当年的功能，这是我不太理解的。但是国区 Microsoft Edge 也会低人一等，偶有广告，不胜其烦，可它的垂直标签页我非常喜欢（Vivaldi 也有），Copilot 也可堪一用——要知道当初微软的 New Bing 赶上了 AI 浪潮，内置 ChatGPT，对话也很有用，现在倒是没什么水花。&lt;/p&gt;
+&lt;p&gt;公司电脑也是 Windows，不过我用的是 Vivaldi，单纯是想换换手感。&lt;/p&gt;
+&lt;h2 id=&#34;小结&#34;&gt;小结&lt;/h2&gt;
+&lt;p&gt;未来我可能会彻底转向 AI 式浏览器，可现在还是不知道具体帮助何在，因此用得比较谨慎。一个原因是之前我用 Windows 时就一直听说 macOS 的 ARC Browser 非常棒，让我心痒难耐。谁知道我真用上后，大家都开始用 Dia 了，连 ChatGPT 也推出了 Atlas。&lt;/p&gt;
+&lt;p&gt;所以，未来浏览器也可能会随着 AI 发展而日新月异。我倒也不是原教旨主义者，工具只要是工具，能够打开网页，功能简洁，那用什么并无显著差异。&lt;/p&gt;
+</description>
     </item>
+    
   </channel>
 </rss>

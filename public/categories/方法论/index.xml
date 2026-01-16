@@ -1,27 +1,154 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>方法论 on 梁某银的博客</title>
+    
+    <title>方法论 - 梁某银</title>
     <link>http://localhost:1313/categories/%E6%96%B9%E6%B3%95%E8%AE%BA/</link>
-    <description>Recent content in 方法论 on 梁某银的博客</description>
-    <generator>Hugo</generator>
+    <description>Recent content on 梁某银的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
+    
+    
     <copyright>Copyright © 2026, 梁某银</copyright>
     <lastBuildDate>Sun, 22 Jun 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/%E6%96%B9%E6%B3%95%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
+    
+        <atom:link href="http://localhost:1313/categories/%E6%96%B9%E6%B3%95%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
     <item>
       <title>再分享几个也许有用的小书签（Bookmarklet）</title>
       <link>http://localhost:1313/blog/%E5%86%8D%E5%88%86%E4%BA%AB%E5%87%A0%E4%B8%AA%E4%B9%9F%E8%AE%B8%E6%9C%89%E7%94%A8%E7%9A%84%E5%B0%8F%E4%B9%A6%E7%AD%BEbookmarklet/</link>
       <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/%E5%86%8D%E5%88%86%E4%BA%AB%E5%87%A0%E4%B8%AA%E4%B9%9F%E8%AE%B8%E6%9C%89%E7%94%A8%E7%9A%84%E5%B0%8F%E4%B9%A6%E7%AD%BEbookmarklet/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;能帮得上忙的小书签，当然如韩信点兵，多多益善。&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;昨天的文章&lt;a href=&#34;https://mp.weixin.qq.com/s/7zqhldAirvLqeaAYTSBHjA&#34;&gt;我的打印终极方法论&lt;/a&gt;受到不少欢迎，这让我意识到，很多人都没用过小书签，也不知道它能发挥这么大的作用。&lt;/p&gt;&#xA;&lt;p&gt;因此，秉承帮人帮到底的念头，我继续为大家分享更多的小书签。&lt;/p&gt;&#xA;&lt;p&gt;其实小书签已经有人专门做过分享，功能丰富，类型齐全，如生成网页二维码、编辑网页、解除网页限制、阅读护眼模式、网页下雪特效，等等。依然无需安装插件、脚本，即点即用。&lt;/p&gt;&#xA;&lt;p&gt;这是由&lt;a href=&#34;https://www.runningcheese.com/RunningCheese_Bookmarklets.html&#34;&gt;奔跑的奶酪汇总整理的 Bookmarklet 小书签&lt;/a&gt;，打开网站后，把想要的小书签，直接拖到书签栏就能使用，一点也不拖泥带水。&lt;/p&gt;&#xA;&lt;p&gt;本着不再重复造轮子的理念，我在下面分享几个也许能优化打印的小书签。&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;1、一键移除所有悬浮元素。&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;javascript:(function() { document.querySelectorAll(&amp;#39;*&amp;#39;).forEach(el =&amp;gt; { const style = window.getComputedStyle(el); if (style.position === &amp;#39;fixed&amp;#39; || style.position === &amp;#39;sticky&amp;#39;) { el.style.setProperty(&amp;#39;position&amp;#39;, &amp;#39;static&amp;#39;, &amp;#39;important&amp;#39;); } }); })();&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;功能：点击后，会自动将所有悬浮、吸顶元素移除，避免让打印时遮挡正文内容，或者在每一页重复出现。&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;2、显示所有链接的URL地址。&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;javascript:(function() { document.querySelectorAll(&amp;#39;a&amp;#39;).forEach(link =&amp;gt; { const href = link.getAttribute(&amp;#39;href&amp;#39;); if (href &amp;amp;&amp;amp; (href.startsWith(&amp;#39;http&amp;#39;) || href.startsWith(&amp;#39;/&amp;#39;)) &amp;amp;&amp;amp; !link.querySelector(&amp;#39;span.appended-url&amp;#39;)) { const urlNode = document.createElement(&amp;#39;span&amp;#39;); urlNode.className = &amp;#39;appended-url&amp;#39;; urlNode.style.color = &amp;#39;#555&amp;#39;; urlNode.style.fontSize = &amp;#39;0.9em&amp;#39;; urlNode.style.marginLeft = &amp;#39;4px&amp;#39;; urlNode.style.fontFamily = &amp;#39;monospace&amp;#39;; urlNode.textContent = `(${href})`; link.after(urlNode); } }); })();&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;功能：在网页上的超链接文字后面，用括号添加网址链接。&lt;/p&gt;</description>
+      
+      <description>&lt;blockquote&gt;
+&lt;p&gt;能帮得上忙的小书签，当然如韩信点兵，多多益善。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;昨天的文章&lt;a href=&#34;https://mp.weixin.qq.com/s/7zqhldAirvLqeaAYTSBHjA&#34;&gt;我的打印终极方法论&lt;/a&gt;受到不少欢迎，这让我意识到，很多人都没用过小书签，也不知道它能发挥这么大的作用。&lt;/p&gt;
+&lt;p&gt;因此，秉承帮人帮到底的念头，我继续为大家分享更多的小书签。&lt;/p&gt;
+&lt;p&gt;其实小书签已经有人专门做过分享，功能丰富，类型齐全，如生成网页二维码、编辑网页、解除网页限制、阅读护眼模式、网页下雪特效，等等。依然无需安装插件、脚本，即点即用。&lt;/p&gt;
+&lt;p&gt;这是由&lt;a href=&#34;https://www.runningcheese.com/RunningCheese_Bookmarklets.html&#34;&gt;奔跑的奶酪汇总整理的 Bookmarklet 小书签&lt;/a&gt;，打开网站后，把想要的小书签，直接拖到书签栏就能使用，一点也不拖泥带水。&lt;/p&gt;
+&lt;p&gt;本着不再重复造轮子的理念，我在下面分享几个也许能优化打印的小书签。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1、一键移除所有悬浮元素。&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;javascript:(function() { document.querySelectorAll(&amp;#39;*&amp;#39;).forEach(el =&amp;gt; { const style = window.getComputedStyle(el); if (style.position === &amp;#39;fixed&amp;#39; || style.position === &amp;#39;sticky&amp;#39;) { el.style.setProperty(&amp;#39;position&amp;#39;, &amp;#39;static&amp;#39;, &amp;#39;important&amp;#39;); } }); })();
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;功能：点击后，会自动将所有悬浮、吸顶元素移除，避免让打印时遮挡正文内容，或者在每一页重复出现。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2、显示所有链接的URL地址。&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;javascript:(function() { document.querySelectorAll(&amp;#39;a&amp;#39;).forEach(link =&amp;gt; { const href = link.getAttribute(&amp;#39;href&amp;#39;); if (href &amp;amp;&amp;amp; (href.startsWith(&amp;#39;http&amp;#39;) || href.startsWith(&amp;#39;/&amp;#39;)) &amp;amp;&amp;amp; !link.querySelector(&amp;#39;span.appended-url&amp;#39;)) { const urlNode = document.createElement(&amp;#39;span&amp;#39;); urlNode.className = &amp;#39;appended-url&amp;#39;; urlNode.style.color = &amp;#39;#555&amp;#39;; urlNode.style.fontSize = &amp;#39;0.9em&amp;#39;; urlNode.style.marginLeft = &amp;#39;4px&amp;#39;; urlNode.style.fontFamily = &amp;#39;monospace&amp;#39;; urlNode.textContent = `(${href})`; link.after(urlNode); } }); })();
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;功能：在网页上的超链接文字后面，用括号添加网址链接。&lt;/p&gt;
+&lt;p&gt;我们打印出来的纸质文章，会遇到超链接变成带下划线的文字，无法知道链接通往何方。因此补上这一环，能够方便溯源和参考。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3、HTML 网页编辑。&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;javascript:(function(){  document.body.contentEditable = !document.body.isContentEditable;  document.designMode = document.body.contentEditable ? %27on%27 : %27off%27;  document.querySelectorAll(%27img, video, iframe%27).forEach(el =&amp;gt; {    el.contentEditable = document.body.contentEditable;  });})();
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;功能：点击后，激活编辑模式，可以随意修改网页上的文本；再次点击，退出编辑模式，保存修改。&lt;/p&gt;
+&lt;p&gt;你可以通过这个，去除网页上不需要的内容，甚至还能做恶作剧，比如到个人公众号主页，修改数据，看起来很唬人。&lt;/p&gt;
+&lt;p&gt;这次的折腾，也让我意识到，很多功能，并不需要太过复杂的工具（对于性能薄弱的电脑，插件装多了也会影响打开网页的流畅性），一枚复古的小书签足矣胜任。&lt;/p&gt;
+</description>
     </item>
+    
     <item>
       <title>我的终极文章打印方案：不靠插件、软件，只用小书签！</title>
       <link>http://localhost:1313/blog/250621-printer/</link>
       <pubDate>Sat, 21 Jun 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/250621-printer/</guid>
-      <description>&lt;p&gt;没错，我的文章打印方案更新了！这次更强大、更简单、更快速！&lt;/p&gt;&#xA;&lt;p&gt;我回想之前的文章打印方案，发现工具实在繁琐，尤其是需要 Obsidian 这一项，就拦掉了一批没用过软件的人。&lt;/p&gt;&#xA;&lt;p&gt;今天我就思考，有没有更好的解决方法。一开始我折腾 Microsoft Edge 的阅读模式，又下载插件，换浏览器，最后逛 UTGD 时，看到了一个完美的解决思路：借助小书签（Bookmarklet）来调整文章格式！&lt;/p&gt;&#xA;&lt;p&gt;我简要介绍一下小书签，它是一种特殊的浏览器书签，点击后就执行 JavaScript 代码，能直接对当前页面进行操作。它的优势是，支持几乎所有主流浏览器，无需下载，比插件更方便，还能自行修改，满足需求。&lt;/p&gt;&#xA;&lt;p&gt;使用方法很简单：直接复制小书签，随后在浏览器随便添加一个网页书签，把网址替换成 javascript 代码即可。如果觉得不需要，刷新网页就能恢复原状。&lt;/p&gt;&#xA;&lt;p&gt;理论说到这里，下面说解决方案。&lt;/p&gt;&#xA;&lt;h2 id=&#34;1把网页文章调整成纯净阅读模式&#34;&gt;1、把网页文章调整成纯净阅读模式。&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;2025-11-19 更新：增加行内代码换行&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;javascript:(function()%7Bjavascript%3A(function()%7Bjavascript%3A(function()%7Bconsole.log(&amp;#39;start&amp;#39;)%3Bvar jsCode%3Ddocument.createElement(&amp;#39;script&amp;#39;)%3BjsCode.setAttribute(&amp;#39;src&amp;#39;%2C&amp;#39;https%3A%2F%2Fgcore.jsdelivr.net%2Fgh%2Fmozilla%2Freadability%2FReadability.js&amp;#39;)%3Bwindow.cleanHtml%3D(function()%7Bvar loc%3Ddocument.location%3Bvar uri%3D%7Bspec%3Aloc.href%2Chost%3Aloc.host%2CprePath%3Aloc.protocol%2B&amp;#39;%2F%2F&amp;#39;%2Bloc.host%2Cscheme%3Aloc.protocol.substr(0%2Cloc.protocol.indexOf(&amp;#39;%3A&amp;#39;))%2CpathBase%3Aloc.protocol%2B&amp;#39;%2F%2F&amp;#39;%2Bloc.host%2Bloc.pathname.substr(0%2Cloc.pathname.lastIndexOf(&amp;#39;%2F&amp;#39;)%2B1)%7D%3Bvar article%3Dnew Readability(uri%2Cdocument).parse()%3Bvar titleElement%3Ddocument.createElement(&amp;#39;h1&amp;#39;)%3BtitleElement.textContent%3Darticle.title%3BtitleElement.style.textAlign%3D&amp;#39;center&amp;#39;%3BtitleElement.style.margin%3D&amp;#39;20px%C2%A00&amp;#39;%3BtitleElement.style.backgroundColor%3D&amp;#39;transparent&amp;#39;%3BtitleElement.style.border%3D&amp;#39;none&amp;#39;%3BtitleElement.style.padding%3D&amp;#39;0&amp;#39;%3Bvar metadataElement%3Ddocument.createElement(&amp;#39;p&amp;#39;)%3BmetadataElement.style.textAlign%3D&amp;#39;center&amp;#39;%3BmetadataElement.style.color%3D&amp;#39;%23555&amp;#39;%3BmetadataElement.style.fontSize%3D&amp;#39;12px&amp;#39;%3BmetadataElement.style.margin%3D&amp;#39;-15px%C2%A00%C2%A025px%C2%A00&amp;#39;%3BmetadataElement.style.lineHeight%3D&amp;#39;1.6&amp;#39;%3BmetadataElement.style.wordBreak%3D&amp;#39;break-word&amp;#39;%3Bvar metadataParts%3D%5B%5D%3Bif(article.byline)%7BmetadataParts.push(&amp;#39;%E4%BD%9C%E8%80%85%3A &amp;#39;%2Barticle.byline)%3B%7Dvar linkHTML%3D&amp;#39;%E5%8E%9F%E6%96%87%3A &amp;lt;a href%3D&amp;#34;&amp;#39;%2Bloc.href%2B&amp;#39;&amp;#34;%C2%A0target%3D&amp;#34;_blank&amp;#34;%C2%A0style%3D&amp;#34;color%3A%23007bff%3Btext-decoration%3Aunderline%3B&amp;#34;&amp;gt;&amp;#39;%2Bloc.href%2B&amp;#39;&amp;lt;%2Fa&amp;gt;&amp;#39;%3BmetadataParts.push(linkHTML)%3BmetadataElement.innerHTML%3DmetadataParts.join(&amp;#39;&amp;lt;span style%3D&amp;#34;margin%3A0 1em%3B&amp;#34;&amp;gt;%7C&amp;lt;%2Fspan&amp;gt;&amp;#39;)%3Bvar contentDiv%3Ddocument.createElement(&amp;#39;div&amp;#39;)%3BcontentDiv.innerHTML%3Darticle.content%3Bdocument.head.innerHTML%3D&amp;#39;&amp;#39;%3Bvar cleanStyle%3Ddocument.createElement(&amp;#39;link&amp;#39;)%3BcleanStyle.setAttribute(&amp;#39;href&amp;#39;%2C&amp;#39;https%3A%2F%2Fgcore.jsdelivr.net%2Fgh%2Frunningcheese%2FAwesome-Bookmarklets%2Flibs%2Fclean.css&amp;#39;)%3BcleanStyle.setAttribute(&amp;#39;rel&amp;#39;%2C&amp;#39;stylesheet&amp;#39;)%3Bdocument.head.appendChild(cleanStyle)%3Bvar customStyles%3Ddocument.createElement(&amp;#39;style&amp;#39;)%3BcustomStyles.type%3D&amp;#39;text%2Fcss&amp;#39;%3Bvar styleText%3D&amp;#39;blockquote %7B color%3A %23666%3B display%3A block%3B margin%3A%C2%A00%C2%A00%C2%A016px%3B padding%3A%C2%A00%C2%A020px%3B border-left%3A %23ddd solid%C2%A04px%3B %7D h1%2C h2%2C h3%2C h4%2C h5%2C h6 %7B color%3A %23000000%C2%A0!important%3B %7D body %7B color%3A %23000000%C2%A0!important%3B font-size%3A%C2%A018px !important%3B line-height%3A%C2%A01.7%C2%A0!important%3B %7D pre %7B white-space%3A pre-wrap !important%3B word-break%3A break-all !important%3B background-color%3A %23f8f8f8%3B padding%3A 10px%3B border-radius%3A 5px%3B %7D code %7B word-wrap%3A break-word !important%3B word-break%3A break-all !important%3B background-color%3A %23f4f4f4%3B padding%3A 2px 4px%3B border-radius%3A 3px%3B %7D&amp;#39;%3BcustomStyles.appendChild(document.createTextNode(styleText))%3Bdocument.head.appendChild(customStyles)%3Bdocument.body.innerHTML%3D&amp;#39;&amp;#39;%3Bdocument.body.appendChild(titleElement)%3Bdocument.body.appendChild(metadataElement)%3Bdocument.body.appendChild(contentDiv)%3B%7D)%3BjsCode.onload%3DcleanHtml%3Bdocument.body.appendChild(jsCode)%3B%7D)()%7D)()%7D)()&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;（从左向右，选中复制即可）&lt;/p&gt;</description>
+      
+      <description>&lt;p&gt;没错，我的文章打印方案更新了！这次更强大、更简单、更快速！&lt;/p&gt;
+&lt;p&gt;我回想之前的文章打印方案，发现工具实在繁琐，尤其是需要 Obsidian 这一项，就拦掉了一批没用过软件的人。&lt;/p&gt;
+&lt;p&gt;今天我就思考，有没有更好的解决方法。一开始我折腾 Microsoft Edge 的阅读模式，又下载插件，换浏览器，最后逛 UTGD 时，看到了一个完美的解决思路：借助小书签（Bookmarklet）来调整文章格式！&lt;/p&gt;
+&lt;p&gt;我简要介绍一下小书签，它是一种特殊的浏览器书签，点击后就执行 JavaScript 代码，能直接对当前页面进行操作。它的优势是，支持几乎所有主流浏览器，无需下载，比插件更方便，还能自行修改，满足需求。&lt;/p&gt;
+&lt;p&gt;使用方法很简单：直接复制小书签，随后在浏览器随便添加一个网页书签，把网址替换成 javascript 代码即可。如果觉得不需要，刷新网页就能恢复原状。&lt;/p&gt;
+&lt;p&gt;理论说到这里，下面说解决方案。&lt;/p&gt;
+&lt;h2 id=&#34;1把网页文章调整成纯净阅读模式&#34;&gt;1、把网页文章调整成纯净阅读模式。&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;2025-11-19 更新：增加行内代码换行&lt;/p&gt;&lt;/blockquote&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;javascript:(function()%7Bjavascript%3A(function()%7Bjavascript%3A(function()%7Bconsole.log(&amp;#39;start&amp;#39;)%3Bvar jsCode%3Ddocument.createElement(&amp;#39;script&amp;#39;)%3BjsCode.setAttribute(&amp;#39;src&amp;#39;%2C&amp;#39;https%3A%2F%2Fgcore.jsdelivr.net%2Fgh%2Fmozilla%2Freadability%2FReadability.js&amp;#39;)%3Bwindow.cleanHtml%3D(function()%7Bvar loc%3Ddocument.location%3Bvar uri%3D%7Bspec%3Aloc.href%2Chost%3Aloc.host%2CprePath%3Aloc.protocol%2B&amp;#39;%2F%2F&amp;#39;%2Bloc.host%2Cscheme%3Aloc.protocol.substr(0%2Cloc.protocol.indexOf(&amp;#39;%3A&amp;#39;))%2CpathBase%3Aloc.protocol%2B&amp;#39;%2F%2F&amp;#39;%2Bloc.host%2Bloc.pathname.substr(0%2Cloc.pathname.lastIndexOf(&amp;#39;%2F&amp;#39;)%2B1)%7D%3Bvar article%3Dnew Readability(uri%2Cdocument).parse()%3Bvar titleElement%3Ddocument.createElement(&amp;#39;h1&amp;#39;)%3BtitleElement.textContent%3Darticle.title%3BtitleElement.style.textAlign%3D&amp;#39;center&amp;#39;%3BtitleElement.style.margin%3D&amp;#39;20px%C2%A00&amp;#39;%3BtitleElement.style.backgroundColor%3D&amp;#39;transparent&amp;#39;%3BtitleElement.style.border%3D&amp;#39;none&amp;#39;%3BtitleElement.style.padding%3D&amp;#39;0&amp;#39;%3Bvar metadataElement%3Ddocument.createElement(&amp;#39;p&amp;#39;)%3BmetadataElement.style.textAlign%3D&amp;#39;center&amp;#39;%3BmetadataElement.style.color%3D&amp;#39;%23555&amp;#39;%3BmetadataElement.style.fontSize%3D&amp;#39;12px&amp;#39;%3BmetadataElement.style.margin%3D&amp;#39;-15px%C2%A00%C2%A025px%C2%A00&amp;#39;%3BmetadataElement.style.lineHeight%3D&amp;#39;1.6&amp;#39;%3BmetadataElement.style.wordBreak%3D&amp;#39;break-word&amp;#39;%3Bvar metadataParts%3D%5B%5D%3Bif(article.byline)%7BmetadataParts.push(&amp;#39;%E4%BD%9C%E8%80%85%3A &amp;#39;%2Barticle.byline)%3B%7Dvar linkHTML%3D&amp;#39;%E5%8E%9F%E6%96%87%3A &amp;lt;a href%3D&amp;#34;&amp;#39;%2Bloc.href%2B&amp;#39;&amp;#34;%C2%A0target%3D&amp;#34;_blank&amp;#34;%C2%A0style%3D&amp;#34;color%3A%23007bff%3Btext-decoration%3Aunderline%3B&amp;#34;&amp;gt;&amp;#39;%2Bloc.href%2B&amp;#39;&amp;lt;%2Fa&amp;gt;&amp;#39;%3BmetadataParts.push(linkHTML)%3BmetadataElement.innerHTML%3DmetadataParts.join(&amp;#39;&amp;lt;span style%3D&amp;#34;margin%3A0 1em%3B&amp;#34;&amp;gt;%7C&amp;lt;%2Fspan&amp;gt;&amp;#39;)%3Bvar contentDiv%3Ddocument.createElement(&amp;#39;div&amp;#39;)%3BcontentDiv.innerHTML%3Darticle.content%3Bdocument.head.innerHTML%3D&amp;#39;&amp;#39;%3Bvar cleanStyle%3Ddocument.createElement(&amp;#39;link&amp;#39;)%3BcleanStyle.setAttribute(&amp;#39;href&amp;#39;%2C&amp;#39;https%3A%2F%2Fgcore.jsdelivr.net%2Fgh%2Frunningcheese%2FAwesome-Bookmarklets%2Flibs%2Fclean.css&amp;#39;)%3BcleanStyle.setAttribute(&amp;#39;rel&amp;#39;%2C&amp;#39;stylesheet&amp;#39;)%3Bdocument.head.appendChild(cleanStyle)%3Bvar customStyles%3Ddocument.createElement(&amp;#39;style&amp;#39;)%3BcustomStyles.type%3D&amp;#39;text%2Fcss&amp;#39;%3Bvar styleText%3D&amp;#39;blockquote %7B color%3A %23666%3B display%3A block%3B margin%3A%C2%A00%C2%A00%C2%A016px%3B padding%3A%C2%A00%C2%A020px%3B border-left%3A %23ddd solid%C2%A04px%3B %7D h1%2C h2%2C h3%2C h4%2C h5%2C h6 %7B color%3A %23000000%C2%A0!important%3B %7D body %7B color%3A %23000000%C2%A0!important%3B font-size%3A%C2%A018px !important%3B line-height%3A%C2%A01.7%C2%A0!important%3B %7D pre %7B white-space%3A pre-wrap !important%3B word-break%3A break-all !important%3B background-color%3A %23f8f8f8%3B padding%3A 10px%3B border-radius%3A 5px%3B %7D code %7B word-wrap%3A break-word !important%3B word-break%3A break-all !important%3B background-color%3A %23f4f4f4%3B padding%3A 2px 4px%3B border-radius%3A 3px%3B %7D&amp;#39;%3BcustomStyles.appendChild(document.createTextNode(styleText))%3Bdocument.head.appendChild(customStyles)%3Bdocument.body.innerHTML%3D&amp;#39;&amp;#39;%3Bdocument.body.appendChild(titleElement)%3Bdocument.body.appendChild(metadataElement)%3Bdocument.body.appendChild(contentDiv)%3B%7D)%3BjsCode.onload%3DcleanHtml%3Bdocument.body.appendChild(jsCode)%3B%7D)()%7D)()%7D)()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;（从左向右，选中复制即可）&lt;/p&gt;
+&lt;p&gt;作用：文章开启阅读模式，有标题和文章来源，字号为 18px，美化引用样式。&lt;/p&gt;
+&lt;p&gt;我以前保存了一个【阅读模式】小书签，但它开启后，不显示正文标题。我借助 AI 完善后，发现不少需要改善的地方：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;标题下我希望显示作者和原文链接，方便打印后溯源；&lt;/li&gt;
+&lt;li&gt;文字颜色比较淡，导致打印出后来字迹不清；&lt;/li&gt;
+&lt;li&gt;文章字号较小，打印在 A5 小册子上阅读比较费眼；&lt;/li&gt;
+&lt;li&gt;引用样式只是两段缩进字符，但不够醒目；&lt;/li&gt;
+&lt;li&gt;小书签无法应用在公众号文章上（因其封闭、自成一体的设计）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;中间我跟 AI 对话了几十次，遇到许多问题，最后完美解决了上述问题（除了公众号文章），再导出为 PDF 即可。&lt;/p&gt;
+&lt;p&gt;现在你把上面 javascript 开头的小书签，添加到浏览器后，点开一篇文章，也就拥有了一个纯净的阅读模式，无需借助插件和 Obsidian。&lt;/p&gt;
+&lt;p&gt;
+&lt;figure&gt;
+    &lt;img src=&#34;https://img.liangmouyin.com/2025/06/84c4224798ba0bf74f1f0e9b4d435f47.png&#34; alt=&#34;&#34; /&gt;
+    
+    
+        &lt;figcaption&gt;应用前与应用后（但放弃了banner图）&lt;/figcaption&gt;
+    
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;2公众号的解决方案字体调大颜色为黑&#34;&gt;2、公众号的解决方案：字体调大、颜色为黑。&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;javascript:(function()%7Bjavascript%3A(function()%7Bvar id%3D&amp;#39;font-styler-bookmarklet&amp;#39;%3Bif(document.getElementById(id))%7Balert(&amp;#39;样式已调整！&amp;#39;)%3Breturn%3B%7Dvar css%3D%60%23js_content%2C%23js_content p%2C%23js_content span%7Bfont-size%3A18px !important%3Bcolor%3A%23000000 !important%3B%7D%60%3Bvar style%3Ddocument.createElement(&amp;#39;style&amp;#39;)%3Bstyle.id%3Did%3Bstyle.appendChild(document.createTextNode(css))%3Bdocument.head.appendChild(style)%3Balert(&amp;#39;正文样式已调整！&amp;#39;)%3B%7D)()%7D)()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;作用：网页文字全部变成黑色，字号为 18px。&lt;/p&gt;
+&lt;p&gt;上述提到，由于公众号的封闭，小书签无法应用。我最后想到，许多时候公众号文章需要调整，是因为原文排版自己不是纯黑色，导致打印出来字迹不清，而且字号太小，无法调整。&lt;/p&gt;
+&lt;p&gt;那问题就简单了，我只需要小书签能帮我把所有文字改为黑色，字号设置为 18px 就够了。应用之后，文章格式就会自动调整。&lt;/p&gt;
+&lt;p&gt;
+&lt;figure&gt;
+    &lt;img src=&#34;https://img.liangmouyin.com/2025/06/1227a57df065872ba29ea97f7afdf4df.png&#34; alt=&#34;&#34; /&gt;
+    
+    
+        &lt;figcaption&gt;应用前与应用后&lt;/figcaption&gt;
+    
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;下图为打印对比：&lt;/p&gt;
+&lt;p&gt;
+&lt;figure&gt;
+    &lt;img src=&#34;https://img.liangmouyin.com/2025/06/e7e9614c8b1ef7ad08b62c69c5c98386.png&#34; alt=&#34;&#34; /&gt;
+    
+    
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;如此一来，公众号文章打印后更适合纸质阅读，也不劳烦其他工具来帮忙了。&lt;/p&gt;
+&lt;h2 id=&#34;3点击就能缩小网页图片&#34;&gt;3、点击就能缩小网页图片。&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;javascript:(function()%7Bjavascript%3A(function() %7B if (window.imgShrinkActive) %7B alert(&amp;#39;图片缩小模式已激活！&amp;#39;)%3B return%3B %7D window.imgShrinkActive %3D true%3B function shrinkImg(e) %7B e.preventDefault()%3B e.stopPropagation()%3B const img %3D e.target%3B const minWidth %3D 50%3B let curWidth %3D img.offsetWidth%3B let newWidth %3D curWidth * 0.9%3B if (newWidth &amp;lt; minWidth) %7B newWidth %3D minWidth%3B %7D img.style.setProperty(&amp;#39;width&amp;#39;%2C newWidth %2B &amp;#39;px&amp;#39;%2C &amp;#39;important&amp;#39;)%3B img.style.setProperty(&amp;#39;height&amp;#39;%2C &amp;#39;auto&amp;#39;%2C &amp;#39;important&amp;#39;)%3B if (newWidth %3D%3D%3D minWidth) %7B alert(&amp;#39;图片已缩小到最小尺寸&amp;#39;)%3B %7D %7D document.querySelectorAll(&amp;#39;img&amp;#39;).forEach(img %3D&amp;gt; %7B img.style.cursor %3D &amp;#39;pointer&amp;#39;%3B img.addEventListener(&amp;#39;click&amp;#39;%2C shrinkImg%2C true)%3B %7D)%3B alert(&amp;#39;图片缩小模式已开启，点击任意图片即可逐步缩小！&amp;#39;)%3B %7D)()%7D)()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;作用：启用后，每点击一次图片，就会缩小 10%，直到 50px 最小尺寸。&lt;/p&gt;
+&lt;p&gt;目前，格式问题解决了，但图片还是个难题。因为不少文章图片比较大，打印出来很占地方，之前就有朋友问有没有方法。&lt;/p&gt;
+&lt;p&gt;今天我想到也能用小书签来解决，于是让 AI 来协助完成，中间也遇到点击图片后，因为原有设计，自动铺满全屏的情况，接着优化几次，总算解决了。&lt;/p&gt;
+&lt;p&gt;
+&lt;figure&gt;
+    &lt;img src=&#34;https://img.liangmouyin.com/2025/06/816894463827dbb944887de974f0becf.gif&#34; alt=&#34;&#34; /&gt;
+    
+    
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;4字体调整为思源宋体-cn&#34;&gt;4、字体调整为「思源宋体 CN」。&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;javascript:(function()%7Bjavascript%3A(function()%7Bvar style %3D document.createElement(&amp;#39;style&amp;#39;)%3Bstyle.innerHTML %3D %60%40import url(&amp;#39;https%3A%2F%2Ffonts.googleapis.com%2Fcss2%3Ffamily%3DNoto%2BSerif%2BSC%3Awght%40500%3B900%26display%3Dswap&amp;#39;)%3Bbody%2C p%2C div%2C span%2C a%2C li%2C td%2C th %7Bfont-family%3A &amp;#39;Noto Serif SC&amp;#39;%2C serif !important%3Bfont-weight%3A 500 !important%3B%7Dh1%2C h2%2C h3%2C h4%2C h5%2C h6%2C b%2C strong %7Bfont-family%3A &amp;#39;Noto Serif SC&amp;#39;%2C serif !important%3Bfont-weight%3A 900 !important%3B%7D%60%3Bdocument.head.appendChild(style)%3B%7D)()%7D)()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;作用：将网页正文字体设置为「思源宋体 CN Medium」，标题及粗体为「思源宋体 CN Heavy」，需要提前安装字体。&lt;/p&gt;
+&lt;p&gt;这是个人偏好，我觉得思源宋体比较耐看，以及我之前打印 UTGD 文章时，就发现粗体和标题的字重都没有变化，因此额外增添一条，诸君自取。&lt;/p&gt;
+&lt;h2 id=&#34;5删除多余元素&#34;&gt;5、删除多余元素。&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;javascript: (function%20()%20%7B%20%20%20var%20isIe%20%3D%20false%3B%20%20%2F*%40cc_on%20isIe%3Dtrue%3B%20%40*%2F%20%20function%20fe(a%2C%20fn)%20%7B%20%20%20%20%20var%20i%2C%20l%20%3D%20a.length%3B%20%20%20%20%20for%20(i%20%3D%200%3B%20i%20%3C%20l%3B%20i%2B%2B)%20%7B%20fn(a%5Bi%5D)%3B%20%7D%20%20%20%7D%3B%20%20%20function%20ae(el%2C%20n%2C%20fn%2C%20ix)%20%7B%20%20%20%20%20function%20wfn(ev)%20%7B%20%20%20%20%20%20%20var%20el%20%3D%20(isIe%20%3F%20window.event.srcElement%20%3A%20ev.target)%3B%20%20%20%20%20%20%20if%20(n%20%3D%3D%20%27click%27)%20%7B%20%20%20%20%20%20%20%20ev.stopPropagation()%3B%20%20%20%20%20%20%20%20ev.preventDefault()%3B%20%20%20%20%20%20%20%7D%20%20%20%20%20%20if%20(ix%20%7C%7C%20!el.xmt)%20%7Bfn(el)%3B%7D%20%20%20%20%20%7D%20%20%20%20%20if%20(isIe)%20%7B%20%20%20%20%20%20%20n%20%3D%20%27on%27%20%2B%20n%3B%20el.attachEvent(n%2C%20wfn)%3B%20%20%20%20%20%7D%20else%20%7B%20%20%20%20%20%20%20var%20isUseCapture%20%3D%20(n%20%3D%3D%20%27click%27)%3B%20%20%20%20%20%20el.addEventListener(n%2C%20wfn%2C%20isUseCapture)%3B%20%7D%20%20%20%20%20if%20(!el.es)%20el.es%20%3D%20%5B%5D%3B%20%20%20%20%20el.es.push(%20%20%20%20%20%20function%20()%20%7B%20%20%20%20%20%20%20%20%20if%20(isIe)%20%7B%20el.detachEvent(n%2C%20wfn)%3B%20%7D%20%20%20%20%20%20%20%20%20else%20%7B%20el.removeEventListener(n%2C%20wfn%2C%20isUseCapture)%3B%20%7D%20%20%20%20%20%20%20%7D)%3B%20%20%20%20%20el.re%20%3D%20function%20()%20%7B%20fe(el.es%2C%20function%20(f)%20%7B%20f()%20%7D)%3B%20%7D%3B%20%20%20%7D%3B%20%20function%20sce(el)%20%7B%20%20%20%20%20var%20oldclick%20%3D%20el.onclick%2C%20oldmu%20%3D%20el.onmouseup%2C%20oldmd%20%3D%20el.onmousedown%3B%20%20%20%20%20el.onclick%20%3D%20function%20()%20%7B%20return%20false%3B%20%7D%3B%20%20%20%20%20el.onmouseup%20%3D%20function%20()%20%7B%20return%20false%3B%20%7D%3B%20%20%20%20%20el.onmousedown%20%3D%20function%20()%20%7B%20return%20false%3B%20%7D%3B%20%20%20%20%20el.rce%20%3D%20function%20()%20%7B%20el.onclick%20%3D%20oldclick%3B%20el.onmouseup%20%3D%20oldmu%3B%20el.onmousedown%20%3D%20oldmd%3B%20%7D%3B%20%20%20%7D%20%20%20if%20(!window.r_)%20window.r_%20%3D%20%5B%5D%3B%20%20%20var%20r%20%3D%20window.r_%3B%20%20%20var%20D%20%3D%20document%3B%20%20%20ae(D.body%2C%20%27mouseover%27%2C%20function%20(el)%20%7B%20el.style.backgroundColor%20%3D%20%27%23ffff99%27%3B%20sce(el)%20%7D)%3B%20%20%20ae(D.body%2C%20%27mouseout%27%2C%20function%20(el)%20%7B%20el.style.backgroundColor%20%3D%20%27%27%3B%20if%20(el.rce)%20el.rce()%3B%20%7D)%3B%20%20%20ae(D.body%2C%20%27click%27%2C%20function%20(el)%20%7B%20%20%20%20el.style.display%20%3D%20%27none%27%3B%20%20%20%20%20r.push(el)%3B%20%20%20%7D)%3B%20%20%20function%20ac(p%2C%20tn%2C%20ih)%20%7B%20var%20e%20%3D%20D.createElement(tn)%3B%20%20%20%20%20if%20(ih)%20e.innerHTML%20%3D%20ih%3B%20%20%20%20%20p.appendChild(e)%3B%20%20%20%20%20return%20e%3B%20%20%20%7D%20%20%20var%20p%20%3D%200%3B%20%20%20var%20bx%20%3D%20ac(D.body%2C%20%27div%27)%3B%20%20%20bx.style.cssText%20%3D%20%27position%3A%27%20%2B%20(isIe%20%3F%20%27absolute%27%20%3A%20%27fixed%27)%20%2B%20%27%3Bpadding%3A2px%3Bbackground-color%3A%2399FF99%3Bborder%3A1px%20solid%20green%3Bz-index%3A9999%3Bfont-family%3Asans-serif%3Bfont-size%3A10px%27%3B%20%20%20function%20sp()%20%7B%20%20%20%20%20bx.style.top%20%3D%20(p%20%26%202)%20%3F%20%27%27%20%3A%20%2710px%27%3B%20%20%20%20%20bx.style.bottom%20%3D%20(p%20%26%202)%20%3F%20%2710px%27%20%3A%20%27%27%3B%20%20%20%20%20bx.style.left%20%3D%20(p%20%26%201)%20%3F%20%27%27%20%3A%20%2710px%27%3B%20%20%20%20%20bx.style.right%20%3D%20(p%20%26%201)%20%3F%20%2710px%27%20%3A%20%27%27%3B%20%20%20%7D%20sp()%3B%20%20%20var%20ul%20%3D%20ac(bx%2C%20%27a%27%2C%20%27%20Undo%20%7C%27)%3B%20%20%20ae(ul%2C%20%27dblclick%27%2C%20function%20()%20%7B%20var%20e%20%3D%20r.pop()%3B%20if%20(e)%20e.style.display%20%3D%20%27%27%3B%20%7D%2C%20true)%3B%20%20%20var%20ual%20%3D%20ac(bx%2C%20%27a%27%2C%20%27%20Undo%20All%20%7C%27)%3B%20%20%20ae(ual%2C%20%27dblclick%27%2C%20function%20()%20%7B%20var%20e%3B%20while%20(e%20%3D%20r.pop())%20e.style.display%20%3D%20%27%27%3B%20%7D%2C%20true)%3B%20%20%20var%20ml%20%3D%20ac(bx%2C%20%27a%27%2C%20%27%20Move%20%7C%27)%3B%20%20%20ae(ml%2C%20%27dblclick%27%2C%20function%20()%20%7B%20p%2B%2B%3B%20sp()%3B%20%7D%2C%20true)%3B%20%20%20var%20xl%20%3D%20ac(bx%2C%20%27a%27%2C%20%27%20Exit%20%27)%3B%20%20%20ae(xl%2C%20%27dblclick%27%2C%20function%20()%20%7B%20D.body.re()%3B%20bx.parentNode.removeChild(bx)%3B%20%7D%2C%20true)%3B%20%20%20fe(%5Bbx%2C%20ul%2C%20ml%2C%20xl%2C%20ual%5D%2C%20function%20(e)%20%7B%20e.style.cursor%20%3D%20%27pointer%27%3B%20e.xmt%20%3D%201%3B%20%7D)%3B%20%7D)()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;源于 Minja 的文章《剪藏网页到本地的轻量化思路》（https://utgd.net/article/8668），由网友 Flez 提供的优化版本。&lt;/p&gt;
+&lt;p&gt;作用：启用后，就能任意删除网页元素。&lt;/p&gt;
+&lt;p&gt;
+&lt;figure&gt;
+    &lt;img src=&#34;https://img.liangmouyin.com/2025/06/d46310df357fe94d4f8de5d01bae15a7.gif&#34; alt=&#34;&#34; /&gt;
+    
+    
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;简单一用，鼠标点点，就能删掉文章里的无用元素，比如二维码、自我介绍、多余图片，最后留下干净清爽的页面。&lt;/p&gt;
+&lt;h2 id=&#34;最后&#34;&gt;最后&lt;/h2&gt;
+&lt;p&gt;我迭代了十几个版本，最后形成了这套打印前的简化流程。这么操作下来，不管是阅读模式，还是调整图片，删改元素，都不需要任何插件。&lt;/p&gt;
+&lt;p&gt;而且你想修改哪里，随时能让 AI 来帮你，比如字号、颜色、字体等、总能调整到满意为止。&lt;/p&gt;
+&lt;p&gt;这时打印出来的文章，格式也跟我之前用 Obsidian 导出打印没什么两样，甚至更加快速简单。&lt;/p&gt;
+&lt;p&gt;至此，文章打印格式的折腾，也能暂且告一段落，希望这篇文章对你有用，少点折腾，一步到位。&lt;/p&gt;
+&lt;p&gt;
+&lt;figure&gt;
+    &lt;img src=&#34;https://img.liangmouyin.com/2025/06/ce98cd147f902e894d477379e35b5ea2.png&#34; alt=&#34;&#34; /&gt;
+    
+    
+&lt;/figure&gt;&lt;/p&gt;
+</description>
     </item>
+    
   </channel>
 </rss>

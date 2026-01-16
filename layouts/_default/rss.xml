@@ -1,0 +1,40 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    {{/* 1. 标题修复：只显示“梁某银” */}}
+    <title>{{ if .IsHome }}梁某银{{ else }}{{ .Title }} - 梁某银{{ end }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>Recent content on {{ .Site.Title }}</description>
+    <generator>Hugo -- gohugo.io</generator>
+    {{ with .Site.LanguageCode }}<language>{{.}}</language>{{end}}
+    {{ with .Site.Author.email }}<manageEditor>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</manageEditor>{{end}}
+    {{ with .Site.Author.email }}<webMaster>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</webMaster>{{end}}
+    {{ with .Site.Copyright }}<copyright>{{.}}</copyright>{{end}}
+    {{ if not .Date.IsZero }}<lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{ end }}
+    {{ with .OutputFormats.Get "RSS" }}
+        {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
+    {{ end }}
+    
+    {{/* --- 核心逻辑 (绝对安全版) --- */}}
+    {{ $pages := .Pages }}
+    
+    {{/* 如果是首页，强行获取全站常规文章 (RegularPages) */}}
+    {{ if .IsHome }}
+      {{ $pages = .Site.RegularPages }}
+    {{ end }}
+
+    {{/* 直接硬编码限制 15 篇，不读取配置，避免报错 */}}
+    {{ $pages = $pages | first 15 }}
+    
+    {{/* --- 循环开始 --- */}}
+    {{ range $pages }}
+    <item>
+      <title>{{ .Title }}</title>
+      <link>{{ .Permalink }}</link>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+      <guid>{{ .Permalink }}</guid>
+      {{/* 这里输出全文，方便阅读器 */}}
+      <description>{{ .Content | html }}</description>
+    </item>
+    {{ end }}
+  </channel>
+</rss>
