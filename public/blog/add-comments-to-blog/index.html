@@ -6,8 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="shortcut icon" href="http://localhost:1313/images/favicon.png" />
-<title>我终于给博客加上评论功能 | 梁某银的博客</title>
-<meta name="title" content="我终于给博客加上评论功能" />
+<title>我终于给博客加上评论功能 | 梁某银的博客</title><meta name="author" content="梁某银" />
 <meta name="description" content="
 
     
@@ -30,13 +29,17 @@
 于是我从自建博客的坑里爬出来，回到最初的起点：Hugo 评论系统。
 我本想选 Utterances (基于 GitHub Issues)，跟着教程，5分钟搞定收工。
 但我又多看了一眼，发现了它的「升级版」—— Giscus (基于 GitHub Discussions)，支持点赞、回复、自定义主题，体验完胜。" />
-<meta name="keywords" content="博客," />
 
+<meta property="og:title" content="我终于给博客加上评论功能 | 梁某银的博客" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/blog/add-comments-to-blog/" />
+<meta property="og:description" content="
 
-<meta property="og:url" content="http://localhost:1313/blog/add-comments-to-blog/">
-  <meta property="og:site_name" content="梁某银的博客">
-  <meta property="og:title" content="我终于给博客加上评论功能">
-  <meta property="og:description" content="今天，突然看到网友问博客为什么不开评论。于是，明明只需要 10 分钟就能搞定的小事，我硬是花了 3 个小时。
+    
+    
+    
+
+今天，突然看到网友问博客为什么不开评论。于是，明明只需要 10 分钟就能搞定的小事，我硬是花了 3 个小时。
 这个过程非常曲折，我从要不要迁移博客，到研究 VPS，最后又回到原点。但事后回想，发现这 3 个小时非常值得，也让我一步步理清思路。
 不过接下来的内容，如果你对网站和博客不感兴趣，估计就是读起来一头雾水，那就直接拉到结尾，看我今天的生活分享吧。
 首先，那位网友问我开评论时，我说自己的博客是用 Hugo &#43; GitHub &#43; Cloudflare 来搭建的，完全是静态博客，压根不知道如何开评论功能。
@@ -51,63 +54,10 @@
 我今天只想加个评论框，为什么要把自己搞得这么累？
 于是我从自建博客的坑里爬出来，回到最初的起点：Hugo 评论系统。
 我本想选 Utterances (基于 GitHub Issues)，跟着教程，5分钟搞定收工。
-但我又多看了一眼，发现了它的「升级版」—— Giscus (基于 GitHub Discussions)，支持点赞、回复、自定义主题，体验完胜。">
-  <meta property="og:locale" content="zh_CN">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="blog">
-    <meta property="article:published_time" content="2025-10-25T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-10-25T00:00:00+00:00">
-    <meta property="article:tag" content="博客">
-    <meta property="og:image" content="http://localhost:1313/images/share.png">
+但我又多看了一眼，发现了它的「升级版」—— Giscus (基于 GitHub Discussions)，支持点赞、回复、自定义主题，体验完胜。" />
 
 
-
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:1313/images/share.png">
-  <meta name="twitter:title" content="我终于给博客加上评论功能">
-  <meta name="twitter:description" content="今天，突然看到网友问博客为什么不开评论。于是，明明只需要 10 分钟就能搞定的小事，我硬是花了 3 个小时。
-这个过程非常曲折，我从要不要迁移博客，到研究 VPS，最后又回到原点。但事后回想，发现这 3 个小时非常值得，也让我一步步理清思路。
-不过接下来的内容，如果你对网站和博客不感兴趣，估计就是读起来一头雾水，那就直接拉到结尾，看我今天的生活分享吧。
-首先，那位网友问我开评论时，我说自己的博客是用 Hugo &#43; GitHub &#43; Cloudflare 来搭建的，完全是静态博客，压根不知道如何开评论功能。
-网友便推荐我试试 Twikoo 和 Waline，我在网上搜索相关教程，还需要部署云端，注册什么账号，引入 HTML，等等，看得非常头疼。
-最后我干脆一想，既然都要折腾了，我为什么不一步到位，干脆直接从 Hugo 迁移到动态博客 WordPress.org 呢？毕竟 WordPress 功能齐全（也可以说是臃肿），教程丰富，想必能实现非常多的功能，甚至还能插入广告增加收入（也许就几块钱）。
-但是 WordPress.org 需要 VPS 才能运行，我在 Gemini 的辅助下，研究市面上的主流方法，可以说是五花八门，具体有以下三类：
-1、「营销陷阱」的主机 (如 SiteGround, Hostinger)。价格 3 美刀/月，便宜到令人发指，可需要一次性付清两年后三年，然后用高到离谱的续费价来套牢你，因此 Pass。
-2、「省心但贵」的托管式VPS (如 Cloudways)。价格 14 美刀/月，性能强，功能齐全，省心；但成本实在太高，一个月就是 100 块钱（且不说我能不能靠文字转到赚么多钱），性价比太低，Pass。
-3、「高性价比但高门槛」的非托管VPS (如 CloudCone)。我是看一位博主推荐的，价格 25 美刀/月，性价比最高，但需要自己手把手操作，还要折腾宝塔面板、Nginx 和数据库安全（这一堆词我都看不懂）；但我目前的目标是安心写作，顺便把内容同步到博客，而不是建站，精力成本太高。
-就在我快要下单 CloudCone 的前一刻，我突然清醒：
-「罢了罢了，先不折腾了。」
-我今天只想加个评论框，为什么要把自己搞得这么累？
-于是我从自建博客的坑里爬出来，回到最初的起点：Hugo 评论系统。
-我本想选 Utterances (基于 GitHub Issues)，跟着教程，5分钟搞定收工。
-但我又多看了一眼，发现了它的「升级版」—— Giscus (基于 GitHub Discussions)，支持点赞、回复、自定义主题，体验完胜。">
-
-
-
-
-  <meta itemprop="name" content="我终于给博客加上评论功能">
-  <meta itemprop="description" content="今天，突然看到网友问博客为什么不开评论。于是，明明只需要 10 分钟就能搞定的小事，我硬是花了 3 个小时。
-这个过程非常曲折，我从要不要迁移博客，到研究 VPS，最后又回到原点。但事后回想，发现这 3 个小时非常值得，也让我一步步理清思路。
-不过接下来的内容，如果你对网站和博客不感兴趣，估计就是读起来一头雾水，那就直接拉到结尾，看我今天的生活分享吧。
-首先，那位网友问我开评论时，我说自己的博客是用 Hugo &#43; GitHub &#43; Cloudflare 来搭建的，完全是静态博客，压根不知道如何开评论功能。
-网友便推荐我试试 Twikoo 和 Waline，我在网上搜索相关教程，还需要部署云端，注册什么账号，引入 HTML，等等，看得非常头疼。
-最后我干脆一想，既然都要折腾了，我为什么不一步到位，干脆直接从 Hugo 迁移到动态博客 WordPress.org 呢？毕竟 WordPress 功能齐全（也可以说是臃肿），教程丰富，想必能实现非常多的功能，甚至还能插入广告增加收入（也许就几块钱）。
-但是 WordPress.org 需要 VPS 才能运行，我在 Gemini 的辅助下，研究市面上的主流方法，可以说是五花八门，具体有以下三类：
-1、「营销陷阱」的主机 (如 SiteGround, Hostinger)。价格 3 美刀/月，便宜到令人发指，可需要一次性付清两年后三年，然后用高到离谱的续费价来套牢你，因此 Pass。
-2、「省心但贵」的托管式VPS (如 Cloudways)。价格 14 美刀/月，性能强，功能齐全，省心；但成本实在太高，一个月就是 100 块钱（且不说我能不能靠文字转到赚么多钱），性价比太低，Pass。
-3、「高性价比但高门槛」的非托管VPS (如 CloudCone)。我是看一位博主推荐的，价格 25 美刀/月，性价比最高，但需要自己手把手操作，还要折腾宝塔面板、Nginx 和数据库安全（这一堆词我都看不懂）；但我目前的目标是安心写作，顺便把内容同步到博客，而不是建站，精力成本太高。
-就在我快要下单 CloudCone 的前一刻，我突然清醒：
-「罢了罢了，先不折腾了。」
-我今天只想加个评论框，为什么要把自己搞得这么累？
-于是我从自建博客的坑里爬出来，回到最初的起点：Hugo 评论系统。
-我本想选 Utterances (基于 GitHub Issues)，跟着教程，5分钟搞定收工。
-但我又多看了一眼，发现了它的「升级版」—— Giscus (基于 GitHub Discussions)，支持点赞、回复、自定义主题，体验完胜。">
-  <meta itemprop="datePublished" content="2025-10-25T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2025-10-25T00:00:00+00:00">
-  <meta itemprop="wordCount" content="113">
-  <meta itemprop="image" content="http://localhost:1313/images/share.png">
-  <meta itemprop="keywords" content="博客">
+  <meta property="og:image" content="http://localhost:1313/images/favicon.png" />
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
   <style>
