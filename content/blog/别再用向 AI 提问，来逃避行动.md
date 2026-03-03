@@ -3,7 +3,7 @@ title: 别再用向 AI 提问，来逃避行动
 date: 2026-03-02
 tags:
   - AI
-slug: 别再用向 AI 提问，来逃避行动
+slug: stop-using-ai-to-escape-action
 author:
   - 梁某银
 categories:
