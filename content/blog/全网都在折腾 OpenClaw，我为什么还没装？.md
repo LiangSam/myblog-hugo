@@ -6,7 +6,7 @@ tags:
 slug: why-i-did-not-install-openclaw
 author:
   - 梁某银
-categories:
+categories: 黑匣子里养龙虾还是螃蟹，这重要吗？
 description:
 ---
 ![ChatGPT Image Mar 5, 2026, 10_00_21 PM.png](https://img.liangmouyin.com/2026/03/2c449bdb65f431b11dc06402dceae2f3.png)
