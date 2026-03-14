@@ -203,7 +203,7 @@ main {
 
  
 .home-hero {
-  padding: 3.5rem 0 2rem;
+  padding: 1.5rem 0 2rem;
   margin-bottom: 2.5rem;
   border-bottom: 1px solid var(--color-border);
 }
@@ -465,6 +465,18 @@ main {
   border: 1px solid var(--color-border);
 }
 .post-content pre code { background: none; padding: 0; border: none; font-size: inherit; }
+.witter-body code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  background: #dbeafe;
+  color: #1e40af;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+}
+[data-theme="dark"] .witter-body code {
+  background: #1e3a5f;
+  color: #93c5fd;
+}
 .post-content ul,
 .post-content ol { margin: 0 0 1.2rem; padding-left: 1.75rem; }
 .post-content li { margin-bottom: 0.3rem; }
@@ -701,12 +713,8 @@ content { display: block; }
 
 <main>
 
-<div class="reading-progress" id="reading-progress"></div>
 <article>
   <div class="post-header">
-    
-    <a href="/blog/" class="post-back">← 归档</a>
-    
     <h1 class="post-title-main">我养的虾生了，但生死难料</h1>
     <div class="post-meta">
       <time datetime="2026-03-13">2026-03-13</time>
@@ -728,7 +736,7 @@ content { display: block; }
     
 </figure></p>
 <p>自从养了鱼虾后，周五除了是洗衣服的日子，也是换水的时候。今天给鱼缸换了一半水，照例观察里面的小虾，结果发现它腹部空空，我再确认里面的虾，最后发现是真的生了。</p>
-<p>两周前，我从同事那化缘来两只黑壳虾虾，一只已经抱卵，腹部有小球紧紧贴着，这是属于受精卵期。我并没有养虾经验，所以对此感到好奇，时不时就贴着鱼缸观察它们。但对小虾来说，一张硕大的人脸骤然靠过来，对它来说也很可怕，所以会极速后撤步，颇有几分灵性。</p>
+<p>两周前，我从同事那化缘来两只黑壳虾虾，一只已经抱卵，腹部有小球紧紧贴着，这是属于<code>受精卵期</code>。我并没有养虾经验，所以对此感到好奇，时不时就贴着鱼缸观察它们。但对小虾来说，一张硕大的人脸骤然靠过来，对它来说也很可怕，所以会极速后撤步，颇有几分灵性。</p>
 <p>但我对虾并不了解，只能照例喂食，它行踪飘忽，时而跑到石头上散步，时而躲在小水榕的叶子下面，反正我捉摸不透。</p>
 <p>我和上周五录了一段视频，和同事研究起来。它的爪子不停地动，腹部有小黑点随着身体抖动而摇曳，虽然小虾是她给我的，但我俩都不了解，她指着小黑点说，你看，这是它们的头，已经要出来了。</p>
 <p>
@@ -785,18 +793,6 @@ content { display: block; }
 </script>
 
 
-<script>
-(function() {
-  var bar = document.getElementById('reading-progress');
-  if (!bar) return;
-  window.addEventListener('scroll', function() {
-    var doc = document.documentElement;
-    var scrollTop = doc.scrollTop || document.body.scrollTop;
-    var scrollHeight = doc.scrollHeight - doc.clientHeight;
-    bar.style.width = scrollHeight > 0 ? (scrollTop / scrollHeight * 100) + '%' : '0%';
-  }, { passive: true });
-})();
-</script>
 
 </main>
 <footer class="site-footer">

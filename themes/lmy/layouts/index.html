@@ -8,7 +8,7 @@
   <p class="post-count">已写 <strong>{{ $postCount }}</strong> 篇，从 2023 年开始</p>
 </section>
 
-{{/* 2. 精选文章（有精选时优先展示） */}}
+{{/* 3. 精选文章（有精选时优先展示） */}}
 {{ $featured := where .Site.RegularPages ".Params.featured" true }}
 {{ if $featured }}
 <section class="home-section">

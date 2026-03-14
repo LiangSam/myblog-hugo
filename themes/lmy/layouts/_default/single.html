@@ -1,5 +1,4 @@
 {{ define "main" }}
-<div class="reading-progress" id="reading-progress"></div>
 <article>
   <div class="post-header">
     <h1 class="post-title-main">{{ .Title }}</h1>
@@ -61,16 +60,4 @@
 </script>
 {{ end }}{{ end }}
 
-<script>
-(function() {
-  var bar = document.getElementById('reading-progress');
-  if (!bar) return;
-  window.addEventListener('scroll', function() {
-    var doc = document.documentElement;
-    var scrollTop = doc.scrollTop || document.body.scrollTop;
-    var scrollHeight = doc.scrollHeight - doc.clientHeight;
-    bar.style.width = scrollHeight > 0 ? (scrollTop / scrollHeight * 100) + '%' : '0%';
-  }, { passive: true });
-})();
-</script>
 {{ end }}

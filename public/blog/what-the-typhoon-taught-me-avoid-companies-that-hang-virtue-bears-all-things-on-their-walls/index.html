@@ -220,16 +220,42 @@ main {
 .post-count strong { color: var(--color-accent); font-weight: 600; }
 
  
+.hero-quote {
+  margin: 0 0 2rem;
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--color-text-muted);
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+ 
 .home-section { margin-bottom: 3rem; }
 
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
 .section-title {
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--color-text);
-  margin: 0 0 1rem;
+  margin: 0;
   font-weight: 700;
 }
+.section-more-link {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.section-more-link:hover { color: var(--color-accent); }
 
  
 .post-list { list-style: none; margin: 0; padding: 0; }
@@ -691,9 +717,6 @@ content { display: block; }
 <div class="reading-progress" id="reading-progress"></div>
 <article>
   <div class="post-header">
-    
-    <a href="/blog/" class="post-back">← 归档</a>
-    
     <h1 class="post-title-main">台风教会我的事：别去墙上挂“厚德载物”的公司</h1>
     <div class="post-meta">
       <time datetime="2025-09-22">2025-09-22</time>

@@ -204,7 +204,7 @@ main {
 
  
 .home-hero {
-  padding: 3.5rem 0 2rem;
+  padding: 1.5rem 0 2rem;
   margin-bottom: 2.5rem;
   border-bottom: 1px solid var(--color-border);
 }
@@ -466,6 +466,18 @@ main {
   border: 1px solid var(--color-border);
 }
 .post-content pre code { background: none; padding: 0; border: none; font-size: inherit; }
+.witter-body code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  background: #dbeafe;
+  color: #1e40af;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+}
+[data-theme="dark"] .witter-body code {
+  background: #1e3a5f;
+  color: #93c5fd;
+}
 .post-content ul,
 .post-content ol { margin: 0 0 1.2rem; padding-left: 1.75rem; }
 .post-content li { margin-bottom: 0.3rem; }
@@ -850,6 +862,41 @@ content { display: block; }
     <a href="/notes/" class="section-more-link">查看全部 →</a>
   </div>
   <div class="witter-stream">
+    
+    <div class="witter-entry">
+      <div class="witter-left">
+        <img src="/images/favicon.png" alt="梁某银" class="witter-avatar" />
+        <div class="witter-line"></div>
+      </div>
+      <div class="witter-right">
+        <div class="witter-header">
+          <span class="witter-name">梁某银</span>
+          <span class="witter-dot">·</span>
+          <time class="witter-date">2026-03-14</time>
+        </div>
+        <div class="witter-body"><p>花了一下午把博客从头重新设计了一遍，感觉挺有成就感的，记录一下。</p>
+<p>原来用的是 hugo-bearblog 主题，简洁是简洁，但总觉得不够「自己」。这次干脆从零写了一个新主题，叫 <code>lmy</code>。</p>
+<p><strong>改了什么：</strong></p>
+<ul>
+<li>配色换了。现在有两套——暖琥珀色和靛蓝色，改一行配置就能切换，我自己用暖色系</li>
+<li>导航栏只留头像 logo，右边几个链接加一个深色/浅色切换按钮，干净了很多</li>
+<li>归档页改成按年份分组的纯文字列表，快，不花哨</li>
+<li>文章页底部导航，之前只有标题是可点的，现在整块都能点</li>
+<li>文章和评论之间的分割线删掉了，过渡自然一些</li>
+</ul>
+<p><strong>新增了什么：</strong></p>
+<ul>
+<li><strong>Essentials 页面</strong>——放精选文章，卡片式布局，日期固定在卡片底部</li>
+<li><strong>Sparks</strong>——就是这里，微博式的碎碎念，界面参考了螺莉莉的 To-Witter</li>
+<li>首页重新设计：顶部简介 + 精选文章预览 + 最近7篇文章 + Sparks 预览，各区块标题右边直接跟「查看全部」，省空间</li>
+<li>自定义 404 页面</li>
+<li>加了 <code>.gitignore</code>，把之前乱跑的 <code>.DS_Store</code> 都清掉了</li>
+</ul>
+<p>写到这里发现，做这件事最爽的部分不是「做完了」，而是每改一个细节、刷新页面看到变化的那一刻。页面是自己的，每一个像素都有来历。</p>
+<p>哦对，这条 note 是我拜托 Claude 帮我写的，不是我自己写的。</p>
+</div>
+      </div>
+    </div>
     
     <div class="witter-entry">
       <div class="witter-left">
