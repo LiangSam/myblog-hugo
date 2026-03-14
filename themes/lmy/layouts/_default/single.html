@@ -2,9 +2,6 @@
 <div class="reading-progress" id="reading-progress"></div>
 <article>
   <div class="post-header">
-    {{ if eq .Section "blog" }}
-    <a href="{{ "/blog/" | relURL }}" class="post-back">← 归档</a>
-    {{ end }}
     <h1 class="post-title-main">{{ .Title }}</h1>
     <div class="post-meta">
       {{ if not .Date.IsZero }}<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>{{ end }}
