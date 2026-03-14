@@ -27,7 +27,7 @@ title = "About"
 ### 文字
 - [#UNTAG ](https://utgd.net/)：比较喜欢的国内网站，一群人在分享效率生活、工具心得、方法论，为此我买了会员，以及大部分专栏
 - [Steph Ango](https://stephango.com/)：Obsidian CEO 的博客，文章简洁有力，没有废话
-- [螺莉莉的数据中心](https://roriri.one/)：希望有一天能写出这样的文章，我留言问作者怎么能写得这么好，他说「因为痛过」
+- [螺莉莉的数据中心](https://roriri.one/)：希望有一天能写出这样的文章，[我留言问作者](https://roriri.one/2026/03/10/beijing-vomit)怎么能写得这么好，他说「因为痛过」
 
 ## 🎵 喜欢的歌
 
@@ -38,17 +38,18 @@ title = "About"
 ## 🖥️ 我的硬件
 
 - 手机：小米 15
-- 电脑：MacBook Air M4 + 4060ti 组装台式机
+- 电脑：MacBook Air M4（16 + 512） + 4060ti 组装台式机
 - 显示器：Redmi A27U 27寸4k显示器
 - 键盘：Rainy 75 机械键盘
 - 音箱：漫步者桌面音箱 N300
-- ~~打印机：兄弟 HL 2260D~~
+- ~~打印机：兄弟 HL 2260D（闲鱼出掉了）~~
 
 ## 🧲 在用软件
 
 - 笔记工具：[Obsidian](https://obsidian.md/)-我的第二大脑，所有文章的起点
 - 输入法
 	- 电脑：[Rime](https://rime.im/)-简洁克制，自定义强
+	- 语音：[Typeless](https://www.typeless.com/refer?code=C4Q5VJ4)：语音识别足够准确，提高语音写作效率（链接带有邀请码）
 	- 手机：[微信输入法](https://z.weixin.qq.com/)
 - 密码管理：[Bitwarden](https://bitwarden.com/)-免费开源，足够好用
 
