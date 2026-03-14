@@ -1,0 +1,28 @@
+{{ define "main" }}
+{{ $notes := .Pages.ByDate.Reverse }}
+{{ $author := .Site.Params.author | default .Site.Title }}
+{{ $avatar := .Site.Params.avatar }}
+<div class="list-header">
+  <h1>{{ .Title }}</h1>
+  <p>{{ len $notes }} 条</p>
+</div>
+
+<div class="witter-stream">
+  {{ range $notes }}
+  <div class="witter-entry">
+    <div class="witter-left">
+      {{ with $avatar }}<img src="{{ . | relURL }}" alt="{{ $author }}" class="witter-avatar" />{{ end }}
+      <div class="witter-line"></div>
+    </div>
+    <div class="witter-right">
+      <div class="witter-header">
+        <span class="witter-name">{{ $author }}</span>
+        <span class="witter-dot">·</span>
+        <time class="witter-date">{{ .Date.Format "2006-01-02" }}</time>
+      </div>
+      <div class="witter-body">{{ .Content }}</div>
+    </div>
+  </div>
+  {{ end }}
+</div>
+{{ end }}

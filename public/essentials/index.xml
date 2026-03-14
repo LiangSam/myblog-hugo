@@ -1,0 +1,24 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Essentials - 梁某银</title>
+    <link>http://localhost:1313/essentials/</link>
+    <description>Recent content on 梁某银的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright © 2026, 梁某银</copyright>
+    
+    
+        <atom:link href="http://localhost:1313/essentials/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+  </channel>
+</rss>

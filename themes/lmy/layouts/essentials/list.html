@@ -1,0 +1,37 @@
+{{ define "main" }}
+<div class="list-header">
+  <h1>{{ .Title }}</h1>
+  <p>从所有文章里挑出来的，我觉得真正值得一读的那些。</p>
+</div>
+
+{{ $featured := where .Site.RegularPages ".Params.featured" true }}
+{{ if $featured }}
+<div class="card-grid">
+  {{ range $featured.ByDate.Reverse }}
+  {{ $image := .Params.image }}
+  {{ if not $image }}
+    {{ $matches := findRE `!\[.*?\]\((https?://[^)]+)\)` .RawContent 1 }}
+    {{ if $matches }}
+      {{ $urlMatches := findRE `https?://[^)]+` (index $matches 0) 1 }}
+      {{ if $urlMatches }}{{ $image = index $urlMatches 0 }}{{ end }}
+    {{ end }}
+  {{ end }}
+  {{ $colors := slice "#d4a373" "#a8c5da" "#c9b8d4" "#a8d4c5" "#d4b896" "#b8a8d4" "#c5c8a8" }}
+  {{ $placeholderColor := index $colors (mod (len .Title) (len $colors)) }}
+  <a href="{{ .Permalink }}" class="post-card">
+    {{ if $image }}
+    <img src="{{ $image }}" alt="{{ .Title }}" class="card-cover" loading="lazy" />
+    {{ else }}
+    <div class="card-cover-placeholder" style="background: {{ $placeholderColor }};"></div>
+    {{ end }}
+    <div class="card-body">
+      <div class="card-title">{{ .Title }}</div>
+      <div class="card-date">{{ .Date.Format "2006-01-02" }}</div>
+    </div>
+  </a>
+  {{ end }}
+</div>
+{{ else }}
+<p style="color: var(--color-text-muted);">暂无精选文章。在任意文章的 front matter 里加上 <code>featured: true</code> 即可在此展示。</p>
+{{ end }}
+{{ end }}

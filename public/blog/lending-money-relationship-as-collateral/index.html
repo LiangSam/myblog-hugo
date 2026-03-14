@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>借钱，以关系作抵押 | 梁某银的博客</title>
+<meta name="description" content="能借出多少，就看「关系」值多少钱。要是不想关系受影响，没事还是少借钱，不管是借给他人还是向他人借。" />
+<link rel="icon" href="/images/favicon.png" />
+<link rel="alternate" type="application/rss+xml" title="梁某银的博客" href="/index.xml" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="http://localhost:1313/blog/lending-money-relationship-as-collateral/" />
+<meta property="og:image" content="http://localhost:1313/images/favicon.png" />
+<meta property="og:title" content="借钱，以关系作抵押" />
+<meta property="og:site_name" content="梁某银的博客" />
+<script>
+  (function() {
+    var saved = localStorage.getItem('lmy-theme');
+    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    document.documentElement.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
+  })();
+</script>
+
+
+<style>
+  
+
+ 
+:root {
+
+   
+  --color-bg: #f4f8ff;
+  --color-bg-soft: #e8f0fc;
+  --color-text: #0f1c2e;
+  --color-text-muted: #5a7090;
+  --color-accent: #1660c4;
+  --color-accent-hover: #0f4fa0;
+  --color-border: #ccdaee;
+  --color-link: #1660c4;
+  --color-card-bg: #eaf1fb;
+
+  --max-width: 720px;
+  --header-height: 56px;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --shadow-sm: 0 1px 4px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.09);
+  --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, 'Courier New', monospace;
+  --line-height: 1.8;
+}
+
+[data-theme="dark"] {
+
+   
+  --color-bg: #0a1220;
+  --color-bg-soft: #111e30;
+  --color-text: #cddaee;
+  --color-text-muted: #4e6a88;
+  --color-accent: #5599e8;
+  --color-accent-hover: #79b2f0;
+  --color-border: #1a2d45;
+  --color-link: #5599e8;
+  --color-card-bg: #111e30;
+
+  --shadow-sm: 0 1px 4px rgba(0,0,0,0.25);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.35);
+}
+
+ 
+*, *::before, *::after { box-sizing: border-box; }
+html { overflow-y: scroll; scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: var(--line-height);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+a { color: var(--color-link); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+ 
+.site-wrapper { min-height: 100vh; display: flex; flex-direction: column; }
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 5rem;
+}
+
+ 
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  text-decoration: none;
+  letter-spacing: -0.3px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.site-title:hover { color: var(--color-accent); text-decoration: none; }
+
+.site-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  overflow-x: auto;
+  flex-shrink: 1;
+}
+
+.nav-link {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  padding: 0.3rem 0.55rem;
+  border-radius: 6px;
+  transition: color 0.15s, background-color 0.15s;
+  white-space: nowrap;
+}
+.nav-link:hover { color: var(--color-text); background-color: var(--color-bg-soft); text-decoration: none; }
+.nav-link.active { color: var(--color-text); font-weight: 600; }
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 0.28rem 0.5rem;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  line-height: 1;
+  transition: color 0.15s, border-color 0.15s;
+  flex-shrink: 0;
+  margin-left: 0.25rem;
+}
+.theme-toggle:hover { color: var(--color-text); border-color: var(--color-text-muted); }
+
+[data-theme="light"] .icon-moon { display: inline; }
+[data-theme="light"] .icon-sun  { display: none; }
+[data-theme="dark"]  .icon-moon { display: none; }
+[data-theme="dark"]  .icon-sun  { display: inline; }
+
+ 
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+.site-footer a { color: var(--color-text-muted); }
+.site-footer a:hover { color: var(--color-accent); text-decoration: none; }
+
+ 
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: var(--color-accent);
+  z-index: 200;
+  transition: width 0.1s linear;
+}
+
+ 
+.home-hero {
+  padding: 3.5rem 0 2rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+.home-hero p { margin: 0 0 0.8rem; }
+.home-hero a { color: var(--color-link); }
+.home-hero ul { margin: 0.5rem 0; padding-left: 1.5rem; }
+.home-hero li { margin-bottom: 0.3rem; }
+
+.post-count {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  margin: 0.5rem 0 0 !important;
+}
+.post-count strong { color: var(--color-accent); font-weight: 600; }
+
+ 
+.home-section { margin-bottom: 3rem; }
+
+.section-title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text);
+  margin: 0 0 1rem;
+  font-weight: 700;
+}
+
+ 
+.post-list { list-style: none; margin: 0; padding: 0; }
+
+.post-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.875rem;
+  padding: 0.3rem 0;
+}
+
+.post-date {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+  min-width: 3.2rem;
+}
+
+.post-link {
+  color: var(--color-text);
+  font-size: 0.94rem;
+  line-height: 1.45;
+}
+.post-link:hover { color: var(--color-accent); text-decoration: none; }
+
+.section-more {
+  margin-top: 1rem;
+  text-align: right;
+  font-size: 0.83rem;
+}
+.section-more a { color: var(--color-text-muted); }
+.section-more a:hover { color: var(--color-accent); text-decoration: none; }
+
+ 
+.now-preview {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  padding: 0.875rem 1.125rem;
+  background: var(--color-bg-soft);
+  border-radius: var(--radius);
+  border-left: 3px solid var(--color-accent);
+}
+.now-preview p { margin: 0; }
+.now-preview a { color: var(--color-link); }
+
+ 
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.125rem;
+}
+
+.post-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.post-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); text-decoration: none; }
+
+.card-cover {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+}
+
+.card-cover-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-body { padding: 0.75rem 0.875rem 0.875rem; flex: 1; display: flex; flex-direction: column; }
+
+.card-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.4;
+  margin: 0 0 0.35rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-date {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  margin-top: auto;
+  padding-top: 0.35rem;
+}
+
+ 
+.archive-year {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 2.5rem 0 0.6rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--color-border);
+}
+.archive-year:first-of-type { margin-top: 0; }
+
+.archive-list { list-style: none; margin: 0; padding: 0; }
+
+.archive-item {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.2rem 0;
+}
+
+.archive-date {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  min-width: 3.2rem;
+  flex-shrink: 0;
+}
+
+.archive-link { color: var(--color-text); font-size: 0.93rem; }
+.archive-link:hover { color: var(--color-accent); text-decoration: none; }
+
+ 
+.post-back {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.83rem;
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+}
+.post-back:hover { color: var(--color-accent); text-decoration: none; }
+
+.post-header { margin-bottom: 2rem; }
+
+.post-title-main {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.4px;
+}
+
+.post-meta {
+  font-size: 0.83rem;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.post-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+.post-tags a {
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+  padding: 0.1rem 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  transition: border-color 0.15s, color 0.15s;
+}
+.post-tags a:hover { border-color: var(--color-accent); color: var(--color-accent); text-decoration: none; }
+
+ 
+.post-content { font-size: 1rem; line-height: var(--line-height); }
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4 { font-weight: 700; line-height: 1.3; margin: 2rem 0 0.75rem; }
+.post-content h2 { font-size: 1.3rem; }
+.post-content h3 { font-size: 1.1rem; }
+.post-content h4 { font-size: 1rem; }
+.post-content p { margin: 0 0 1.2rem; }
+.post-content a { color: var(--color-link); text-decoration: underline; text-underline-offset: 3px; }
+.post-content a:hover { text-decoration: none; }
+.post-content img { border-radius: var(--radius); margin: 1.5rem auto; }
+.post-content figure { margin: 1.5rem 0; }
+.post-content figure figcaption {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: 0.5rem;
+}
+.post-content blockquote {
+  border-left: 3px solid var(--color-accent);
+  margin: 1.5rem 0;
+  padding: 0.5rem 1.25rem;
+  color: var(--color-text-muted);
+  background: var(--color-bg-soft);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+.post-content blockquote p { margin: 0; }
+.post-content pre {
+  background: var(--color-bg-soft);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+.post-content code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  background: var(--color-bg-soft);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+}
+.post-content pre code { background: none; padding: 0; border: none; font-size: inherit; }
+.post-content ul,
+.post-content ol { margin: 0 0 1.2rem; padding-left: 1.75rem; }
+.post-content li { margin-bottom: 0.3rem; }
+.post-content table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
+.post-content th,
+.post-content td { padding: 0.5rem 0.75rem; border: 1px solid var(--color-border); text-align: left; }
+.post-content th { background: var(--color-bg-soft); font-weight: 600; }
+.post-content hr { border: none; border-top: 1px solid var(--color-border); margin: 2rem 0; }
+
+ 
+.page-content { font-size: 1rem; line-height: var(--line-height); }
+.page-content h1 { font-size: 1.75rem; font-weight: 700; margin: 0 0 0.75rem; letter-spacing: -0.4px; }
+.page-content h2,
+.page-content h3 { font-weight: 700; line-height: 1.3; margin: 2rem 0 0.75rem; }
+.page-content h2 { font-size: 1.3rem; }
+.page-content h3 { font-size: 1.1rem; }
+.page-content p { margin: 0 0 1.2rem; }
+.page-content a { color: var(--color-link); text-decoration: underline; text-underline-offset: 3px; }
+.page-content a:hover { text-decoration: none; }
+.page-content img { border-radius: var(--radius); margin: 1.5rem auto; }
+.page-content blockquote {
+  border-left: 3px solid var(--color-accent);
+  margin: 1.5rem 0;
+  padding: 0.5rem 1.25rem;
+  color: var(--color-text-muted);
+  background: var(--color-bg-soft);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+.page-content blockquote p { margin: 0; }
+.page-content ul,
+.page-content ol { margin: 0 0 1.2rem; padding-left: 1.75rem; }
+.page-content li { margin-bottom: 0.3rem; }
+.page-content hr { border: none; border-top: 1px solid var(--color-border); margin: 2rem 0; }
+.page-content figure figcaption {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: 0.5rem;
+}
+
+ 
+.page-title { margin: 0 0 1.5rem; font-size: 1.4rem; font-weight: 700; }
+.search-container { margin-bottom: 1.5rem; }
+input#search-query {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.625rem 0.875rem;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--color-text);
+  background: var(--color-bg);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius);
+  outline: none;
+  transition: border-color 0.15s;
+}
+input#search-query:focus { border-color: var(--color-accent); }
+
+.search-suggestions { margin-bottom: 2rem; }
+.tag-cloud { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.tag-chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  padding: 0.25rem 0.625rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.82rem;
+  color: var(--color-text);
+  transition: border-color 0.15s, color 0.15s;
+}
+.tag-chip:hover { border-color: var(--color-accent); color: var(--color-accent); text-decoration: none; }
+.tag-name { opacity: 0.9; }
+.tag-count { font-size: 0.75em; color: var(--color-text-muted); font-family: var(--font-mono); }
+
+ 
+content { display: block; }
+
+ 
+.blog-posts { list-style: none; margin: 0; padding: 0; }
+
+ 
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.85rem;
+}
+.post-nav-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  max-width: 48%;
+  color: var(--color-text);
+  text-decoration: none;
+}
+.post-nav-item:hover { color: var(--color-accent); text-decoration: none; }
+.post-nav-item.next { text-align: right; margin-left: auto; }
+.post-nav-label {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.post-nav-title {
+  color: inherit;
+  line-height: 1.4;
+}
+
+ 
+.archive-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+.archive-tag {
+  font-size: 0.8rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 99px;
+  background: var(--color-bg-soft);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  border: 1px solid var(--color-border);
+  transition: background 0.15s, color 0.15s;
+}
+.archive-tag:hover {
+  background: var(--color-accent);
+  color: #fff;
+  border-color: var(--color-accent);
+}
+
+ 
+.witter-entry {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+.witter-entry:last-child { padding-bottom: 0; }
+.witter-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 40px;
+}
+.witter-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.witter-line {
+  flex: 1;
+  width: 1px;
+  background: var(--color-border);
+  margin-top: 0.5rem;
+  min-height: 1rem;
+}
+.witter-entry:last-child .witter-line { display: none; }
+.witter-right { flex: 1; min-width: 0; }
+.witter-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  margin-bottom: 0.4rem;
+}
+.witter-name { font-size: 0.9rem; font-weight: 700; color: var(--color-accent); }
+.witter-dot { color: var(--color-text-muted); font-size: 0.85rem; }
+.witter-date { font-size: 0.78rem; color: var(--color-text-muted); font-family: var(--font-mono); }
+.witter-body { font-size: 0.95rem; line-height: 1.75; }
+.witter-body p { margin: 0 0 0.5rem; }
+.witter-body p:last-child { margin: 0; }
+.witter-body a { color: var(--color-link); text-decoration: underline; text-underline-offset: 3px; }
+
+ 
+.error-page { padding: 4rem 0 2rem; }
+.error-code { font-size: 4rem; font-weight: 700; color: var(--color-accent); margin: 0 0 0.5rem; line-height: 1; }
+.error-msg { color: var(--color-text-muted); margin: 0 0 2rem; }
+.error-back { color: var(--color-link); text-decoration: none; font-size: 0.9rem; }
+.error-back:hover { text-decoration: underline; }
+
+ 
+.list-header { margin-bottom: 2rem; }
+.list-header h1 { font-size: 1.75rem; font-weight: 700; line-height: 1.3; margin: 0 0 0.25rem; letter-spacing: -0.4px; }
+.list-header p { color: var(--color-text-muted); font-size: 0.9rem; margin: 0; }
+
+ 
+@media (max-width: 680px) {
+  .header-inner { padding: 0 1rem; }
+  main { padding: 1.75rem 1rem 4rem; }
+  .card-grid { grid-template-columns: 1fr; }
+  .post-title-main { font-size: 1.4rem; }
+  .list-header h1 { font-size: 1.4rem; }
+  .main-nav { gap: 0; }
+  .nav-link { padding: 0.3rem 0.4rem; font-size: 0.82rem; }
+}
+
+@media (min-width: 681px) and (max-width: 900px) {
+  .card-grid { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+
+</head>
+<body class="site-wrapper">
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-title" aria-label="梁某银的博客">
+      <img src="/images/favicon.png" alt="梁某银的博客" class="site-avatar" />
+    </a>
+    <nav class="main-nav">
+      
+      <a href="/" class="nav-link">Home</a>
+      
+      <a href="/blog/" class="nav-link">Archives</a>
+      
+      <a href="/essentials/" class="nav-link">Essentials</a>
+      
+      <a href="/now/" class="nav-link">Now</a>
+      
+      <a href="/about/" class="nav-link">About</a>
+      
+      <button class="theme-toggle" aria-label="切换深浅色" onclick="(function(){var t=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('lmy-theme',t);})()" >
+        <span class="icon-sun">☀</span>
+        <span class="icon-moon">☾</span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<div class="reading-progress" id="reading-progress"></div>
+<article>
+  <div class="post-header">
+    
+    <a href="/blog/" class="post-back">← 归档</a>
+    
+    <h1 class="post-title-main">借钱，以关系作抵押</h1>
+    <div class="post-meta">
+      <time datetime="2026-03-08">2026-03-08</time>
+      
+      <span class="post-tags">
+        
+        <a href="http://localhost:1313/tags/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB/">#人际关系</a>
+        
+        <a href="http://localhost:1313/tags/%E5%80%9F%E9%92%B1/">#借钱</a>
+        
+      </span>
+      
+    </div>
+  </div>
+
+  <div class="post-content">
+    <p>
+<figure>
+    <img src="https://img.liangmouyin.com/2026/03/cd5cfb28c8b73bedf68f5f2f95c8613a.png" alt="ChatGPT Image Mar 8, 2026 at 10_28_10 PM.png" />
+    
+    
+</figure></p>
+<p>最近梳理手头的账本，发现竟借出去了不少钱，总额不到一万，但还是让我颇为心疼。毕竟在深圳工作，一切开销都非常大，我现在两月房租，差不多是小县城的一年，储蓄率也低得可怕。</p>
+<p>借钱自然不是主要原因，还有我的生活习惯，吃什么，喝什么，用什么，都直接影响银行卡余额。不过后者不可避免，频率高，但数额少，而被人借钱动辄数千元，可我偏偏不善拒绝，委实要重新梳理我的借钱观。</p>
+<p>我向来很奇怪一件事，就是我很少跟人说兜里有多少钱，也经历过向人借钱的窘困。但隔段时间就有人来找我借钱，除了部分交好的直接转账外，其他的我都会说存不下钱（这也是事实），可别人是不相信的，毕竟我在一线城市工作，怎么可能会没有存款。</p>
+<p>被人借钱的原因是我比较好说话，脾气也软，而且还是无敌之人，即无房贷、无车贷、无后代，甚至连对象都没有，就很容易成为借钱目标。</p>
+<p>此前我借钱给一位帮过我很多忙的表哥，那几乎是我三分之二的存款，他当时打电话问有没有几千块，我说有，然后给他转过去。次年我奔赴广东，初期需要花钱，这时找表哥要，好几次都说没钱，但我每隔一段时间打，他便一千一千地给，某天说不一下子还清，是怕你在外面没工作缺钱，到时候家都回不了，才这样。</p>
+<p>当时我笑了，所以聊几句挂掉。我气愤他的擅自主张，过两年他说房子要装修，找我借几万块，我只能说一点钱也没有，只能借个一两千，他便没吭声。</p>
+<p>与之相对的是个青少年，我去年年底借他一千来块，我并不急着要。但今年过年前，他就先给我转 200 元，还发聊天记录，是给人打单子挣的钱，微信余额也只剩 50 块钱。在我看来，他应该找我借钱的人中，最穷的一位。</p>
+<p>我不喜欢借钱的原因，是它有个先后顺序，父母、亲戚、银行，最后才是朋友，但大多时候是反着来的，真急着用钱，且能按时还，那为什么不找银行？</p>
+<p>归根到底，借钱对于我来说是个亏本的事，没有欠条、没有利息、也没有还款时间。这笔钱，我放在银行，每年也能涨十几块钱的利息。</p>
+<p>我尽管给自己设定一个 200 元上限原则，即假定对方不还的前提下，200 块是能接受的损失。而且还能通过这点钱看清一个人，学费相当便宜。</p>
+<p>借钱是在拷问人性，但是不借也能检验人性。如果有人找你借钱为了买车、买房，你拒绝，最后导致关系断裂，反而是件好事，因为一分不花就检验了关系。</p>
+<p>尽管我知道原因，却经常做不到，甚至别人找我借几千时，也不好说只能借 200 元。其实应该为难的是对方，既然他不感到难为情，那我更不该感到紧张，没必要为别人的情绪买单。</p>
+<p>拒绝不是与生俱来的天赋，也不是想通了自然就会的，而是一种习惯，也需要练习。当然，关系要好的人也能借，所谓「救急不救穷」，救命钱能借，其他的就没必要，否则关系也会变差。</p>
+<p>那么为什么会出现找熟人借钱呢？</p>
+<p>我刚才说借钱是亏本买卖，因为无利息、无欠条、无还款时间，而找人还钱时还要不断交涉，甚至要鼓足勇气，斟酌措辞，否则显得自己像周扒皮。</p>
+<p>原因在于，找熟人借钱的成本是最低的。</p>
+<p>借钱的逻辑，是把现在的资源暂借给你，你在未来某个时间段来偿还。如果找银行借钱，那需要用合同、征信和利息来保障，数额大的需要抵押物；而熟人之间，是<strong>以关系作为抵押物</strong>，用来代替复杂的机制。</p>
+<p>这也就能解释，为什么很多借钱的人很少主动联系你，因为能通过「减少联系」来逃避承诺兑现的压力，由此不还钱；而那位主动还我钱的青少年，就让我感到宽慰，这说明他很重视「关系」这个抵押物；而我的表哥，拿了我的资源后，还单方面重新定义还款规则，等于是擅自修改合同。</p>
+<p>因此，能借出多少，就看「关系」值多少钱。要是不想关系受影响，没事还是少借钱，不管是借给他人还是向他人借。</p>
+<p>我想起两年前发过的一则朋友圈，与诸君共勉：</p>
+<blockquote>
+<p>这借钱呐，我有四不借：</p>
+<p>第一，金额大的，我不借，自己都没钱，我能借多少？</p>
+<p>第二，金额小的，我也不借，这点钱都要借，那还能指望还吗？</p>
+<p>第三，突然联系的，我不借，有事才找我，平常干啥去了？</p>
+<p>第四，经常联系的，我也不借，谈钱伤感情，关系容易坏。</p></blockquote>
+<p>相关文章：<a href="https://liangmouyin.com/blog/suddenly-asked-for-money/">突然被借钱</a></p>
+
+  </div>
+</article>
+
+
+
+
+
+
+<nav class="post-nav">
+  
+  <a href="http://localhost:1313/blog/visit-a-small-library/" class="post-nav-item prev">
+    <span class="post-nav-label">← 上一篇</span>
+    <span class="post-nav-title">周末漫游小图书馆</span>
+  </a>
+  
+  
+  <a href="http://localhost:1313/blog/missed-the-flowers-and-openclaw/" class="post-nav-item next">
+    <span class="post-nav-label">下一篇 →</span>
+    <span class="post-nav-title">错过了花期，也错过 OpenClaw</span>
+  </a>
+  
+</nav>
+
+
+
+
+
+<script src="https://giscus.app/client.js"
+        data-repo="LiangSam/myblog-hugo"
+        data-repo-id="R_kgDOPFANrA"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOPFANrM4CxC-2"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+<script>
+(function() {
+  var bar = document.getElementById('reading-progress');
+  if (!bar) return;
+  window.addEventListener('scroll', function() {
+    var doc = document.documentElement;
+    var scrollTop = doc.scrollTop || document.body.scrollTop;
+    var scrollHeight = doc.scrollHeight - doc.clientHeight;
+    bar.style.width = scrollHeight > 0 ? (scrollTop / scrollHeight * 100) + '%' : '0%';
+  }, { passive: true });
+})();
+</script>
+
+</main>
+<footer class="site-footer">
+  <p>Copyright © 2026, 梁某银 · <a href="/index.xml">RSS</a> · <a href="/search/">搜索</a></p>
+</footer>
+
+</body>
+</html>

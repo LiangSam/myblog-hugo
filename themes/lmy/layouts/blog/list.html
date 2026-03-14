@@ -1,0 +1,19 @@
+{{ define "main" }}
+{{ $total := len .Pages }}
+<div class="list-header">
+  <h1>{{ .Title }}</h1>
+  <p>共 {{ $total }} 篇</p>
+</div>
+
+{{ range .Pages.GroupByDate "2006" }}
+<h2 class="archive-year">{{ .Key }}</h2>
+<ul class="archive-list">
+  {{ range .Pages }}
+  <li class="archive-item">
+    <span class="archive-date">{{ .Date.Format "01-02" }}</span>
+    <a href="{{ .Permalink }}" class="archive-link">{{ .Title }}</a>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}
+{{ end }}

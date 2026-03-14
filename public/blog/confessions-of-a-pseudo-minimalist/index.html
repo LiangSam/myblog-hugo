@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>一个“伪极简主义者”的自白 | 梁某银的博客</title>
+<meta name="description" content="记录，分享，成长" />
+<link rel="icon" href="/images/favicon.png" />
+<link rel="alternate" type="application/rss+xml" title="梁某银的博客" href="/index.xml" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="http://localhost:1313/blog/confessions-of-a-pseudo-minimalist/" />
+<meta property="og:image" content="http://localhost:1313/images/favicon.png" />
+<meta property="og:title" content="一个“伪极简主义者”的自白" />
+<meta property="og:site_name" content="梁某银的博客" />
+<script>
+  (function() {
+    var saved = localStorage.getItem('lmy-theme');
+    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    document.documentElement.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
+  })();
+</script>
+
+
+<style>
+  
+
+ 
+:root {
+
+   
+  --color-bg: #f4f8ff;
+  --color-bg-soft: #e8f0fc;
+  --color-text: #0f1c2e;
+  --color-text-muted: #5a7090;
+  --color-accent: #1660c4;
+  --color-accent-hover: #0f4fa0;
+  --color-border: #ccdaee;
+  --color-link: #1660c4;
+  --color-card-bg: #eaf1fb;
+
+  --max-width: 720px;
+  --header-height: 56px;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --shadow-sm: 0 1px 4px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.09);
+  --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, 'Courier New', monospace;
+  --line-height: 1.8;
+}
+
+[data-theme="dark"] {
+
+   
+  --color-bg: #0a1220;
+  --color-bg-soft: #111e30;
+  --color-text: #cddaee;
+  --color-text-muted: #4e6a88;
+  --color-accent: #5599e8;
+  --color-accent-hover: #79b2f0;
+  --color-border: #1a2d45;
+  --color-link: #5599e8;
+  --color-card-bg: #111e30;
+
+  --shadow-sm: 0 1px 4px rgba(0,0,0,0.25);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.35);
+}
+
+ 
+*, *::before, *::after { box-sizing: border-box; }
+html { overflow-y: scroll; scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: var(--line-height);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+a { color: var(--color-link); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+ 
+.site-wrapper { min-height: 100vh; display: flex; flex-direction: column; }
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 5rem;
+}
+
+ 
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  text-decoration: none;
+  letter-spacing: -0.3px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.site-title:hover { color: var(--color-accent); text-decoration: none; }
+
+.site-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  overflow-x: auto;
+  flex-shrink: 1;
+}
+
+.nav-link {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  padding: 0.3rem 0.55rem;
+  border-radius: 6px;
+  transition: color 0.15s, background-color 0.15s;
+  white-space: nowrap;
+}
+.nav-link:hover { color: var(--color-text); background-color: var(--color-bg-soft); text-decoration: none; }
+.nav-link.active { color: var(--color-text); font-weight: 600; }
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 0.28rem 0.5rem;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  line-height: 1;
+  transition: color 0.15s, border-color 0.15s;
+  flex-shrink: 0;
+  margin-left: 0.25rem;
+}
+.theme-toggle:hover { color: var(--color-text); border-color: var(--color-text-muted); }
+
+[data-theme="light"] .icon-moon { display: inline; }
+[data-theme="light"] .icon-sun  { display: none; }
+[data-theme="dark"]  .icon-moon { display: none; }
+[data-theme="dark"]  .icon-sun  { display: inline; }
+
+ 
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+.site-footer a { color: var(--color-text-muted); }
+.site-footer a:hover { color: var(--color-accent); text-decoration: none; }
+
+ 
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: var(--color-accent);
+  z-index: 200;
+  transition: width 0.1s linear;
+}
+
+ 
+.home-hero {
+  padding: 3.5rem 0 2rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+.home-hero p { margin: 0 0 0.8rem; }
+.home-hero a { color: var(--color-link); }
+.home-hero ul { margin: 0.5rem 0; padding-left: 1.5rem; }
+.home-hero li { margin-bottom: 0.3rem; }
+
+.post-count {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  margin: 0.5rem 0 0 !important;
+}
+.post-count strong { color: var(--color-accent); font-weight: 600; }
+
+ 
+.home-section { margin-bottom: 3rem; }
+
+.section-title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text);
+  margin: 0 0 1rem;
+  font-weight: 700;
+}
+
+ 
+.post-list { list-style: none; margin: 0; padding: 0; }
+
+.post-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.875rem;
+  padding: 0.3rem 0;
+}
+
+.post-date {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+  min-width: 3.2rem;
+}
+
+.post-link {
+  color: var(--color-text);
+  font-size: 0.94rem;
+  line-height: 1.45;
+}
+.post-link:hover { color: var(--color-accent); text-decoration: none; }
+
+.section-more {
+  margin-top: 1rem;
+  text-align: right;
+  font-size: 0.83rem;
+}
+.section-more a { color: var(--color-text-muted); }
+.section-more a:hover { color: var(--color-accent); text-decoration: none; }
+
+ 
+.now-preview {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  padding: 0.875rem 1.125rem;
+  background: var(--color-bg-soft);
+  border-radius: var(--radius);
+  border-left: 3px solid var(--color-accent);
+}
+.now-preview p { margin: 0; }
+.now-preview a { color: var(--color-link); }
+
+ 
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.125rem;
+}
+
+.post-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.post-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); text-decoration: none; }
+
+.card-cover {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+}
+
+.card-cover-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-body { padding: 0.75rem 0.875rem 0.875rem; flex: 1; display: flex; flex-direction: column; }
+
+.card-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.4;
+  margin: 0 0 0.35rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-date {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  margin-top: auto;
+  padding-top: 0.35rem;
+}
+
+ 
+.archive-year {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 2.5rem 0 0.6rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--color-border);
+}
+.archive-year:first-of-type { margin-top: 0; }
+
+.archive-list { list-style: none; margin: 0; padding: 0; }
+
+.archive-item {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.2rem 0;
+}
+
+.archive-date {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  min-width: 3.2rem;
+  flex-shrink: 0;
+}
+
+.archive-link { color: var(--color-text); font-size: 0.93rem; }
+.archive-link:hover { color: var(--color-accent); text-decoration: none; }
+
+ 
+.post-back {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.83rem;
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+}
+.post-back:hover { color: var(--color-accent); text-decoration: none; }
+
+.post-header { margin-bottom: 2rem; }
+
+.post-title-main {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.4px;
+}
+
+.post-meta {
+  font-size: 0.83rem;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.post-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+.post-tags a {
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+  padding: 0.1rem 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  transition: border-color 0.15s, color 0.15s;
+}
+.post-tags a:hover { border-color: var(--color-accent); color: var(--color-accent); text-decoration: none; }
+
+ 
+.post-content { font-size: 1rem; line-height: var(--line-height); }
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4 { font-weight: 700; line-height: 1.3; margin: 2rem 0 0.75rem; }
+.post-content h2 { font-size: 1.3rem; }
+.post-content h3 { font-size: 1.1rem; }
+.post-content h4 { font-size: 1rem; }
+.post-content p { margin: 0 0 1.2rem; }
+.post-content a { color: var(--color-link); text-decoration: underline; text-underline-offset: 3px; }
+.post-content a:hover { text-decoration: none; }
+.post-content img { border-radius: var(--radius); margin: 1.5rem auto; }
+.post-content figure { margin: 1.5rem 0; }
+.post-content figure figcaption {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: 0.5rem;
+}
+.post-content blockquote {
+  border-left: 3px solid var(--color-accent);
+  margin: 1.5rem 0;
+  padding: 0.5rem 1.25rem;
+  color: var(--color-text-muted);
+  background: var(--color-bg-soft);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+.post-content blockquote p { margin: 0; }
+.post-content pre {
+  background: var(--color-bg-soft);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+.post-content code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  background: var(--color-bg-soft);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+}
+.post-content pre code { background: none; padding: 0; border: none; font-size: inherit; }
+.post-content ul,
+.post-content ol { margin: 0 0 1.2rem; padding-left: 1.75rem; }
+.post-content li { margin-bottom: 0.3rem; }
+.post-content table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
+.post-content th,
+.post-content td { padding: 0.5rem 0.75rem; border: 1px solid var(--color-border); text-align: left; }
+.post-content th { background: var(--color-bg-soft); font-weight: 600; }
+.post-content hr { border: none; border-top: 1px solid var(--color-border); margin: 2rem 0; }
+
+ 
+.page-content { font-size: 1rem; line-height: var(--line-height); }
+.page-content h1 { font-size: 1.75rem; font-weight: 700; margin: 0 0 0.75rem; letter-spacing: -0.4px; }
+.page-content h2,
+.page-content h3 { font-weight: 700; line-height: 1.3; margin: 2rem 0 0.75rem; }
+.page-content h2 { font-size: 1.3rem; }
+.page-content h3 { font-size: 1.1rem; }
+.page-content p { margin: 0 0 1.2rem; }
+.page-content a { color: var(--color-link); text-decoration: underline; text-underline-offset: 3px; }
+.page-content a:hover { text-decoration: none; }
+.page-content img { border-radius: var(--radius); margin: 1.5rem auto; }
+.page-content blockquote {
+  border-left: 3px solid var(--color-accent);
+  margin: 1.5rem 0;
+  padding: 0.5rem 1.25rem;
+  color: var(--color-text-muted);
+  background: var(--color-bg-soft);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+.page-content blockquote p { margin: 0; }
+.page-content ul,
+.page-content ol { margin: 0 0 1.2rem; padding-left: 1.75rem; }
+.page-content li { margin-bottom: 0.3rem; }
+.page-content hr { border: none; border-top: 1px solid var(--color-border); margin: 2rem 0; }
+.page-content figure figcaption {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: 0.5rem;
+}
+
+ 
+.page-title { margin: 0 0 1.5rem; font-size: 1.4rem; font-weight: 700; }
+.search-container { margin-bottom: 1.5rem; }
+input#search-query {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.625rem 0.875rem;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--color-text);
+  background: var(--color-bg);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius);
+  outline: none;
+  transition: border-color 0.15s;
+}
+input#search-query:focus { border-color: var(--color-accent); }
+
+.search-suggestions { margin-bottom: 2rem; }
+.tag-cloud { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.tag-chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  padding: 0.25rem 0.625rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.82rem;
+  color: var(--color-text);
+  transition: border-color 0.15s, color 0.15s;
+}
+.tag-chip:hover { border-color: var(--color-accent); color: var(--color-accent); text-decoration: none; }
+.tag-name { opacity: 0.9; }
+.tag-count { font-size: 0.75em; color: var(--color-text-muted); font-family: var(--font-mono); }
+
+ 
+content { display: block; }
+
+ 
+.blog-posts { list-style: none; margin: 0; padding: 0; }
+
+ 
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.85rem;
+}
+.post-nav-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  max-width: 48%;
+  color: var(--color-text);
+  text-decoration: none;
+}
+.post-nav-item:hover { color: var(--color-accent); text-decoration: none; }
+.post-nav-item.next { text-align: right; margin-left: auto; }
+.post-nav-label {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.post-nav-title {
+  color: inherit;
+  line-height: 1.4;
+}
+
+ 
+.archive-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+.archive-tag {
+  font-size: 0.8rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 99px;
+  background: var(--color-bg-soft);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  border: 1px solid var(--color-border);
+  transition: background 0.15s, color 0.15s;
+}
+.archive-tag:hover {
+  background: var(--color-accent);
+  color: #fff;
+  border-color: var(--color-accent);
+}
+
+ 
+.witter-entry {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+.witter-entry:last-child { padding-bottom: 0; }
+.witter-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 40px;
+}
+.witter-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.witter-line {
+  flex: 1;
+  width: 1px;
+  background: var(--color-border);
+  margin-top: 0.5rem;
+  min-height: 1rem;
+}
+.witter-entry:last-child .witter-line { display: none; }
+.witter-right { flex: 1; min-width: 0; }
+.witter-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  margin-bottom: 0.4rem;
+}
+.witter-name { font-size: 0.9rem; font-weight: 700; color: var(--color-accent); }
+.witter-dot { color: var(--color-text-muted); font-size: 0.85rem; }
+.witter-date { font-size: 0.78rem; color: var(--color-text-muted); font-family: var(--font-mono); }
+.witter-body { font-size: 0.95rem; line-height: 1.75; }
+.witter-body p { margin: 0 0 0.5rem; }
+.witter-body p:last-child { margin: 0; }
+.witter-body a { color: var(--color-link); text-decoration: underline; text-underline-offset: 3px; }
+
+ 
+.error-page { padding: 4rem 0 2rem; }
+.error-code { font-size: 4rem; font-weight: 700; color: var(--color-accent); margin: 0 0 0.5rem; line-height: 1; }
+.error-msg { color: var(--color-text-muted); margin: 0 0 2rem; }
+.error-back { color: var(--color-link); text-decoration: none; font-size: 0.9rem; }
+.error-back:hover { text-decoration: underline; }
+
+ 
+.list-header { margin-bottom: 2rem; }
+.list-header h1 { font-size: 1.75rem; font-weight: 700; line-height: 1.3; margin: 0 0 0.25rem; letter-spacing: -0.4px; }
+.list-header p { color: var(--color-text-muted); font-size: 0.9rem; margin: 0; }
+
+ 
+@media (max-width: 680px) {
+  .header-inner { padding: 0 1rem; }
+  main { padding: 1.75rem 1rem 4rem; }
+  .card-grid { grid-template-columns: 1fr; }
+  .post-title-main { font-size: 1.4rem; }
+  .list-header h1 { font-size: 1.4rem; }
+  .main-nav { gap: 0; }
+  .nav-link { padding: 0.3rem 0.4rem; font-size: 0.82rem; }
+}
+
+@media (min-width: 681px) and (max-width: 900px) {
+  .card-grid { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+
+</head>
+<body class="site-wrapper">
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-title" aria-label="梁某银的博客">
+      <img src="/images/favicon.png" alt="梁某银的博客" class="site-avatar" />
+    </a>
+    <nav class="main-nav">
+      
+      <a href="/" class="nav-link">Home</a>
+      
+      <a href="/blog/" class="nav-link">Archives</a>
+      
+      <a href="/essentials/" class="nav-link">Essentials</a>
+      
+      <a href="/now/" class="nav-link">Now</a>
+      
+      <a href="/about/" class="nav-link">About</a>
+      
+      <button class="theme-toggle" aria-label="切换深浅色" onclick="(function(){var t=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('lmy-theme',t);})()" >
+        <span class="icon-sun">☀</span>
+        <span class="icon-moon">☾</span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<div class="reading-progress" id="reading-progress"></div>
+<article>
+  <div class="post-header">
+    
+    <a href="/blog/" class="post-back">← 归档</a>
+    
+    <h1 class="post-title-main">一个“伪极简主义者”的自白</h1>
+    <div class="post-meta">
+      <time datetime="2026-01-25">2026-01-25</time>
+      
+      <span class="post-tags">
+        
+        <a href="http://localhost:1313/tags/%E6%9E%81%E7%AE%80%E4%B8%BB%E4%B9%89/">#极简主义</a>
+        
+      </span>
+      
+    </div>
+  </div>
+
+  <div class="post-content">
+    <p>
+<figure>
+    <img src="https://img.liangmouyin.com/2026/01/c1332f67a370d6d7d391c4c1dd8d9bd3.png" alt="loop_on_A_computer_desktop_three_mobile_phones_three_computers__7f6af713-7a26-4d6a-a364-e44ba68222a7.png" />
+    
+    
+</figure></p>
+<p>我从来不敢标榜自己是极简主义者，只能说崇尚。前段时间发了我的电脑桌面图片，朋友说实在太干净了；只看黑白配色的桌面，很能给人这种错觉，倘若您能看到我桌面下凌乱的电源线，衣柜里的物件，就不会这么以为——但这也是很多「极简主义者」不会让你看到的。</p>
+<p>房间里冗余的东西委实不少，我想试着梳理一下为什么会有这么多东西，它们的来龙去脉，遂成此文。</p>
+<h2 id="三部手机">三部手机</h2>
+<p>
+<figure>
+    <img src="https://img.liangmouyin.com/2026/01/7d538e2d71808de2837a9d38019242da.jpg" alt="三台手机_压缩后.jpg" />
+    
+    
+</figure></p>
+<p>我现在用着小米 15，另外两部是过去换机剩下来的，小米 MIX 2s 和小米 10 至尊纪念版（后面简写 10 Ultra），这还没算上公司配的工作手机。</p>
+<p>理性层面来看，我只需要保留小米 15 足矣，只要它不发生物理上的报废，就能一直用。而闲余的手机里，上一台 10 Ultra 我几乎不再打开，后盖破裂，电源键失灵严重，需要用极为精妙的手法才能使用；再上一台 MIX 2s，我反而作为备用机，安装社交媒体软件，有空时会从抽屉里拿出来观摩，它的电源键也半失灵。</p>
+<p>不过我也说不清为什么还不把旧手机卖掉。一则以前买的时候并不便宜，我还记得 10 Ultra 是我第一次分期买的，后来有工作后慢慢还掉，如今出掉二手，价格还不到以前的一成，这让我很是挫败，小米跟保值从来就没有关系；二则我比较恋物懒惰，那台手机里还有不少图片，清理也需要时间，所以之前说好要出二手，计划搁浅到现在还没执行。</p>
+<p>可还是要处理。我抽个时间，把旧手机数据清理一下，再放到转转卖掉吧，如果卖不掉，那再议。</p>
+<h2 id="三台电脑">三台电脑</h2>
+<p>现在我日常用的是 MacBook 和 Windows 台式机，其实还有台大学时家长给买的惠普笔记本，从大学用到工作，当初随我来深圳闯荡，如今鸟枪换炮后，旧电脑再无用武之地（除了在前司用来工作外）。</p>
+<p>目前我并不打算出掉 Windows 台式机，两年前的电脑现在依然很流畅，偶尔会在上面看电影、打游戏，和 MacBook 换着用也不会有丝毫不顺，除了快捷键的肌肉记忆让我困扰外。</p>
+<p>惠普笔记本应该是要出掉的，这电脑也不省心，我在上面装过机，换过电池，加过内存条和硬盘。如今脱手，估计也就是几百块钱，我就放在衣柜底部吃灰，一吃就是一年，中间没再打开过。</p>
+<p>另一个思路是看侄子辈有没有想用电脑的，就顺手当作新年礼物，他们在念初中，大多在手机上玩吃鸡游戏，尚不清楚他们需不需要，实在不行放在贵州吃灰吧，起码我在深圳看不到。</p>
+<h2 id="三只枕头">三只枕头</h2>
+<p>是的，我有三只枕头。</p>
+<p>第一个是乳胶枕头，我在<a href="https://liangmouyin.com/blog/should-i-change-my-pillow/">要不要换枕头？</a>谈过，大学就用这类枕头，回弹有力，支撑很好。而我表姐读了那篇文章后，就送了一个记忆棉枕头给我<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>，这是我的第二个枕头，感受和乳胶枕头完全不一样，回弹慢，有包裹感，睡眠质量有所提升，位列<a href="https://liangmouyin.com/blog/best-items-of-2025/">2025 年度好物</a>。</p>
+<p>第三个是充气枕头。购买契机是去年想要在办公室午睡，放工位上头能枕着，缓解颈部压力。但是充气枕只适合应急，日常用下来按压会有声音，比较滑，支撑很薄弱，最后用了段时间，放在家里吃灰。</p>
+<p>两个枕头的好处是，我靠在床头时，一个平方，一个立起来，我的背部有支撑，软绵绵的，刷手机、读会儿书很过瘾。如果睡觉侧卧，我会拿乳胶枕放在旁边，腿搭在上面，这样能维持身体脊柱自然曲线。</p>
+<h2 id="三床被子">三床被子</h2>
+<p>最开始我只有一床夏凉被，当时在深圳有了工作，也租了房子后，只用被单怕是不合适，所以买一床网易严选夏凉被。</p>
+<p>后来天气渐冷，深圳冬天虽说比贵州好熬，可冷起来也会到 10 度以下。我连续两三个夜晚被冻醒，即便往身上盖衣服也弥补不了，就下单一床 6 斤重的大豆纤维被——事实证明，单凭这个重量还不太够，冷的时候两个加在一起才比较合适。</p>
+<p>第三个严格来说不算被子，是睡袋。我在去年下半年开始打地铺，只睡在防潮垫上，睡袋则是之前买的，信封式，拉链拉开后平摊，就是一床被子，从厚薄上和夏凉被没区别。所以我的夏凉被也处于闲置，看来也要等个时间把它处理掉。</p>
+<h2 id="四个水杯">四个水杯</h2>
+<p>
+<figure>
+    <img src="https://img.liangmouyin.com/2026/01/38918be86db9ade98ced8387794b77a3.jpg" alt="三个水杯_压缩后.jpg" />
+    
+    
+</figure></p>
+<p>最开始我只有膳魔师保温杯，从 2022 年用到现在，质量很好，如今里面只有一个冰块砸出来的小坑。</p>
+<p>在公司后，我买了个米家 Tritan 水杯，透明的，日常用来喝水。在公司接上满满一大杯，我能喝很久，但是杯盖、茶滤和搅拌网格对我来说就没啥大用。</p>
+<p>第三个杯子是宜家马克杯，有段时间我爱喝枸杞和茶，但出租屋里只有保温杯，用它来泡并不合适，杯子深，保温效果太好而烫嘴，遂买此杯。</p>
+<p>第四个杯子则没花钱，参加某个活动所得，是个有保温效果的小咖啡杯，能装 300ml 水。我放在公司喝水用，我不爱喝茶和咖啡（最近又染上了枸杞陈皮瘾），这个咖啡杯非常合适，有段时间还用来冲豆浆喝。</p>
+<p>但这些杯子各有各的用途，唯一闲置下来的是米家水杯，可能也要扔掉。</p>
+<h2 id="三个充电宝">三个充电宝</h2>
+<p>
+<figure>
+    <img src="https://img.liangmouyin.com/2026/01/f07d61100003e314a521856a77ced7f4.jpg" alt="三个充电宝_压缩后.jpg" />
+    
+    
+</figure></p>
+<p>第一个充电宝是紫米（现为酷态科）的 1 万毫安时，墨绿色，非常小巧，但是遇到过充不上电的情况；第二个则是前年买小米 15 所赠的自带线充电宝口袋版，也很小巧，优势在于它自带一根 Type-C 线，这样你出门就不需要多带。</p>
+<p>按理来说，有这些已经足矣。可是我去年国庆出门旅游，觉得缺一个充电宝（其实就是想花钱了），最后买了一个酷态科 10 号 Plus 充电宝<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>，相当有极客感，最高支持 120W 充电功率，有屏幕显示，双击变成小电流模式。我买它想着能给 MacBook 供电，谁知道压根用不上，MacBook 的续航能力强到出乎意料。</p>
+<p>除了三个充电宝，我甚至还有四个充电器，这就不展开介绍了。</p>
+<h2 id="小结">小结</h2>
+<p>细数这些冗余物件，功能重复，占用着许多空间，但我也知道为什么会有这个结果。</p>
+<p>最初源于设备迭代，导致旧有物件难以割舍，既因沉没成本，也因一时懒惰，不想处理，数码产品不像普通物件，直接扔垃圾桶就好，这会让人觉得浪费；其次是场景变迁，水杯换了几个，最初的购买目的和现在的使用需求出现错位，生活质量提升之余，也闲置不少物件，可又没有花心思处理；最后则是试错，比如那个充气枕头，如今确实闲置，好在放气后就是一团，占用空间小。</p>
+<p>极简主义（minimalism）并非家徒四壁，而是减少持有物，突显你真正重要的东西。桌面上一堆电子设备想必会增加维护的时间成本，如果什么都没有，而只有一台笔记本电脑，不需要像我这样思考今天用 MacBook 还是 Windows 台式机，音箱线有没有插对，键鼠有没有连上，显示器亮不亮。</p>
+<p>简言之，通过最少必要物品，来获得另一种纯粹的生活。</p>
+<p>可惜笔者暂时还做不到。我决心在今年搬家之前，把这些冗余东西都处理掉，不管送人、回收还是扔掉，否则又是一地鸡毛。</p>
+<h2 id="尾声">尾声</h2>
+<p>如果文章落笔到这里，是一件非常轻松的事。因为什么都没被改变，物件无增无减，我没有经历任何阵痛，自然也没有扔掉东西后带来的快感。</p>
+<p>所以我想往前走一步。下午写完上面的部分后，我在二手平台预约回收，揣着小米 10 Ultra 和充电器出门，到线下店以不足 5% 的折价出掉（购买时花了五千多，回收价格 200 多元），我还问小哥要不要充电器，他说不要，但我从兜里掏出硬塞给他，说给你了。</p>
+<p>尽管折价率低得可怕，但我并不感到很难过，反而是一阵轻松。我在购买之初，就享受了它作为旗舰级的价值，陪着我度过毕业后的四五年；但随着新旗舰推出，它都在掉价，现在我也有了新手机，它的使命在去年就该结束，但我拖延许久。</p>
+<p>平台打款很快，我出了商场，到 7-11 吃了一顿关东煮作为晚餐，里面有萝卜、魔芋丝、豆腐、鱼蛋，我吃得很开心。</p>
+<p>
+<figure>
+    <img src="https://img.liangmouyin.com/2026/01/de60b40bdae0046d9935954498f0f622.jpg" alt="关东煮_压缩后.jpg" />
+    
+    
+</figure></p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>朋友们，这就是公开表达的魅力啊！&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>它甚至还送了个硅胶保护套，我手机从来不戴壳，但没想到充电宝也能有次殊荣，套上之后就变得又大又丑，实在想不出有什么用。&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+  </div>
+</article>
+
+
+
+
+
+
+<nav class="post-nav">
+  
+  <a href="http://localhost:1313/blog/why-i-refuse-to-update-macos-26/" class="post-nav-item prev">
+    <span class="post-nav-label">← 上一篇</span>
+    <span class="post-nav-title">为什么我拒绝更新 macOS 26？</span>
+  </a>
+  
+  
+  <a href="http://localhost:1313/blog/business-plan-for-fish-bone-spitting-class/" class="post-nav-item next">
+    <span class="post-nav-label">下一篇 →</span>
+    <span class="post-nav-title">“吐刺培训班”商业计划书</span>
+  </a>
+  
+</nav>
+
+
+
+
+
+<script src="https://giscus.app/client.js"
+        data-repo="LiangSam/myblog-hugo"
+        data-repo-id="R_kgDOPFANrA"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOPFANrM4CxC-2"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+<script>
+(function() {
+  var bar = document.getElementById('reading-progress');
+  if (!bar) return;
+  window.addEventListener('scroll', function() {
+    var doc = document.documentElement;
+    var scrollTop = doc.scrollTop || document.body.scrollTop;
+    var scrollHeight = doc.scrollHeight - doc.clientHeight;
+    bar.style.width = scrollHeight > 0 ? (scrollTop / scrollHeight * 100) + '%' : '0%';
+  }, { passive: true });
+})();
+</script>
+
+</main>
+<footer class="site-footer">
+  <p>Copyright © 2026, 梁某银 · <a href="/index.xml">RSS</a> · <a href="/search/">搜索</a></p>
+</footer>
+
+</body>
+</html>

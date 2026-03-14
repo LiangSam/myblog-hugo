@@ -1,0 +1,16 @@
+<header class="site-header">
+  <div class="header-inner">
+    <a href="{{ "/" | relURL }}" class="site-title" aria-label="{{ .Site.Title }}">
+      {{ with .Site.Params.avatar }}<img src="{{ . | relURL }}" alt="{{ $.Site.Title }}" class="site-avatar" />{{ end }}
+    </a>
+    <nav class="main-nav">
+      {{ range .Site.Menus.main }}
+      <a href="{{ .URL | relURL }}" class="nav-link{{ if eq $.RelPermalink (.URL | relURL) }} active{{ end }}">{{ .Name }}</a>
+      {{ end }}
+      <button class="theme-toggle" aria-label="切换深浅色" onclick="(function(){var t=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('lmy-theme',t);})()" >
+        <span class="icon-sun">☀</span>
+        <span class="icon-moon">☾</span>
+      </button>
+    </nav>
+  </div>
+</header>

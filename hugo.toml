@@ -6,7 +6,7 @@ title = "梁某银的博客"
 author = "梁某银"
 copyright = "Copyright © 2026, 梁某银"
 languageCode = "zh-CN"
-theme = 'hugo-bearblog'
+theme = 'lmy'
 
 # 生成 robots.txt，对 SEO 友好
 enableRobotsTXT = true
@@ -44,10 +44,10 @@ enableRobotsTXT = true
     weight = 20    # 2. 归档：最重要的内容入口
 
   [[menu.main]]
-    identifier = "search"
-    name = "Search"
-    url = "/search/"
-    weight = 30    # 3. 搜索：紧跟归档，方便查找
+    identifier = "essentials"
+    name = "Essentials"
+    url = "/essentials/"
+    weight = 30    # 3. 精选文章
 
   [[menu.main]]
     identifier = "now"
@@ -65,6 +65,8 @@ enableRobotsTXT = true
 # 参数配置 (Params)
 # ============================================================
 [params]
+  # 配色方案：warm（暖色琥珀）或 indigo（靛青冷峻）
+  colorScheme = "indigo"
   description = "记录，分享，成长"
   favicon = "images/favicon.png"
   images = ["images/favicon.png"]
@@ -72,6 +74,13 @@ enableRobotsTXT = true
   avatar = "images/favicon.png"
   title = "梁某银的博客"
   dateFormat = "2006-01-02"
+
+# Giscus 评论配置
+[params.giscus]
+  repo = "LiangSam/myblog-hugo"
+  repoId = "R_kgDOPFANrA"
+  category = "Announcements"
+  categoryId = "DIC_kwDOPFANrM4CxC-2"
 
 # ============================================================
 # 代码高亮配置 (Markup)

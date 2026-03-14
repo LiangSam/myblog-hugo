@@ -6,6 +6,7 @@ slug: Why-I-Gave-Up-on-To-Do-List-Apps-and-Went-Back-to-Using-Sticky-Notes
 author:
   - 梁某银
 categories:
+featured: true
 description:
 ---
 忘记从什么时候开始，我觉得自己是个容易分心的人。

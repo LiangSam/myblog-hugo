@@ -1,0 +1,79 @@
+{{ define "main" }}
+<div class="reading-progress" id="reading-progress"></div>
+<article>
+  <div class="post-header">
+    {{ if eq .Section "blog" }}
+    <a href="{{ "/blog/" | relURL }}" class="post-back">← 归档</a>
+    {{ end }}
+    <h1 class="post-title-main">{{ .Title }}</h1>
+    <div class="post-meta">
+      {{ if not .Date.IsZero }}<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>{{ end }}
+      {{ if .GetTerms "tags" }}
+      <span class="post-tags">
+        {{ range .GetTerms "tags" }}
+        <a href="{{ .Permalink }}">#{{ .LinkTitle }}</a>
+        {{ end }}
+      </span>
+      {{ end }}
+    </div>
+  </div>
+
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+</article>
+
+{{/* 上一篇 / 下一篇 */}}
+{{ if eq .Section "blog" }}
+{{ $prev := .PrevInSection }}
+{{ $next := .NextInSection }}
+{{ if or $prev $next }}
+<nav class="post-nav">
+  {{ if $prev }}
+  <a href="{{ $prev.Permalink }}" class="post-nav-item prev">
+    <span class="post-nav-label">← 上一篇</span>
+    <span class="post-nav-title">{{ $prev.Title }}</span>
+  </a>
+  {{ end }}
+  {{ if $next }}
+  <a href="{{ $next.Permalink }}" class="post-nav-item next">
+    <span class="post-nav-label">下一篇 →</span>
+    <span class="post-nav-title">{{ $next.Title }}</span>
+  </a>
+  {{ end }}
+</nav>
+{{ end }}
+{{ end }}
+
+{{/* Giscus 评论 */}}
+{{ with .Site.Params.giscus }}{{ if .repoId }}
+<script src="https://giscus.app/client.js"
+        data-repo="{{ .repo }}"
+        data-repo-id="{{ .repoId }}"
+        data-category="{{ .category }}"
+        data-category-id="{{ .categoryId }}"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+{{ end }}{{ end }}
+
+<script>
+(function() {
+  var bar = document.getElementById('reading-progress');
+  if (!bar) return;
+  window.addEventListener('scroll', function() {
+    var doc = document.documentElement;
+    var scrollTop = doc.scrollTop || document.body.scrollTop;
+    var scrollHeight = doc.scrollHeight - doc.clientHeight;
+    bar.style.width = scrollHeight > 0 ? (scrollTop / scrollHeight * 100) + '%' : '0%';
+  }, { passive: true });
+})();
+</script>
+{{ end }}

@@ -1,0 +1,34 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sparks - 梁某银</title>
+    <link>http://localhost:1313/notes/</link>
+    <description>Recent content on 梁某银的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright © 2026, 梁某银</copyright>
+    <lastBuildDate>Sat, 14 Mar 2026 09:00:00 +0800</lastBuildDate>
+    
+        <atom:link href="http://localhost:1313/notes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/notes/2026-03-14/</link>
+      <pubDate>Sat, 14 Mar 2026 09:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/notes/2026-03-14/</guid>
+      <description>&lt;p&gt;这是第一条碎碎念。用来写一些不成文章的话——灵感片段、读书摘抄、或者某个普通的下午突然想到的一句话。&lt;/p&gt;
+&lt;p&gt;界面参考了&lt;a href=&#34;https://roriri.one/to-witter&#34;&gt;天才少女螺莉莉的 To→Witter&lt;/a&gt;，现在我也等于是拥有一个自己的微博了~&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

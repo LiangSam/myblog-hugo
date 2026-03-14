@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>春节回家，你给父母装什么 AI 工具？ | 梁某银的博客</title>
+<meta name="description" content="记录，分享，成长" />
+<link rel="icon" href="/images/favicon.png" />
+<link rel="alternate" type="application/rss+xml" title="梁某银的博客" href="/index.xml" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="http://localhost:1313/blog/which-ai-tool-for-parents/" />
+<meta property="og:image" content="http://localhost:1313/images/favicon.png" />
+<meta property="og:title" content="春节回家，你给父母装什么 AI 工具？" />
+<meta property="og:site_name" content="梁某银的博客" />
+<script>
+  (function() {
+    var saved = localStorage.getItem('lmy-theme');
+    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    document.documentElement.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
+  })();
+</script>
+
+
+<style>
+  
+
+ 
+:root {
+
+   
+  --color-bg: #f4f8ff;
+  --color-bg-soft: #e8f0fc;
+  --color-text: #0f1c2e;
+  --color-text-muted: #5a7090;
+  --color-accent: #1660c4;
+  --color-accent-hover: #0f4fa0;
+  --color-border: #ccdaee;
+  --color-link: #1660c4;
+  --color-card-bg: #eaf1fb;
+
+  --max-width: 720px;
+  --header-height: 56px;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --shadow-sm: 0 1px 4px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.09);
+  --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, 'Courier New', monospace;
+  --line-height: 1.8;
+}
+
+[data-theme="dark"] {
+
+   
+  --color-bg: #0a1220;
+  --color-bg-soft: #111e30;
+  --color-text: #cddaee;
+  --color-text-muted: #4e6a88;
+  --color-accent: #5599e8;
+  --color-accent-hover: #79b2f0;
+  --color-border: #1a2d45;
+  --color-link: #5599e8;
+  --color-card-bg: #111e30;
+
+  --shadow-sm: 0 1px 4px rgba(0,0,0,0.25);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.35);
+}
+
+ 
+*, *::before, *::after { box-sizing: border-box; }
+html { overflow-y: scroll; scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: var(--line-height);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+a { color: var(--color-link); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+ 
+.site-wrapper { min-height: 100vh; display: flex; flex-direction: column; }
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 5rem;
+}
+
+ 
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  text-decoration: none;
+  letter-spacing: -0.3px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.site-title:hover { color: var(--color-accent); text-decoration: none; }
+
+.site-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  overflow-x: auto;
+  flex-shrink: 1;
+}
+
+.nav-link {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  padding: 0.3rem 0.55rem;
+  border-radius: 6px;
+  transition: color 0.15s, background-color 0.15s;
+  white-space: nowrap;
+}
+.nav-link:hover { color: var(--color-text); background-color: var(--color-bg-soft); text-decoration: none; }
+.nav-link.active { color: var(--color-text); font-weight: 600; }
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 0.28rem 0.5rem;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  line-height: 1;
+  transition: color 0.15s, border-color 0.15s;
+  flex-shrink: 0;
+  margin-left: 0.25rem;
+}
+.theme-toggle:hover { color: var(--color-text); border-color: var(--color-text-muted); }
+
+[data-theme="light"] .icon-moon { display: inline; }
+[data-theme="light"] .icon-sun  { display: none; }
+[data-theme="dark"]  .icon-moon { display: none; }
+[data-theme="dark"]  .icon-sun  { display: inline; }
+
+ 
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+.site-footer a { color: var(--color-text-muted); }
+.site-footer a:hover { color: var(--color-accent); text-decoration: none; }
+
+ 
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: var(--color-accent);
+  z-index: 200;
+  transition: width 0.1s linear;
+}
+
+ 
+.home-hero {
+  padding: 3.5rem 0 2rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+.home-hero p { margin: 0 0 0.8rem; }
+.home-hero a { color: var(--color-link); }
+.home-hero ul { margin: 0.5rem 0; padding-left: 1.5rem; }
+.home-hero li { margin-bottom: 0.3rem; }
+
+.post-count {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  margin: 0.5rem 0 0 !important;
+}
+.post-count strong { color: var(--color-accent); font-weight: 600; }
+
+ 
+.home-section { margin-bottom: 3rem; }
+
+.section-title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text);
+  margin: 0 0 1rem;
+  font-weight: 700;
+}
+
+ 
+.post-list { list-style: none; margin: 0; padding: 0; }
+
+.post-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.875rem;
+  padding: 0.3rem 0;
+}
+
+.post-date {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+  min-width: 3.2rem;
+}
+
+.post-link {
+  color: var(--color-text);
+  font-size: 0.94rem;
+  line-height: 1.45;
+}
+.post-link:hover { color: var(--color-accent); text-decoration: none; }
+
+.section-more {
+  margin-top: 1rem;
+  text-align: right;
+  font-size: 0.83rem;
+}
+.section-more a { color: var(--color-text-muted); }
+.section-more a:hover { color: var(--color-accent); text-decoration: none; }
+
+ 
+.now-preview {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  padding: 0.875rem 1.125rem;
+  background: var(--color-bg-soft);
+  border-radius: var(--radius);
+  border-left: 3px solid var(--color-accent);
+}
+.now-preview p { margin: 0; }
+.now-preview a { color: var(--color-link); }
+
+ 
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.125rem;
+}
+
+.post-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.post-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); text-decoration: none; }
+
+.card-cover {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+}
+
+.card-cover-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-body { padding: 0.75rem 0.875rem 0.875rem; flex: 1; display: flex; flex-direction: column; }
+
+.card-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.4;
+  margin: 0 0 0.35rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-date {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  margin-top: auto;
+  padding-top: 0.35rem;
+}
+
+ 
+.archive-year {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 2.5rem 0 0.6rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--color-border);
+}
+.archive-year:first-of-type { margin-top: 0; }
+
+.archive-list { list-style: none; margin: 0; padding: 0; }
+
+.archive-item {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.2rem 0;
+}
+
+.archive-date {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  min-width: 3.2rem;
+  flex-shrink: 0;
+}
+
+.archive-link { color: var(--color-text); font-size: 0.93rem; }
+.archive-link:hover { color: var(--color-accent); text-decoration: none; }
+
+ 
+.post-back {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.83rem;
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+}
+.post-back:hover { color: var(--color-accent); text-decoration: none; }
+
+.post-header { margin-bottom: 2rem; }
+
+.post-title-main {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.4px;
+}
+
+.post-meta {
+  font-size: 0.83rem;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.post-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+.post-tags a {
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+  padding: 0.1rem 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  transition: border-color 0.15s, color 0.15s;
+}
+.post-tags a:hover { border-color: var(--color-accent); color: var(--color-accent); text-decoration: none; }
+
+ 
+.post-content { font-size: 1rem; line-height: var(--line-height); }
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4 { font-weight: 700; line-height: 1.3; margin: 2rem 0 0.75rem; }
+.post-content h2 { font-size: 1.3rem; }
+.post-content h3 { font-size: 1.1rem; }
+.post-content h4 { font-size: 1rem; }
+.post-content p { margin: 0 0 1.2rem; }
+.post-content a { color: var(--color-link); text-decoration: underline; text-underline-offset: 3px; }
+.post-content a:hover { text-decoration: none; }
+.post-content img { border-radius: var(--radius); margin: 1.5rem auto; }
+.post-content figure { margin: 1.5rem 0; }
+.post-content figure figcaption {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: 0.5rem;
+}
+.post-content blockquote {
+  border-left: 3px solid var(--color-accent);
+  margin: 1.5rem 0;
+  padding: 0.5rem 1.25rem;
+  color: var(--color-text-muted);
+  background: var(--color-bg-soft);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+.post-content blockquote p { margin: 0; }
+.post-content pre {
+  background: var(--color-bg-soft);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+.post-content code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  background: var(--color-bg-soft);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+}
+.post-content pre code { background: none; padding: 0; border: none; font-size: inherit; }
+.post-content ul,
+.post-content ol { margin: 0 0 1.2rem; padding-left: 1.75rem; }
+.post-content li { margin-bottom: 0.3rem; }
+.post-content table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
+.post-content th,
+.post-content td { padding: 0.5rem 0.75rem; border: 1px solid var(--color-border); text-align: left; }
+.post-content th { background: var(--color-bg-soft); font-weight: 600; }
+.post-content hr { border: none; border-top: 1px solid var(--color-border); margin: 2rem 0; }
+
+ 
+.page-content { font-size: 1rem; line-height: var(--line-height); }
+.page-content h1 { font-size: 1.75rem; font-weight: 700; margin: 0 0 0.75rem; letter-spacing: -0.4px; }
+.page-content h2,
+.page-content h3 { font-weight: 700; line-height: 1.3; margin: 2rem 0 0.75rem; }
+.page-content h2 { font-size: 1.3rem; }
+.page-content h3 { font-size: 1.1rem; }
+.page-content p { margin: 0 0 1.2rem; }
+.page-content a { color: var(--color-link); text-decoration: underline; text-underline-offset: 3px; }
+.page-content a:hover { text-decoration: none; }
+.page-content img { border-radius: var(--radius); margin: 1.5rem auto; }
+.page-content blockquote {
+  border-left: 3px solid var(--color-accent);
+  margin: 1.5rem 0;
+  padding: 0.5rem 1.25rem;
+  color: var(--color-text-muted);
+  background: var(--color-bg-soft);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+.page-content blockquote p { margin: 0; }
+.page-content ul,
+.page-content ol { margin: 0 0 1.2rem; padding-left: 1.75rem; }
+.page-content li { margin-bottom: 0.3rem; }
+.page-content hr { border: none; border-top: 1px solid var(--color-border); margin: 2rem 0; }
+.page-content figure figcaption {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: 0.5rem;
+}
+
+ 
+.page-title { margin: 0 0 1.5rem; font-size: 1.4rem; font-weight: 700; }
+.search-container { margin-bottom: 1.5rem; }
+input#search-query {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.625rem 0.875rem;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--color-text);
+  background: var(--color-bg);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius);
+  outline: none;
+  transition: border-color 0.15s;
+}
+input#search-query:focus { border-color: var(--color-accent); }
+
+.search-suggestions { margin-bottom: 2rem; }
+.tag-cloud { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.tag-chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  padding: 0.25rem 0.625rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.82rem;
+  color: var(--color-text);
+  transition: border-color 0.15s, color 0.15s;
+}
+.tag-chip:hover { border-color: var(--color-accent); color: var(--color-accent); text-decoration: none; }
+.tag-name { opacity: 0.9; }
+.tag-count { font-size: 0.75em; color: var(--color-text-muted); font-family: var(--font-mono); }
+
+ 
+content { display: block; }
+
+ 
+.blog-posts { list-style: none; margin: 0; padding: 0; }
+
+ 
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.85rem;
+}
+.post-nav-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  max-width: 48%;
+  color: var(--color-text);
+  text-decoration: none;
+}
+.post-nav-item:hover { color: var(--color-accent); text-decoration: none; }
+.post-nav-item.next { text-align: right; margin-left: auto; }
+.post-nav-label {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.post-nav-title {
+  color: inherit;
+  line-height: 1.4;
+}
+
+ 
+.archive-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+.archive-tag {
+  font-size: 0.8rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 99px;
+  background: var(--color-bg-soft);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  border: 1px solid var(--color-border);
+  transition: background 0.15s, color 0.15s;
+}
+.archive-tag:hover {
+  background: var(--color-accent);
+  color: #fff;
+  border-color: var(--color-accent);
+}
+
+ 
+.witter-entry {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+.witter-entry:last-child { padding-bottom: 0; }
+.witter-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 40px;
+}
+.witter-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.witter-line {
+  flex: 1;
+  width: 1px;
+  background: var(--color-border);
+  margin-top: 0.5rem;
+  min-height: 1rem;
+}
+.witter-entry:last-child .witter-line { display: none; }
+.witter-right { flex: 1; min-width: 0; }
+.witter-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  margin-bottom: 0.4rem;
+}
+.witter-name { font-size: 0.9rem; font-weight: 700; color: var(--color-accent); }
+.witter-dot { color: var(--color-text-muted); font-size: 0.85rem; }
+.witter-date { font-size: 0.78rem; color: var(--color-text-muted); font-family: var(--font-mono); }
+.witter-body { font-size: 0.95rem; line-height: 1.75; }
+.witter-body p { margin: 0 0 0.5rem; }
+.witter-body p:last-child { margin: 0; }
+.witter-body a { color: var(--color-link); text-decoration: underline; text-underline-offset: 3px; }
+
+ 
+.error-page { padding: 4rem 0 2rem; }
+.error-code { font-size: 4rem; font-weight: 700; color: var(--color-accent); margin: 0 0 0.5rem; line-height: 1; }
+.error-msg { color: var(--color-text-muted); margin: 0 0 2rem; }
+.error-back { color: var(--color-link); text-decoration: none; font-size: 0.9rem; }
+.error-back:hover { text-decoration: underline; }
+
+ 
+.list-header { margin-bottom: 2rem; }
+.list-header h1 { font-size: 1.75rem; font-weight: 700; line-height: 1.3; margin: 0 0 0.25rem; letter-spacing: -0.4px; }
+.list-header p { color: var(--color-text-muted); font-size: 0.9rem; margin: 0; }
+
+ 
+@media (max-width: 680px) {
+  .header-inner { padding: 0 1rem; }
+  main { padding: 1.75rem 1rem 4rem; }
+  .card-grid { grid-template-columns: 1fr; }
+  .post-title-main { font-size: 1.4rem; }
+  .list-header h1 { font-size: 1.4rem; }
+  .main-nav { gap: 0; }
+  .nav-link { padding: 0.3rem 0.4rem; font-size: 0.82rem; }
+}
+
+@media (min-width: 681px) and (max-width: 900px) {
+  .card-grid { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+
+</head>
+<body class="site-wrapper">
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-title" aria-label="梁某银的博客">
+      <img src="/images/favicon.png" alt="梁某银的博客" class="site-avatar" />
+    </a>
+    <nav class="main-nav">
+      
+      <a href="/" class="nav-link">Home</a>
+      
+      <a href="/blog/" class="nav-link">Archives</a>
+      
+      <a href="/essentials/" class="nav-link">Essentials</a>
+      
+      <a href="/now/" class="nav-link">Now</a>
+      
+      <a href="/about/" class="nav-link">About</a>
+      
+      <button class="theme-toggle" aria-label="切换深浅色" onclick="(function(){var t=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('lmy-theme',t);})()" >
+        <span class="icon-sun">☀</span>
+        <span class="icon-moon">☾</span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<div class="reading-progress" id="reading-progress"></div>
+<article>
+  <div class="post-header">
+    
+    <a href="/blog/" class="post-back">← 归档</a>
+    
+    <h1 class="post-title-main">春节回家，你给父母装什么 AI 工具？</h1>
+    <div class="post-meta">
+      <time datetime="2026-02-04">2026-02-04</time>
+      
+      <span class="post-tags">
+        
+        <a href="http://localhost:1313/tags/ai/">#AI</a>
+        
+      </span>
+      
+    </div>
+  </div>
+
+  <div class="post-content">
+    <p>
+<figure>
+    <img src="https://img.liangmouyin.com/2026/02/3bb0132e99b557efaea8e02bd0387c7f.png" alt="loop_on_A_pair_of_parents_chatting_with_an_AI_on_their_phone._315703ab-ed73-44e9-948b-509bb0eb5d6f.png" />
+    
+    
+</figure></p>
+<p>今天我看到一个很有意思的问题：如果给家人推荐一款 AI 聊天工具，你会推荐什么？</p>
+<p>问题下给出了一些选项，比如豆包、Kimi、DeepSeek、元宝、通义千问。</p>
+<p>我用 AI 也有一段时间了，从 ChatGPT 元年就开始使用各种 AI 工具，如今差不多用了两三年，它在我的工作和生活中提供了非常多的帮助。我也经常跟朋友讨论哪个工具更好用、有什么功能，或者在网上看教程，研究怎么把 AI 工具的效用最大化。</p>
+<p>但我确实没想过 AI 工具对于家人有没有直接帮助。如果 AI 确实能让人更好地生活、能够帮助到人们，那它理应发挥这方面的作用。</p>
+<p>因此看到那个问题时，随后思考发现，我觉得豆包和元宝这两个比较合适，而不是 DeepSeek 或 Kimi（后两者经常被很多打工人使用）。我想了想，原因可能是豆包和元宝更生活化一些，如果只选一个，那应该是豆包。</p>
+<p>给家人推荐工具的原则其实就是简单、省心、够用。</p>
+<p>他们不需要知道大模型背后的原理，不需要知道是哪个公司提供了什么服务，也不需要知道参考了什么语料库或是深度思考模型是什么。他们只需要知道，问了一个问题之后，AI 能够迅速给出相对正确的一个回答，然后他们就可以直接拿来用。</p>
+<p>工具首先是要干净的。因为长辈的手机一到过年，就能看到多出一堆乱七八糟的软件。我也不知道是怎么做到的，可能是莫名其妙就安装了。那我每年都得帮他们清理、卸载，查看哪些软件在后台跑流量比较多，这几乎成了春节过年的一个必备仪式。</p>
+<p>至于为什么不推荐 DeepSeek？说实话，它现在的功能还是太简单了，甚至不能直接语音对话。相比之下，元宝和豆包是可以的。</p>
+<p>但最终推荐豆包的原因在于：它能直接把抖音作为信息源，所以很多生活化的问题在抖音都能得到详尽的回答。比如菜谱、怎么乘地铁，甚至会直接在下面给你推荐一个视频，更加可视化。</p>
+<p>另外一点，之前看过很多人说，家里的长辈和孩子用豆包会多一点，所以我本能的第一反应就是豆包可能会更适合家人。</p>
+<p>我当然也不会指望 AI 能给出多么深刻的回答，只能说父母在日常当中遇到的绝大多数问题，AI 的回答可能会更好一点，而且它们会比较有同理心。</p>
+<p>如果问孩子的话，往往会隔一段时间才能回答，因为他们通常都在上班，不能第一时间接语音或者视频。</p>
+<p>就像我跟我家人聊天，平常都是下了班之后才有时间聊几句。但在日常生活中，他们遇到问题可以直接问豆包，不需要等到晚上或者是过几天聊天时再问。到那时候，可能都已经忘记要问什么了。</p>
+<p>另外一点，我觉得这种 AI 聊天工具想必能缓解父母的一些焦虑吧。这是我的一个猜想。</p>
+<p>比如，当他们问一些问题时：你都 28 了，怎么存款还是这么少？怎么还不找对象？怎么还不结婚生孩子？</p>
+<p>
+<figure>
+    <img src="https://img.liangmouyin.com/2026/02/6e0620f7c9ba5004c4ed894a1604ae25.jpg" alt="IMG_20260204_211557.jpg" />
+    
+    
+        <figcaption>在豆包记忆里，我已经是个操心孩子的老登了</figcaption>
+    
+</figure></p>
+<p>这种情况下，你很难向他们解释大城市的生活成本有多高，或者是当前的工作有多艰难。如果你让他们直接问 AI 的话，想必 AI 就能给出更加全面的回答。</p>
+<p>因为如果他们感到生气发火的话，AI 目前是没有情绪的。就像罗永浩跟豆包的那一次辩论一样，聊到最后，罗永浩已经几乎面红耳赤、恼羞成怒，可豆包还是那么淡定。</p>
+<p>所以如果换成我跟家人（尤其是长辈）来聊天，就这么一对一地聊，聊到一些敏感话题时，你觉得他无法理解你，他觉得你不懂事，最后多半会话赶话，然后开始吵架。</p>
+<p>当然这也是理想情况下。</p>
+<p>但还是能跟他们说一下 AI 的重要性，毕竟现在 AI 的发展已经是不容忽视了。我现在也不知道我家人的手机上都安装了哪些软件，有没有装 AI 工具。</p>
+<p>唯一的做法就是到时候给他们安装，然后教他们怎么去使用。我刚才看了一下豆包，它居然还有记忆功能，这其实还是蛮好的。像 DeepSeek 和元宝好像就没有。有了记忆功能之后，AI 的对话肯定会更加地个性化。</p>
+<p>所以这次春节回家，也就多了一个我给自己加的任务，给家人装一个 AI 工具，让他们先用起来。至于最后，这个软件会束之高阁，还是成为每天都需要用的一个工具，那我也不好说了。</p>
+<p>只能说它可以作为我聊天时的一个工具。比如聊到某些时候，我觉得我说服不了他时，就让他去问问 AI。我想 AI 应该会比我更能说服对方。</p>
+<p>因为他们会理所当然地认为：孩子始终是孩子，孩子的认知不可能超过他。我父亲就经常非常爹味地对我说：「我的社会经验可太多了，你学的都是书本上的知识，不顶用。」</p>
+<p>我其实很想问他：「你有了这么多社会经验，认识了这么多人，最后你的存款有变得非常多吗？」</p>
+<p>据我所知，他应该是没有的。但我知道我这句话一开口，恐怕就会吵起来了，所以每次都是奉承着：「您说的对。」</p>
+<p>算了算了，这种劳心费神的工作，还是交给 AI 比较好，就像我劝不动他少喝酒，他也劝不动我要上进，还是放过彼此吧。</p>
+
+  </div>
+</article>
+
+
+
+
+
+
+<nav class="post-nav">
+  
+  <a href="http://localhost:1313/blog/han-han-on-luo-yonghao-podcast/" class="post-nav-item prev">
+    <span class="post-nav-label">← 上一篇</span>
+    <span class="post-nav-title">韩寒什么时候上罗永浩的播客？</span>
+  </a>
+  
+  
+  <a href="http://localhost:1313/blog/college-students-fail-as-rural-scribes/" class="post-nav-item next">
+    <span class="post-nav-label">下一篇 →</span>
+    <span class="post-nav-title">农村的“礼部尚书”，咱们大学生真干不了</span>
+  </a>
+  
+</nav>
+
+
+
+
+
+<script src="https://giscus.app/client.js"
+        data-repo="LiangSam/myblog-hugo"
+        data-repo-id="R_kgDOPFANrA"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOPFANrM4CxC-2"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+<script>
+(function() {
+  var bar = document.getElementById('reading-progress');
+  if (!bar) return;
+  window.addEventListener('scroll', function() {
+    var doc = document.documentElement;
+    var scrollTop = doc.scrollTop || document.body.scrollTop;
+    var scrollHeight = doc.scrollHeight - doc.clientHeight;
+    bar.style.width = scrollHeight > 0 ? (scrollTop / scrollHeight * 100) + '%' : '0%';
+  }, { passive: true });
+})();
+</script>
+
+</main>
+<footer class="site-footer">
+  <p>Copyright © 2026, 梁某银 · <a href="/index.xml">RSS</a> · <a href="/search/">搜索</a></p>
+</footer>
+
+</body>
+</html>

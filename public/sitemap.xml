@@ -2,17 +2,311 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/blog/</loc>
-    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/notes/2026-03-14/</loc>
+    <lastmod>2026-03-14T09:00:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+    <lastmod>2026-03-14T09:00:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/notes/</loc>
+    <lastmod>2026-03-14T09:00:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/</loc>
+    <lastmod>2026-03-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-03-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/baby-shrimp/</loc>
+    <lastmod>2026-03-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2026-03-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/river-town/</loc>
+    <lastmod>2026-03-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E8%AF%BB%E4%B9%A6%E8%AE%B0/</loc>
+    <lastmod>2026-03-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/riting-in-the-passenger-seat/</loc>
+    <lastmod>2026-03-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/not-like-it-cant-be-used/</loc>
+    <lastmod>2026-03-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E8%80%B3%E6%9C%BA/</loc>
+    <lastmod>2026-03-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/ai/</loc>
+    <lastmod>2026-03-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E7%94%9F%E6%B4%BB/</loc>
+    <lastmod>2026-03-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/missed-the-flowers-and-openclaw/</loc>
+    <lastmod>2026-03-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB/</loc>
+    <lastmod>2026-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E5%80%9F%E9%92%B1/</loc>
+    <lastmod>2026-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/lending-money-relationship-as-collateral/</loc>
+    <lastmod>2026-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/visit-a-small-library/</loc>
+    <lastmod>2026-03-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/cheap-goodwill-of-dropping-links/</loc>
+    <lastmod>2026-03-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2026-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/why-i-did-not-install-openclaw/</loc>
+    <lastmod>2026-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/%E9%BB%91%E5%8C%A3%E5%AD%90%E9%87%8C%E5%85%BB%E9%BE%99%E8%99%BE%E8%BF%98%E6%98%AF%E8%9E%83%E8%9F%B9%E8%BF%99%E9%87%8D%E8%A6%81%E5%90%97/</loc>
+    <lastmod>2026-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/why-micro-budgeting-didnt-work-for-me/</loc>
+    <lastmod>2026-03-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E7%90%86%E8%B4%A2/</loc>
+    <lastmod>2026-03-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/my-responsibility-for-claude/</loc>
+    <lastmod>2026-03-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/stop-using-ai-to-escape-action/</loc>
+    <lastmod>2026-03-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/why-hoarding-books-feels-better-than-reading/</loc>
+    <lastmod>2026-03-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E9%98%85%E8%AF%BB/</loc>
+    <lastmod>2026-03-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/atomic-tools-iodine-swab/</loc>
+    <lastmod>2026-02-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E8%8D%AF%E5%93%81/</loc>
+    <lastmod>2026-02-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/sprinkling-pepper-salt-on-wounds/</loc>
+    <lastmod>2026-02-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E7%BD%91%E7%BB%9C%E5%B0%8F%E8%AF%B4/</loc>
+    <lastmod>2026-02-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/taking-my-brain-back-from-web-novels/</loc>
+    <lastmod>2026-02-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/speeding-like-hanhan/</loc>
+    <lastmod>2026-02-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E7%94%B5%E5%BD%B1/</loc>
+    <lastmod>2026-02-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E9%9F%A9%E5%AF%92/</loc>
+    <lastmod>2026-02-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/freedom-of-not-playing-mahjong/</loc>
+    <lastmod>2026-02-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/escaping-groundhog-day/</loc>
+    <lastmod>2026-02-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/first-night-back-in-shenzhen/</loc>
+    <lastmod>2026-02-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/after-blacking-out/</loc>
+    <lastmod>2026-02-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/lovely-winter-happy-spring-festival/</loc>
+    <lastmod>2026-02-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E6%98%A5%E8%8A%82/</loc>
+    <lastmod>2026-02-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/offering-food-and-forgetting/</loc>
+    <lastmod>2026-02-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/cultivating-humility-in-hometown/</loc>
+    <lastmod>2026-02-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/terrible-sleep-in-hometown/</loc>
+    <lastmod>2026-02-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/this-new-years-eve-is-not-too-cold/</loc>
+    <lastmod>2026-02-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/limited-edition-sugarcane/</loc>
+    <lastmod>2026-02-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/high-speed-rail-tribulation/</loc>
+    <lastmod>2026-02-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/saved-128-yuan-on-neck-pillow/</loc>
+    <lastmod>2026-02-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E6%B6%88%E8%B4%B9%E5%86%B3%E7%AD%96/</loc>
+    <lastmod>2026-02-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E5%86%99%E4%BD%9C/</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/prerequisites-for-daily-writing/</loc>
+    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/one-month-without-smart-band/</loc>
+    <lastmod>2026-02-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E6%95%B0%E7%A0%81/</loc>
+    <lastmod>2026-02-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/how-to-buy-cny-tickets/</loc>
+    <lastmod>2026-02-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/going-home-is-like-getting-drunk/</loc>
+    <lastmod>2026-02-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/revisiting-hong-kong/</loc>
+    <lastmod>2026-02-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E9%A6%99%E6%B8%AF/</loc>
+    <lastmod>2026-02-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E7%81%AB%E9%94%85/</loc>
+    <lastmod>2026-02-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/eating-chaoshan-beef-hot-pot-alone/</loc>
+    <lastmod>2026-02-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E5%86%9C%E6%9D%91/</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/cousin-asks-about-salary/</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/college-students-fail-as-rural-scribes/</loc>
+    <lastmod>2026-02-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/which-ai-tool-for-parents/</loc>
+    <lastmod>2026-02-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E6%92%AD%E5%AE%A2/</loc>
+    <lastmod>2026-02-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/han-han-on-luo-yonghao-podcast/</loc>
+    <lastmod>2026-02-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/ticket-snatching-season-again/</loc>
+    <lastmod>2026-02-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E6%98%A5%E8%BF%90/</loc>
+    <lastmod>2026-02-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/ants-leaves-lettuce-and-a-dog/</loc>
+    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/why-i-sold-my-printer/</loc>
+    <lastmod>2026-01-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E6%89%93%E5%8D%B0%E6%9C%BA/</loc>
+    <lastmod>2026-01-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/maybe-we-never-matured/</loc>
+    <lastmod>2026-01-30T21:00:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/giving-up-the-optimal-solution/</loc>
+    <lastmod>2026-01-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E9%80%89%E6%8B%A9%E5%93%B2%E5%AD%A6/</loc>
+    <lastmod>2026-01-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/macbook/</loc>
+    <lastmod>2026-01-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/macos/</loc>
+    <lastmod>2026-01-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/when-do-you-need-a-macbook/</loc>
+    <lastmod>2026-01-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E7%BA%A6%E9%A5%AD/</loc>
+    <lastmod>2026-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/spontaneous-dinner-invitations/</loc>
+    <lastmod>2026-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/business-plan-for-fish-bone-spitting-class/</loc>
+    <lastmod>2026-01-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E7%9E%8E%E6%89%AF%E6%B7%A1/</loc>
+    <lastmod>2026-01-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/confessions-of-a-pseudo-minimalist/</loc>
+    <lastmod>2026-01-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E6%9E%81%E7%AE%80%E4%B8%BB%E4%B9%89/</loc>
+    <lastmod>2026-01-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/why-i-refuse-to-update-macos-26/</loc>
+    <lastmod>2026-01-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E5%86%B3%E7%AD%96/</loc>
+    <lastmod>2026-01-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/positioning-over-decisions/</loc>
+    <lastmod>2026-01-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E6%89%8B%E6%9C%BA/</loc>
+    <lastmod>2026-01-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/walking-home-with-dead-phone/</loc>
+    <lastmod>2026-01-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/grayscale-phone-digital-detox/</loc>
+    <lastmod>2026-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E7%94%B5%E7%BA%B8%E4%B9%A6/</loc>
+    <lastmod>2026-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E5%8E%9F%E5%AD%90%E5%8C%96/</loc>
+    <lastmod>2026-01-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/unrecoverable-gift-money/</loc>
+    <lastmod>2026-01-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2026-01-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E9%85%92%E5%B8%AD/</loc>
+    <lastmod>2026-01-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/woken-up-by-kettle-first-time/</loc>
+    <lastmod>2026-01-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/the-art-of-group-buying/</loc>
+    <lastmod>2026-01-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E6%B6%88%E8%B4%B9%E4%B8%BB%E4%B9%89/</loc>
+    <lastmod>2026-01-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/my-k-drama-recommendations/</loc>
+    <lastmod>2026-01-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E9%9F%A9%E5%89%A7/</loc>
+    <lastmod>2026-01-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/shifting-from-saving-to-investing/</loc>
+    <lastmod>2026-01-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/so-good-i-want-to-gift-it/</loc>
     <lastmod>2026-01-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2026-01-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2026-01-14T00:00:00+00:00</lastmod>
@@ -30,9 +324,6 @@
     <lastmod>2026-01-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/hiding-assets-to-reduce-anxiety/</loc>
-    <lastmod>2026-01-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/%E7%90%86%E8%B4%A2/</loc>
     <lastmod>2026-01-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/over-equipped-fish-keeping/</loc>
@@ -233,9 +524,6 @@
     <loc>http://localhost:1313/blog/daily-trifles-pancake-gaming-call-walking/</loc>
     <lastmod>2025-11-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/macbook/</loc>
-    <lastmod>2025-11-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/blog/after-macbook-travel-save-money/</loc>
     <lastmod>2025-11-10T00:00:00+00:00</lastmod>
   </url><url>
@@ -264,12 +552,6 @@
     <lastmod>2025-11-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/lidan-work-manual-review/</loc>
-    <lastmod>2025-11-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-11-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/%E8%AF%BB%E4%B9%A6%E8%AE%B0/</loc>
     <lastmod>2025-11-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/%E8%AF%BB%E5%90%8E%E6%84%9F/</loc>
@@ -641,6 +923,15 @@
     <loc>http://localhost:1313/blog/250701-share-my-blog/</loc>
     <lastmod>2025-07-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/%E5%9C%B0%E9%93%BA/</loc>
+    <lastmod>2025-06-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/sleeping-on-the-floor-experiment/</loc>
+    <lastmod>2025-06-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F/</loc>
+    <lastmod>2025-06-27T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/blog/250626-happiness/</loc>
     <lastmod>2025-06-26T00:00:00+00:00</lastmod>
   </url><url>
@@ -651,9 +942,6 @@
     <lastmod>2025-06-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/250623-writing/</loc>
-    <lastmod>2025-06-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/%E5%86%99%E4%BD%9C/</loc>
     <lastmod>2025-06-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%E4%BD%8E%E6%8A%80%E6%9C%AF/</loc>
@@ -671,9 +959,6 @@
     <loc>http://localhost:1313/blog/250621-printer/</loc>
     <lastmod>2025-06-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/%E6%89%93%E5%8D%B0%E6%9C%BA/</loc>
-    <lastmod>2025-06-21T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/blog/250620-writing/</loc>
     <lastmod>2025-06-20T00:00:00+00:00</lastmod>
   </url><url>
@@ -688,6 +973,9 @@
   </url><url>
     <loc>http://localhost:1313/blog/250608-printer-read-later/</loc>
     <lastmod>2025-06-08T23:52:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/new-tool-second-hand-printer/</loc>
+    <lastmod>2025-06-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/250519-ai-write/</loc>
     <lastmod>2025-05-29T00:00:00+00:00</lastmod>
@@ -713,6 +1001,12 @@
     <loc>http://localhost:1313/blog/250411-continue-to-create/</loc>
     <lastmod>2025-04-11T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/blog/train-ticket-grabbing-tool-bypass/</loc>
+    <lastmod>2025-01-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E9%AB%98%E9%93%81/</loc>
+    <lastmod>2025-01-12T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/blog/goal-of-100k-yuan/</loc>
     <lastmod>2024-12-04T00:00:00+00:00</lastmod>
   </url><url>
@@ -724,6 +1018,9 @@
   </url><url>
     <loc>http://localhost:1313/blog/self-repetition-in-writing/</loc>
     <lastmod>2024-11-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/eating-at-haidilao-alone/</loc>
+    <lastmod>2024-10-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/knowledge-beyond-finance/</loc>
     <lastmod>2024-06-26T00:00:00+00:00</lastmod>
@@ -777,6 +1074,8 @@
     <lastmod>2023-07-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/about/</loc>
+  </url><url>
+    <loc>http://localhost:1313/essentials/</loc>
   </url><url>
     <loc>http://localhost:1313/now/</loc>
   </url><url>

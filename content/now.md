@@ -2,7 +2,6 @@
 title = "Now"
 slug = "now"
 +++
-# 此刻
 
 ![](https://img.liangmouyin.com/2025/10/6df011a553bac3c512717fb97a8d73e9.jpg "《鼓浪屿》摄于 2025 年国庆")
 
