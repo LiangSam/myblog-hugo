@@ -38,16 +38,16 @@ enableRobotsTXT = true
     weight = 10    # 1. 首页永远在最左边
 
   [[menu.main]]
-    identifier = "blog"
-    name = "Archives"
-    url = "/blog/"
-    weight = 20    # 2. 归档：最重要的内容入口
-
-  [[menu.main]]
     identifier = "essentials"
     name = "Essentials"
     url = "/essentials/"
-    weight = 30    # 3. 精选文章
+    weight = 20    # 2. 精选文章
+
+  [[menu.main]]
+    identifier = "blog"
+    name = "Archives"
+    url = "/blog/"
+    weight = 30    # 3. 归档
 
   [[menu.main]]
     identifier = "now"
