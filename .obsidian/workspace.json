@@ -11,13 +11,14 @@
             "id": "887218f5ee7167b9",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "Untitled.base",
-                "viewName": "Table"
+                "file": "content/blog/我为什么放弃了清单App，重新用回便利贴.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-table",
-              "title": "Untitled"
+              "icon": "lucide-file",
+              "title": "我为什么放弃了清单App，重新用回便利贴"
             }
           }
         ]
@@ -52,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "重新发现",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -170,13 +171,15 @@
   },
   "active": "887218f5ee7167b9",
   "lastOpenFiles": [
+    "content/blog/《重新发现泉州》：记第一次参加新书分享会.md",
+    "Untitled.base",
+    "content/blog/​如何读书后立刻见效？.md",
     "public/tags/降低思维负荷/index.xml",
     "public/tags/降低思维负荷/index.html",
     "public/tags/降低思维负荷",
     "content/blog/2025-03-02-布鲁克林的荒唐事读后.md",
     "public/blog/after-reading-the-absurdities-of-brooklyn/index.html",
     "public/blog/after-reading-the-absurdities-of-brooklyn",
-    "Untitled.base",
     "content/blog/连更第100天.md",
     "public/blog/100th-consecutive-day-of-writing/index.html",
     "public/blog/100th-consecutive-day-of-writing",
@@ -184,7 +187,6 @@
     "public/blog/连更第100天",
     "content/blog/2024-03-17-今天逛了逛图书馆.md",
     "content/blog/2025-01-14-体验四款时间记录软件后.md",
-    "content/blog/​如何读书后立刻见效？.md",
     "content/blog/我的 2026 数码编年史：从参数党到体验党.md",
     "content/blog/2024-06-09-一个重要的思维方式类比.md",
     "content/blog/2024-06-07-高考厕所和粮仓.md",
@@ -205,7 +207,6 @@
     "content/blog/2025-06-06-入手新玩具漫步者桌面音箱-n300.md",
     "content/blog/2025-06-05-生活小技巧为明天预备.md",
     "content/blog/2025-06-04-我是世界上最小众的赛道.md",
-    "scripts/migrate_wechat.py",
     "themes/hugo-bearblog/exampleSite/static/images/favicon.png",
     "themes/hugo-bearblog/exampleSite/static/images/share.png",
     "themes/hugo-bearblog/images/tn.png",
