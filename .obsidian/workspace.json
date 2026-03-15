@@ -11,13 +11,14 @@
             "id": "887218f5ee7167b9",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "文章清单.base",
-                "viewName": "Table"
+                "file": "content/blog/2026-03-15-记第一次买台版电子书兼如何去掉 Kobo 的 DRM.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-table",
-              "title": "文章清单"
+              "icon": "lucide-file",
+              "title": "2026-03-15-记第一次买台版电子书兼如何去掉 Kobo 的 DRM"
             }
           },
           {
@@ -53,7 +54,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "byModifiedTime",
+                "sortOrder": "byCreatedTime",
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
@@ -184,26 +185,27 @@
   },
   "active": "887218f5ee7167b9",
   "lastOpenFiles": [
+    "content/blog/2025-06-10-为什么我宁愿把文章打印出来而不是用电纸书.md",
+    "content/blog/2026-03-15-记第一次买台版电子书兼如何去掉 Kobo 的 DRM.md",
+    "public/blog/记第一次买台版电子书兼如何去掉-kobo-的-drm/index.html",
+    "public/blog/记第一次买台版电子书兼如何去掉-kobo-的-drm",
+    "content/blog/在阳光和晚霞里，虚度一个周六.md",
+    "文章清单.base",
     "content/blog/第一次独自旅行准备指南：1个核心心法与10条实用建议.md",
     "content/blog/2025-06-11-分享我的私藏信息源.md",
-    "文章清单.base",
-    "content/blog/在阳光和晚霞里，虚度一个周六.md",
     "public/blog/wasting-a-saturday/index.html",
     "public/blog/wasting-a-saturday",
     "public/tags/旅行/index.xml",
     "public/tags/旅行/index.html",
     "public/tags/旅行",
     "content/blog/2025-10-01-第一次独自远行，我的20L背包里都装了些什么？.md",
-    "content/blog/2026-03-15-记第一次买台版电子书兼如何去掉 Kobo 的 DRM.md",
     "template/博客模板.md",
     "content/blog/我为什么放弃了清单App，重新用回便利贴.md",
     "content/blog/《重新发现泉州》：记第一次参加新书分享会.md",
     "content/blog/​如何读书后立刻见效？.md",
     "public/tags/降低思维负荷/index.xml",
     "public/tags/降低思维负荷/index.html",
-    "public/tags/降低思维负荷",
     "content/blog/2025-03-02-布鲁克林的荒唐事读后.md",
-    "public/blog/after-reading-the-absurdities-of-brooklyn/index.html",
     "content/blog/连更第100天.md",
     "content/blog/2024-03-17-今天逛了逛图书馆.md",
     "content/blog/2025-01-14-体验四款时间记录软件后.md",
@@ -215,11 +217,9 @@
     "content/blog/把 Claude 聊成这样，我有责任.md",
     "content/blog/2025-02-07-安卓手机如何跳过开屏广告以-gkd-为例.md",
     "content/blog/2025-02-17-莫向外求如何用一张表管理物欲.md",
-    "content/blog/2025-06-10-为什么我宁愿把文章打印出来而不是用电纸书.md",
     "content/blog/2025-07-10-注意安全呐.md",
     "content/blog/2025-06-14-关于更换网名的思考.md",
     "content/blog/2025-06-13-突然被流量撞了一下腰.md",
-    "content/blog/2025-06-12-如何用-obsidian-把文章打印得更省墨更符合自己.md",
     "themes/hugo-bearblog/exampleSite/static/images/favicon.png",
     "themes/hugo-bearblog/exampleSite/static/images/share.png",
     "themes/hugo-bearblog/images/tn.png",
