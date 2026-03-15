@@ -2,6 +2,7 @@
 title: 我为什么放弃了清单App，重新用回便利贴
 date: 2025-09-25
 tags:
+  - 方法论
 slug: Why-I-Gave-Up-on-To-Do-List-Apps-and-Went-Back-to-Using-Sticky-Notes
 author:
   - 梁某银
@@ -9,6 +10,8 @@ categories:
 featured: true
 description:
 ---
+![loop_on_3D_isometric_view_A_small_speedboat_folded_from_a_stick_38ca90f8-615b-4d9d-b730-27a7760ef9dd.png](https://img.liangmouyin.com/2026/03/257eb9ececcf4d8f13dc8409190f0473.png)
+
 忘记从什么时候开始，我觉得自己是个容易分心的人。
 
 上周末，我去参加场[新书分享会](https://mp.weixin.qq.com/s?__biz=MzU3NTYyODI3Ng==&mid=2247487591&idx=1&sn=8c73187d6b57becad62a6e773c2344c0&scene=21#wechat_redirect)，更加印证这件事。我在椅子上坐立难安，总想站起来走动，可囿于是他人地盘，只能把屁股定在椅子上，要么掏出手机看，要么翻出包里的待读文章。

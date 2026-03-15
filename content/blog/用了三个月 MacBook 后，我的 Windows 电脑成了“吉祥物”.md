@@ -10,7 +10,7 @@ description:
 ---
 ![loop_on_A_Windows_PC_and_a_MacBook._minimalist_art_69940e07-092d-470e-b26b-94a5d5723de9.png](https://img.liangmouyin.com/2025/12/75de0958f97321af5bb103a712f7ebd0.png)
 
-我使用 MacBook 已经三个多月，这期间，Windows 使用次数越发地少。关于使用体验，我在这篇文章《用了8年Windows的我，为什么要买MacBook？》中有过详尽描述。
+我使用 MacBook 已经三个多月，这期间，Windows 使用次数越发地少。关于使用体验，我在这篇文章[《用了8年Windows的我，为什么要买MacBook？》](https://liangmouyin.com/blog/macbook-after-8-years-windows/)中有过详尽描述。
 
 那时我仍处于尝鲜期，觉得 macOS 上的一切都觉新鲜。它精致、漂亮、便携和长续航，后因生物污染，不得不快速脱手，及时止损，过段时间趁着国补，买一台全新 MacBook Air。
 
