@@ -7,7 +7,7 @@
       {{ range .Site.Menus.main }}
       <a href="{{ .URL | relURL }}" class="nav-link{{ if eq $.RelPermalink (.URL | relURL) }} active{{ end }}">{{ .Name }}</a>
       {{ end }}
-      <button class="theme-toggle" aria-label="切换深浅色" onclick="(function(){var t=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('lmy-theme',t);})()" >
+      <button class="theme-toggle" aria-label="切换深浅色" onclick="(function(){var t=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('lmy-theme',t);var f=document.querySelector('iframe.giscus-frame');if(f)f.contentWindow.postMessage({giscus:{setConfig:{theme:t==='dark'?'dark':'light'}}},'https://giscus.app');})()" >
         <span class="icon-sun">☀</span>
         <span class="icon-moon">☾</span>
       </button>

@@ -53,11 +53,21 @@
         data-reactions-enabled="1"
         data-emit-metadata="0"
         data-input-position="bottom"
-        data-theme="preferred_color_scheme"
+        data-theme="light"
+        id="giscus-script"
         data-lang="zh-CN"
         crossorigin="anonymous"
         async>
 </script>
 {{ end }}{{ end }}
+
+<script>
+(function(){
+  var s = document.getElementById('giscus-script');
+  if (!s) return;
+  var t = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+  s.setAttribute('data-theme', t);
+})();
+</script>
 
 {{ end }}

@@ -14,7 +14,7 @@
 <section class="home-section">
   <div class="section-header">
     <h2 class="section-title">精选文章</h2>
-    <a href="{{ "/essentials/" | relURL }}" class="section-more-link">查看全部 →</a>
+    <a href="{{ "/essentials/" | relURL }}" class="section-more-link">更多 →</a>
   </div>
   <div class="card-grid">
     {{ range first 3 ($featured.ByDate.Reverse) }}
@@ -51,7 +51,7 @@
 <section class="home-section">
   <div class="section-header">
     <h2 class="section-title">最近更新</h2>
-    <a href="{{ "/blog/" | relURL }}" class="section-more-link">查看全部归档 →</a>
+    <a href="{{ "/blog/" | relURL }}" class="section-more-link">更多 →</a>
   </div>
   <ul class="post-list">
     {{ range $recent }}
@@ -73,7 +73,7 @@
 <section class="home-section">
   <div class="section-header">
     <h2 class="section-title">Sparks</h2>
-    <a href="{{ "/notes/" | relURL }}" class="section-more-link">查看全部 →</a>
+    <a href="{{ "/notes/" | relURL }}" class="section-more-link">更多 →</a>
   </div>
   <div class="witter-stream">
     {{ range $sparks }}

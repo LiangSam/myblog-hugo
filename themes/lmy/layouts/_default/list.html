@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="list-header">
-  <h1>{{ .Title }}</h1>
+  <h1>{{ if eq .Kind "term" }}#{{ end }}{{ .Title }}</h1>
 </div>
 
 <ul class="post-list">
