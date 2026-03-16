@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/blog/2026-03-15-记第一次买台版电子书兼如何去掉 Kobo 的 DRM.md",
+                "file": "content/biweekly/2026-03-15.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-03-15-记第一次买台版电子书兼如何去掉 Kobo 的 DRM"
+              "title": "2026-03-15"
             }
           },
           {
@@ -54,7 +54,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "byCreatedTime",
+                "sortOrder": "byModifiedTime",
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
@@ -67,7 +67,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "重新发现",
+                "query": "biw",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -183,24 +183,26 @@
       "bases:Create new base": false
     }
   },
-  "active": "887218f5ee7167b9",
+  "active": "375e38a930e3ced7",
   "lastOpenFiles": [
+    "content/blog/我的 2026 数码编年史：从参数党到体验党.md",
+    "content/biweekly/_index.md",
+    "content/biweekly/2026-03-15.md",
+    "content/biweekly",
+    "public/biweekly/index.xml",
+    "public/biweekly/2026-03-15/index.html",
+    "public/biweekly/index.html",
+    "public/biweekly/2026-03-15",
+    "public/biweekly",
+    "content/blog/2026-03-15-记第一次买台版电子书兼如何去掉 Kobo 的 DRM.md",
     "public/tags/电子书/index.xml",
     "public/tags/电子书/index.html",
     "public/tags/电子书",
     "public/blog/taiwan-ebook-drm/index.html",
-    "public/blog/taiwan-ebook-drm",
     "content/blog/2025-06-10-为什么我宁愿把文章打印出来而不是用电纸书.md",
-    "content/blog/2026-03-15-记第一次买台版电子书兼如何去掉 Kobo 的 DRM.md",
-    "public/blog/记第一次买台版电子书兼如何去掉-kobo-的-drm/index.html",
-    "public/blog/记第一次买台版电子书兼如何去掉-kobo-的-drm",
     "content/blog/在阳光和晚霞里，虚度一个周六.md",
-    "文章清单.base",
     "content/blog/第一次独自旅行准备指南：1个核心心法与10条实用建议.md",
     "content/blog/2025-06-11-分享我的私藏信息源.md",
-    "public/blog/wasting-a-saturday/index.html",
-    "public/blog/wasting-a-saturday",
-    "public/tags/旅行/index.xml",
     "content/blog/2025-10-01-第一次独自远行，我的20L背包里都装了些什么？.md",
     "template/博客模板.md",
     "content/blog/我为什么放弃了清单App，重新用回便利贴.md",
@@ -210,7 +212,6 @@
     "content/blog/连更第100天.md",
     "content/blog/2024-03-17-今天逛了逛图书馆.md",
     "content/blog/2025-01-14-体验四款时间记录软件后.md",
-    "content/blog/我的 2026 数码编年史：从参数党到体验党.md",
     "content/blog/2024-06-09-一个重要的思维方式类比.md",
     "content/blog/2024-06-07-高考厕所和粮仓.md",
     "content/blog/2024-01-31-2024年还有必要学英语吗.md",
@@ -219,8 +220,6 @@
     "content/blog/2025-02-07-安卓手机如何跳过开屏广告以-gkd-为例.md",
     "content/blog/2025-02-17-莫向外求如何用一张表管理物欲.md",
     "content/blog/2025-07-10-注意安全呐.md",
-    "content/blog/2025-06-14-关于更换网名的思考.md",
-    "content/blog/2025-06-13-突然被流量撞了一下腰.md",
     "themes/hugo-bearblog/exampleSite/static/images/favicon.png",
     "themes/hugo-bearblog/exampleSite/static/images/share.png",
     "themes/hugo-bearblog/images/tn.png",
