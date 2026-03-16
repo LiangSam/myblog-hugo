@@ -39,7 +39,7 @@ enableRobotsTXT = true
 
   [[menu.main]]
     identifier = "essentials"
-    name = "Essentials"
+    name = "Gems"
     url = "/essentials/"
     weight = 20    # 2. 精选文章
 
@@ -86,7 +86,7 @@ enableRobotsTXT = true
 # 代码高亮配置 (Markup)
 # ============================================================
 [markup]
-  [markup.highlight]
+[markup.highlight]
     style = 'friendly'
     lineNos = true
     lineNumbersInTable = false
