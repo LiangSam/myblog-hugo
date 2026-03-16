@@ -39,7 +39,7 @@ enableRobotsTXT = true
 
   [[menu.main]]
     identifier = "essentials"
-    name = "Gems"
+    name = "Essentials"
     url = "/essentials/"
     weight = 20    # 2. 精选文章
 
