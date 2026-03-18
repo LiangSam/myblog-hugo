@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/blog/从自卑到超越，如何逃离原生家庭？.md",
+                "file": "content/blog/2024-01-28-从自卑到超越，如何逃离原生家庭？.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "从自卑到超越，如何逃离原生家庭？"
+              "title": "2024-01-28-从自卑到超越，如何逃离原生家庭？"
             }
           }
         ]
@@ -172,8 +172,11 @@
   "active": "bd40d26f1076c18b",
   "lastOpenFiles": [
     "content/blog/2026-03-17-《你想爲誰賺錢？》读后：我花六十块买的书，微信读书免费看.md",
-    "content/blog/2025-10-29-语言的来处，与我的归途.md",
+    "public/blog/oatmeal-regret/index.html",
+    "public/blog/oatmeal-regret",
     "content/blog/2026-03-18-我买了一个月的煮面水.md",
+    "content/blog/2024-01-28-从自卑到超越，如何逃离原生家庭？.md",
+    "content/blog/2025-10-29-语言的来处，与我的归途.md",
     "content/blog/2026-03-15-记第一次买台版电子书兼如何去掉 Kobo 的 DRM.md",
     "public/blog/sixty-yuan-lesson/index.html",
     "public/blog/sixty-yuan-lesson",
@@ -182,7 +185,6 @@
     "content/blog/2026-03-16-Now 的近况补充：一些自然而然的变迁.md",
     "content/essentials/_index.md",
     "content/blog/哆啦A梦漫画：从自卑到超越，如何摆脱原生家庭？.md",
-    "content/blog/从自卑到超越，如何逃离原生家庭？.md",
     "content/now.md",
     "content/biweekly/2026-03-15.md",
     "content/blog/我的 2026 数码编年史：从参数党到体验党.md",
@@ -191,8 +193,6 @@
     "public/biweekly/index.xml",
     "public/biweekly/2026-03-15/index.html",
     "public/biweekly/index.html",
-    "public/biweekly/2026-03-15",
-    "public/biweekly",
     "content/blog/2025-06-10-为什么我宁愿把文章打印出来而不是用电纸书.md",
     "content/blog/在阳光和晚霞里，虚度一个周六.md",
     "content/blog/第一次独自旅行准备指南：1个核心心法与10条实用建议.md",
@@ -206,7 +206,6 @@
     "content/blog/连更第100天.md",
     "content/blog/2024-03-17-今天逛了逛图书馆.md",
     "content/blog/2025-01-14-体验四款时间记录软件后.md",
-    "content/blog/2024-06-09-一个重要的思维方式类比.md",
     "themes/hugo-bearblog/exampleSite/static/images/favicon.png",
     "themes/hugo-bearblog/exampleSite/static/images/share.png",
     "themes/hugo-bearblog/images/tn.png",
