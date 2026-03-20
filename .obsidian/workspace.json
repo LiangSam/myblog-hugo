@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/blog/谁还玩 QQ 农场啊？.md",
+                "file": "content/blog/2026-03-20-这类公众号，读着读着就不对味了.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "谁还玩 QQ 农场啊？"
+              "title": "2026-03-20-这类公众号，读着读着就不对味了"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "c7a07587fb080b57",
@@ -172,8 +171,9 @@
   },
   "active": "bd40d26f1076c18b",
   "lastOpenFiles": [
+    "content/blog/2026-03-19-谁还玩 QQ 农场啊？.md",
+    "content/blog/2026-03-20-这类公众号，读着读着就不对味了.md",
     "content/blog/2024-01-28-从自卑到超越，如何逃离原生家庭？.md",
-    "content/blog/谁还玩 QQ 农场啊？.md",
     "content/blog/2026-03-17-《你想爲誰賺錢？》读后：我花六十块买的书，微信读书免费看.md",
     "public/blog/oatmeal-regret/index.html",
     "public/blog/oatmeal-regret",
@@ -207,7 +207,6 @@
     "content/blog/2025-03-02-布鲁克林的荒唐事读后.md",
     "content/blog/连更第100天.md",
     "content/blog/2024-03-17-今天逛了逛图书馆.md",
-    "content/blog/2025-01-14-体验四款时间记录软件后.md",
     "themes/hugo-bearblog/exampleSite/static/images/favicon.png",
     "themes/hugo-bearblog/exampleSite/static/images/share.png",
     "themes/hugo-bearblog/images/tn.png",
