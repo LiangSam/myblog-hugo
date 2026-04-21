@@ -1,0 +1,48 @@
+/* giscus custom theme — light warm */
+:root {
+  --color-canvas-default:        #faf9f5;
+  --color-canvas-subtle:         #f0ede4;
+  --color-canvas-inset:          #e8e4db;
+  --color-border-default:        #e4ddd3;
+  --color-border-muted:          #ede8df;
+  --color-fg-default:            #1a1714;
+  --color-fg-muted:              #9a9288;
+  --color-fg-subtle:             #b5aea6;
+  --color-accent-fg:             #c96442;
+  --color-accent-emphasis:       #c96442;
+  --color-neutral-emphasis:      #6a6460;
+  --color-neutral-emphasis-plus: #1a1714;
+
+  --color-btn-text:                   #1a1714;
+  --color-btn-bg:                     #f0ede4;
+  --color-btn-border:                 #e4ddd3;
+  --color-btn-shadow:                 0 0 transparent;
+  --color-btn-inset-shadow:           0 0 transparent;
+  --color-btn-hover-bg:               #e8e4db;
+  --color-btn-hover-border:           #d4cdc4;
+  --color-btn-active-bg:              #e0dbd2;
+  --color-btn-active-border:          #d4cdc4;
+  --color-btn-selected-bg:            #e0dbd2;
+
+  --color-btn-primary-text:           #fff;
+  --color-btn-primary-bg:             #c96442;
+  --color-btn-primary-border:         #b55838;
+  --color-btn-primary-shadow:         0 0 transparent;
+  --color-btn-primary-inset-shadow:   0 0 transparent;
+  --color-btn-primary-hover-bg:       #b55838;
+  --color-btn-primary-hover-border:   #a04e31;
+  --color-btn-primary-selected-bg:    #a04e31;
+  --color-btn-primary-selected-shadow: 0 0 transparent;
+  --color-btn-primary-disabled-text:  rgba(255,255,255,0.5);
+  --color-btn-primary-disabled-bg:    #e0a080;
+  --color-btn-primary-disabled-border: transparent;
+
+  --color-input-bg:              #faf9f5;
+  --color-input-border:          #e4ddd3;
+  --color-input-shadow:          0 0 transparent;
+  --color-input-disabled-bg:     #f0ede4;
+  --color-input-disabled-border: #e4ddd3;
+
+  --color-social-reaction-bg-hover:          #f0ede4;
+  --color-social-reaction-bg-reacted-hover:  #f5ebe0;
+}

@@ -1,0 +1,24 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.folder == "content/blog"
+    order:
+      - file.name
+      - date
+      - draft
+      - featured
+      - slug
+      - tags
+      - description
+      - title
+    sort:
+      - property: date
+        direction: ASC
+      - property: tags
+        direction: ASC
+      - property: description
+        direction: ASC
+    columnSize:
+      note.slug: 274

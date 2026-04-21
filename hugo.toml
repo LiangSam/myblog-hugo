@@ -1,0 +1,88 @@
+# ============================================================
+# 基础配置 (Base Configuration)
+# ============================================================
+baseURL = "https://liangmouyin.com"
+title = "梁某银的博客"
+author = "梁某银"
+copyright = "Copyright © 2026, 梁某银"
+languageCode = "zh-CN"
+theme = 'lmy'
+
+# 生成 robots.txt，对 SEO 友好
+enableRobotsTXT = true
+
+# ============================================================
+# 输出配置 (Outputs)
+# ⚠️ 必须包含 JSON，否则搜索功能无法使用
+# ============================================================
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# ============================================================
+# 链接格式 (Permalinks)
+# ============================================================
+[permalinks]
+  blog = "/blog/:slug/"
+  tags = "/tags/:slug/"
+
+# ============================================================
+# 菜单配置 (Menu)
+# ⚠️ 这里定义了导航栏，确保没有重复的 [[menu.main]]
+# ============================================================
+[menu]
+
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 10    # 1. 首页永远在最左边
+
+  [[menu.main]]
+    identifier = "essentials"
+    name = "Essentials"
+    url = "/essentials/"
+    weight = 20    # 2. 精选文章
+
+  [[menu.main]]
+    identifier = "blog"
+    name = "Archives"
+    url = "/blog/"
+    weight = 30    # 3. 归档
+
+  [[menu.main]]
+    identifier = "now"
+    name = "Now"
+    url = "/now/"
+    weight = 40    # 4. 状态：博主的近况
+
+
+# ============================================================
+# 参数配置 (Params)
+# ============================================================
+[params]
+  # 配色方案：warm（暖色琥珀）或 indigo（靛青冷峻）
+  colorScheme = "indigo"
+  description = "记录，分享，成长"
+  favicon = "images/favicon.png"
+  images = ["images/favicon.png"]
+  author = "梁某银"
+  avatar = "images/favicon.png"
+  title = "梁某银的博客"
+  dateFormat = "2006-01-02"
+
+# Giscus 评论配置
+[params.giscus]
+  repo = "LiangSam/myblog-hugo"
+  repoId = "R_kgDOPFANrA"
+  category = "Announcements"
+  categoryId = "DIC_kwDOPFANrM4CxC-2"
+
+# ============================================================
+# 代码高亮配置 (Markup)
+# ============================================================
+[markup]
+[markup.highlight]
+    style = 'friendly'
+    lineNos = true
+    lineNumbersInTable = false
+    codeFences = true

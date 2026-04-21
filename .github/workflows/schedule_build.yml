@@ -1,0 +1,18 @@
+name: Scheduled Build for Cloudflare Pages
+
+on:
+  schedule:
+    # 注意：Cron 使用的是 UTC 时间。
+    # 北京时间 21:00 等于 UTC 时间 13:00。
+    - cron: '5 13 * * *' # 建议设在 13:05，避开整点高峰
+  workflow_dispatch: # 允许你手动点击按钮触发
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Cloudflare Pages Deploy
+        # 这里不需要复杂的配置，只需产生一个空的 commit 或者通过 API 触发
+        # 最简单的方法是利用 GitHub Actions 自身重新跑一遍部署
+        run: |
+          curl -X POST "https://api.cloudflare.com/client/v4/pages/webhooks/deploy_hooks/dee08b2e-228a-42c1-8e2e-6661759c3c4a"

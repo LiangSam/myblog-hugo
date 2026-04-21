@@ -1,0 +1,11 @@
+{{/*
+  render-image.html
+  覆盖默认的图片渲染方式，使其支持 <figure> 和 <figcaption>
+*/}}
+<figure>
+    <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" />
+    {{/* 如果图片在 Markdown 中定义了 title，就用它作为 figcaption */}}
+    {{ with .Title }}
+        <figcaption>{{ . }}</figcaption>
+    {{ end }}
+</figure>

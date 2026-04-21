@@ -1,0 +1,269 @@
+/* ==========================================================================
+   默认（浅色模式）样式
+   ========================================================================== */
+
+/* 代码块横向滚动 */
+
+/* ==========================================================================
+   全局修复
+   ========================================================================== */
+
+/* 强制总是显示垂直滚动条轨道，防止页面切换时因滚动条消失而导致页面左右抖动 */
+html {
+    overflow-y: scroll;
+}
+
+pre {
+    overflow-x: auto;
+}
+
+/* 引用块样式 */
+blockquote {
+    color: #666;
+    display: block;
+    margin: 20px 0;
+    padding: 0px 20px;
+    border-left: #ddd solid 4px;
+    font-style: normal;
+
+    /* utgd 版本样式，将来也许能用上，先保留吧
+    background: linear-gradient(90deg, #fffaf4, #ffffff);
+    border-left: 6px solid #ffd600;
+    color: #707070;
+    font-style: normal;
+    margin: 20px 0; 
+    padding: 10px 20px;*/
+}
+
+/* 图片说明样式 */
+figure figcaption {
+    text-align: center;
+    color: #888888;
+    font-size: 0.9em;
+    margin-top: 0.5em;
+}
+
+/* 文章内图片的圆角 */
+main img {
+    border-radius: 8px;
+}
+
+/* 自定义文章列表样式 */
+.post-list-custom .post-list-item {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 0.3em;
+}
+
+/* 自定义文章列表 - 日期部分 */
+.post-list-custom .post-date {
+    font-size: 0.9em;
+    color: #888888;
+    min-width: 6em;
+    margin-right: 1em;
+}
+
+/* 自定义文章列表 - 标题部分 */
+.post-list-custom .post-title {
+    color: var(--text-color);
+    text-decoration: underline; /* <--- 修改这里，默认带下划线 */
+    text-decoration-thickness: 1px; /* (可选) 让下划线细一点 */
+    text-underline-offset: 3px;   /* (可选) 让下划线和文字之间有点距离 */
+}
+
+/* 自定义文章列表 - 标题悬停效果 */
+.post-list-custom .post-list-item a:hover .post-title {
+    color: var(--link-color); /* <--- 设置为你想要的“蓝色” */
+    text-decoration: none; /* <--- 修改这里，悬停时去掉下划线 */
+}
+
+/*
+ * 针对标签行的链接，强制其内部不换行，确保 # 和标签名总是在一起
+ */
+.tag-line p a {
+    display: inline-block; /* 确保间距和边距等属性可以正常应用 */
+    white-space: nowrap;   /* 核心：强制链接内部的文本不换行 */
+}
+
+/* ==========================================================================
+   深色模式下的覆盖样式
+   ========================================================================== */
+
+@media (prefers-color-scheme: dark) {
+
+    /* 方案A：新样式 (style-new) 在深色模式下的表现 */
+    blockquote {
+        border-left-color: #555555; /* 左侧边框变为深灰色 */
+        color: #cccccc;           /* 文字颜色变为更亮的浅灰色 */
+    }
+
+    /* 深色模式下的引用块 */旧版
+    /*blockquote {
+        background: linear-gradient(90deg, #3a3620, #2e2e2e);
+        border-left-color: #ffd600; 
+        color: #c5c5c5;*/
+    }
+
+    /* 深色模式下的文章列表日期 */
+    .post-list-custom .post-date {
+        color: #6a6a6a;
+    }
+
+    /* 你未来任何其他的深色模式样式，都加在这个大括号里面 */
+
+}
+
+/* ==========================================================================
+   优化和修复
+   ========================================================================== */
+
+/* 统一内容区宽度，修复 home 页和其他页宽度不一致的问题 */
+/* 对所有页面内容容器 (<content>) 应用统一的最大宽度和居中对齐。
+   使用 700px 作为示例，这符合 Bear Blog 简洁、专注于阅读的风格。
+*/
+main content {
+    max-width: 700px; /* 设定一个统一的最大宽度，您可以根据喜好调整这个值 */
+    margin-left: auto; /* 居中 */
+    margin-right: auto; /* 居中 */
+    display: block; /* 确保 max-width 生效 */
+    padding: 0 15px; /* 增加左右内边距，防止内容紧贴屏幕边缘 */
+}
+
+/* ==========================================================================
+   顶部导航栏优化
+   ========================================================================== */
+header a.title {
+    font-size: 1.4em; /* 放大标题 */
+    font-weight: 900; /* 加粗 */
+    letter-spacing: -0.5px; /* 收紧字间距，更精致 */
+}
+
+/* ==========================================================================
+   2. 搜索页：回归极简风格 (Minimalist)
+   ========================================================================== */
+
+/* 标题微调 */
+.page-title {
+    margin-bottom: 20px;
+}
+
+/* 搜索框容器 */
+.search-container {
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+/* 输入框本体 */
+input#search-query {
+    width: 100%;
+    /* 核心：这一行确保 padding 不会撑爆手机屏幕宽度 */
+    box-sizing: border-box; 
+    
+    /* 样式：纯粹的黑白风格，无阴影，无动画 */
+    padding: 10px 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    
+    color: var(--text-color);
+    background: var(--bg-color);
+    
+    /* 边框：跟随主题颜色的细实线 */
+    border: 2px solid var(--text-color);
+    border-radius: 4px; /* 只有极其微小的圆角 */
+    
+    /* 去掉浏览器默认的蓝色高亮框 */
+    outline: none;
+}
+
+/* 获得焦点时：仅加粗边框或改变透明度，不做位移 */
+input#search-query:focus {
+    opacity: 0.8;
+}
+
+/* ==========================================================================
+   热门标签建议 (Search Suggestions) - 极简优雅版
+   ========================================================================== */
+
+.search-suggestions {
+    margin-bottom: 40px;
+    /* 移除位移动画，只保留极淡的显现，或者干脆静止，保持稳重 */
+    animation: fadeIn 0.8s ease; 
+}
+
+.suggestions-label {
+    font-size: 0.85rem;
+    color: #999; /* 标签标题改用浅灰色，不再喧宾夺主 */
+    margin-bottom: 12px;
+    font-weight: normal; /* 去掉粗体，更清秀 */
+}
+
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; /* 间距微调，更紧凑一点 */
+}
+
+/* 标签本体：微圆角、素雅 */
+.tag-chip {
+    display: inline-flex;
+    align-items: baseline; /* 文字基线对齐 */
+    padding: 5px 10px;     /* 内边距适中 */
+    
+    /* 默认状态：极淡的边框，像空气一样 */
+    border: 1px solid rgba(136, 136, 136, 0.3); 
+    border-radius: 4px;    /* 4px 微圆角，呼应搜索框 */
+    
+    text-decoration: none;
+    font-size: 0.85rem;
+    color: var(--text-color);
+    background-color: transparent; /* 无背景 */
+    
+    transition: all 0.2s ease; /* 平滑过渡 */
+}
+
+/* 标签名 */
+.tag-name {
+    margin-right: 4px;
+    opacity: 0.9;
+}
+
+/* 数量：纯数字，无背景 */
+.tag-count {
+    font-size: 0.75em;
+    color: #aaa;           /* 浅灰色数字 */
+    font-family: monospace; /* 等宽数字，更有极客感 */
+    position: relative;
+    top: -1px;             /* 微调垂直位置 */
+}
+
+/* --- 鼠标悬停交互 (Hover) --- */
+/* 不再变黑，而是变得“清晰” */
+.tag-chip:hover {
+    border-color: var(--text-color); /* 边框变实 */
+    background-color: rgba(125, 125, 125, 0.05); /* 只有极淡的一层灰底，甚至看不出来 */
+    color: var(--text-color);
+    transform: none; /* 去掉上浮动画，保持稳重 */
+}
+
+.tag-chip:hover .tag-count {
+    color: #666; /* 悬停时数字稍微变深一点点 */
+}
+
+/* 深色模式微调 */
+@media (prefers-color-scheme: dark) {
+    .tag-chip {
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+    .tag-chip:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-color: #fff;
+    }
+    .suggestions-label, .tag-count {
+        color: #666;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

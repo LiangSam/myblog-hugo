@@ -1,0 +1,140 @@
+{{ define "main" }}
+{{ if strings.Contains .TableOfContents "<li>" }}
+<aside class="toc-sidebar">
+  <div class="toc-inner">
+    <div class="toc-title">目录</div>
+    {{ .TableOfContents }}
+  </div>
+</aside>
+{{ end }}
+
+<article>
+  <div class="post-header">
+    <h1 class="post-title-main">{{ .Title }}</h1>
+    <div class="post-meta">
+      {{ if not .Date.IsZero }}<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>{{ end }}
+      <address class="post-author" rel="author">{{ .Site.Params.author }}</address>
+      {{ if .GetTerms "tags" }}
+      <span class="post-tags">
+        {{ range .GetTerms "tags" }}
+        <a href="{{ .Permalink }}">#{{ .LinkTitle }}</a>
+        {{ end }}
+      </span>
+      {{ end }}
+    </div>
+  </div>
+
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+</article>
+
+{{/* 往年今日 */}}
+{{ if not .Date.IsZero }}
+{{ $monthDay := .Date.Format "01-02" }}
+{{ $thisYear := .Date.Format "2006" }}
+{{ $onThisDay := slice }}
+{{ range .Site.RegularPages }}
+  {{ if and (eq (.Date.Format "01-02") $monthDay) (ne (.Date.Format "2006") $thisYear) (eq .Section "blog") }}
+    {{ $onThisDay = $onThisDay | append . }}
+  {{ end }}
+{{ end }}
+{{ if $onThisDay }}
+<div class="on-this-day">
+  <span class="on-this-day-label">往年今日</span>
+  {{ range sort $onThisDay "Date" "desc" }}
+  <a href="{{ .Permalink }}" class="on-this-day-link">
+    <span class="on-this-day-year">{{ .Date.Format "2006" }}</span>
+    <span class="on-this-day-title">{{ .Title }}</span>
+  </a>
+  {{ end }}
+</div>
+{{ end }}
+{{ end }}
+
+{{/* 上一篇 / 下一篇 */}}
+{{ if eq .Section "blog" }}
+{{ $prev := .PrevInSection }}
+{{ $next := .NextInSection }}
+{{ if or $prev $next }}
+<nav class="post-nav">
+  {{ if $prev }}
+  <a href="{{ $prev.Permalink }}" class="post-nav-item prev">
+    <span class="post-nav-label">← 上一篇</span>
+    <span class="post-nav-title">{{ $prev.Title }}</span>
+  </a>
+  {{ end }}
+  {{ if $next }}
+  <a href="{{ $next.Permalink }}" class="post-nav-item next">
+    <span class="post-nav-label">下一篇 →</span>
+    <span class="post-nav-title">{{ $next.Title }}</span>
+  </a>
+  {{ end }}
+</nav>
+{{ end }}
+{{ end }}
+
+{{/* Giscus 评论 */}}
+{{ with .Site.Params.giscus }}{{ if .repoId }}
+<script src="https://giscus.app/client.js"
+        data-repo="{{ .repo }}"
+        data-repo-id="{{ .repoId }}"
+        data-category="{{ .category }}"
+        data-category-id="{{ .categoryId }}"
+        data-mapping="pathname"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        id="giscus-script"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+{{ end }}{{ end }}
+
+<script>
+(function(){
+  var s = document.getElementById('giscus-script');
+  if (!s) return;
+  var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  s.setAttribute('data-theme', isDark ? 'dark' : 'light');
+
+  var obs = new MutationObserver(function(mutations) {
+    mutations.forEach(function(m) {
+      if (m.attributeName !== 'data-theme') return;
+      var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+      var theme = dark ? 'dark' : 'light';
+      var frame = document.querySelector('iframe.giscus-frame');
+      if (frame) {
+        frame.contentWindow.postMessage({ giscus: { setConfig: { theme: theme } } }, 'https://giscus.app');
+      }
+    });
+  });
+  obs.observe(document.documentElement, { attributes: true });
+})();
+</script>
+
+{{ if strings.Contains .TableOfContents "<li>" }}
+<script>
+(function(){
+  var headings = document.querySelectorAll('.post-content h2, .post-content h3');
+  var links = document.querySelectorAll('.toc-inner a');
+  if (!headings.length || !links.length) return;
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        links.forEach(function(l) { l.classList.remove('toc-active'); });
+        var id = entry.target.getAttribute('id');
+        var active = document.querySelector('.toc-inner a[href="#' + id + '"]');
+        if (active) active.classList.add('toc-active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -80% 0px' });
+  headings.forEach(function(h) { observer.observe(h); });
+})();
+</script>
+{{ end }}
+
+{{ end }}

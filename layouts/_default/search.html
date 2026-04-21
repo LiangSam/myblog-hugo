@@ -1,0 +1,86 @@
+{{ define "main" }}
+<content>
+  <h1 class="page-title">文章搜索</h1>
+  
+  <div class="search-container">
+    <input id="search-query" type="text" placeholder="Type to search..." autocomplete="off">
+  </div>
+
+  <div class="search-suggestions">
+    <div class="tag-cloud">
+      {{/* 获取所有标签，并按文章数量(Count)倒序排列 */}}
+      {{ range .Site.Taxonomies.tags.ByCount }}
+        {{/* 这里的 .Page.Title 是标签名， .Count 是文章数 */}}
+        <a href="{{ .Page.Permalink }}" class="tag-chip">
+          <span class="tag-name">#{{ .Page.Title }}</span>
+          <span class="tag-count">{{ .Count }}</span>
+        </a>
+      {{ end }}
+    </div>
+  </div>
+
+  <div id="search-results" class="blog-posts"></div>
+</content>
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+<script>
+  var fuse;
+  var searchInput = document.getElementById('search-query');
+  var searchResults = document.getElementById('search-results');
+
+  // ... (这里保留您原有的 JS 逻辑，不需要变) ...
+  
+  window.onload = function() {
+    fetch('/index.json')
+      .then(function(response) { return response.json(); })
+      .then(function(data) {
+        var options = {
+          shouldSort: true,
+          includeMatches: true,
+          threshold: 0.3,
+          tokenize: true,
+          location: 0,
+          distance: 100,
+          maxPatternLength: 32,
+          minMatchCharLength: 1,
+          keys: [
+            {name: "title", weight: 0.8},
+            {name: "content", weight: 0.5},
+            {name: "tags", weight: 0.3}
+          ]
+        };
+        fuse = new Fuse(data, options);
+      });
+  };
+
+  searchInput.addEventListener('input', function(e) {
+    var query = e.target.value;
+    var suggestionsBox = document.querySelector('.search-suggestions'); // 获取标签区域
+
+    if (query.length > 0) {
+      // 💡 体验优化：输入文字时，隐藏标签建议，避免干扰视线
+      if(suggestionsBox) suggestionsBox.style.display = 'none';
+
+      var results = fuse.search(query);
+      var htmlContent = '';
+
+      if (results.length > 0) {
+        results.forEach(function(item) {
+          var post = item.item;
+          htmlContent += '<div class="post-list-item" style="margin-bottom:1em; display:flex; align-items:baseline;">' +
+            '<span class="post-date" style="color:#999; margin-right:12px; font-family:monospace; min-width:6em;">' + post.date + '</span>' +
+            '<a href="' + post.permalink + '">' + post.title + '</a>' +
+            '</div>';
+        });
+      } else {
+        htmlContent = '<p>没有找到相关文章。</p>';
+      }
+      searchResults.innerHTML = htmlContent;
+    } else {
+      // 💡 体验优化：清空输入时，重新显示标签建议
+      if(suggestionsBox) suggestionsBox.style.display = 'block';
+      searchResults.innerHTML = '';
+    }
+  });
+</script>
+{{ end }}

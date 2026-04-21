@@ -1,0 +1,6 @@
+{{/* custom_head.html */}}
+{{/* 这个文件里的所有内容都会被自动添加到网站的 <head> 标签中 */}}
+
+{{/* 加载自定义 CSS 文件 */}}
+{{ $style := resources.Get "css/custom.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">

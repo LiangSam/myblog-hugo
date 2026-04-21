@@ -1,0 +1,28 @@
+{{ define "main" }}
+{{ $total := len .Pages }}
+{{ $grouped := .Pages.GroupByDate "2006" }}
+{{ $currentYear := now.Format "2006" }}
+{{ $lastYear := (now.AddDate -1 0 0).Format "2006" }}
+<div class="list-header">
+  <h1>{{ .Title }}</h1>
+  <p>共 {{ $total }} 篇</p>
+</div>
+
+{{ range $grouped }}
+{{ $isOpen := or (eq .Key $currentYear) (eq .Key $lastYear) }}
+<details class="archive-year-group" id="year-{{ .Key }}"{{ if $isOpen }} open{{ end }}>
+  <summary class="archive-year">
+    <span class="archive-year-label">{{ .Key }}</span>
+    <span class="archive-year-meta">{{ len .Pages }} 篇</span>
+  </summary>
+  <ul class="archive-list">
+    {{ range .Pages }}
+    <li class="archive-item">
+      <span class="archive-date">{{ .Date.Format "01-02" }}</span>
+      <a href="{{ .Permalink }}" class="archive-link">{{ .Title }}</a>
+    </li>
+    {{ end }}
+  </ul>
+</details>
+{{ end }}
+{{ end }}
