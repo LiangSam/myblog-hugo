@@ -1,0 +1,447 @@
+/**
+ * 梁某银 公众号主题 — Indigo
+ * 参考：huangyangme/hyme-mp-themes
+ * 按 Alt/Option + Shift + F 可格式化
+ * 如需使用主题色，请使用 var(--md-primary-color) 代替颜色值
+ */
+
+/* 全局变量定义 */
+:root {
+  --md-primary-color: #1c6fcf;
+  --color-accent-light: #eef3fa;
+  --color-accent-border: #a0c4ef;
+  --color-text: #1a1a1a;
+  --color-text-soft: #4a5568;
+  --color-text-muted: #6b7280;
+  --color-bg: #ffffff;
+  --color-bg-soft: #f4f8fd;
+  --color-border: #d0e0f5;
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+  --font-mono: "SF Mono", "Fira Code", "Menlo", "Consolas", monospace;
+}
+
+/* 根容器 */
+.md-container {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  padding: 0 0.5em;
+  max-width: 677px;
+  margin: 0 auto;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 标题样式 */
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.4;
+  margin: 2em 0 0.8em;
+  padding-bottom: 0.4em;
+  border-bottom: 2px solid var(--md-primary-color);
+  letter-spacing: 0.01em;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.4;
+  margin: 1.8em 0 0.8em;
+  padding-bottom: 0.3em;
+  border-bottom: 1.5px solid var(--color-border);
+}
+
+h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.4;
+  margin: 1.5em 0 0.6em;
+  padding-left: 10px;
+  border-left: 4px solid var(--md-primary-color);
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-soft);
+  line-height: 1.4;
+  margin: 1.2em 0 0.5em;
+}
+
+h5 {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  margin: 1em 0 0.4em;
+}
+
+h6 {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  margin: 1em 0 0.4em;
+}
+
+/* 段落和文本 */
+p {
+  font-size: 16px;
+  line-height: 1.95;
+  color: var(--color-text);
+  margin: 0 0 1.3em;
+  letter-spacing: 0.02em;
+  word-break: break-word;
+  line-break: strict;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+strong {
+  font-weight: 700;
+  color: var(--md-primary-color);
+}
+
+em {
+  font-style: normal;
+  background: linear-gradient(to bottom, transparent 55%, #dbeafe 0);
+  padding: 0 2px;
+  color: var(--color-text);
+}
+
+/* 引用块 */
+blockquote {
+  margin: 1.5em 0;
+  padding: 0.9em 1.2em;
+  border-left: 3px solid var(--md-primary-color);
+  background: linear-gradient(to right, var(--color-accent-light), transparent 85%);
+  border-radius: 0 6px 6px 0;
+  color: var(--color-text-soft);
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+blockquote > p {
+  margin: 0;
+  color: var(--color-text-soft);
+  line-break: strict;
+}
+
+/* 代码 */
+
+/* 行内代码 */
+code {
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  background-color: var(--color-accent-light);
+  color: var(--md-primary-color);
+  padding: 2px 6px;
+  border-radius: 4px;
+  word-break: break-all;
+}
+
+/* 代码块容器 */
+pre.code__pre,
+.hljs.code__pre {
+  background-color: var(--color-bg-soft);
+  border-radius: 8px;
+  padding: 1em 1.2em;
+  overflow-x: auto;
+  margin: 1.5em 0;
+  border: 1px solid var(--color-border);
+}
+
+/* 代码块内的 code */
+pre.code__pre > code,
+.hljs.code__pre > code {
+  background: none;
+  color: #1e3a5f;
+  padding: 0;
+  font-size: 13px;
+  line-height: 1.75;
+  border-radius: 0;
+  word-break: normal;
+}
+
+/* 列表 */
+ol {
+  padding-left: 1.6em;
+  margin: 0.6em 0 1.3em;
+  color: var(--color-text);
+}
+
+ul {
+  padding-left: 1.5em;
+  margin: 0.6em 0 1.3em;
+  color: var(--color-text);
+}
+
+li {
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--color-text);
+  margin-bottom: 0.35em;
+}
+
+/* 表格 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  margin: 1.5em 0;
+  word-break: normal;
+}
+
+thead {
+  background-color: var(--color-accent-light);
+}
+
+th {
+  text-align: left;
+  padding: 0.6em 0.9em;
+  color: var(--md-primary-color);
+  font-weight: 600;
+  font-size: 14px;
+  border-bottom: 2px solid var(--color-border);
+}
+
+td {
+  padding: 0.5em 0.9em;
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-border);
+  font-size: 15px;
+}
+
+/* 其他元素 */
+img {
+  display: block;
+  max-width: 100%;
+  margin: 1.2em auto;
+  border-radius: 6px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 2em 0;
+}
+
+/* 分隔线变体：--- */
+hr.hr-dash {
+  border-top: 1px dashed var(--color-border);
+}
+
+/* 分隔线变体：*** */
+hr.hr-star {
+  border: none;
+  text-align: center;
+  color: var(--color-text-muted);
+  letter-spacing: 0.4em;
+  margin: 2em 0;
+}
+
+hr.hr-star::after {
+  content: "· · ·";
+  font-size: 18px;
+}
+
+/* 分隔线变体：___ */
+hr.hr-underscore {
+  border-top: 2px solid var(--color-border);
+}
+
+figure {
+  margin: 1.5em 0;
+  text-align: center;
+}
+
+figcaption {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-top: 0.5em;
+  letter-spacing: 0.04em;
+}
+
+/* KaTeX 公式 */
+.katex-inline {
+  font-size: 15px;
+  color: var(--color-text);
+}
+
+.katex-block {
+  font-size: 15px;
+  color: var(--color-text);
+  margin: 1.2em 0;
+  text-align: center;
+  overflow-x: auto;
+}
+
+/* Markup 标记 */
+
+/* 高亮 ==文本== */
+.markup-highlight {
+  background-color: #dbeafe;
+  color: var(--md-primary-color);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+/* 下划线 ++文本++ */
+.markup-underline {
+  text-decoration: underline;
+  text-decoration-color: var(--md-primary-color);
+  text-underline-offset: 3px;
+}
+
+/* 波浪线 ~文本~ */
+.markup-wavyline {
+  text-decoration: underline wavy;
+  text-decoration-color: var(--color-accent-border);
+}
+
+/* GFM Alert 警告块 — 统一用主题色调，按语义轻微区分 */
+
+.alert-title-note {
+  color: var(--md-primary-color);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.alert-title-tip {
+  color: #0ea5e9;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.alert-title-info {
+  color: var(--md-primary-color);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.alert-title-important {
+  color: #7c3aed;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.alert-title-warning {
+  color: #d97706;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.alert-title-caution {
+  color: #dc2626;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.alert-title-abstract,
+.alert-title-summary,
+.alert-title-tldr {
+  color: #0891b2;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.alert-title-todo {
+  color: var(--md-primary-color);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.alert-title-success,
+.alert-title-done {
+  color: #16a34a;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.alert-title-question,
+.alert-title-help,
+.alert-title-faq {
+  color: #0891b2;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.alert-title-failure,
+.alert-title-fail,
+.alert-title-missing {
+  color: #dc2626;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.alert-title-danger,
+.alert-title-error {
+  color: #dc2626;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.alert-title-bug {
+  color: #e11d48;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.alert-title-example {
+  color: #7c3aed;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.alert-title-quote,
+.alert-title-cite {
+  color: var(--color-text-muted);
+  font-weight: 600;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* Alert SVG 图标 — 沿用语义色 */
+
+.alert-icon-note { color: var(--md-primary-color); }
+.alert-icon-tip { color: #0ea5e9; }
+.alert-icon-info { color: var(--md-primary-color); }
+.alert-icon-important { color: #7c3aed; }
+.alert-icon-warning { color: #d97706; }
+.alert-icon-caution { color: #dc2626; }
+
+/* Obsidian-style Callout SVG 图标 */
+
+.alert-icon-abstract,
+.alert-icon-summary,
+.alert-icon-tldr { color: #0891b2; }
+
+.alert-icon-todo { color: var(--md-primary-color); }
+
+.alert-icon-success,
+.alert-icon-done { color: #16a34a; }
+
+.alert-icon-question,
+.alert-icon-help,
+.alert-icon-faq { color: #0891b2; }
+
+.alert-icon-failure,
+.alert-icon-fail,
+.alert-icon-missing { color: #dc2626; }
+
+.alert-icon-danger,
+.alert-icon-error { color: #dc2626; }
+
+.alert-icon-bug { color: #e11d48; }
+
+.alert-icon-example { color: #7c3aed; }
+
+.alert-icon-quote,
+.alert-icon-cite { color: var(--color-text-muted); }
