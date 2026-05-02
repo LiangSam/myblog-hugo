@@ -33,25 +33,25 @@ enableRobotsTXT = true
 
   [[menu.main]]
     identifier = "home"
-    name = "Home"
+    name = "首页"
     url = "/"
     weight = 10    # 1. 首页永远在最左边
 
   [[menu.main]]
     identifier = "essentials"
-    name = "Essentials"
+    name = "精选"
     url = "/essentials/"
     weight = 20    # 2. 精选文章
 
   [[menu.main]]
     identifier = "blog"
-    name = "Archives"
+    name = "归档"
     url = "/blog/"
     weight = 30    # 3. 归档
 
   [[menu.main]]
     identifier = "now"
-    name = "Now"
+    name = "近况"
     url = "/now/"
     weight = 40    # 4. 状态：博主的近况
 
