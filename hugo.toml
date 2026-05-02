@@ -51,7 +51,7 @@ enableRobotsTXT = true
 
   [[menu.main]]
     identifier = "now"
-    name = "近况"
+    name = "此刻"
     url = "/now/"
     weight = 40    # 4. 状态：博主的近况
 
