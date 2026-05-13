@@ -11,7 +11,7 @@
       {{/* 获取所有标签，并按文章数量(Count)倒序排列 */}}
       {{ range .Site.Taxonomies.tags.ByCount }}
         {{/* 这里的 .Page.Title 是标签名， .Count 是文章数 */}}
-        <a href="{{ .Page.Permalink }}" class="tag-chip">
+        <a href="{{ .Page.RelPermalink }}" class="tag-chip">
           <span class="tag-name">#{{ .Page.Title }}</span>
           <span class="tag-count">{{ .Count }}</span>
         </a>

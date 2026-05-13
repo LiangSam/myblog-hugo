@@ -17,14 +17,14 @@
       {{ if .GetTerms "tags" }}
       <span class="post-tags">
         {{ range .GetTerms "tags" }}
-        <a href="{{ .Permalink }}">#{{ .LinkTitle }}</a>
+        <a href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a>
         {{ end }}
       </span>
       {{ end }}
     </div>
   </div>
 
-  <div class="post-content">
+  <div class="post-content{{ if eq .Section "blog" }} post-content-article{{ end }}">
     {{ .Content }}
   </div>
 </article>
@@ -43,7 +43,7 @@
 <div class="on-this-day">
   <span class="on-this-day-label">往年今日</span>
   {{ range sort $onThisDay "Date" "desc" }}
-  <a href="{{ .Permalink }}" class="on-this-day-link">
+  <a href="{{ .RelPermalink }}" class="on-this-day-link">
     <span class="on-this-day-year">{{ .Date.Format "2006" }}</span>
     <span class="on-this-day-title">{{ .Title }}</span>
   </a>
@@ -59,13 +59,13 @@
 {{ if or $prev $next }}
 <nav class="post-nav">
   {{ if $prev }}
-  <a href="{{ $prev.Permalink }}" class="post-nav-item prev">
+  <a href="{{ $prev.RelPermalink }}" class="post-nav-item prev">
     <span class="post-nav-label">← 上一篇</span>
     <span class="post-nav-title">{{ $prev.Title }}</span>
   </a>
   {{ end }}
   {{ if $next }}
-  <a href="{{ $next.Permalink }}" class="post-nav-item next">
+  <a href="{{ $next.RelPermalink }}" class="post-nav-item next">
     <span class="post-nav-label">下一篇 →</span>
     <span class="post-nav-title">{{ $next.Title }}</span>
   </a>
@@ -122,6 +122,28 @@
   var headings = document.querySelectorAll('.post-content h2, .post-content h3');
   var links = document.querySelectorAll('.toc-inner a');
   if (!headings.length || !links.length) return;
+  var toc = document.querySelector('.toc-inner');
+
+  if (toc) {
+    toc.addEventListener('click', function(event) {
+      var link = event.target.closest ? event.target.closest('a') : null;
+      if (!link || !toc.contains(link)) return;
+
+      var href = link.getAttribute('href') || '';
+      if (href.charAt(0) === '#') return;
+
+      var label = (link.textContent || '').trim();
+      var target = Array.prototype.find.call(headings, function(heading) {
+        return (heading.textContent || '').trim() === label;
+      });
+
+      if (!target || !target.id) return;
+      event.preventDefault();
+      window.history.pushState(null, '', '#' + target.id);
+      target.scrollIntoView({ block: 'start' });
+    });
+  }
+
   var observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
       if (entry.isIntersecting) {
