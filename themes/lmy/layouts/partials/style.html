@@ -512,7 +512,12 @@ main {
 .post-content h2 { font-size: 1.5rem; margin-bottom: 1.25rem; }
 .post-content h3 { font-size: 1.1rem; margin: 1.5rem 0 1rem; }
 .post-content h4 { font-size: 1rem; }
-.post-content p { margin: 0 0 1.2rem; }
+.post-content p {
+  margin: 0 0 1.2rem;
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-character;
+}
 .post-content a { color: var(--color-link); text-decoration: underline; text-underline-offset: 3px; }
 .post-content a:hover { text-decoration: none; }
 .post-content img { border-radius: var(--radius); margin: 1.5rem auto; }
@@ -782,7 +787,12 @@ content { display: block; }
 .witter-dot { color: var(--color-text-muted); font-size: 0.85rem; line-height: 1; }
 .witter-date { font-size: 0.78rem; color: var(--color-text-muted); font-family: var(--font-mono); }
 .witter-body { font-size: 0.95rem; line-height: 1.75; }
-.witter-body p { margin: 0 0 0.5rem; }
+.witter-body p {
+  margin: 0 0 0.5rem;
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-character;
+}
 .witter-body p:last-child { margin: 0; }
 .witter-body a { color: var(--color-link); text-decoration: underline; text-underline-offset: 3px; }
 
