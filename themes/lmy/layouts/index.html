@@ -28,7 +28,7 @@
     {{ end }}
     {{ $colors := slice "#d4a373" "#a8c5da" "#c9b8d4" "#a8d4c5" "#d4b896" "#b8a8d4" "#c5c8a8" }}
     {{ $placeholderColor := index $colors (mod (len .Title) (len $colors)) }}
-    <a href="{{ .Permalink }}" class="post-card">
+    <a href="{{ .RelPermalink }}" class="post-card">
       {{ if $image }}
       <img src="{{ $image }}" alt="{{ .Title }}" class="card-cover" loading="lazy" />
       {{ else }}
@@ -57,7 +57,7 @@
     {{ range $recent }}
     <li class="post-item">
       <span class="post-date">{{ .Date.Format "01-02" }}</span>
-      <a href="{{ .Permalink }}" class="post-link">{{ .Title }}</a>
+      <a href="{{ .RelPermalink }}" class="post-link">{{ .Title }}</a>
     </li>
     {{ end }}
   </ul>
