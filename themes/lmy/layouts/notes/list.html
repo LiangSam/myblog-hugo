@@ -4,7 +4,7 @@
 {{ $avatar := .Site.Params.avatar }}
 <div class="list-header">
   <h1>{{ .Title }}</h1>
-  <p>{{ len $notes }} 条</p>
+  <p>{{ with .Description }}{{ . }} · {{ end }}{{ len $notes }} 条</p>
 </div>
 
 <div class="witter-stream">
