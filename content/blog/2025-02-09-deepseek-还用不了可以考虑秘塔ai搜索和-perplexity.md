@@ -1,9 +1,16 @@
 ---
 title: "DeepSeek 还用不了？可以考虑秘塔AI搜索和 Perplexity"
 date: 2025-02-09
-draft: true
+tags:
+  - AI
+  - 工具
+slug: 2025-02-09-deepseek-alternatives-metaso-and-perplexity
+author:
+  - 梁某银
+draft: false
+featured: false
+description:
 ---
-
 昨天我在文章中说 DeepSeek 写稿还差点意思，但如果想要用 DeepSeek 的R1 推理模型，那么可以考虑秘塔AI搜索和 Perplexity，下面我逐个介绍一下。
 
 1，秘塔 AI 搜索。

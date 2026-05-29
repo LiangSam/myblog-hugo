@@ -2,7 +2,9 @@
 title: 译本难等又难读？用 DeepSeek 自翻原著，快速制作双语对照电子书
 date: 2025-07-06
 categories: 
-tags: 
+tags:
+  - AI
+  - 英语
 slug: 250706-translate_ebook
 draft: false
 description:
