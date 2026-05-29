@@ -3,6 +3,7 @@ title: 为什么，以及如何用HomeBrew安装macOS应用
 date: 2026-04-26
 tags:
   - 工具
+  - macOS
 slug: why-how-homebrew-macos
 author:
   - 梁某银

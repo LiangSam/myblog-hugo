@@ -4,6 +4,7 @@ date: 2025-07-21
 categories:
 tags:
   - MacBook
+  - macOS
 slug: macbook-after-8-years-windows
 draft: false
 description:
