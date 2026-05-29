@@ -81,7 +81,7 @@ brew uninstall --zap <软件名>
 
 ## 2026-05-29 补：如何清理 Homebrew 安装包缓存？
 
-待我读到 Minja 的[macOS 缓存垃圾清理自助手册[更新]](https://utgd.net/article/21152/)时，觉得我选择 Homebrew 果然不错，但他提到，Homebrew 仍是需要从网上下载文件，所以就会遗留有安装包，并不会自动清理，建议直接删除 downloads 里面的文件：
+待我读到 Minja 的[macOS 缓存垃圾清理自助手册[更新]](https://utgd.net/article/21152/)时，觉得我选择 Homebrew 果然不错，但他提到，Homebrew 仍是需要从网上下载文件，所以就会遗留有安装包，并不会自动清理，建议直接删除 downloads 里面的文件（`⌘Command`-`⇧Shift`-`G` 跳转）：
 
 ```
 ~/Library/Caches/Homebrew/downloads
@@ -92,3 +92,16 @@ brew uninstall --zap <软件名>
 固然，你可以使用 Homebrew 自带的命令 `brew cleanup -s` 清除旧版安装包、缓存，但不会删除你正在使用的软件包。
 
 所以还是删掉一了白了。
+
+查看缓存占用多少，终端输入：
+
+```
+du -sh ~/Library/Caches/Homebrew
+du -sh ~/Library/Caches/Homebrew/downloads 2>/dev/null
+```
+
+直接用删除：
+
+```
+rm -rf ~/Library/Caches/Homebrew/downloads
+```
