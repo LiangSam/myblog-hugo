@@ -2,6 +2,8 @@
 title: 为IDM付费后
 date: 2024-11-09
 tags:
+  - 工具
+  - 低技术
 slug: after-paying-for-idm
 author:
   - 梁某银

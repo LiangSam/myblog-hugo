@@ -6,7 +6,7 @@ categories:
 tags:
   - 方法论
   - 低技术
-slug: 
+slug: more-useful-bookmarklets
 draft: false
 description: 能帮得上忙的小书签，当然如韩信点兵，多多益善。
 ---
