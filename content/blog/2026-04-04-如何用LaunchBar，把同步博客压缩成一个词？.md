@@ -3,6 +3,7 @@ title: 如何用LaunchBar，把同步博客压缩成一个词？
 date: 2026-04-04
 tags:
   - LaunchBar
+  - macOS
 slug: launchbar-hugo-sync
 author:
   - 梁某银
