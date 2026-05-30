@@ -1,0 +1,136 @@
+{{ define "main" }}
+{{ $map := hugo.Data.theme_map }}
+{{ $posts := where .Site.RegularPages "Section" "blog" }}
+{{ $topicOffsets := slice
+  (dict "x" -126 "y" -96)
+  (dict "x" 130 "y" -74)
+  (dict "x" -142 "y" 84)
+  (dict "x" 136 "y" 96)
+}}
+{{ $articleOffsets := slice
+  (dict "x" -22 "y" 58)
+  (dict "x" 28 "y" 70)
+  (dict "x" 0 "y" 86)
+}}
+
+<section class="theme-map-page" aria-labelledby="theme-map-title">
+  <a href="{{ "/" | relURL }}" class="theme-map-brand" aria-label="{{ .Site.Title }}">
+    {{ with .Site.Params.avatar }}<img src="{{ . | relURL }}" alt="{{ $.Site.Title }}" />{{ end }}
+    <span>{{ .Site.Params.author | default .Site.Title }} · Theme Map</span>
+  </a>
+  <h1 id="theme-map-title" class="theme-map-title">{{ $map.title }}</h1>
+
+  <div class="theme-map-canvas" style="--map-w: {{ $map.canvas.width }}; --map-h: {{ $map.canvas.height }};">
+    <svg class="theme-map-lines" viewBox="0 0 {{ $map.canvas.width }} {{ $map.canvas.height }}" aria-hidden="true">
+      {{ range $map.relations }}
+      <line class="theme-relation-line" x1="{{ .x1 }}" y1="{{ .y1 }}" x2="{{ .x2 }}" y2="{{ .y2 }}" />
+      {{ end }}
+
+      {{ range $theme := $map.themes }}
+        {{ range $i, $subtopic := $theme.subtopics }}
+          {{ $topicOffset := index $topicOffsets (mod $i (len $topicOffsets)) }}
+          {{ $topicX := add $theme.x $topicOffset.x }}
+          {{ $topicY := add $theme.y $topicOffset.y }}
+          <line class="topic-line" x1="{{ $theme.x }}" y1="{{ $theme.y }}" x2="{{ $topicX }}" y2="{{ $topicY }}" style="--accent: {{ $theme.accent }};" />
+
+          {{ $matchedArticles := where $theme.articles "topic" $subtopic }}
+          {{ range $j, $article := $matchedArticles }}
+            {{ $articleOffset := index $articleOffsets (mod $j (len $articleOffsets)) }}
+            {{ $articleX := add $topicX $articleOffset.x }}
+            {{ $articleY := add $topicY $articleOffset.y }}
+            <line class="article-line" x1="{{ $topicX }}" y1="{{ $topicY }}" x2="{{ $articleX }}" y2="{{ $articleY }}" style="--accent: {{ $theme.accent }};" />
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    </svg>
+
+    {{ range $theme := $map.themes }}
+      <article class="theme-node theme-core-node" style="--x: {{ $theme.x }}; --y: {{ $theme.y }}; --accent: {{ $theme.accent }};">
+        <span class="node-dot" aria-hidden="true"></span>
+        <h2>{{ $theme.title }}</h2>
+        <p>{{ $theme.subtitle }}</p>
+      </article>
+
+      {{ range $i, $subtopic := $theme.subtopics }}
+        {{ $topicOffset := index $topicOffsets (mod $i (len $topicOffsets)) }}
+        {{ $topicX := add $theme.x $topicOffset.x }}
+        {{ $topicY := add $theme.y $topicOffset.y }}
+        <section class="theme-node topic-node" style="--x: {{ $topicX }}; --y: {{ $topicY }}; --accent: {{ $theme.accent }};">
+          <h3>{{ $subtopic }}</h3>
+        </section>
+
+        {{ $matchedArticles := where $theme.articles "topic" $subtopic }}
+        {{ range $j, $article := $matchedArticles }}
+          {{ $articleOffset := index $articleOffsets (mod $j (len $articleOffsets)) }}
+          {{ $articleX := add $topicX $articleOffset.x }}
+          {{ $articleY := add $topicY $articleOffset.y }}
+          {{ $post := index (where $posts ".Params.slug" $article.slug) 0 }}
+          {{ if $post }}
+          <a
+            class="theme-node article-node"
+            href="{{ $post.RelPermalink }}"
+            style="--x: {{ $articleX }}; --y: {{ $articleY }}; --accent: {{ $theme.accent }};"
+            data-title="{{ $post.Title }}"
+            data-date="{{ $post.Date.Format "2006-01-02" }}"
+            data-url="{{ $post.RelPermalink }}"
+            data-theme="{{ $theme.title }}"
+            data-note="{{ $article.note }}">
+            <span>{{ $post.Title }}</span>
+            <time>{{ $post.Date.Format "2006-01-02" }}</time>
+          </a>
+          {{ else }}
+          <span class="theme-node article-node theme-article-missing" style="--x: {{ $articleX }}; --y: {{ $articleY }}; --accent: {{ $theme.accent }};">{{ $article.slug }}</span>
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+
+    <aside class="theme-map-panel" aria-label="主题地图详情">
+      <p class="panel-label">Selected</p>
+      <h2 data-map-title>随便点一篇文章</h2>
+      <p data-map-note>选择一枚文章节点，查看它被放进这张地图的理由。</p>
+      <dl>
+        <div>
+          <dt>母题</dt>
+          <dd data-map-theme>等待选择</dd>
+        </div>
+        <div>
+          <dt>日期</dt>
+          <dd data-map-date>--</dd>
+        </div>
+      </dl>
+      <a class="panel-link" href="/blog/" data-map-link>进入文章</a>
+    </aside>
+  </div>
+</section>
+
+<script>
+(() => {
+  const page = document.querySelector('.theme-map-page');
+  if (!page) return;
+
+  const title = page.querySelector('[data-map-title]');
+  const note = page.querySelector('[data-map-note]');
+  const theme = page.querySelector('[data-map-theme]');
+  const date = page.querySelector('[data-map-date]');
+  const link = page.querySelector('[data-map-link]');
+  const articles = Array.from(page.querySelectorAll('.article-node[href]'));
+
+  const selectArticle = (article) => {
+    articles.forEach((item) => item.classList.toggle('is-active', item === article));
+    title.textContent = article.dataset.title;
+    note.textContent = article.dataset.note;
+    theme.textContent = article.dataset.theme;
+    date.textContent = article.dataset.date;
+    link.href = article.dataset.url;
+  };
+
+  articles.forEach((article) => {
+    article.addEventListener('mouseenter', () => selectArticle(article));
+    article.addEventListener('focus', () => selectArticle(article));
+  });
+
+  if (articles[0]) selectArticle(articles[0]);
+})();
+</script>
+{{ end }}

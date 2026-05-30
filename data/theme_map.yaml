@@ -1,0 +1,231 @@
+title: 主题地图
+description: 从日更里长出来的几个长期问题。
+canvas:
+  width: 1300
+  height: 840
+themes:
+  - id: tools
+    title: 工具不是目的
+    subtitle: 工具真正有价值的时候，是它把人从系统里解放出来。
+    accent: "#1c6fcf"
+    x: 280
+    y: 210
+    subtopics:
+      - 自动化与低技术
+      - 打印与稍后读
+      - Mac、Homebrew 与桌面工具
+      - 知识管理与 Obsidian
+    articles:
+      - slug: 250608-printer-read-later
+        topic: 打印与稍后读
+        note: 打印机从工具变成阅读秩序。
+      - slug: why-how-homebrew-macos
+        topic: Mac、Homebrew 与桌面工具
+        note: 把装软件这件小事重新变简单。
+      - slug: atomic-tools-iodine-swab
+        topic: 自动化与低技术
+        note: 好工具是一个问题的一次性解法。
+  - id: writing
+    title: 写作作为自救
+    subtitle: 写作不是展示才华，而是把生活重新组织成自己能理解的东西。
+    accent: "#c05621"
+    x: 610
+    y: 150
+    subtopics:
+      - 日更与连续性
+      - 公开表达
+      - 写作工具与写作本身
+      - 从第一句话开始
+    articles:
+      - slug: 240416-first-sentence-write
+        topic: 从第一句话开始
+        note: 从第一句话里把自己拽上路。
+      - slug: 250623-writing
+        topic: 公开表达
+        note: 不分享，才是真正的浪费。
+      - slug: two-years-see-you-tomorrow
+        topic: 日更与连续性
+        note: 连续性本身就是作品的一部分。
+  - id: money
+    title: 普通人的钱与欲望
+    subtitle: 在欲望、消费和安全感之间保住生活余量。
+    accent: "#7c6f2f"
+    x: 940
+    y: 220
+    subtopics:
+      - 存钱与安全感
+      - 消费主义与物欲管理
+      - 反消费主义
+      - 普通人的投资边界
+    articles:
+      - slug: why-cant-you-save-10k
+        topic: 存钱与安全感
+        note: 存不到钱，往往不是数学问题。
+      - slug: confessions-of-a-pseudo-minimalist
+        topic: 反消费主义
+        note: 极简主义也可能变成另一种表演。
+      - slug: how-does-clutter-devour-your-room-and-energy
+        topic: 消费主义与物欲管理
+        note: 杂物吞掉的不只是空间。
+  - id: shenzhen
+    title: 深圳与漂泊
+    subtitle: 一个普通人重新安放肉身和灵魂的地方。
+    accent: "#23856d"
+    x: 340
+    y: 510
+    subtopics:
+      - 深漂与城市感
+      - 小县城经验
+      - 租房、搬家与独居
+      - 第一次独自旅行
+    articles:
+      - slug: shenzhen-2-years
+        topic: 深漂与城市感
+        note: 从小县城视角重新看深圳。
+      - slug: 2025-04-30-two-years-in-shenzhen
+        topic: 小县城经验
+        note: 来深圳两年后的自我对账。
+      - slug: setting-out-at-twenty-eight
+        topic: 第一次独自旅行
+        note: 独自出发，重新确认生活半径。
+  - id: body
+    title: 身体与生活秩序
+    subtitle: 秩序不是宏大计划，而是睡眠、散步、吃饭这些小事的复利。
+    accent: "#b45309"
+    x: 690
+    y: 430
+    subtopics:
+      - 睡眠与早起
+      - 散步与身体边界
+      - 饮食、血糖与身体仪表盘
+      - 小物件改善生活
+    articles:
+      - slug: 2024-11-21-sleep-may-be-your-only-edge
+        topic: 睡眠与早起
+        note: 睡眠可能是最朴素的优势。
+      - slug: unlocking-my-body-dashboard-14-day-cgm-trial
+        topic: 饮食、血糖与身体仪表盘
+        note: 用数据偷看身体的后台。
+      - slug: 35yuan-alarm-clock
+        topic: 小物件改善生活
+        note: 一个便宜闹钟解决睡前手机。
+  - id: ai
+    title: AI 作为外置器官
+    subtitle: AI 不是答案机器，而是新的外置器官。
+    accent: "#6d5bd0"
+    x: 1010
+    y: 470
+    subtopics:
+      - AI 与创作
+      - AI 幻觉与谄媚
+      - AI 工具链
+      - 私人知识库
+    articles:
+      - slug: life-questions-ai
+        topic: AI 与创作
+        note: 把生活问题外包给 AI 后。
+      - slug: ai-sycophancy-and-rlhf
+        topic: AI 幻觉与谄媚
+        note: 机器太会顺着人说，也是一种危险。
+      - slug: after-karpathy-llm-wiki
+        topic: 私人知识库
+        note: 私人知识库是一种新的记忆方式。
+  - id: reading
+    title: 读书、打印与慢一点
+    subtitle: 阅读不是吞信息，而是把注意力从电子流里夺回来。
+    accent: "#2f6f7e"
+    x: 500
+    y: 705
+    subtopics:
+      - 纸质阅读与打印
+      - Kindle 与设备
+      - 信息源与稍后读
+      - 读书方法与复习
+    articles:
+      - slug: 2025-06-10-why-print-articles-instead-of-ereader
+        topic: 纸质阅读与打印
+        note: 打印是一种减速装置。
+      - slug: still-using-kindle-2025
+        topic: Kindle 与设备
+        note: 旧设备为什么还能继续有用。
+      - slug: 2025-04-23-reading-revelation-slow-down
+        topic: 读书方法与复习
+        note: 慢一点，反而更能读进去。
+  - id: relationships
+    title: 关系、边界与成年人
+    subtitle: 成年人最难的不是讲道理，而是在关系里保留边界和清醒。
+    accent: "#9f3a5b"
+    x: 850
+    y: 665
+    subtopics:
+      - 借钱与关系成本
+      - 朋友与边界
+      - 家庭与原生经验
+      - 助人情结与他人命运
+    articles:
+      - slug: lending-money-relationship-as-collateral
+        topic: 借钱与关系成本
+        note: 借钱常常抵押的是关系。
+      - slug: failure-is-just-a-status
+        topic: 朋友与边界
+        note: 失败如何被描述，决定它如何存在。
+      - slug: why-i-stopped-recommending-phones
+        topic: 助人情结与他人命运
+        note: 放下助人情结，尊重他人命运。
+relations:
+  - from: tools
+    to: reading
+    label: 工具回到阅读秩序
+    x1: 280
+    y1: 210
+    x2: 500
+    y2: 705
+  - from: tools
+    to: ai
+    label: AI 是更复杂的工具
+    x1: 280
+    y1: 210
+    x2: 1010
+    y2: 470
+  - from: writing
+    to: relationships
+    label: 公开表达改变关系现场
+    x1: 610
+    y1: 150
+    x2: 850
+    y2: 665
+  - from: writing
+    to: shenzhen
+    label: 城市经验被写下来
+    x1: 610
+    y1: 150
+    x2: 340
+    y2: 510
+  - from: money
+    to: relationships
+    label: 钱显影边界
+    x1: 940
+    y1: 220
+    x2: 850
+    y2: 665
+  - from: money
+    to: body
+    label: 消费落到生活质量
+    x1: 940
+    y1: 220
+    x2: 690
+    y2: 430
+  - from: ai
+    to: writing
+    label: 辅助表达而非替代表达
+    x1: 1010
+    y1: 470
+    x2: 610
+    y2: 150
+  - from: reading
+    to: writing
+    label: 输入方式改变输出方式
+    x1: 500
+    y1: 705
+    x2: 610
+    y2: 150
