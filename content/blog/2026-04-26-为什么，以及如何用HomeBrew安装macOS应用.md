@@ -1,5 +1,5 @@
 ---
-title: 为什么，以及如何用HomeBrew安装macOS应用
+title: 为什么，以及如何用Homebrew安装macOS应用
 date: 2026-04-26
 tags:
   - 工具
