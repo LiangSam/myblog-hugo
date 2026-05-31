@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{ $map := hugo.Data.theme_map }}
+{{ $map := .Site.Data.theme_map }}
 {{ $posts := where .Site.RegularPages "Section" "blog" }}
 {{ $topicOffsets := slice
   (dict "x" -126 "y" -96)
