@@ -29,15 +29,15 @@
       {{ range $theme := $map.themes }}
         {{ range $i, $subtopic := $theme.subtopics }}
           {{ $topicOffset := index $topicOffsets (mod $i (len $topicOffsets)) }}
-          {{ $topicX := add $theme.x $topicOffset.x }}
-          {{ $topicY := add $theme.y $topicOffset.y }}
+          {{ $topicX := add (int $theme.x) (int $topicOffset.x) }}
+          {{ $topicY := add (int $theme.y) (int $topicOffset.y) }}
           <line class="topic-line" x1="{{ $theme.x }}" y1="{{ $theme.y }}" x2="{{ $topicX }}" y2="{{ $topicY }}" style="--accent: {{ $theme.accent }};" />
 
           {{ $matchedArticles := where $theme.articles "topic" $subtopic }}
           {{ range $j, $article := $matchedArticles }}
             {{ $articleOffset := index $articleOffsets (mod $j (len $articleOffsets)) }}
-            {{ $articleX := add $topicX $articleOffset.x }}
-            {{ $articleY := add $topicY $articleOffset.y }}
+            {{ $articleX := add (int $topicX) (int $articleOffset.x) }}
+            {{ $articleY := add (int $topicY) (int $articleOffset.y) }}
             <line class="article-line" x1="{{ $topicX }}" y1="{{ $topicY }}" x2="{{ $articleX }}" y2="{{ $articleY }}" style="--accent: {{ $theme.accent }};" />
           {{ end }}
         {{ end }}
@@ -53,8 +53,8 @@
 
       {{ range $i, $subtopic := $theme.subtopics }}
         {{ $topicOffset := index $topicOffsets (mod $i (len $topicOffsets)) }}
-        {{ $topicX := add $theme.x $topicOffset.x }}
-        {{ $topicY := add $theme.y $topicOffset.y }}
+        {{ $topicX := add (int $theme.x) (int $topicOffset.x) }}
+        {{ $topicY := add (int $theme.y) (int $topicOffset.y) }}
         <section class="theme-node topic-node" style="--x: {{ $topicX }}; --y: {{ $topicY }}; --accent: {{ $theme.accent }};">
           <h3>{{ $subtopic }}</h3>
         </section>
@@ -62,8 +62,8 @@
         {{ $matchedArticles := where $theme.articles "topic" $subtopic }}
         {{ range $j, $article := $matchedArticles }}
           {{ $articleOffset := index $articleOffsets (mod $j (len $articleOffsets)) }}
-          {{ $articleX := add $topicX $articleOffset.x }}
-          {{ $articleY := add $topicY $articleOffset.y }}
+          {{ $articleX := add (int $topicX) (int $articleOffset.x) }}
+          {{ $articleY := add (int $topicY) (int $articleOffset.y) }}
           {{ $post := index (where $posts ".Params.slug" $article.slug) 0 }}
           {{ if $post }}
           <a
