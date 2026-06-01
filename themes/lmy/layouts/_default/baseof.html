@@ -6,7 +6,7 @@
 </head>
 <body class="site-wrapper">
 {{ if ne .Section "map" }}{{ partial "header.html" . }}{{ end }}
-<main class="{{ if eq .Section "map" }}map-main{{ end }}">
+<main class="{{ if .IsHome }}home-main{{ end }}{{ if eq .Section "map" }} map-main{{ end }}">
 {{ block "main" . }}{{ end }}
 </main>
 {{ if ne .Section "map" }}{{ partial "footer.html" . }}{{ end }}
