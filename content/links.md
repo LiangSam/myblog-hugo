@@ -13,4 +13,3 @@ draft = false
 - [#UNTAG](https://utgd.net/)
 - [Ratfactor](https://ratfactor.com/)
 - [虹线](https://1q43.blog/)
-- [極客死亡計劃](https://www.geedea.pro/)
