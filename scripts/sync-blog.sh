@@ -7,6 +7,10 @@ export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PAT
 REPO_DIR="${BLOG_DIR:-$HOME/HUGO}"
 LOG_FILE="${HUGO_SYNC_LOG:-/tmp/hugo-sync.log}"
 
+git_push() {
+  git -c core.sshCommand="ssh -o ConnectTimeout=10 -o ServerAliveInterval=5 -o ServerAliveCountMax=2" push
+}
+
 run_sync() {
   echo "== Hugo sync started at $(date '+%Y-%m-%d %H:%M:%S') =="
 
@@ -29,7 +33,7 @@ run_sync() {
   if git diff --cached --quiet; then
     echo "没有需要提交的变更"
     echo "正在确认远端同步状态..."
-    git push || return 1
+    git_push || return 1
     return 0
   fi
 
@@ -38,7 +42,7 @@ run_sync() {
   git commit -m "$commit_message" || return 1
 
   echo "正在推送到远端..."
-  git push || return 1
+  git_push || return 1
 }
 
 run_sync > "$LOG_FILE" 2>&1
