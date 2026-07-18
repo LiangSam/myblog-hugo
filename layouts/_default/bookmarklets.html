@@ -1,0 +1,128 @@
+{{ define "main" }}
+{{ $tools := slice
+  (dict "number" "01" "name" "纯净阅读" "source" "bookmarklets/clean-reading.js" "summary" "提取正文，保留标题、作者和原文链接，适合阅读或打印。" "note" "需要联网载入 Readability；个别特殊网页可能无法识别。")
+  (dict "number" "02" "name" "公众号打印" "source" "bookmarklets/wechat-print.js" "summary" "把公众号正文统一为 18px 黑字，解决打印后字号太小、颜色太浅。" "note" "再次点击可关闭。")
+  (dict "number" "03" "name" "点击缩图" "source" "bookmarklets/shrink-image-click.js" "summary" "开启后，每点击一次图片就缩小 10%，最小保留 50px。" "note" "适合只想调整一两张图片的文章。")
+  (dict "number" "04" "name" "正文图片 -30%" "source" "bookmarklets/shrink-images-all.js" "summary" "一次缩小页面里的正文大图，并尽量跳过头像、Logo、图标和小图片。" "note" "每张图片只处理一次；刷新页面即可恢复。")
+  (dict "number" "05" "name" "思源宋体" "source" "bookmarklets/source-serif.js" "summary" "把正文切换为思源宋体，标题和粗体使用更重字重。" "note" "电脑需要已经安装思源宋体或 Noto Serif CJK。")
+  (dict "number" "06" "name" "网页修剪" "source" "bookmarklets/remove-elements.js" "summary" "进入修剪模式，点击网页上的导航、广告、二维码等元素即可隐藏。" "note" "顶部工具条可以撤销或完成；刷新页面即可全部恢复。")
+  (dict "number" "07" "name" "紧凑分页" "source" "bookmarklets/compact-pagination.js" "summary" "导出 PDF 前保护图片、代码、引用和表格，减少图片被跨页截断。" "note" "这是基于规则的优化，不能保证所有网页都没有留白。")
+  (dict "number" "08" "name" "移除悬浮元素" "source" "bookmarklets/remove-floating.js" "summary" "取消网页中的悬浮和吸顶定位，避免打印时遮住正文或在每页重复出现。" "note" "刷新页面即可恢复原来的位置。")
+  (dict "number" "09" "name" "显示链接地址" "source" "bookmarklets/show-link-urls.js" "summary" "在超链接文字后补出完整网址，让打印后的纸质文章也能找到链接去向。" "note" "再次点击即可隐藏补充的网址。")
+  (dict "number" "10" "name" "网页编辑" "source" "bookmarklets/edit-page.js" "summary" "把当前网页变成可编辑状态，可以直接修改或删除页面文字。" "note" "再次点击退出编辑模式；刷新页面即可恢复原文。")
+}}
+
+<section class="bookmarklet-hero">
+  <p class="bookmarklet-kicker">BOOKMARKLETS · 无需安装</p>
+  <h1>{{ .Title }}</h1>
+  <p class="bookmarklet-lead">把按钮拖进浏览器书签栏，以后打开任意网页点一下就能用。它们不保存你的网页，也不需要注册账号。</p>
+</section>
+
+<aside class="bookmarklet-guide" aria-label="安装方法">
+  <span class="bookmarklet-guide-label">怎么安装</span>
+  <ol>
+    <li>显示浏览器的书签栏</li>
+    <li>把蓝色按钮拖到书签栏</li>
+    <li>打开文章，点击刚才的书签</li>
+  </ol>
+</aside>
+
+<div class="bookmarklet-list">
+  {{ range $tools }}
+  {{ $asset := resources.Get .source | minify }}
+  {{ $code := printf "javascript:%s" $asset.Content }}
+  <article class="bookmarklet-item">
+    <div class="bookmarklet-number" aria-hidden="true">{{ .number }}</div>
+    <div class="bookmarklet-copy">
+      <h2>{{ .name }}</h2>
+      <p>{{ .summary }}</p>
+      <small>{{ .note }}</small>
+    </div>
+    <div class="bookmarklet-actions">
+      <a class="bookmarklet-drag" href="{{ $code | safeURL }}" draggable="true" data-bookmarklet>拖走「{{ .name }}」</a>
+      <button class="bookmarklet-copy-button" type="button" data-code="{{ $code }}">复制代码</button>
+    </div>
+  </article>
+  {{ end }}
+</div>
+
+<section class="bookmarklet-caveat">
+  <h2>使用前知道这些</h2>
+  <p>小书签只修改当前页面，刷新以后就会恢复。它们应当在普通网页中使用；Safari 原生阅读模式是浏览器重新生成的页面，小书签通常无法继续修改它。不同网站结构不同，网页修剪和分页优化的结果也可能略有差异。</p>
+  <p>如果你想知道这些工具为什么会出现，可以读 <a href="{{ "/blog/250621-printer/" | relURL }}">《我的终极文章打印方案》</a>。</p>
+</section>
+
+<div class="bookmarklet-toast" role="status" aria-live="polite"></div>
+
+<style>
+.bookmarklet-hero{position:relative;padding:1rem 0 2.2rem;border-bottom:1px solid var(--color-border)}
+.bookmarklet-hero::after{content:"";position:absolute;right:0;bottom:-1px;width:5rem;height:3px;background:var(--color-accent)}
+.bookmarklet-kicker{margin:0 0 .6rem;color:var(--color-accent);font-family:var(--font-mono);font-size:.72rem;font-weight:700;letter-spacing:.12em}
+.bookmarklet-hero h1{margin:0 0 .8rem;font-size:2.15rem;line-height:1.2;letter-spacing:-.04em}
+.bookmarklet-lead{max-width:35rem;margin:0;color:var(--color-text-soft);font-size:1.02rem;line-height:1.8}
+.bookmarklet-guide{display:grid;grid-template-columns:7rem 1fr;gap:1.25rem;margin:2rem 0 2.6rem;padding:1.15rem 1.25rem;border:1px solid var(--color-border);border-radius:var(--radius);background:var(--color-bg-soft)}
+.bookmarklet-guide-label{font-weight:700}
+.bookmarklet-guide ol{display:flex;gap:1.5rem;margin:0;padding:0;counter-reset:guide;list-style:none;color:var(--color-text-soft);font-size:.88rem}
+.bookmarklet-guide li{position:relative;padding-left:1.5rem;counter-increment:guide}
+.bookmarklet-guide li::before{content:counter(guide);position:absolute;left:0;top:.08rem;width:1.1rem;height:1.1rem;border:1px solid var(--color-accent);border-radius:50%;color:var(--color-accent);font:700 .68rem/1rem var(--font-mono);text-align:center}
+.bookmarklet-list{border-top:1px solid var(--color-border)}
+.bookmarklet-item{display:grid;grid-template-columns:2.5rem minmax(0,1fr) auto;gap:1rem;padding:1.45rem 0;border-bottom:1px solid var(--color-border);align-items:start}
+.bookmarklet-number{padding-top:.18rem;color:var(--color-text-muted);font:600 .72rem/1 var(--font-mono)}
+.bookmarklet-copy h2{margin:0 0 .35rem;font-size:1.08rem;line-height:1.35}
+.bookmarklet-copy p{margin:0;color:var(--color-text-soft);font-size:.94rem;line-height:1.65}
+.bookmarklet-copy small{display:block;margin-top:.38rem;color:var(--color-text-muted);font-size:.78rem;line-height:1.55}
+.bookmarklet-actions{display:flex;align-items:center;gap:.55rem;padding-top:.05rem}
+.bookmarklet-drag,.bookmarklet-copy-button{white-space:nowrap;border-radius:6px;font:600 .78rem/1 var(--font-body);cursor:grab}
+.bookmarklet-drag{display:inline-flex;align-items:center;padding:.68rem .8rem;background:var(--color-accent);color:#fff;text-decoration:none;box-shadow:0 2px 0 color-mix(in srgb,var(--color-accent) 75%,#000)}
+.bookmarklet-drag::before{content:"⠿";margin-right:.38rem;font-size:1rem;opacity:.72}
+.bookmarklet-drag:hover{background:var(--color-accent-hover);color:#fff;text-decoration:none}
+.bookmarklet-drag:active{cursor:grabbing;transform:translateY(1px);box-shadow:none}
+.bookmarklet-copy-button{padding:.64rem .72rem;border:1px solid var(--color-border);background:transparent;color:var(--color-text-muted);cursor:pointer}
+.bookmarklet-copy-button:hover{border-color:var(--color-accent);color:var(--color-accent)}
+.bookmarklet-caveat{margin-top:3rem;padding-top:1.5rem;border-top:3px double var(--color-border)}
+.bookmarklet-caveat h2{margin:0 0 .75rem;font-size:1rem}
+.bookmarklet-caveat p{margin:0 0 .8rem;color:var(--color-text-soft);font-size:.9rem;line-height:1.75}
+.bookmarklet-caveat a{text-decoration:underline;text-underline-offset:3px}
+.bookmarklet-toast{position:fixed;left:50%;bottom:1.5rem;z-index:1000;transform:translate(-50%,1rem);padding:.6rem .9rem;border-radius:7px;background:var(--color-text);color:var(--color-bg);font-size:.82rem;opacity:0;pointer-events:none;transition:opacity .18s,transform .18s}
+.bookmarklet-toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:680px){.bookmarklet-hero h1{font-size:1.8rem}.bookmarklet-guide{grid-template-columns:1fr;gap:.7rem}.bookmarklet-guide ol{display:grid;gap:.55rem}.bookmarklet-item{grid-template-columns:2rem 1fr}.bookmarklet-actions{grid-column:2;flex-wrap:wrap}.bookmarklet-drag{cursor:pointer}.bookmarklet-copy-button{display:inline-flex}}
+@media print{.bookmarklet-actions,.bookmarklet-toast{display:none}.bookmarklet-item{break-inside:avoid}}
+</style>
+
+<script>
+(() => {
+  const toast = document.querySelector('.bookmarklet-toast');
+  let timer;
+  const show = (message) => {
+    toast.textContent = message;
+    toast.classList.add('show');
+    clearTimeout(timer);
+    timer = setTimeout(() => toast.classList.remove('show'), 1500);
+  };
+  document.querySelectorAll('[data-bookmarklet]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      show('请把按钮拖到书签栏，或使用旁边的复制按钮');
+    });
+  });
+  document.querySelectorAll('.bookmarklet-copy-button').forEach((button) => {
+    button.addEventListener('click', async () => {
+      const code = button.dataset.code;
+      try {
+        await navigator.clipboard.writeText(code);
+      } catch (_) {
+        const field = document.createElement('textarea');
+        field.value = code;
+        field.style.position = 'fixed';
+        field.style.opacity = '0';
+        document.body.appendChild(field);
+        field.select();
+        document.execCommand('copy');
+        field.remove();
+      }
+      show(`已复制「${button.closest('.bookmarklet-item').querySelector('h2').textContent}」`);
+    });
+  });
+})();
+</script>
+{{ end }}
