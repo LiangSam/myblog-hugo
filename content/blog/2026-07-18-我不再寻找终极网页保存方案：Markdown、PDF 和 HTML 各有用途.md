@@ -2,7 +2,7 @@
 title: 我不再寻找终极网页保存方案：Markdown、PDF 和 HTML 各有用途
 date: 2026-07-18
 tags:
-slug:
+slug: save-webpages-markdown-pdf-html
 author:
   - 梁某银
 draft: false
