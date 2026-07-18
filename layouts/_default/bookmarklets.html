@@ -39,7 +39,7 @@
       <small>{{ .note }}</small>
     </div>
     <div class="bookmarklet-actions">
-      <a class="bookmarklet-drag" href="{{ $code | safeURL }}" draggable="true" data-bookmarklet>拖走「{{ .name }}」</a>
+      <a class="bookmarklet-drag" href="{{ $code | safeURL }}" draggable="true" data-bookmarklet>{{ .name }}</a>
       <button class="bookmarklet-copy-button" type="button" data-code="{{ $code }}">复制代码</button>
     </div>
   </article>
