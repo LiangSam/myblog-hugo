@@ -1,0 +1,12 @@
+{{- $source := .Get "source" -}}
+{{- $name := .Get "name" -}}
+{{- $icon := .Get "icon" | default "🔖" -}}
+{{- $page := .Page -}}
+
+{{- with resources.Get $source -}}
+  {{- $asset := . | minify -}}
+  {{- $code := printf "javascript:%s" $asset.Content -}}
+<a class="inline-bookmarklet" href="{{ $code | safeURL }}" draggable="true" title="拖到书签栏，或点击在当前页使用">{{ $icon }} {{ $name }}</a>
+{{- else -}}
+  {{- errorf "bookmarklet shortcode: asset %q not found in %s" $source $page.File.Path -}}
+{{- end -}}
