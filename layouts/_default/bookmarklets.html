@@ -13,34 +13,49 @@
 }}
 
 <section class="bookmarklet-hero">
-  <p class="bookmarklet-kicker">BOOKMARKLETS · 无需安装</p>
+  <p class="bookmarklet-kicker"><span aria-hidden="true"></span> BOOKMARKLETS</p>
   <h1>{{ .Title }}</h1>
   <p class="bookmarklet-lead">把按钮拖进浏览器书签栏，以后打开任意网页点一下就能用。它们不保存你的网页，也不需要注册账号。</p>
+  <p class="bookmarklet-privacy">无需安装 · 不收集数据 · 刷新即可恢复</p>
 </section>
 
 <aside class="bookmarklet-guide" aria-label="安装方法">
-  <span class="bookmarklet-guide-label">怎么安装</span>
+  <div class="bookmarklet-guide-heading">
+    <span class="bookmarklet-guide-label">三步开始</span>
+    <small>只需设置一次</small>
+  </div>
   <ol>
-    <li>显示浏览器的书签栏</li>
-    <li>把蓝色按钮拖到书签栏</li>
-    <li>打开文章，点击刚才的书签</li>
+    <li><strong>显示</strong><span>浏览器书签栏</span></li>
+    <li><strong>拖入</strong><span>下方蓝色按钮</span></li>
+    <li><strong>点击</strong><span>在任意网页使用</span></li>
   </ol>
 </aside>
+
+<header class="bookmarklet-list-heading">
+  <div>
+    <p>TOOLBOX</p>
+    <h2>选择一个工具</h2>
+  </div>
+  <span>{{ len $tools }} 个小书签</span>
+</header>
 
 <div class="bookmarklet-list">
   {{ range $tools }}
   {{ $asset := resources.Get .source | minify }}
   {{ $code := printf "javascript:%s" $asset.Content }}
   <article class="bookmarklet-item">
-    <div class="bookmarklet-number" aria-hidden="true">{{ .number }}</div>
+    <div class="bookmarklet-item-top">
+      <div class="bookmarklet-number" aria-hidden="true">{{ .number }}</div>
+      <span>网页工具</span>
+    </div>
     <div class="bookmarklet-copy">
       <h2>{{ .name }}</h2>
       <p>{{ .summary }}</p>
-      <small>{{ .note }}</small>
+      <small><span aria-hidden="true">i</span>{{ .note }}</small>
     </div>
     <div class="bookmarklet-actions">
-      <a class="bookmarklet-drag" href="{{ $code | safeURL }}" draggable="true" data-bookmarklet>{{ .name }}</a>
-      <button class="bookmarklet-copy-button" type="button" data-code="{{ $code }}">复制代码</button>
+      <a class="bookmarklet-drag" href="{{ $code | safeURL }}" draggable="true" data-bookmarklet><span aria-hidden="true">⠿</span>拖动「{{ .name }}」</a>
+      <button class="bookmarklet-copy-button" type="button" data-code="{{ $code }}" aria-label="复制「{{ .name }}」的代码">复制</button>
     </div>
   </article>
   {{ end }}
@@ -55,37 +70,56 @@
 <div class="bookmarklet-toast" role="status" aria-live="polite"></div>
 
 <style>
-.bookmarklet-hero{position:relative;padding:1rem 0 2.2rem;border-bottom:1px solid var(--color-border)}
-.bookmarklet-hero::after{content:"";position:absolute;right:0;bottom:-1px;width:5rem;height:3px;background:var(--color-accent)}
-.bookmarklet-kicker{margin:0 0 .6rem;color:var(--color-accent);font-family:var(--font-mono);font-size:.72rem;font-weight:700;letter-spacing:.12em}
-.bookmarklet-hero h1{margin:0 0 .8rem;font-size:2.15rem;line-height:1.2;letter-spacing:-.04em}
-.bookmarklet-lead{max-width:35rem;margin:0;color:var(--color-text-soft);font-size:1.02rem;line-height:1.8}
-.bookmarklet-guide{display:grid;grid-template-columns:7rem 1fr;gap:1.25rem;margin:2rem 0 2.6rem;padding:1.15rem 1.25rem;border:1px solid var(--color-border);border-radius:var(--radius);background:var(--color-bg-soft)}
-.bookmarklet-guide-label{font-weight:700}
-.bookmarklet-guide ol{display:flex;gap:1.5rem;margin:0;padding:0;counter-reset:guide;list-style:none;color:var(--color-text-soft);font-size:.88rem}
-.bookmarklet-guide li{position:relative;padding-left:1.5rem;counter-increment:guide}
-.bookmarklet-guide li::before{content:counter(guide);position:absolute;left:0;top:.08rem;width:1.1rem;height:1.1rem;border:1px solid var(--color-accent);border-radius:50%;color:var(--color-accent);font:700 .68rem/1rem var(--font-mono);text-align:center}
-.bookmarklet-list{border-top:1px solid var(--color-border)}
-.bookmarklet-item{display:grid;grid-template-columns:2.5rem minmax(0,1fr) auto;gap:1rem;padding:1.45rem 0;border-bottom:1px solid var(--color-border);align-items:start}
-.bookmarklet-number{padding-top:.18rem;color:var(--color-text-muted);font:600 .72rem/1 var(--font-mono)}
-.bookmarklet-copy h2{margin:0 0 .35rem;font-size:1.08rem;line-height:1.35}
-.bookmarklet-copy p{margin:0;color:var(--color-text-soft);font-size:.94rem;line-height:1.65}
-.bookmarklet-copy small{display:block;margin-top:.38rem;color:var(--color-text-muted);font-size:.78rem;line-height:1.55}
-.bookmarklet-actions{display:flex;align-items:center;gap:.55rem;padding-top:.05rem}
-.bookmarklet-drag,.bookmarklet-copy-button{white-space:nowrap;border-radius:6px;font:600 .78rem/1 var(--font-body);cursor:grab}
-.bookmarklet-drag{display:inline-flex;align-items:center;padding:.68rem .8rem;background:var(--color-accent);color:#fff;text-decoration:none;box-shadow:0 2px 0 color-mix(in srgb,var(--color-accent) 75%,#000)}
-.bookmarklet-drag::before{content:"⠿";margin-right:.38rem;font-size:1rem;opacity:.72}
+.bookmarklet-hero{position:relative;isolation:isolate;overflow:hidden;margin:.5rem 0 1.5rem;padding:2.5rem 2.25rem;border:1px solid var(--color-border);border-radius:var(--radius-lg);background:color-mix(in srgb,var(--color-card-bg) 78%,var(--color-bg));box-shadow:0 14px 40px color-mix(in srgb,var(--color-text) 6%,transparent)}
+.bookmarklet-hero::after{content:"";position:absolute;z-index:-1;right:-3rem;bottom:-5rem;width:14rem;height:14rem;border:2.8rem solid color-mix(in srgb,var(--color-accent) 7%,transparent);border-radius:50%}
+.bookmarklet-kicker{display:flex;align-items:center;gap:.5rem;margin:0 0 1.15rem;color:var(--color-accent);font-family:var(--font-mono);font-size:.68rem;font-weight:700;letter-spacing:.14em}
+.bookmarklet-kicker span{width:1.6rem;height:1px;background:currentColor}
+.bookmarklet-hero h1{max-width:26rem;margin:0 0 .8rem;font-size:clamp(2.15rem,7vw,3.3rem);font-weight:750;line-height:1.08;letter-spacing:-.065em}
+.bookmarklet-lead{max-width:32rem;margin:0;color:var(--color-text-soft);font-size:1rem;line-height:1.75}
+.bookmarklet-privacy{margin:1.4rem 0 0;color:var(--color-text-muted);font-size:.76rem;letter-spacing:.02em}
+.bookmarklet-guide{display:grid;grid-template-columns:7.5rem 1fr;gap:1.5rem;margin:0 0 3.25rem;padding:1.15rem 1.3rem;border:1px solid color-mix(in srgb,var(--color-border) 78%,transparent);border-radius:var(--radius);background:color-mix(in srgb,var(--color-bg-soft) 42%,var(--color-bg))}
+.bookmarklet-guide-heading{display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--color-border)}
+.bookmarklet-guide-label{font-size:.88rem;font-weight:700}
+.bookmarklet-guide-heading small{margin-top:.08rem;color:var(--color-text-muted);font-size:.68rem}
+.bookmarklet-guide ol{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:0;padding:0;counter-reset:guide;list-style:none}
+.bookmarklet-guide li{position:relative;display:flex;flex-direction:column;min-width:0;padding-left:1.65rem;counter-increment:guide}
+.bookmarklet-guide li::before{content:"0" counter(guide);position:absolute;left:0;top:.18rem;color:var(--color-accent);font:700 .62rem/1 var(--font-mono)}
+.bookmarklet-guide strong{font-size:.82rem;line-height:1.4}
+.bookmarklet-guide li span{color:var(--color-text-muted);font-size:.72rem;line-height:1.45}
+.bookmarklet-list-heading{display:flex;align-items:end;justify-content:space-between;margin-bottom:1rem}
+.bookmarklet-list-heading p{margin:0 0 .22rem;color:var(--color-accent);font:700 .64rem/1 var(--font-mono);letter-spacing:.13em}
+.bookmarklet-list-heading h2{margin:0;font-size:1.35rem;line-height:1.3;letter-spacing:-.025em}
+.bookmarklet-list-heading>span{padding-bottom:.15rem;color:var(--color-text-muted);font:.7rem/1 var(--font-mono)}
+.bookmarklet-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.85rem}
+.bookmarklet-item{display:flex;flex-direction:column;min-height:18.2rem;padding:1.25rem;border:1px solid color-mix(in srgb,var(--color-border) 85%,transparent);border-radius:var(--radius-lg);background:color-mix(in srgb,var(--color-card-bg) 54%,var(--color-bg));transition:border-color .18s,transform .18s,box-shadow .18s}
+.bookmarklet-item:hover{transform:translateY(-2px);border-color:color-mix(in srgb,var(--color-accent) 38%,var(--color-border));box-shadow:0 10px 28px color-mix(in srgb,var(--color-text) 7%,transparent)}
+.bookmarklet-item-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.2rem}
+.bookmarklet-item-top>span{color:var(--color-text-muted);font:.62rem/1 var(--font-mono);letter-spacing:.07em}
+.bookmarklet-number{display:grid;width:1.8rem;height:1.8rem;place-items:center;border:1px solid var(--color-border);border-radius:50%;color:var(--color-accent);font:700 .63rem/1 var(--font-mono)}
+.bookmarklet-copy{display:flex;flex:1;flex-direction:column}
+.bookmarklet-copy h2{margin:0 0 .5rem;font-size:1.08rem;line-height:1.35;letter-spacing:-.015em}
+.bookmarklet-copy p{margin:0;color:var(--color-text-soft);font-size:.86rem;line-height:1.68}
+.bookmarklet-copy small{display:flex;align-items:flex-start;gap:.4rem;margin-top:.65rem;color:var(--color-text-muted);font-size:.71rem;line-height:1.55}
+.bookmarklet-copy small span{display:grid;flex:0 0 auto;width:.9rem;height:.9rem;margin-top:.08rem;place-items:center;border:1px solid currentColor;border-radius:50%;font:600 .58rem/1 var(--font-mono)}
+.bookmarklet-actions{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.45rem;margin-top:1.15rem;padding-top:.9rem;border-top:1px solid color-mix(in srgb,var(--color-border) 72%,transparent)}
+.bookmarklet-drag,.bookmarklet-copy-button{min-height:2.35rem;white-space:nowrap;border-radius:6px;font:650 .72rem/1 var(--font-body)}
+.bookmarklet-drag{display:inline-flex;align-items:center;justify-content:center;overflow:hidden;padding:.7rem .75rem;background:var(--color-accent);color:#fff;text-decoration:none;box-shadow:inset 0 -1px 0 color-mix(in srgb,var(--color-accent) 72%,#000);cursor:grab;transition:background .15s,transform .15s}
+.bookmarklet-drag span{margin-right:.35rem;font-size:.9rem;opacity:.7}
 .bookmarklet-drag:hover{background:var(--color-accent-hover);color:#fff;text-decoration:none}
-.bookmarklet-drag:active{cursor:grabbing;transform:translateY(1px);box-shadow:none}
-.bookmarklet-copy-button{padding:.64rem .72rem;border:1px solid var(--color-border);background:transparent;color:var(--color-text-muted);cursor:pointer}
-.bookmarklet-copy-button:hover{border-color:var(--color-accent);color:var(--color-accent)}
-.bookmarklet-caveat{margin-top:3rem;padding-top:1.5rem;border-top:3px double var(--color-border)}
-.bookmarklet-caveat h2{margin:0 0 .75rem;font-size:1rem}
-.bookmarklet-caveat p{margin:0 0 .8rem;color:var(--color-text-soft);font-size:.9rem;line-height:1.75}
+.bookmarklet-drag:active{transform:translateY(1px);box-shadow:none;cursor:grabbing}
+.bookmarklet-copy-button{padding:.65rem .7rem;border:1px solid var(--color-border);background:var(--color-bg);color:var(--color-text-muted);cursor:pointer;transition:border-color .15s,color .15s,background .15s}
+.bookmarklet-copy-button:hover{border-color:var(--color-accent);background:color-mix(in srgb,var(--color-accent) 6%,var(--color-bg));color:var(--color-accent)}
+.bookmarklet-drag:focus-visible,.bookmarklet-copy-button:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+.bookmarklet-caveat{margin-top:3.5rem;padding:1.35rem 1.5rem;border-left:3px solid var(--color-accent);border-radius:0 var(--radius) var(--radius) 0;background:color-mix(in srgb,var(--color-bg-soft) 38%,var(--color-bg))}
+.bookmarklet-caveat h2{margin:0 0 .55rem;font-size:.95rem}
+.bookmarklet-caveat p{margin:0 0 .65rem;color:var(--color-text-soft);font-size:.82rem;line-height:1.72}
+.bookmarklet-caveat p:last-child{margin-bottom:0}
 .bookmarklet-caveat a{text-decoration:underline;text-underline-offset:3px}
-.bookmarklet-toast{position:fixed;left:50%;bottom:1.5rem;z-index:1000;transform:translate(-50%,1rem);padding:.6rem .9rem;border-radius:7px;background:var(--color-text);color:var(--color-bg);font-size:.82rem;opacity:0;pointer-events:none;transition:opacity .18s,transform .18s}
+.bookmarklet-toast{position:fixed;left:50%;bottom:1.5rem;z-index:1000;transform:translate(-50%,1rem);padding:.65rem .95rem;border:1px solid color-mix(in srgb,var(--color-bg) 16%,transparent);border-radius:99px;background:var(--color-text);box-shadow:var(--shadow-md);color:var(--color-bg);font-size:.78rem;opacity:0;pointer-events:none;transition:opacity .18s,transform .18s}
 .bookmarklet-toast.show{opacity:1;transform:translate(-50%,0)}
-@media(max-width:680px){.bookmarklet-hero h1{font-size:1.8rem}.bookmarklet-guide{grid-template-columns:1fr;gap:.7rem}.bookmarklet-guide ol{display:grid;gap:.55rem}.bookmarklet-item{grid-template-columns:2rem 1fr}.bookmarklet-actions{grid-column:2;flex-wrap:wrap}.bookmarklet-drag{cursor:pointer}.bookmarklet-copy-button{display:inline-flex}}
+@media(max-width:680px){.bookmarklet-hero{padding:2rem 1.35rem}.bookmarklet-guide{grid-template-columns:1fr;gap:.85rem}.bookmarklet-guide-heading{border-right:0}.bookmarklet-guide ol{gap:.4rem}.bookmarklet-guide li{padding-left:0}.bookmarklet-guide li::before{position:static;margin-bottom:.3rem}.bookmarklet-list{grid-template-columns:1fr}.bookmarklet-item{min-height:0}.bookmarklet-drag{cursor:pointer}}
+@media(max-width:390px){.bookmarklet-guide ol{grid-template-columns:1fr;gap:.65rem}.bookmarklet-guide li{padding-left:1.65rem}.bookmarklet-guide li::before{position:absolute;margin:0}.bookmarklet-actions{grid-template-columns:1fr}.bookmarklet-copy-button{width:100%}}
+@media(prefers-reduced-motion:reduce){.bookmarklet-item,.bookmarklet-drag,.bookmarklet-copy-button,.bookmarklet-toast{transition:none}.bookmarklet-item:hover{transform:none}}
 @media print{.bookmarklet-actions,.bookmarklet-toast{display:none}.bookmarklet-item{break-inside:avoid}}
 </style>
 
