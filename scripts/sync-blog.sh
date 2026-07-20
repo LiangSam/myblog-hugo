@@ -8,7 +8,7 @@ REPO_DIR="${BLOG_DIR:-$HOME/HUGO}"
 LOG_FILE="${HUGO_SYNC_LOG:-/tmp/hugo-sync.log}"
 
 git_push() {
-  git -c core.sshCommand="ssh -o ConnectTimeout=10 -o ServerAliveInterval=5 -o ServerAliveCountMax=2" push
+  git -c core.sshCommand="ssh -o ConnectTimeout=10 -o ServerAliveInterval=5 -o ServerAliveCountMax=2" push origin main
 }
 
 run_sync() {
@@ -18,6 +18,12 @@ run_sync() {
     echo "找不到文件夹：$REPO_DIR"
     return 1
   }
+
+  current_branch="$(git branch --show-current)"
+  if [ "$current_branch" != "main" ]; then
+    echo "当前分支是 $current_branch，请先切换到 main"
+    return 1
+  fi
 
   if ! command -v hugo >/dev/null 2>&1; then
     echo "找不到 hugo 命令"
