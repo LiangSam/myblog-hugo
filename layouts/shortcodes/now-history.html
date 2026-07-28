@@ -1,0 +1,14 @@
+{{- $date := .Get "date" -}}
+{{- $title := .Get "title" -}}
+{{- $parsedDate := time.AsTime $date -}}
+<details class="now-history-entry">
+  <summary class="now-history-summary">
+    <time class="now-history-date" datetime="{{ $date }}">{{ $parsedDate.Format "2006 年 1 月 2 日" }}</time>
+    {{- with $title }}
+      <span class="now-history-title">{{ . }}</span>
+    {{- end }}
+  </summary>
+  <div class="now-history-content">
+    {{- .Page.RenderString (dict "display" "block") .Inner -}}
+  </div>
+</details>
