@@ -5,12 +5,16 @@ set -eu
 blog_dir="${NEW_BLOG_DIR:-/Users/bob/HUGO/content/blog}"
 today="$(date +%Y-%m-%d)"
 requested_title="${1:-}"
-filename_title="$(printf '%s' "$requested_title" | tr '\r\n' '  ' | sed -E 's/^[[:space:]]+//; s/[[:space:]]+$//; s#[/:]#-#g; s/[[:space:]]+/ /g')"
+post_title="$(printf '%s' "$requested_title" | tr '\r\n' '  ' | sed -E 's/^[[:space:]]+//; s/[[:space:]]+$//; s/[[:space:]]+/ /g')"
+filename_title="$(printf '%s' "$post_title" | sed -E 's#[/:]#-#g')"
 
 if [[ -n "$filename_title" ]]; then
   post_path="${blog_dir}/${today}-${filename_title}.md"
+  yaml_title="$(printf '%s' "$post_title" | sed "s/'/''/g")"
+  title_line="title: '${yaml_title}'"
 else
   post_path="${blog_dir}/${today}.md"
+  title_line='title: '
 fi
 
 mkdir -p "$blog_dir"
@@ -18,7 +22,7 @@ mkdir -p "$blog_dir"
 if [[ ! -e "$post_path" ]]; then
   printf '%s\n' \
     '---' \
-    'title: ' \
+    "$title_line" \
     "date: ${today}" \
     'tags:' \
     '  - ' \
