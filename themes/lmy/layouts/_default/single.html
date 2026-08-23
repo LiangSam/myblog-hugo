@@ -74,19 +74,6 @@
 {{ end }}
 {{ end }}
 
-{{/* 无需 GitHub 登录的邮件留言入口 */}}
-{{ if eq .Section "blog" }}
-{{ with .Site.Params.commentEmail }}
-{{ $subject := printf "关于《%s》" $.Title | urlquery }}
-{{ $body := printf "你好，\n\n我想聊聊这篇文章：\n%s\n\n" $.Permalink | urlquery }}
-{{ $mailto := printf "mailto:%s?subject=%s&body=%s" . $subject $body | safeURL }}
-<div class="email-comment">
-  <span>不方便使用 GitHub？</span>
-  <a href="{{ $mailto }}">通过邮件留言</a>
-</div>
-{{ end }}
-{{ end }}
-
 {{/* Giscus 评论 */}}
 {{ with .Site.Params.giscus }}{{ if .repoId }}
 <script src="https://giscus.app/client.js"
