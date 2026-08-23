@@ -69,6 +69,7 @@ enableRobotsTXT = true
   avatar = "images/favicon.png"
   title = "梁某银的博客"
   dateFormat = "2006-01-02"
+  commentEmail = "comment@liangmouyin.com"
 
 # Giscus 评论配置
 [params.giscus]

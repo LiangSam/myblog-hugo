@@ -243,7 +243,7 @@ main {
 .post-author { display: none; font-style: normal; }
 
 @media print {
-  .site-header, .toc-sidebar, .post-nav, .site-footer, .giscus, .giscus-frame { display: none !important; }
+  .site-header, .toc-sidebar, .post-nav, .email-comment, .site-footer, .giscus, .giscus-frame { display: none !important; }
   .post-author { display: inline; font-size: 0.9rem; color: #666; }
   .post-content img { max-width: 100%; break-inside: avoid; }
   body { background: white; color: black; }
@@ -1194,6 +1194,31 @@ content { display: block; }
 .post-nav-title {
   color: inherit;
   line-height: 1.4;
+}
+
+/* === Email comment alternative === */
+.email-comment {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 2rem 0;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-bg-soft);
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+.email-comment a {
+  flex: 0 0 auto;
+  color: var(--color-link);
+  font-weight: 500;
+  text-decoration: none;
+}
+.email-comment a:hover { text-decoration: underline; }
+@media (max-width: 480px) {
+  .email-comment { align-items: flex-start; flex-direction: column; gap: 0.35rem; }
 }
 
 /* === Archive tags === */
