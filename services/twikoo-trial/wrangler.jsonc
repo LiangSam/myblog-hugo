@@ -1,0 +1,31 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "lmy-comments-trial",
+  "main": "src/index.js",
+  "compatibility_date": "2026-03-02",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "workers_dev": true,
+  "assets": {
+    "directory": "./public"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "lmy-comments-trial",
+      "database_id": "8c46e0f9-a76d-491c-bb9f-1bbddee06315"
+    }
+  ],
+  "alias": {
+    "jsdom": "./src/unused.cjs",
+    "tencentcloud-sdk-nodejs": "./src/unused.cjs",
+    "nodemailer": "./src/unused.cjs"
+  },
+  "observability": {
+    "enabled": false
+  },
+  "dev": {
+    "port": 8787
+  }
+}
