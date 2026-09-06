@@ -4,7 +4,7 @@ slug = "links"
 draft = false
 +++
 
-这些是我常读、常看、偶尔回访的地方。它们不是交换名片的友链，更像从这棵树旁边伸出去的枝条。
+我常读、常看、偶尔回访的地方，非友链。
 
 ## 博客
 
@@ -13,3 +13,4 @@ draft = false
 - [#UNTAG](https://utgd.net/)
 - [Ratfactor](https://ratfactor.com/)
 - [虹线](https://1q43.blog/)
+- [胡拉图说](https://hulatu.com)
