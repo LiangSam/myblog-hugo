@@ -75,6 +75,7 @@
 {{ end }}
 
 {{/* Giscus 评论 */}}
+{{ if ne .Params.comments false }}
 {{ with .Site.Params.giscus }}{{ if .repoId }}
 <script src="https://giscus.app/client.js"
         data-repo="{{ .repo }}"
@@ -115,6 +116,7 @@
   obs.observe(document.documentElement, { attributes: true });
 })();
 </script>
+{{ end }}
 
 {{ if strings.Contains .TableOfContents "<li>" }}
 <script>
