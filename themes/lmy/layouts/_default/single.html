@@ -9,11 +9,9 @@
 {{ end }}
 
 <article>
-  <div class="post-header">
+  <div class="post-header{{ if ne .Section "blog" }} page-header{{ end }}">
     <h1 class="post-title-main">{{ .Title }}</h1>
-    {{ if ne .Section "blog" }}
-      {{ with .Description }}<p>{{ $.RenderString . }}</p>{{ end }}
-    {{ end }}
+    {{ if eq .Section "blog" }}
     <div class="post-meta">
       {{ if not .Date.IsZero }}<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>{{ end }}
       <address class="post-author" rel="author">{{ .Site.Params.author }}</address>
@@ -25,6 +23,21 @@
       </span>
       {{ end }}
     </div>
+    {{ else }}
+      {{ if or .Params.created .Params.updated }}
+      <div class="page-dates">
+        {{ with .Params.created }}
+          {{ $date := time.Format "2006-01-02" . }}
+          <div>创建于：<time datetime="{{ $date }}">{{ $date }}</time></div>
+        {{ end }}
+        {{ with .Params.updated }}
+          {{ $date := time.Format "2006-01-02" . }}
+          <div>更新于：<time datetime="{{ $date }}">{{ $date }}</time></div>
+        {{ end }}
+      </div>
+      {{ end }}
+      {{ with .Description }}<p class="page-description">{{ $.RenderString . }}</p>{{ end }}
+    {{ end }}
   </div>
 
   <div class="post-content{{ if eq .Section "blog" }} post-content-article{{ end }}">

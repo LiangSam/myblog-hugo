@@ -2,14 +2,13 @@
 title = "Now"
 slug = "now"
 comments = false
-created = "" # 创建日期待确认
+created = 2025-07-04
 updated = 2026-09-09
-description = "该页面由 [Derek Sivers 的 nownownow.com](https://nownownow.com/about) 项目启发，不定期更新，主要聊聊我的生活近况。"
 +++
 
 **2026-09-09**：调整博客，新增 [Now 的历史页面](/now-history/)，这样就不怕没有存档，简直完美。之前觉得写 Now 太重，要加图，加一堆东西，目前就纯文字吧，想加图时候再加。
 
-最近读了《人生4千個禮拜》和《13·67》，等我抽空把书评写了（如果你看到这里时左边还不是可点击的链接，就说明我还没写），我很喜欢 Oliver Burkeman 关于时间有限性的论述，而后又猛地扎进陈浩基所塑造的香港历史，无比惬意。
+最近读了[《人生4千個禮拜》](/blog/four-thousand-weeks/)和《13·67》，等我抽空把书评写了（如果你看到这里时书名号还不是可点击的链接，就说明我还没写），我很喜欢 Oliver Burkeman 关于时间有限性的论述，而后又猛地扎进陈浩基所塑造的香港历史，无比惬意。
 
 另外受到 [Ratfactor 的启发](https://ratfactor.com/cards/personal-website)，博客也该视为个人网站，所以准备一些子页面，我想可以把过去同类主题的文章汇总在一起，然后再编辑它，有点专题的意思，比如 [Books](/books/)、写作、深圳、macOS、AI，想想就挺有意思。
 
@@ -19,4 +18,4 @@ description = "该页面由 [Derek Sivers 的 nownownow.com](https://nownownow.c
 
 [查看过去的 Now](/now-history/)
 
-这个页面由 [Derek Sivers 的 nownownow.com](https://nownownow.com/about) 项目启发，不定期更新~
+该页面由 [Derek Sivers 的 nownownow.com](https://nownownow.com/about) 项目启发，不定期更新，主要聊聊我的生活近况。
