@@ -1,4 +1,4 @@
 ---
 title: "Essentials"
-description: "写得还不赖、自己也满意的文章，像是从沙里淘出来的那几粒。"
+description: "essentials：名词，必需品。在这里，指的是我写过、并且觉得还不错的文章，挑出来推荐给你。谁让我日更呢。"
 ---

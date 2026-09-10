@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="list-header">
   <h1>{{ .Title }}</h1>
-  <p>从所有文章里挑出来的，我觉得真正值得一读的那些。</p>
+  {{ with .Description }}<p>{{ $.RenderString . }}</p>{{ end }}
 </div>
 
 {{ $featured := where .Site.RegularPages ".Params.featured" true }}

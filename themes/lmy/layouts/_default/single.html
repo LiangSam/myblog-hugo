@@ -11,6 +11,9 @@
 <article>
   <div class="post-header">
     <h1 class="post-title-main">{{ .Title }}</h1>
+    {{ if ne .Section "blog" }}
+      {{ with .Description }}<p>{{ $.RenderString . }}</p>{{ end }}
+    {{ end }}
     <div class="post-meta">
       {{ if not .Date.IsZero }}<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>{{ end }}
       <address class="post-author" rel="author">{{ .Site.Params.author }}</address>

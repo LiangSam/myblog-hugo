@@ -4,6 +4,7 @@ slug = "now"
 comments = false
 created = "" # 创建日期待确认
 updated = 2026-09-09
+description = "该页面由 [Derek Sivers 的 nownownow.com](https://nownownow.com/about) 项目启发，不定期更新，主要聊聊我的生活近况。"
 +++
 
 **2026-09-09**：调整博客，新增 [Now 的历史页面](/now-history/)，这样就不怕没有存档，简直完美。之前觉得写 Now 太重，要加图，加一堆东西，目前就纯文字吧，想加图时候再加。

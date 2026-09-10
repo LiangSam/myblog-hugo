@@ -50,9 +50,9 @@ title = "About"
 	- 手机：[微信输入法](https://z.weixin.qq.com/) — 够用
 - 密码管理：[Bitwarden](https://bitwarden.com/) — 免费开源，足够好用
 - AI（堪称我的四大将）
-	- Google Gemini：曾白嫖一年会员，所以好用
-	- ChatGPT：离开 Gemini 后，发现外面并没有下雨，画图的风格很好，免费版够用，虽然想开会员，但目前还是算了
-	- Claude：2026 年 3 月开会员，发现对话非常够味，一点也不惯着我，甚至还会提问引导我一步步找到答案；客户端的 Claude Code 挺好用，我用它重新设计了博客
+	- ~~Google Gemini：曾白嫖一年会员，所以好用~~（会员已过期）
+	- ChatGPT：离开 Gemini 后，发现外面并没有下雨，画图的风格很好，免费版够用，虽然想开会员，但目前还是算了（已在 [2026 年 4 月开会员](https://liangmouyin.com/blog/subscribe-to-openai-plus-2026/)，续到现在 2026-09-10）
+	- ~~Claude：2026 年 3 月开会员，发现对话非常够味，一点也不惯着我，甚至还会提问引导我一步步找到答案；客户端的 Claude Code 挺好用，我用它重新设计了博客~~（已被A\封号）
 	- 豆包：没想到吧，生活中的小问题都能找它解决，诸如发烧要不要吃药，养鱼怎么换水，路边是什么花……
 - RSS：[NetNewsWire](https://netnewswire.com) — 怎么会有如此简洁好用还免费的 RSS 工具？唯需注意的是，RSS 虽好，不可贪多，否则一堆 Unread 也会让人无从下嘴
 
