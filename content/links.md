@@ -2,9 +2,8 @@
 title = "旁枝"
 slug = "links"
 draft = false
+description = "我常读、常看、偶尔回访的地方，非友链。"
 +++
-
-我常读、常看、偶尔回访的地方，非友链。
 
 ## 博客
 
