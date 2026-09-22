@@ -4,6 +4,7 @@ url = "/writing/"
 created = 2026-09-22
 updated = 2026-09-22
 comments = false
+dated_lists = true
 +++
 
 这里放一些关于写作的想法、用过的方法，以及持续写下去的经历。

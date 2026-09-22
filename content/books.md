@@ -4,6 +4,7 @@ url = "/books/"
 created = 2026-09-09
 updated = 2026-09-16
 comments = false
+dated_lists = true
 +++
 
 目前写过不少阅读和书籍相关的文章，列在这里会比较清晰，后面再不断补充我新的想法，再去验证之，也许将来能截取一两段拓展为新的文章。

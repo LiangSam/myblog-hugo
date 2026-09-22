@@ -4,6 +4,7 @@ url = "/shenzhen/"
 created = 2026-09-22
 updated = 2026-09-22
 comments = false
+dated_lists = true
 +++
 
 这里收集我在深圳生活的记录：去过的地方、遇到的人，以及租房、搬家和日常出行。
