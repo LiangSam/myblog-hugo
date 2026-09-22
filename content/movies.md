@@ -4,6 +4,7 @@ url = "/movies/"
 created = 2026-09-22
 updated = 2026-09-22
 comments = false
+dated_lists = true
 +++
 
 这里放一些和电影有关的文章，以及看完电影后留下的感想。

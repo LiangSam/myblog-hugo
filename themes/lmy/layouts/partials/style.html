@@ -609,6 +609,16 @@ main {
 .post-content ul,
 .post-content ol { margin: 0 0 1.2rem; padding-left: 1.75rem; }
 .post-content li { margin-bottom: 0.3rem; }
+.post-content .dated-list-item {
+  display: grid;
+  grid-template-columns: 10ch minmax(0, 1fr);
+  column-gap: 1rem;
+  text-align: left;
+  font-variant-numeric: tabular-nums;
+}
+.dated-list-item time { white-space: nowrap; }
+.dated-list-text { min-width: 0; overflow-wrap: anywhere; }
+.post-content ul:has(> .dated-list-item) { padding-left: 0; }
 .post-content table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
 .post-content th,
 .post-content td { padding: 0.5rem 0.75rem; border: 1px solid var(--color-border); text-align: left; }
