@@ -2,8 +2,17 @@
 title = "Home"
 +++
 
-我是梁某银。每晚写一篇，记录工具、生活和自我成长。
+我是梁某银，欢迎来到我的个人网站。我现在每晚写一篇文章，写生活小事、读过的书、用过的工具，也可能什么都写点。
 
-近期施工：[小书签](/bookmarklets/) · [Books](/books/) · [Movies](/movies/) · [Writing](/writing/) · [Shenzhen](/shenzhen/)
+博客已经有八百多篇文章，部分旧文只怕连我自己都没回顾过，想找时也不容易找到。2026 年 9 月，我开始把相关内容整理到几个页面，你可以按兴趣阅读：
 
-[即刻](https://okjk.co/0P62E1) · [微博](https://weibo.com/u/2774785564) · [RSS](/index.xml) · [关于](/about)
+- [书籍](/books/)：或许是一份读书记录，还有些关于买书、阅读和电纸书的讨论。
+- [电影](/movies/)：一些看过的电影，有好有坏。
+- [写作](/writing/)：关于写作的写作，包括怎么写、为什么写。大多从个人经验出发，理论性的讨论不多。
+- [深圳](/shenzhen/)：我现在住在深圳，在这里记录租房、搬家、四处走走，以及日常遇到的人和事。
+
+第一次来，可以看看[精选文章](/essentials/)；想了解我，可以看看[近况](/now/)和[关于](/about/)。[旁枝](/links/)里放着一些其他网站，也欢迎通过 [RSS](/index.xml) 订阅本站。
+
+我的小工具：[小书签](/bookmarklets/) · [塔罗牌](https://tarot.liangmouyin.com) · [深港天气看板](https://weather.liangmouyin.com)
+
+其他地方：[即刻](https://okjk.co/0P62E1) · [微博](https://weibo.com/u/2774785564)
