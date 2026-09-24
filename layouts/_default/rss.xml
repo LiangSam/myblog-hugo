@@ -2,7 +2,7 @@
   <channel>
     <title>{{ if .IsHome }}梁某银{{ else }}{{ .Title }} - 梁某银{{ end }}</title>
     <link>{{ .Permalink }}</link>
-    <description>Recent content on {{ .Site.Title }}</description>
+    <description>{{ .Site.Title }}的最新文章</description>
     <generator>Hugo -- gohugo.io</generator>
     {{ with .Site.LanguageCode }}<language>{{.}}</language>{{end}}
     {{ with .Site.Copyright }}<copyright>{{.}}</copyright>{{end}}
