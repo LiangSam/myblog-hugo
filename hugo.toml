@@ -2,7 +2,7 @@
 # 基础配置 (Base Configuration)
 # ============================================================
 baseURL = "https://liangmouyin.com"
-title = "梁某银的博客"
+title = "梁某银"
 author = "梁某银"
 copyright = "Copyright © 2023-2026, 梁某银"
 languageCode = "zh-CN"
@@ -67,7 +67,7 @@ enableRobotsTXT = true
   images = ["images/favicon.png"]
   author = "梁某银"
   avatar = "images/favicon.png"
-  title = "梁某银的博客"
+  title = "梁某银"
   dateFormat = "2006-01-02"
 
 # Giscus 评论配置
