@@ -21,8 +21,8 @@
   --color-code-bg: #e4edfb;
   --color-code-text: #0f4fa0;
   --color-code-border: #b0c8e8;
-  --color-blockquote-border: #7aa0cc;
-  --color-blockquote-bg: #e8f0fb;
+  --color-blockquote-border: #d8a125;
+  --color-blockquote-bg: #f2f3f5;
 {{ else }}
   /* -- Warm 配色（暖米色，默认） -- */
   --color-bg: #f8f8f6;
@@ -38,8 +38,8 @@
   --color-code-bg: #efeeeb;
   --color-code-text: #a84040;
   --color-code-border: #c8c7c5;
-  --color-blockquote-border: #c8c5c0;
-  --color-blockquote-bg: #f0efec;
+  --color-blockquote-border: #d8a125;
+  --color-blockquote-bg: #f0f0ef;
 {{ end }}
   --max-width: 720px;
   --header-height: 56px;
@@ -68,8 +68,8 @@
   --color-code-bg: #0d1a2d;
   --color-code-text: #79b2f0;
   --color-code-border: #1a3050;
-  --color-blockquote-border: #2a4565;
-  --color-blockquote-bg: #0d1a2d;
+  --color-blockquote-border: #aa801f;
+  --color-blockquote-bg: #24272d;
 {{ else }}
   /* -- Warm 深色 -- */
   --color-bg: #1f1f1e;
@@ -85,8 +85,8 @@
   --color-code-bg: #2c2420;
   --color-code-text: #e89070;
   --color-code-border: #3d3532;
-  --color-blockquote-border: #3d3a35;
-  --color-blockquote-bg: #272522;
+  --color-blockquote-border: #aa801f;
+  --color-blockquote-bg: #2d2d2d;
 {{ end }}
   --shadow-sm: 0 1px 4px rgba(0,0,0,0.25);
   --shadow-md: 0 4px 16px rgba(0,0,0,0.35);
@@ -567,12 +567,12 @@ main {
   margin-top: 0.15rem;
 }
 .post-content blockquote {
-  border-left: 3px solid var(--color-blockquote-border);
+  border-left: 2px solid var(--color-blockquote-border);
   margin: 1.5rem 0;
-  padding: 0.5rem 1.25rem;
+  padding: 0.8em 1em;
   color: var(--color-text-soft);
-  background: linear-gradient(to right, var(--color-blockquote-bg), transparent);
-  border-radius: 0;
+  background: var(--color-blockquote-bg);
+  border-radius: 0 4px 4px 0;
 }
 .post-content blockquote p { margin: 0; }
 .post-content pre {
@@ -650,12 +650,12 @@ main {
 .page-content a:hover { text-decoration: none; }
 .page-content img { border-radius: var(--radius); margin: 1.5rem auto; }
 .page-content blockquote {
-  border-left: 3px solid var(--color-blockquote-border);
+  border-left: 2px solid var(--color-blockquote-border);
   margin: 1.5rem 0;
-  padding: 0.5rem 1.25rem;
+  padding: 0.8em 1em;
   color: var(--color-text-soft);
-  background: linear-gradient(to right, var(--color-blockquote-bg), transparent);
-  border-radius: 0;
+  background: var(--color-blockquote-bg);
+  border-radius: 0 4px 4px 0;
 }
 .page-content blockquote p { margin: 0; }
 .page-content ul,
