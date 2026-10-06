@@ -15,4 +15,4 @@ title = "Home"
 
 我的小工具：[小书签](/bookmarklets/) · [塔罗牌](https://tarot.liangmouyin.com) · [深港天气看板](https://weather.liangmouyin.com)
 
-其他地方：[即刻](https://okjk.co/0P62E1) · [微博](https://weibo.com/u/2774785564)
+其他地方：[即刻](https://okjk.co/0P62E1) · [微博](https://weibo.com/u/2774785564) · [Telegram](https://t.me/liangmouyin)
