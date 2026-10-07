@@ -12,7 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger Cloudflare Pages Deploy
-        # 这里不需要复杂的配置，只需产生一个空的 commit 或者通过 API 触发
-        # 最简单的方法是利用 GitHub Actions 自身重新跑一遍部署
+        env:
+          CLOUDFLARE_PAGES_DEPLOY_HOOK: ${{ secrets.CLOUDFLARE_PAGES_DEPLOY_HOOK }}
         run: |
-          curl -X POST "https://api.cloudflare.com/client/v4/pages/webhooks/deploy_hooks/dee08b2e-228a-42c1-8e2e-6661759c3c4a"
+          test -n "$CLOUDFLARE_PAGES_DEPLOY_HOOK"
+          curl --fail --silent --show-error --request POST "$CLOUDFLARE_PAGES_DEPLOY_HOOK"
