@@ -18,12 +18,7 @@ title = "About"
 
 - [即刻](https://okjk.co/0P62E1)
 - [微博](https://weibo.com/u/2774785564)
-
-## 📰 信息源
-
-- [#UNTAG](https://utgd.net/)：比较喜欢的国内网站，一群人在分享效率生活、工具心得、方法论，为此我买了会员，以及大部分专栏
-- [Steph Ango](https://stephango.com/)：Obsidian CEO 的博客，文章简洁有力，没有废话
-- [螺莉莉的数据中心](https://roriri.one/)：希望有一天能写出这样的文章，[我留言问作者](https://roriri.one/2026/03/10/beijing-vomit)怎么能写得这么好，他说「因为痛过」
+- [邮箱](mailto:hello@liangmouyin.com)
 
 ## 🎵 喜欢的歌
 
