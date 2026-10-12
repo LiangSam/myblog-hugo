@@ -2,7 +2,7 @@
 title = "Books"
 url = "/books/"
 created = 2026-09-09
-updated = 2026-09-16
+updated = 2026-10-12
 comments = false
 dated_lists = true
 +++
@@ -23,6 +23,7 @@ dated_lists = true
 
 下面的日期为发表后的日期，读完时间可能稍早一些，但当时没有一一记录，所以就这样。其实还有不少书只读个开头或者没读完的，如果有就会标注一下，链接会直达我的博客文章。
 
+- 2026-10-09 [《长日将尽》](/blog/the-remains-of-the-day-review/) — [英]石黑一雄
 - 2026-09-16 [《13·67》](/blog/13-67-review) - 陈浩基
 - 2026-09-09 [《人生4千個禮拜》](/blog/four-thousand-weeks) - [英]Oliver Burkeman
 - 2026-06-05 [《失控的照护》](/blog/caregiving-out-of-control/) — 叶真中显
