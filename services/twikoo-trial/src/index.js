@@ -14,7 +14,7 @@ export default {
         return Response.json({code:1000,message:'请填写昵称，评论请控制在 2000 字以内。'});
       }
       if (['UPLOAD_IMAGE', 'EMAIL_TEST'].includes(event.event)) {
-        return Response.json({code:1000,message:'试用期间暂未启用图片上传和邮件通知。'});
+        return Response.json({code:1000,message:'暂未启用图片上传和邮件通知。'});
       }
     }
     const run = pending.then(() => upstream.fetch(request, env, ctx));
