@@ -14,8 +14,16 @@
   (function() {
     var media = window.matchMedia('(prefers-color-scheme: dark)');
 
+    function syncGiscus(theme) {
+      var frame = document.querySelector('iframe.giscus-frame');
+      if (frame) {
+        frame.contentWindow.postMessage({ giscus: { setConfig: { theme: theme } } }, 'https://giscus.app');
+      }
+    }
+
     function setTheme(theme) {
       document.documentElement.setAttribute('data-theme', theme);
+      syncGiscus(theme);
     }
 
     function systemTheme() {
