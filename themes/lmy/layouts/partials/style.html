@@ -247,7 +247,7 @@ main {
 .post-author { display: none; font-style: normal; }
 
 @media print {
-.site-header, .toc-sidebar, .post-nav, .site-footer, .comments-section { display: none !important; }
+  .site-header, .toc-sidebar, .post-nav, .site-footer, .giscus, .giscus-frame { display: none !important; }
   .post-author { display: inline; font-size: 0.9rem; color: #666; }
   .post-content img { max-width: 100%; break-inside: avoid; }
   body { background: white; color: black; }
@@ -1199,9 +1199,6 @@ content { display: block; }
   color: inherit;
   line-height: 1.4;
 }
-
-/* === Comments (Twikoo default styling) === */
-.comments-section { margin-top: 3rem; color: var(--color-text); }
 
 /* === Archive tags === */
 .archive-tags {

@@ -95,32 +95,48 @@
 {{ end }}
 {{ end }}
 
-{{/* Twikoo 评论（默认样式） */}}
+{{/* Giscus 评论 */}}
 {{ if ne .Params.comments false }}
-{{ with .Site.Params.twikoo }}
-<section class="comments-section">
-  <div id="tcomment" data-env-id="{{ .envId }}" data-script="{{ .script }}" data-path="{{ $.RelPermalink }}"></div>
-</section>
+{{ with .Site.Params.giscus }}{{ if .repoId }}
+<script src="https://giscus.app/client.js"
+        data-repo="{{ .repo }}"
+        data-repo-id="{{ .repoId }}"
+        data-category="{{ .category }}"
+        data-category-id="{{ .categoryId }}"
+        data-mapping="pathname"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        id="giscus-script"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+{{ end }}{{ end }}
+
 <script>
 (function(){
-  var el = document.getElementById('tcomment');
-  function showError() { el.textContent = '评论暂时无法加载。'; }
-  var script = document.createElement('script');
-  script.src = el.dataset.script;
-  script.onload = function() {
-    if (!window.twikoo) return showError();
-    Promise.resolve(window.twikoo.init({
-      envId: el.dataset.envId,
-      el: '#tcomment',
-      path: el.dataset.path,
-      lang: 'zh-CN'
-    })).catch(showError);
-  };
-  script.onerror = showError;
-  document.head.appendChild(script);
+  var s = document.getElementById('giscus-script');
+  if (!s) return;
+  var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  s.setAttribute('data-theme', isDark ? 'dark' : 'light');
+
+  var obs = new MutationObserver(function(mutations) {
+    mutations.forEach(function(m) {
+      if (m.attributeName !== 'data-theme') return;
+      var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+      var theme = dark ? 'dark' : 'light';
+      var frame = document.querySelector('iframe.giscus-frame');
+      if (frame) {
+        frame.contentWindow.postMessage({ giscus: { setConfig: { theme: theme } } }, 'https://giscus.app');
+      }
+    });
+  });
+  obs.observe(document.documentElement, { attributes: true });
 })();
 </script>
-{{ end }}
 {{ end }}
 
 {{ if strings.Contains .TableOfContents "<li>" }}
