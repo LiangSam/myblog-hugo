@@ -95,55 +95,17 @@
 {{ end }}
 {{ end }}
 
-{{/* Twikoo 评论 */}}
+{{/* Twikoo 评论（默认样式） */}}
 {{ if ne .Params.comments false }}
 {{ with .Site.Params.twikoo }}
-<section class="comments-section" aria-labelledby="comments-heading">
-  <h2 id="comments-heading" class="comments-heading">留言</h2>
-  <div class="comment-identity" hidden>
-    <span>以&nbsp;</span><button class="comment-identity-name" type="button" aria-label="修改昵称和邮箱"></button><span>&nbsp;留言</span>
-  </div>
-  <div id="tcomment" class="twikoo-comment" data-env-id="{{ .envId }}" data-script="{{ .script }}" data-path="{{ $.RelPermalink }}"></div>
+<section class="comments-section">
+  <div id="tcomment" data-env-id="{{ .envId }}" data-script="{{ .script }}" data-path="{{ $.RelPermalink }}"></div>
 </section>
 <script>
 (function(){
   var el = document.getElementById('tcomment');
-  var section = el.closest('.comments-section');
-  var identity = section.querySelector('.comment-identity');
-  var identityName = identity.querySelector('.comment-identity-name');
+  function showError() { el.textContent = '评论暂时无法加载。'; }
   var script = document.createElement('script');
-  function placeControls() {
-    section.querySelectorAll('.tk-comment .tk-tag.tk-tag-green').forEach(function(tag) {
-      if (tag.textContent.trim() === '博主') tag.textContent = '作者';
-    });
-    section.querySelectorAll('.tk-submit').forEach(function(form, index) {
-      var start = form.querySelector('.tk-row.actions .tk-row-actions-start');
-      var meta = form.querySelector('.tk-meta-input');
-      if (!start) return;
-      if (meta && meta.parentNode !== start) start.insertBefore(meta, start.firstChild);
-      if (index === 0) {
-        if (identity.parentNode !== start) start.insertBefore(identity, start.firstChild);
-        if (section.classList.contains('has-comment-identity')) identity.hidden = false;
-      }
-    });
-  }
-  new MutationObserver(placeControls).observe(section, { childList: true, subtree: true });
-  function showError() {
-    el.textContent = '评论暂时无法加载。';
-  }
-  try {
-    var saved = JSON.parse(localStorage.getItem('twikoo') || 'null');
-    if (saved && typeof saved.nick === 'string' && saved.nick.trim()) {
-      identityName.textContent = saved.nick.trim();
-      section.classList.add('has-comment-identity');
-    }
-  } catch (e) {}
-  identityName.addEventListener('click', function() {
-    section.classList.remove('has-comment-identity');
-    identity.hidden = true;
-    var input = section.querySelector('input[name="nick"]');
-    if (input) input.focus();
-  });
   script.src = el.dataset.script;
   script.onload = function() {
     if (!window.twikoo) return showError();
@@ -151,8 +113,7 @@
       envId: el.dataset.envId,
       el: '#tcomment',
       path: el.dataset.path,
-      lang: 'zh-CN',
-      placeholder: '写下评论…'
+      lang: 'zh-CN'
     })).catch(showError);
   };
   script.onerror = showError;
