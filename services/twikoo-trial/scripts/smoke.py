@@ -1,10 +1,15 @@
 """Verify an explicitly selected trial API; remove only comments created by this run."""
-import json, sys, subprocess, uuid
+import hashlib, json, sys, subprocess, uuid
 from pathlib import Path
 base = sys.argv[1]
-if base not in ('http://localhost:8787/api', 'https://lmy-comments-trial.suihantarot.workers.dev/api'):
+if base not in (
+    'http://localhost:8787/api',
+    'https://lmy-comments-trial.suihantarot.workers.dev/api',
+    'https://comment.liangmouyin.com/api',
+):
     raise SystemExit('Only the local or deployed trial API is allowed.')
 password = (Path(__file__).resolve().parent.parent / '.admin-password').read_text().strip()
+access_token = hashlib.md5(password.encode()).hexdigest()
 path = '/automated-test/' + uuid.uuid4().hex + '/'
 created = []
 def call(event, **kw):
@@ -18,6 +23,7 @@ def require(condition, label):
 try:
     require(call('GET_CONFIG')['config']['REQUIRED_FIELDS'] == 'nick', 'nickname is the only required identity field')
     require(call('COMMENT_GET_FOR_ADMIN', per=10, page=1)['code'] == 1024, 'anonymous admin access denied')
+    require(call('LOGIN', password=access_token).get('code') == 0, 'administrator login works')
     require(call('SET_PASSWORD', password='invalid-test-password')['code'] != 0, 'anonymous password replacement denied')
     require(call('UPLOAD_IMAGE')['code'] != 0, 'image upload disabled')
     require(call('COMMENT_SUBMIT', url=path, nick='', ua='Mozilla/5.0', comment='test')['code'] != 0, 'empty nickname rejected')
@@ -30,9 +36,9 @@ try:
     rows = call('COMMENT_GET', url=path)['data']
     require(len(rows)==1 and len(rows[0]['replies'])==1, 'parent and reply read back together')
     require(all(k not in rows[0] for k in ('mail','ip')), 'public response omits raw email and IP')
-    require(call('COMMENT_GET_FOR_ADMIN', per=10,page=1, accessToken=password).get('code')==0, 'administrator access works')
+    require(call('COMMENT_GET_FOR_ADMIN', per=10,page=1, accessToken=access_token).get('code')==0, 'administrator access works')
 finally:
     for comment_id in reversed(created):
-        require(call('COMMENT_DELETE_FOR_ADMIN', id=comment_id, accessToken=password).get('code')==0, 'own test comment deleted')
+        require(call('COMMENT_DELETE_FOR_ADMIN', id=comment_id, accessToken=access_token).get('code')==0, 'own test comment deleted')
 if created:
     require(call('COMMENT_GET',url=path).get('count')==0, 'test comments cleaned up')
