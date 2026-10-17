@@ -119,9 +119,27 @@
     up.setAttribute('aria-label', '赞成这条留言');
     down.setAttribute('aria-label', '反对这条留言');
     score.setAttribute('aria-live', 'polite');
-    function updateVotes() {
-      score.textContent = String(comment.voteScore || 0);
-      score.setAttribute('aria-label', `留言净票数 ${comment.voteScore || 0}`);
+    function updateVotes(previousScore = null) {
+      const nextScore = Number(comment.voteScore || 0);
+      score.classList.remove('is-rising', 'is-falling');
+      if (previousScore !== null && previousScore !== nextScore && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const oldValue = el('span', 'simple-comment-score-old', String(previousScore));
+        const newValue = el('span', 'simple-comment-score-new', String(nextScore));
+        oldValue.setAttribute('aria-hidden', 'true');
+        newValue.setAttribute('aria-hidden', 'true');
+        score.replaceChildren(oldValue, newValue);
+        score.classList.add(nextScore > previousScore ? 'is-rising' : 'is-falling');
+        const finish = () => {
+          if (!score.contains(newValue)) return;
+          score.classList.remove('is-rising', 'is-falling');
+          score.textContent = String(nextScore);
+        };
+        newValue.addEventListener('animationend', finish, { once: true });
+        window.setTimeout(finish, 300);
+      } else {
+        score.textContent = String(nextScore);
+      }
+      score.setAttribute('aria-label', `留言净票数 ${nextScore}`);
       up.setAttribute('aria-pressed', String(comment.viewerVote === 1));
       down.setAttribute('aria-pressed', String(comment.viewerVote === -1));
     }
@@ -137,9 +155,10 @@
         });
         const data = await result.json();
         if (!result.ok) throw new Error(data.error || '投票失败。');
+        const previousScore = Number(comment.voteScore || 0);
         comment.voteScore = data.voteScore;
         comment.viewerVote = data.viewerVote;
-        updateVotes();
+        updateVotes(previousScore);
       } catch (error) {
         voteError.textContent = error.message;
       } finally {
