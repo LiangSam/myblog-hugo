@@ -11,7 +11,7 @@ title = "Home"
 - [写作](/writing/)：关于写作的写作，包括怎么写、为什么写。大多从个人经验出发，理论性的讨论不多。
 - [深圳](/shenzhen/)：我现在住在深圳，在这里记录租房、搬家、四处走走，以及日常遇到的人和事。
 
-第一次来，可以看看[精选文章](/essentials/)；想了解我，可以看看[近况](/now/)和[关于](/about/)。[旁枝](/links/)里放着一些其他网站，也欢迎通过 [RSS](/index.xml) 订阅本站。
+第一次来，可以看看[精选文章](/essentials/)；想了解我，可以看看[近况](/now/)和[关于](/about/)。想随意聊聊，可以去[留言板](/guestbook/)；[旁枝](/links/)里放着一些其他网站，也欢迎通过 [RSS](/index.xml) 订阅本站。
 
 我的小工具：[小书签](/bookmarklets/) · [塔罗牌](https://tarot.liangmouyin.com) · [深港天气看板](https://weather.liangmouyin.com)
 
