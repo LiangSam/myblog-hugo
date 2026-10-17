@@ -1,0 +1,27 @@
+<section class="simple-comments" id="comments" data-api="{{ .Site.Params.simpleComments.api | default "https://comment.liangmouyin.com" }}" data-page="{{ .RelPermalink }}">
+  <div class="simple-comments-header">
+    <h2>留言 <span class="simple-comments-count" aria-live="polite"></span></h2>
+  </div>
+  <form class="simple-comments-form">
+    <label class="visually-hidden" for="simple-comment-body">写下评论</label>
+    <textarea id="simple-comment-body" name="body" maxlength="2000" placeholder="写下评论…" required></textarea>
+    <div class="simple-comments-actions">
+      <div class="simple-comments-identity">
+        <span class="simple-comments-as">以</span>
+        <button class="simple-comments-identity-toggle" type="button" aria-expanded="false">填写昵称</button>
+        <span class="simple-comments-as">留言</span>
+      </div>
+      <span class="simple-comments-replying" hidden></span>
+      <button class="simple-comments-send" type="submit">发送</button>
+    </div>
+    <div class="simple-comments-fields" hidden>
+      <label><span class="visually-hidden">昵称</span><input name="nickname" type="text" maxlength="40" autocomplete="nickname" placeholder="昵称" required></label>
+      <label><span class="visually-hidden">邮箱（选填）</span><input name="email" type="email" maxlength="254" autocomplete="email" placeholder="邮箱（选填）"></label>
+      <p>邮箱不会公开；填写后头像取自 <a href="https://gravatar.com/emails" target="_blank" rel="noopener noreferrer">Gravatar</a>。</p>
+    </div>
+    <input class="simple-comments-honey" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <p class="simple-comments-message" role="status" aria-live="polite"></p>
+  </form>
+  <div class="simple-comments-list" aria-live="polite"><p class="simple-comments-loading">正在读取留言…</p></div>
+</section>
+<script src="{{ "js/simple-comments.js" | relURL }}" defer></script>
