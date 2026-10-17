@@ -95,48 +95,9 @@
 {{ end }}
 {{ end }}
 
-{{/* Giscus 评论 */}}
+{{/* Comments: the simple service is shared by the blog and its local preview. */}}
 {{ if ne .Params.comments false }}
-{{ with .Site.Params.giscus }}{{ if .repoId }}
-<script src="https://giscus.app/client.js"
-        data-repo="{{ .repo }}"
-        data-repo-id="{{ .repoId }}"
-        data-category="{{ .category }}"
-        data-category-id="{{ .categoryId }}"
-        data-mapping="pathname"
-        data-strict="1"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="light"
-        id="giscus-script"
-        data-lang="zh-CN"
-        crossorigin="anonymous"
-        async>
-</script>
-{{ end }}{{ end }}
-
-<script>
-(function(){
-  var s = document.getElementById('giscus-script');
-  if (!s) return;
-  var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-  s.setAttribute('data-theme', isDark ? 'dark' : 'light');
-
-  var obs = new MutationObserver(function(mutations) {
-    mutations.forEach(function(m) {
-      if (m.attributeName !== 'data-theme') return;
-      var dark = document.documentElement.getAttribute('data-theme') === 'dark';
-      var theme = dark ? 'dark' : 'light';
-      var frame = document.querySelector('iframe.giscus-frame');
-      if (frame) {
-        frame.contentWindow.postMessage({ giscus: { setConfig: { theme: theme } } }, 'https://giscus.app');
-      }
-    });
-  });
-  obs.observe(document.documentElement, { attributes: true });
-})();
-</script>
+  {{ partial "comments.html" . }}
 {{ end }}
 
 {{ if strings.Contains .TableOfContents "<li>" }}

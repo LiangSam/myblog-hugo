@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>管理留言 · 梁某银</title>
+  <style>
+    :root { color-scheme: light dark; font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif; }
+    * { box-sizing: border-box; }
+    body { max-width: 760px; margin: 0 auto; padding: 2rem 1.1rem 5rem; background: #fff; color: #172238; line-height: 1.65; }
+    a { color: #245ba5; }
+    header { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid #d8dee8; padding-bottom: .9rem; margin-bottom: 2rem; }
+    header h1 { font-size: 1.3rem; margin: 0; }
+    h2 { font-size: 1.05rem; margin: 2rem 0 1rem; }
+    form { display: flex; gap: .5rem; max-width: 420px; }
+    input { min-width: 0; flex: 1; padding: .55rem .65rem; border: 1px solid #bbc6d5; border-radius: 5px; background: transparent; color: inherit; font: inherit; }
+    button { padding: .4rem .7rem; border: 1px solid #b9c7d9; border-radius: 5px; background: transparent; color: inherit; font: inherit; font-size: .82rem; cursor: pointer; }
+    button:hover { border-color: #245ba5; color: #245ba5; }
+    button.primary { background: #245ba5; color: white; border-color: #245ba5; }
+    button.danger { color: #a83b36; border-color: #dbbdbb; }
+    button:disabled { opacity: .5; cursor: wait; }
+    .muted, #status { color: #5f6f86; font-size: .84rem; }
+    #status { min-height: 1.5em; }
+    .item { border-top: 1px solid #e1e6ed; padding: 1rem 0 1.2rem; }
+    .item-head { display: flex; flex-wrap: wrap; gap: .5rem; align-items: baseline; font-size: .82rem; }
+    .item-head strong { color: #172238; }
+    .item-body { white-space: pre-wrap; overflow-wrap: anywhere; margin: .45rem 0 .7rem; font-size: .92rem; }
+    .item-actions { display: flex; gap: .45rem; flex-wrap: wrap; }
+    .reply-form { display: grid; gap: .55rem; max-width: none; margin-top: .8rem; }
+    .reply-form textarea { width: 100%; min-height: 6rem; padding: .6rem .7rem; border: 1px solid #bbc6d5; border-radius: 5px; background: transparent; color: inherit; font: inherit; resize: vertical; }
+    .reply-controls { display: flex; gap: .5rem; }
+    .reply-form .muted { margin: 0; }
+    .item.deleted { opacity: .55; }
+    .ban { display: flex; gap: .7rem; align-items: center; border-top: 1px solid #e1e6ed; padding: .6rem 0; }
+    code { color: #5f6f86; font-size: .82rem; }
+    [hidden] { display: none !important; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #0a1220; color: #cddaee; }
+      header, .item, .ban { border-color: #243449; }
+      input, button, .reply-form textarea { border-color: #405672; }
+      .item-head strong { color: #cddaee; }
+      .muted, #status, code { color: #8fa3c0; }
+    }
+  </style>
+</head>
+<body>
+  <header><h1>管理留言</h1><a href="/">返回博客</a></header>
+  <section id="login-section">
+    <p>输入管理员密码后，可回复、删除留言和封禁发言网络。</p>
+    <form id="login-form"><input type="password" name="password" placeholder="管理员密码" autocomplete="current-password" required><button class="primary">登录</button></form>
+  </section>
+  <section id="manage-section" hidden>
+    <button id="logout">退出管理</button>
+    <h2>已封禁的网络</h2>
+    <div id="bans"></div>
+    <h2>最近的留言</h2>
+    <div id="comments"></div>
+    <button id="more" hidden>加载更早的留言</button>
+  </section>
+  <p id="status" role="status" aria-live="polite"></p>
+  <script src="/js/simple-comments-admin.js" defer></script>
+</body>
+</html>
