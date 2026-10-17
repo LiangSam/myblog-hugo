@@ -39,7 +39,7 @@ npx wrangler d1 execute lmy-comments-trial --local --file .legacy-import.sql
 
 ## 新留言 Telegram 通知
 
-读者（非管理员）发表新留言或回复成功后，Worker 用 `ctx.waitUntil` 在后台调用 Telegram Bot API，发送昵称、约 200 字摘要、页面链接和管理页链接。未设置 `TELEGRAM_BOT_TOKEN` 或 `TELEGRAM_CHAT_ID` 时不发送；Telegram 出错只记录日志，不影响留言提交。
+读者（非管理员）发表新留言或回复成功后，Worker 用 `ctx.waitUntil` 在后台调用 Telegram Bot API，发送一条简短消息：`<b>昵称</b> 留言了：摘要`（回复为“回复了”），下一行是以文章标题为文字、指向页面 `#comments` 的链接，不显示链接预览。标题取自页面的 `og:title`（或 `<title>`），读取失败时显示页面路径。未设置 `TELEGRAM_BOT_TOKEN` 或 `TELEGRAM_CHAT_ID` 时不发送；Telegram 出错只记录日志，不影响留言提交。
 
 两项都是 Worker secret，不写入仓库或 `wrangler.jsonc`。在本目录运行：
 
@@ -53,9 +53,9 @@ npx wrangler deploy
 
 ## 在 Telegram 里直接回复留言
 
-在 Telegram 中“回复”某条新留言通知并输入文字，Worker 会以作者身份（昵称“梁某银”、作者标记）在同一页面发布对那条留言的回复，并回一条“已回复 ✅”和页面链接。回复不会再触发通知。非回复消息只会收到一句用法提示；其他聊天发来的消息直接忽略。
+在 Telegram 中“回复”某条新留言通知并输入文字，Worker 会以作者身份（昵称“梁某银”、作者标记）在同一页面发布对那条留言的回复，并回复一条“已回复 ✅”。回复不会再触发通知。非回复消息只会收到一句用法提示；其他聊天发来的消息直接忽略。
 
-Webhook 地址是 `https://comment.liangmouyin.com/telegram/webhook`，页面上没有任何入口。Worker 校验 Telegram 发来的 `X-Telegram-Bot-Api-Secret-Token`，不等于 `TELEGRAM_WEBHOOK_SECRET` 时返回 401。通知消息 ID 与留言 ID 的对应关系保存在 D1 的 `simple_telegram_messages` 表；查不到时，从通知末尾的“ID：…”解析留言 ID。
+Webhook 地址是 `https://comment.liangmouyin.com/telegram/webhook`，页面上没有任何入口。Worker 校验 Telegram 发来的 `X-Telegram-Bot-Api-Secret-Token`，不等于 `TELEGRAM_WEBHOOK_SECRET` 时返回 401。通知消息 ID 与留言 ID 的对应关系保存在 D1 的 `simple_telegram_messages` 表（写入失败会重试 3 次并记录日志），回复时只按这张表查找；查不到时会提示找不到对应留言，不会发布。
 
 首次设置（在本目录运行，前提是已按上一节设置好 `TELEGRAM_BOT_TOKEN` 和 `TELEGRAM_CHAT_ID`）：
 
