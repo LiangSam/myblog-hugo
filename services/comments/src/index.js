@@ -184,7 +184,18 @@ async function notifyTelegram(env, row, path) {
   const excerpt = chars.length > 200 ? `${chars.slice(0, 200).join('')}…` : chars.join('');
   const title = await pageTitle(path);
   const href = `${PUBLIC_ORIGIN}${path}#comments`;
-  const text = `<b>${escapeHtml(row.nickname)}</b> ${row.parent_id ? '回复了' : '留言了'}：${escapeHtml(excerpt)}\n<a href="${escapeHtml(href).replace(/"/g, '&quot;')}">${escapeHtml(title)}</a>`;
+  let who = `<b>${escapeHtml(row.nickname)}</b>`;
+  if (row.parent_id) {
+    let parentNick = '';
+    try {
+      const parent = await env.DB.prepare('SELECT nickname FROM simple_comments WHERE id = ?').bind(row.parent_id).first();
+      parentNick = String(parent?.nickname || '').trim();
+    } catch (error) {
+      console.error('Telegram parent lookup failed', error?.message || error);
+    }
+    who += parentNick ? ` 回复 <b>${escapeHtml(parentNick)}</b>` : ' 回复了';
+  }
+  const text = `💬 <a href="${escapeHtml(href).replace(/"/g, '&quot;')}">${escapeHtml(title)}</a>\n${who}：${escapeHtml(excerpt)}`;
   let sent;
   try {
     sent = await telegramSend(env, { text, parse_mode: 'HTML' });
