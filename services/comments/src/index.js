@@ -144,6 +144,17 @@ function escapeHtml(value) {
   return String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
+async function telegramSend(env, payload) {
+  const res = await fetch(`https://api.telegram.org/bot${env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ chat_id: env.TELEGRAM_CHAT_ID, disable_web_page_preview: true, ...payload })
+  });
+  const data = await res.json().catch(() => null);
+  if (!res.ok || !data?.ok) throw new Error(`Telegram sendMessage ${res.status}: ${JSON.stringify(data).slice(0, 300)}`);
+  return data.result;
+}
+
 async function notifyTelegram(env, row, path) {
   if (!env.TELEGRAM_BOT_TOKEN || !env.TELEGRAM_CHAT_ID) return;
   const chars = Array.from(row.body.replace(/\s+/g, ' '));
@@ -154,18 +165,78 @@ async function notifyTelegram(env, row, path) {
     escapeHtml(excerpt),
     '',
     `页面：${escapeHtml(`${PUBLIC_ORIGIN}${path}#comments`)}`,
-    `管理：${PUBLIC_ORIGIN}/comments-admin/`
+    `管理：${PUBLIC_ORIGIN}/comments-admin/`,
+    `ID：<code>${row.id}</code>`,
+    '直接回复这条消息即可以作者身份回复。'
   ].join('\n');
   try {
-    const res = await fetch(`https://api.telegram.org/bot${env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ chat_id: env.TELEGRAM_CHAT_ID, text, parse_mode: 'HTML', disable_web_page_preview: true })
-    });
-    if (!res.ok) console.error('Telegram notify failed', res.status, (await res.text()).slice(0, 300));
+    const sent = await telegramSend(env, { text, parse_mode: 'HTML' });
+    if (sent?.message_id) {
+      await env.DB.prepare('INSERT OR REPLACE INTO simple_telegram_messages(message_id, comment_id, created_at) VALUES(?, ?, ?)')
+        .bind(sent.message_id, row.id, Date.now()).run()
+        .catch(error => console.error('Telegram mapping save failed', error?.message || error));
+    }
   } catch (error) {
     console.error('Telegram notify error', error?.message || error);
   }
+}
+
+const UUID_RE = /[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}/i;
+
+async function commentForTelegramReply(env, replyTo) {
+  let commentId = null;
+  try {
+    const mapped = await env.DB.prepare('SELECT comment_id FROM simple_telegram_messages WHERE message_id = ?').bind(replyTo.message_id).first();
+    commentId = mapped?.comment_id || null;
+  } catch (error) {
+    console.error('Telegram mapping lookup failed', error?.message || error);
+  }
+  if (!commentId) commentId = (String(replyTo.text || '').match(UUID_RE) || [])[0] || null;
+  if (!commentId) return null;
+  return env.DB.prepare('SELECT id, page_path FROM simple_comments WHERE id = ? AND deleted_at IS NULL').bind(commentId).first();
+}
+
+async function telegramWebhook(request, env) {
+  const ok = () => new Response('ok');
+  if (!env.TELEGRAM_WEBHOOK_SECRET || !env.TELEGRAM_BOT_TOKEN || !env.TELEGRAM_CHAT_ID) return new Response('not configured', { status: 404 });
+  if (!await sameSecret(request.headers.get('x-telegram-bot-api-secret-token') || '', env.TELEGRAM_WEBHOOK_SECRET)) {
+    return new Response('unauthorized', { status: 401 });
+  }
+  let update;
+  try { update = await request.json(); } catch { return ok(); }
+  const message = update?.message;
+  if (!message || String(message.chat?.id) !== String(env.TELEGRAM_CHAT_ID)) return ok();
+  const reply = (text, extra = {}) => telegramSend(env, { text, reply_to_message_id: message.message_id, ...extra })
+    .catch(error => console.error('Telegram reply error', error?.message || error));
+  const body = String(message.text || '').trim();
+  if (!message.reply_to_message) {
+    await reply('要回复读者，请直接"回复"那条新留言通知，再输入内容。');
+    return ok();
+  }
+  if (!body) {
+    await reply('只支持文字回复。');
+    return ok();
+  }
+  if (body.length > MAX_BODY) {
+    await reply(`回复太长了，请控制在 ${MAX_BODY} 字以内。`);
+    return ok();
+  }
+  try {
+    const parent = await commentForTelegramReply(env, message.reply_to_message);
+    if (!parent) {
+      await reply('找不到对应的留言（可能已被删除），没有发布。');
+      return ok();
+    }
+    const now = Date.now();
+    const id = crypto.randomUUID();
+    await env.DB.prepare('INSERT INTO simple_comments(id, page_path, parent_id, nickname, avatar_url, body, created_at, ip_key, is_author) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)')
+      .bind(id, parent.page_path, parent.id, '梁某银', '', body, now, 'telegram', 1).run();
+    await reply(`已回复 ✅\n${PUBLIC_ORIGIN}${parent.page_path}#comments`);
+  } catch (error) {
+    console.error('Telegram webhook error', error?.message || error);
+    await reply('回复失败，请稍后再试或去管理页回复。');
+  }
+  return ok();
 }
 
 async function postComment(request, env, origin, ctx) {
@@ -254,6 +325,7 @@ export default {
     if (request.method === 'OPTIONS') return response({}, 204, origin);
     const url = new URL(request.url);
     try {
+      if (request.method === 'POST' && url.pathname === '/telegram/webhook') return telegramWebhook(request, env);
       if (request.method === 'GET' && url.pathname === '/api/health') return response({ ok: true }, 200, origin);
       if (request.method === 'GET' && url.pathname === '/api/comments') {
         const path = pagePath(url.searchParams.get('path'));

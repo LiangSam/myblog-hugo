@@ -50,3 +50,27 @@ npx wrangler deploy
 ```
 
 本地测试时可以把这两项写进未纳入 Git 的 `.dev.vars`。
+
+## 在 Telegram 里直接回复留言
+
+在 Telegram 中“回复”某条新留言通知并输入文字，Worker 会以作者身份（昵称“梁某银”、作者标记）在同一页面发布对那条留言的回复，并回一条“已回复 ✅”和页面链接。回复不会再触发通知。非回复消息只会收到一句用法提示；其他聊天发来的消息直接忽略。
+
+Webhook 地址是 `https://comment.liangmouyin.com/telegram/webhook`，页面上没有任何入口。Worker 校验 Telegram 发来的 `X-Telegram-Bot-Api-Secret-Token`，不等于 `TELEGRAM_WEBHOOK_SECRET` 时返回 401。通知消息 ID 与留言 ID 的对应关系保存在 D1 的 `simple_telegram_messages` 表；查不到时，从通知末尾的“ID：…”解析留言 ID。
+
+首次设置（在本目录运行，前提是已按上一节设置好 `TELEGRAM_BOT_TOKEN` 和 `TELEGRAM_CHAT_ID`）：
+
+```sh
+# 1. 新增消息对应表
+npx wrangler d1 execute lmy-comments-trial --remote --file migrations/003-telegram-messages.sql
+# 2. 设置 webhook 密钥（自取一串随机字符，只用字母、数字、_ 和 -，例如 openssl rand -hex 32 生成）
+npx wrangler secret put TELEGRAM_WEBHOOK_SECRET
+# 3. 部署
+npx wrangler deploy
+# 4. 告诉 Telegram 把消息推到 Worker（<TOKEN> 和 <SECRET> 换成真实值）
+curl "https://api.telegram.org/bot<TOKEN>/setWebhook" \
+  -d url=https://comment.liangmouyin.com/telegram/webhook \
+  -d secret_token=<SECRET> \
+  -d 'allowed_updates=["message"]'
+```
+
+可用 `curl "https://api.telegram.org/bot<TOKEN>/getWebhookInfo"` 检查状态。注意：设置 webhook 后，`getUpdates` 不再可用；如需重新查 chat id，先运行 `deleteWebhook`。
