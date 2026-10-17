@@ -39,7 +39,7 @@ npx wrangler d1 execute lmy-comments-trial --local --file .legacy-import.sql
 
 ## 新留言 Telegram 通知
 
-读者（非管理员）发表新留言或回复成功后，Worker 用 `ctx.waitUntil` 在后台调用 Telegram Bot API，发送一条简短消息：第一行是 `💬` 加以文章标题为文字、指向页面 `#comments` 的链接；第二行是 `<b>昵称</b>：摘要`，回复为 `<b>昵称</b> 回复 <b>被回复者</b>：摘要`（查不到被回复者时为“回复了”）。摘要约 200 字，不显示链接预览。标题取自页面的 `og:title`（或 `<title>`），读取失败时显示页面路径。未设置 `TELEGRAM_BOT_TOKEN` 或 `TELEGRAM_CHAT_ID` 时不发送；Telegram 出错只记录日志，不影响留言提交。
+读者（非管理员）发表新留言或回复成功后，Worker 用 `ctx.waitUntil` 在后台调用 Telegram Bot API，发送一条简短消息：第一行是 `💬` 加以文章标题为文字、指向页面 `#comments` 的链接；空一行后是 `<b>昵称</b>：摘要`，回复为 `<b>昵称</b> 回复 <b>被回复者</b>：摘要`（查不到被回复者时为“回复了”）。摘要约 200 字，不显示链接预览。标题取自页面的 `og:title`（或 `<title>`），读取失败时显示页面路径。未设置 `TELEGRAM_BOT_TOKEN` 或 `TELEGRAM_CHAT_ID` 时不发送；Telegram 出错只记录日志，不影响留言提交。
 
 两项都是 Worker secret，不写入仓库或 `wrangler.jsonc`。在本目录运行：
 

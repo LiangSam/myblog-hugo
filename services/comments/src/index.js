@@ -195,7 +195,7 @@ async function notifyTelegram(env, row, path) {
     }
     who += parentNick ? ` 回复 <b>${escapeHtml(parentNick)}</b>` : ' 回复了';
   }
-  const text = `💬 <a href="${escapeHtml(href).replace(/"/g, '&quot;')}">${escapeHtml(title)}</a>\n${who}：${escapeHtml(excerpt)}`;
+  const text = `💬 <a href="${escapeHtml(href).replace(/"/g, '&quot;')}">${escapeHtml(title)}</a>\n\n${who}：${escapeHtml(excerpt)}`;
   let sent;
   try {
     sent = await telegramSend(env, { text, parse_mode: 'HTML' });
