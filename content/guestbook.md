@@ -1,6 +1,4 @@
 +++
 title = "留言板"
-description = "这里收下不属于某一篇文章的留言。"
+comments_compact = true
 +++
-
-想打个招呼、聊聊博客，或者问个问题，都可以写在这里。
