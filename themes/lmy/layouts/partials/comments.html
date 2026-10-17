@@ -1,10 +1,10 @@
-<section class="simple-comments" id="comments" data-api="{{ .Site.Params.simpleComments.api | default "https://comment.liangmouyin.com" }}" data-page="{{ .RelPermalink }}">
-  <div class="simple-comments-header">
+<section class="simple-comments{{ if .Params.comments_compact }} simple-comments-compact{{ end }}" id="comments" data-api="{{ .Site.Params.simpleComments.api | default "https://comment.liangmouyin.com" }}" data-page="{{ .RelPermalink }}">
+  <div class="simple-comments-header{{ if .Params.comments_compact }} visually-hidden{{ end }}">
     <h2>留言 <span class="simple-comments-count" aria-live="polite"></span></h2>
   </div>
   <form class="simple-comments-form">
     <label class="visually-hidden" for="simple-comment-body">写下评论</label>
-    <textarea id="simple-comment-body" name="body" maxlength="2000" placeholder="写下评论…" required></textarea>
+    <textarea id="simple-comment-body" name="body" maxlength="2000" placeholder="{{ if .Params.comments_compact }}随便写点？{{ else }}写下评论…{{ end }}" required></textarea>
     <div class="simple-comments-actions">
       <div class="simple-comments-identity">
         <span class="simple-comments-as">以</span>
