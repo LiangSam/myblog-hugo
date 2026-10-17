@@ -140,7 +140,35 @@ async function postVote(request, env, origin) {
   return response({ voteScore: Number(tally.score), viewerVote: value }, 200, origin);
 }
 
-async function postComment(request, env, origin) {
+function escapeHtml(value) {
+  return String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+async function notifyTelegram(env, row, path) {
+  if (!env.TELEGRAM_BOT_TOKEN || !env.TELEGRAM_CHAT_ID) return;
+  const chars = Array.from(row.body.replace(/\s+/g, ' '));
+  const excerpt = chars.length > 200 ? `${chars.slice(0, 200).join('')}…` : chars.join('');
+  const text = [
+    `💬 <b>${escapeHtml(row.nickname)}</b> ${row.parent_id ? '回复了一条留言' : '留言了'}`,
+    '',
+    escapeHtml(excerpt),
+    '',
+    `页面：${escapeHtml(`${PUBLIC_ORIGIN}${path}#comments`)}`,
+    `管理：${PUBLIC_ORIGIN}/comments-admin/`
+  ].join('\n');
+  try {
+    const res = await fetch(`https://api.telegram.org/bot${env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ chat_id: env.TELEGRAM_CHAT_ID, text, parse_mode: 'HTML', disable_web_page_preview: true })
+    });
+    if (!res.ok) console.error('Telegram notify failed', res.status, (await res.text()).slice(0, 300));
+  } catch (error) {
+    console.error('Telegram notify error', error?.message || error);
+  }
+}
+
+async function postComment(request, env, origin, ctx) {
   if (!env.IP_SALT) return response({ error: '服务尚未配置。' }, 503, origin);
   const data = await jsonBody(request);
   if (!data || data.website) return response({ error: '留言未提交。' }, 400, origin);
@@ -171,6 +199,7 @@ async function postComment(request, env, origin) {
     body, created_at: now, is_author: admin ? 1 : 0
   };
   await env.DB.prepare('INSERT INTO simple_comments(id, page_path, parent_id, nickname, avatar_url, body, created_at, ip_key, is_author) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)').bind(row.id, path, row.parent_id, row.nickname, row.avatar_url, row.body, now, key, row.is_author).run();
+  if (!admin && ctx) ctx.waitUntil(notifyTelegram(env, row, path));
   return response({ comment: publicRow(row) }, 201, origin);
 }
 
@@ -219,7 +248,7 @@ async function adminAction(request, env, origin) {
 }
 
 export default {
-  async fetch(request, env) {
+  async fetch(request, env, ctx) {
     const origin = request.headers.get('origin') || '';
     if (origin && !allowedOrigin(origin)) return response({ error: '来源未获允许。' }, 403);
     if (request.method === 'OPTIONS') return response({}, 204, origin);
@@ -230,7 +259,7 @@ export default {
         const path = pagePath(url.searchParams.get('path'));
         return path ? listComments(request, env, path, origin) : response({ error: '文章地址无效。' }, 400, origin);
       }
-      if (request.method === 'POST' && url.pathname === '/api/comments') return postComment(request, env, origin);
+      if (request.method === 'POST' && url.pathname === '/api/comments') return postComment(request, env, origin, ctx);
       if (request.method === 'POST' && url.pathname === '/api/comments/vote') return postVote(request, env, origin);
       if (request.method === 'POST' && url.pathname === '/api/admin/login') return adminLogin(request, env, origin);
       if (url.pathname.startsWith('/api/admin/')) {

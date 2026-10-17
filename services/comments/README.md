@@ -36,3 +36,17 @@ npx wrangler d1 execute lmy-comments-trial --local --file .legacy-import.sql
 只切回 Giscus 时，恢复 `themes/lmy/layouts/_default/single.html` 中原有的 Giscus 脚本并重新发布 Hugo 网站；`hugo.toml` 的 Giscus 参数和 GitHub Discussions 保留着。此操作只改变文章页面显示的评论区，D1 中的自建评论仍保留。
 
 需要同时把 `comment.liangmouyin.com` 切回 Twikoo 时，先从 `services/comments/wrangler.jsonc` 移除 `routes` 并部署 `lmy-comments`，再从 `.backups/2026-10-17-cutover/twikoo-wrangler.jsonc` 恢复 `services/twikoo-trial/wrangler.jsonc` 的域名配置并部署 `lmy-comments-trial`。旧 Worker 的 `workers.dev` 地址仍为 `https://lmy-comments-trial.suihantarot.workers.dev`。回退页面或域名时，不要直接把旧 SQL 导出覆盖到 D1：切换后可能已经产生新留言，应先另行导出当前 D1 并核对差异。
+
+## 新留言 Telegram 通知
+
+读者（非管理员）发表新留言或回复成功后，Worker 用 `ctx.waitUntil` 在后台调用 Telegram Bot API，发送昵称、约 200 字摘要、页面链接和管理页链接。未设置 `TELEGRAM_BOT_TOKEN` 或 `TELEGRAM_CHAT_ID` 时不发送；Telegram 出错只记录日志，不影响留言提交。
+
+两项都是 Worker secret，不写入仓库或 `wrangler.jsonc`。在本目录运行：
+
+```sh
+npx wrangler secret put TELEGRAM_BOT_TOKEN   # 粘贴 @BotFather 给的 token
+npx wrangler secret put TELEGRAM_CHAT_ID     # 你的 chat id（先给机器人发一条消息，再用 getUpdates 查看）
+npx wrangler deploy
+```
+
+本地测试时可以把这两项写进未纳入 Git 的 `.dev.vars`。
