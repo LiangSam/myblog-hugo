@@ -6,7 +6,9 @@ created = 2025-07-04
 updated = 2026-09-09
 +++
 
-**2026-09-09**：调整博客，新增 [Now 的历史页面](/now-history/)，这样就不怕没有存档，简直完美。之前觉得写 Now 太重，要加图，加一堆东西，目前就纯文字吧，想加图时候再加。
+这里不定期记下我的生活近况，灵感来自 [nownownow.com](https://nownownow.com/about)。
+
+**2026-09-09**：最近调整博客，给 Now 加了[过去的记录](/now-history/)。之前总觉得写近况还得配图，太麻烦；现在先用文字记，哪天想加图再说。
 
 最近读了[《人生4千個禮拜》](/blog/four-thousand-weeks/)和[《13·67》](/blog/13-67-review)，我很喜欢 Oliver Burkeman 关于时间有限性的论述，而后又猛地扎进陈浩基所塑造的香港历史，无比惬意。
 
@@ -17,5 +19,3 @@ updated = 2026-09-09
 ---
 
 [查看过去的 Now](/now-history/)
-
-该页面由 [Derek Sivers 的 nownownow.com](https://nownownow.com/about) 项目启发，不定期更新，主要聊聊我的生活近况。
