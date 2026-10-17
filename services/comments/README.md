@@ -53,7 +53,7 @@ npx wrangler deploy
 
 ## 在 Telegram 里直接回复留言
 
-在 Telegram 中“回复”某条新留言通知并输入文字，Worker 会以作者身份（昵称“梁某银”、作者标记）在同一页面发布对那条留言的回复，并回复一条“已回复 ✅”。回复不会再触发通知。非回复消息只会收到一句用法提示；其他聊天发来的消息直接忽略。
+在 Telegram 中“回复”某条新留言通知并输入文字，Worker 会以作者身份（昵称“梁某银”、作者标记）在同一页面发布对那条留言的回复，并回复一条“已回复 ✅”。回复不会再触发通知。如果回复的内容是 `/del`（也接受 `/del@lmy_blog_comments_bot`），则不发布回复，而是把那条留言软删除并回复“已删除 🗑”；留言已删除或不存在时回复“这条留言已不存在”。误删的留言可在 `/comments-admin/` 点“恢复”找回。非回复消息只会收到一句用法提示；其他聊天发来的消息直接忽略。
 
 Webhook 地址是 `https://comment.liangmouyin.com/telegram/webhook`，页面上没有任何入口。Worker 校验 Telegram 发来的 `X-Telegram-Bot-Api-Secret-Token`，不等于 `TELEGRAM_WEBHOOK_SECRET` 时返回 401。通知消息 ID 与留言 ID 的对应关系保存在 D1 的 `simple_telegram_messages` 表（写入失败会重试 3 次并记录日志），回复时只按这张表查找；查不到时会提示找不到对应留言，不会发布。
 

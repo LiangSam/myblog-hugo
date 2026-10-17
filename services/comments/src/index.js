@@ -248,6 +248,21 @@ async function telegramWebhook(request, env) {
     await reply('只支持文字回复。');
     return ok();
   }
+  if (/^\/del(?:@lmy_blog_comments_bot)?$/i.test(body)) {
+    try {
+      const target = await commentForTelegramReply(env, message.reply_to_message);
+      if (!target) {
+        await reply('这条留言已不存在');
+        return ok();
+      }
+      const result = await env.DB.prepare('UPDATE simple_comments SET deleted_at = ? WHERE id = ? AND deleted_at IS NULL').bind(Date.now(), target.id).run();
+      await reply(result.meta?.changes ? '已删除 🗑' : '这条留言已不存在');
+    } catch (error) {
+      console.error('Telegram delete error', error?.message || error);
+      await reply('删除失败，请稍后再试或去管理页删除。');
+    }
+    return ok();
+  }
   if (body.length > MAX_BODY) {
     await reply(`回复太长了，请控制在 ${MAX_BODY} 字以内。`);
     return ok();
