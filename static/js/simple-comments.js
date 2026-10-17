@@ -178,7 +178,12 @@
   function render() {
     count.textContent = comments.length ? String(comments.length) : '';
     list.replaceChildren();
-    if (!comments.length) { list.append(el('p', 'simple-comments-empty', '还没有留言。')); return; }
+    if (!comments.length) {
+      const emptyText = root.classList.contains('simple-comments-compact')
+        ? '这里还很安静，欢迎写下第一条留言。' : '还没有留言。';
+      list.append(el('p', 'simple-comments-empty', emptyText));
+      return;
+    }
     const children = new Map();
     const ids = new Set(comments.map(c => c.id));
     for (const comment of comments) {
