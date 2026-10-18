@@ -5,7 +5,7 @@ baseURL = "https://liangmouyin.com"
 title = "梁某银"
 author = "梁某银"
 copyright = "Copyright © 2023-2026, 梁某银"
-languageCode = "zh-CN"
+locale = "zh-CN"
 theme = 'lmy'
 
 # 生成 robots.txt，对 SEO 友好
