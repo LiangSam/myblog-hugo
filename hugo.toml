@@ -70,13 +70,6 @@ enableRobotsTXT = true
   title = "梁某银"
   dateFormat = "2006-01-02"
 
-# Giscus 评论配置
-[params.giscus]
-  repo = "LiangSam/myblog-hugo"
-  repoId = "R_kgDOPFANrA"
-  category = "Announcements"
-  categoryId = "DIC_kwDOPFANrM4CxC-2"
-
 # ============================================================
 # 代码高亮配置 (Markup)
 # ============================================================
