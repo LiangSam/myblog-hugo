@@ -4,8 +4,9 @@
 {{- $desc := .Site.Params.description -}}
 {{- with .Description }}{{ $desc = . }}{{ else }}{{ if .IsPage }}{{ with .Summary | plainify | htmlUnescape | strings.TrimSpace }}{{ $desc = . | replaceRE `\s+` " " | truncate 120 }}{{ end }}{{ end }}{{ end -}}
 {{- $title := cond .IsHome .Site.Title .Title -}}
-{{- $image := "images/share.png" | absURL -}}
-{{- with .Params.images }}{{ $image = index . 0 | absURL }}{{ end -}}
+{{- $image := "images/favicon.png" | absURL -}}
+{{- $hasCover := false -}}
+{{- with .Params.images }}{{ $image = index . 0 | absURL }}{{ $hasCover = true }}{{ else }}{{ if .IsPage }}{{ with findRESubmatch `<img[^>]+src="([^"]+)"` .Content 1 }}{{ $image = index (index . 0) 1 | absURL }}{{ $hasCover = true }}{{ end }}{{ end }}{{ end -}}
 <meta name="description" content="{{ $desc }}" />
 {{ with .Site.Params.favicon }}<link rel="icon" href="{{ . | relURL }}" />{{ end }}
 <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ "/index.xml" | relURL }}" />
@@ -20,7 +21,7 @@
 <meta property="og:site_name" content="{{ .Site.Title }}" />
 <meta property="og:locale" content="zh_CN" />
 {{ if and .IsPage (not .Date.IsZero) }}<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" />{{ end }}
-<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:card" content="{{ if $hasCover }}summary_large_image{{ else }}summary{{ end }}" />
 <meta name="twitter:title" content="{{ $title }}" />
 <meta name="twitter:description" content="{{ $desc }}" />
 <meta name="twitter:image" content="{{ $image }}" />
