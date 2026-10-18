@@ -74,3 +74,25 @@ curl "https://api.telegram.org/bot<TOKEN>/setWebhook" \
 ```
 
 可用 `curl "https://api.telegram.org/bot<TOKEN>/getWebhookInfo"` 检查状态。注意：设置 webhook 后，`getUpdates` 不再可用；如需重新查 chat id，先运行 `deleteWebhook`。
+
+## 每周自动备份 D1
+
+`.github/workflows/backup-comments.yml` 每周一 UTC 19:00（北京时间周二 03:00）导出 `lmy-comments-trial`，也可以在 GitHub Actions 页面手动运行。仓库是公开的，任何 GitHub 用户都能下载 artifact，因此导出文件先用 `BACKUP_PASSPHRASE` 做 AES256 对称加密，再以 `comments-d1-日期` 为名上传，保留 90 天。导出包含旧 Twikoo 表里的读者邮箱、IP 摘要和管理配置，请勿把未加密的文件放进仓库。
+
+首次设置：
+
+1. 在 Cloudflare 控制台 “My Profile → API Tokens → Create Token → Create Custom Token”，权限选 `Account` / `D1` / `Edit`，Account Resources 只选自己的账户，创建后复制 token。（`wrangler d1 export` 需要 Edit 权限。）
+2. 在 Cloudflare 控制台右侧或 `npx wrangler whoami` 中找到 Account ID。
+3. 在 GitHub 仓库 “Settings → Secrets and variables → Actions” 添加三个 secret：`CLOUDFLARE_API_TOKEN`、`CLOUDFLARE_ACCOUNT_ID`、`BACKUP_PASSPHRASE`（自取一个长随机密码，并另外妥善保存；丢失后备份无法解密）。
+4. 在 Actions 页面手动运行一次 “Weekly comments D1 backup”，确认成功。
+
+恢复：
+
+```sh
+# 从 Actions 运行记录下载 artifact 并解压，得到 comments-YYYY-MM-DD.sql.gpg
+gpg --decrypt comments-YYYY-MM-DD.sql.gpg > comments.sql   # 输入 BACKUP_PASSPHRASE
+# 先导入本地数据库检查
+npx wrangler d1 execute lmy-comments-trial --local --file comments.sql
+```
+
+导出文件包含建表语句，不能直接覆盖已有的云端数据库。需要恢复云端时，先另行导出当前 D1 留底，再新建一个 D1（`npx wrangler d1 create lmy-comments-restore`）导入 `comments.sql` 核对，确认无误后把 `wrangler.jsonc` 的 `database_id` 换成新库并部署，或只把缺失的行导回原库。
