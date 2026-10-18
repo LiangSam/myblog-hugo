@@ -31,7 +31,7 @@ dated_lists = true
 - 2026-03-12 [《江城》](/blog/river-town/) — 何伟
 - 2025-11-01 [《李诞脱口秀工作手册》](/blog/lidan-work-manual-review/) — 李诞
 - 2025-10-19 [《金钱的艺术》](/blog/the-art-of-spending-money-review/) — 摩根·豪泽尔
-- 2025-08-17 [《人性的迷雾》](/blog/after-reading-The-Fog-of-Human-Nature/) — 韩律
+- 2025-08-17 [《人性的迷雾》](/blog/after-reading-the-fog-of-human-nature/) — 韩律
 - 2025-07-07 [《如何度过每天的24小时》](/blog/how-to-live-on-24-hours-a-day/) — 阿诺德·本涅特
 - 2025-07-03 [《思考的真相》](/blog/250703-lixiaolai/) — 李笑来
 - 2025-03-02 [《布鲁克林的荒唐事》](/blog/after-reading-the-absurdities-of-brooklyn/) — 保罗·奥斯特
