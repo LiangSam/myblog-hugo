@@ -28,7 +28,7 @@ title = "About"
 
 ## 🖥️ 我的硬件
 
-- 手机：小米 15
+- 手机：小米 15 + iPhone 15 Pro Max 国行 1TB（经某人强烈要求补上）
 - 电脑：MacBook Air M4 13 英寸（16GB + 512GB）+ 4060ti 组装台式机
 - 显示器：Redmi A27U 27 寸 4K
 - 键盘：Rainy 75 机械键盘
