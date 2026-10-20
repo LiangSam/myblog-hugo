@@ -4,8 +4,9 @@
 <section class="home-hero">
   {{ .Content }}
   {{/* 文章数统计 */}}
-  {{ $postCount := len (where .Site.RegularPages "Section" "blog") }}
-  <p class="post-count">已写 <strong>{{ $postCount }}</strong> 篇，从 2023 年开始</p>
+  {{ $posts := where .Site.RegularPages "Section" "blog" }}
+  {{ $postCount := len $posts }}
+  <p class="post-count">已收录 <strong>{{ $postCount }}</strong> 篇文章{{ if gt $postCount 0 }}，最早写于 {{ (index $posts.ByDate 0).Date.Format "2006" }} 年{{ end }}</p>
 </section>
 
 {{/* 3. 精选文章（有精选时优先展示） */}}
@@ -45,7 +46,6 @@
 {{ end }}
 
 {{/* 3. 最近更新 */}}
-{{ $posts := where .Site.RegularPages "Section" "blog" }}
 {{ $recent := first 7 $posts.ByDate.Reverse }}
 {{ if $recent }}
 <section class="home-section">
