@@ -4,6 +4,7 @@ date: 2026-04-04
 tags:
   - LaunchBar
   - macOS
+  - 博客
 slug: launchbar-hugo-sync
 author:
   - 梁某银
