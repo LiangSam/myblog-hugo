@@ -12,6 +12,8 @@ featured: false
 description: 是啊，Chandler，你曾让我如此开心，现在又如何好意思让我们感伤呢。
 ---
 
+> 本文最初发表于我的旧博客[梁某银的Blogs](https://liangsam.github.io/posts/%E5%86%8D%E8%A7%81chandler-bing/)。
+
 <!-- 原文配图（mmexport1698555420029.jpg）已丢失：Notion 图片链接于 2024 年过期，待补 -->
 
 《老友记》里面，我最喜欢的角色，Chandler Bing 的扮演者马修·派瑞今天在家溺水身亡，终年 54 岁。
