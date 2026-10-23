@@ -90,7 +90,7 @@ enableRobotsTXT = true
 # ============================================================
 [params.imageCDN]
   host = "https://img.liangmouyin.com"
-  resize = false
+  resize = true
   quality = 82
 
 # ============================================================
