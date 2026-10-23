@@ -443,55 +443,159 @@ main {
 .archive-link:hover { color: var(--color-accent); text-decoration: none; }
 .archive-pick { color: var(--color-accent); font-size: 0.75rem; flex-shrink: 0; margin-left: -0.55rem; cursor: default; }
 
-/* Archives 页的文章刻度条（archive-rail.js），一篇一格，精选是强调色 */
-.archive-rail {
-  position: fixed;
-  z-index: 90;
-  cursor: pointer;
-  touch-action: none;
-  -webkit-tap-highlight-color: transparent;
-  user-select: none;
-  -webkit-user-select: none;
+/* Archives 页：月份小节 */
+.archive-month + .archive-month { margin-top: 0.9rem; }
+.archive-month-label {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin: 0 0 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
 }
-.archive-rail.is-dragging { cursor: grabbing; }
-.archive-rail canvas { display: block; width: 100%; height: 100%; }
-.archive-rail-card {
+.archive-month-label::after {
+  content: "";
+  order: 1;
+  flex: 1;
+  align-self: center;
+  height: 1px;
+  background: var(--color-border);
+}
+.archive-month-count { order: 2; font-family: var(--font-mono); font-size: 0.72rem; font-weight: 400; }
+
+/* Archives 页：吸顶的年份栏 */
+.archive-bar {
+  position: sticky;
+  top: var(--header-height);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  height: 2.75rem;
+  margin: -0.5rem 0 1.25rem;
+  background: var(--color-bg);
+  box-shadow: 0 1px 0 transparent;
+  transition: box-shadow 0.2s;
+}
+.archive-bar.is-stuck { box-shadow: 0 1px 0 var(--color-border); }
+.archive-bar-years { display: flex; gap: 0.15rem; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+.archive-bar-years::-webkit-scrollbar { display: none; }
+.archive-bar-year,
+.archive-bar-filter {
+  flex-shrink: 0;
+  padding: 0.22rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: var(--color-text-muted);
+  transition: color 0.15s, background-color 0.15s;
+}
+.archive-bar-year { font-family: var(--font-mono); }
+.archive-bar-year:hover,
+.archive-bar-filter:hover { color: var(--color-text); text-decoration: none; }
+.archive-bar-year[aria-current] { color: var(--color-text); background: var(--color-bg-soft); }
+.archive-bar-filter {
+  border: 1px solid var(--color-border);
+  background: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+.archive-bar-filter[aria-pressed="true"] { color: var(--color-accent); border-color: currentColor; background: var(--color-bg-soft); }
+/* html 已经有 scroll-padding-top（导航栏 + 1rem），这里只补上年份栏的高度 */
+.archive-year-group { scroll-margin-top: 2.25rem; }
+
+/* 只看精选 */
+.archive-picks .archive-item:not([data-featured]),
+.archive-picks [data-no-picks],
+.archive-picks .archive-heat,
+.archive-picks .archive-month-count,
+.archive-picks .archive-year-meta { display: none; }
+
+/* Archives 页：每年的写作热力图（archive.js），一格一天，一周从周一开始 */
+.archive-heat { margin: 0.1rem 0 1.5rem; }
+.archive-heat-months,
+.archive-heat-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--weeks), minmax(0, 1fr));
+  column-gap: 3px;
+}
+.archive-heat-months { margin-bottom: 0.3rem; font-family: var(--font-mono); font-size: 0.66rem; line-height: 1; color: var(--color-text-muted); }
+.archive-heat-months span { grid-row: 1; white-space: nowrap; }
+.archive-heat-months i { font-style: normal; }
+.archive-heat-grid { grid-template-rows: repeat(7, auto); grid-auto-flow: column; row-gap: 3px; }
+.archive-heat-grid span,
+.archive-heat-legend i {
+  aspect-ratio: 1;
+  border-radius: 2px;
+  background: color-mix(in srgb, var(--color-text-muted) 9%, transparent);
+}
+.archive-heat-grid .archive-heat-pad { background: none; }
+.archive-heat-grid .is-future { background: none; box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-text-muted) 11%, transparent); }
+.archive-heat .is-on { background: color-mix(in srgb, var(--color-accent) 30%, transparent); }
+.archive-heat .is-many { background: color-mix(in srgb, var(--color-accent) 58%, transparent); }
+.archive-heat .is-pick { background: var(--color-accent); }
+.archive-heat-grid .is-on { cursor: pointer; transition: transform 0.12s; }
+.archive-heat-grid .is-on:hover { transform: scale(1.35); box-shadow: 0 0 0 1px var(--color-bg); }
+.archive-heat-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  margin-top: 0.55rem;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+.archive-heat-stats { font-variant-numeric: tabular-nums; }
+.archive-heat-legend { display: inline-flex; align-items: center; gap: 0.3rem; }
+.archive-heat-legend i { display: inline-block; width: 9px; }
+.archive-heat-legend i + i { margin-left: 0.45rem; }
+
+.archive-tip {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 95;
   max-width: 17rem;
-  padding: 0.45rem 0.7rem 0.5rem;
+  padding: 0.4rem 0.65rem 0.45rem;
   background: var(--color-bg);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   box-shadow: var(--shadow-md);
+  font-size: 0.82rem;
+  line-height: 1.45;
   pointer-events: none;
   opacity: 0;
-  transition: opacity 0.18s;
-  font-size: 0.85rem;
-  line-height: 1.45;
+  transition: opacity 0.15s;
 }
-.archive-rail-card.is-visible { opacity: 1; }
-.archive-rail-date { display: block; font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-text-muted); }
-.archive-rail-card.is-featured .archive-rail-date::after { content: " · ✦ 精选"; font-family: var(--font-body); color: var(--color-accent); }
-.archive-rail-title { display: block; color: var(--color-text); text-wrap: balance; }
-.archive-item.is-scrub { background: var(--color-bg-soft); box-shadow: -0.5rem 0 0 var(--color-bg-soft), 0.5rem 0 0 var(--color-bg-soft); border-radius: 2px; }
+.archive-tip.is-visible { opacity: 1; }
+.archive-tip span { display: block; }
+.archive-tip-date { font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-text-muted); }
+.archive-tip-empty { color: var(--color-text-muted); }
+.archive-tip-title { color: var(--color-text); text-wrap: balance; }
+.archive-tip-title.is-pick::after { content: " ✦"; color: var(--color-accent); }
+
 @keyframes archive-flash {
   from { background: color-mix(in srgb, var(--color-accent) 22%, transparent); }
   to { background: transparent; }
 }
 .archive-item.is-flash { animation: archive-flash 1.4s ease-out; border-radius: 2px; }
-/* 刻度条贴右边缘时，给列表让出触摸热区 */
-.archive-rail-right .archive-root { padding-right: 1rem; }
-/* 有刻度条时年份全展开，折叠箭头就没用了 */
-.has-archive-rail .archive-year { cursor: default; pointer-events: none; }
-.has-archive-rail .archive-year-label::before { display: none; }
+
+@media (max-width: 680px) {
+  .archive-heat-months,
+  .archive-heat-grid { column-gap: 1px; }
+  .archive-heat-grid { row-gap: 1px; }
+  .archive-heat-months { font-size: 0.6rem; }
+  .archive-heat-months i { display: none; }
+  .archive-heat-grid .is-on:hover { transform: none; }
+}
 @media (prefers-reduced-motion: reduce) {
   .archive-item.is-flash { animation: none; }
-  .archive-rail-card { transition: none; }
+  .archive-tip, .archive-heat-grid .is-on { transition: none; }
 }
-@media print { .archive-rail, .archive-rail-card { display: none !important; } }
+@media print { .archive-bar, .archive-heat, .archive-tip { display: none !important; } }
 
 /* === Single Post === */
 .post-header { margin-bottom: 2rem; }
