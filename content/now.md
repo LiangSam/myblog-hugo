@@ -1,5 +1,5 @@
 +++
-title = "Now"
+title = "近况"
 slug = "now"
 comments = false
 created = 2025-07-04

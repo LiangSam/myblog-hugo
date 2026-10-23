@@ -2,6 +2,7 @@
 
 {{/* 1. Hero */}}
 <section class="home-hero">
+  <h1 class="visually-hidden">{{ .Site.Title }}</h1>
   {{ .Content }}
   {{/* 文章数统计 */}}
   {{ $posts := where .Site.RegularPages "Section" "blog" }}
@@ -9,43 +10,7 @@
   <p class="post-count">已收录 <strong>{{ $postCount }}</strong> 篇文章{{ if gt $postCount 0 }}，最早写于 {{ (index $posts.ByDate 0).Date.Format "2006" }} 年{{ end }}</p>
 </section>
 
-{{/* 3. 精选文章（有精选时优先展示） */}}
-{{ $featured := where .Site.RegularPages ".Params.featured" true }}
-{{ if $featured }}
-<section class="home-section">
-  <div class="section-header">
-    <h2 class="section-title">精选文章</h2>
-    <a href="{{ "/essentials/" | relURL }}" class="section-more-link">更多 →</a>
-  </div>
-  <div class="card-grid">
-    {{ range first 3 ($featured.ByDate.Reverse) }}
-    {{ $image := .Params.image }}
-    {{ if not $image }}
-      {{ $matches := findRE `!\[.*?\]\((https?://[^)]+)\)` .RawContent 1 }}
-      {{ if $matches }}
-        {{ $urlMatches := findRE `https?://[^)]+` (index $matches 0) 1 }}
-        {{ if $urlMatches }}{{ $image = index $urlMatches 0 }}{{ end }}
-      {{ end }}
-    {{ end }}
-    {{ $colors := slice "#d4a373" "#a8c5da" "#c9b8d4" "#a8d4c5" "#d4b896" "#b8a8d4" "#c5c8a8" }}
-    {{ $placeholderColor := index $colors (mod (len .Title) (len $colors)) }}
-    <a href="{{ .RelPermalink }}" class="post-card">
-      {{ if $image }}
-      <img src="{{ $image }}" alt="{{ .Title }}" class="card-cover" loading="lazy" />
-      {{ else }}
-      <div class="card-cover-placeholder" style="background: {{ $placeholderColor }};"></div>
-      {{ end }}
-      <div class="card-body">
-        <div class="card-title">{{ .Title }}</div>
-        <div class="card-date">{{ .Date.Format "2006-01-02" }}</div>
-      </div>
-    </a>
-    {{ end }}
-  </div>
-</section>
-{{ end }}
-
-{{/* 3. 最近更新 */}}
+{{/* 2. 最近更新：日更博客，最新的文章放最前面 */}}
 {{ $recent := first 7 $posts.ByDate.Reverse }}
 {{ if $recent }}
 <section class="home-section">
@@ -64,7 +29,23 @@
 </section>
 {{ end }}
 
-{{/* 4. Sparks 预览 */}}
+{{/* 3. 精选文章 */}}
+{{ $featured := where .Site.RegularPages ".Params.featured" true }}
+{{ if $featured }}
+<section class="home-section">
+  <div class="section-header">
+    <h2 class="section-title">精选文章</h2>
+    <a href="{{ "/essentials/" | relURL }}" class="section-more-link">更多 →</a>
+  </div>
+  <div class="card-grid">
+    {{ range first 3 ($featured.ByDate.Reverse) }}
+    {{ partial "post-card.html" . }}
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+{{/* 4. 碎碎念预览 */}}
 {{ $sparks := where .Site.RegularPages "Section" "notes" }}
 {{ $sparks = first 2 $sparks.ByDate.Reverse }}
 {{ if $sparks }}
@@ -72,14 +53,14 @@
 {{ $avatar := .Site.Params.avatar }}
 <section class="home-section">
   <div class="section-header">
-    <h2 class="section-title section-title-mixed">Sparks</h2>
+    <h2 class="section-title">{{ with site.GetPage "/notes" }}{{ .Title }}{{ end }}</h2>
     <a href="{{ "/notes/" | relURL }}" class="section-more-link">更多 →</a>
   </div>
   <div class="witter-stream">
     {{ range $sparks }}
     <div class="witter-entry">
       <div class="witter-left">
-        {{ with $avatar }}<img src="{{ . | relURL }}" alt="{{ $author }}" class="witter-avatar" />{{ end }}
+        {{ with $avatar }}<img src="{{ . | relURL }}" alt="" class="witter-avatar" />{{ end }}
         <div class="witter-line"></div>
       </div>
       <div class="witter-right">

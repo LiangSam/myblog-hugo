@@ -40,6 +40,13 @@
     {{ end }}
   </div>
 
+  {{ if strings.Contains .TableOfContents "<li>" }}
+  <details class="toc-mobile">
+    <summary>目录</summary>
+    {{ .TableOfContents | replaceRE `<nav id="TableOfContents">` `<nav>` | safeHTML }}
+  </details>
+  {{ end }}
+
   <div class="post-content{{ if eq .Section "blog" }} post-content-article{{ end }}">
     {{ if .Params.dated_lists }}
       {{/* Keep plain Markdown date lists editable; only format date-prefixed items. */}}
@@ -49,6 +56,22 @@
     {{ end }}
   </div>
 </article>
+
+{{/* 相关文章：按标签和日期找同主题的旧文 */}}
+{{ if eq .Section "blog" }}
+{{ $related := where (.Site.RegularPages.Related .) "Section" "blog" | first 5 }}
+{{ if $related }}
+<div class="on-this-day related-posts">
+  <span class="on-this-day-label">相关文章</span>
+  {{ range $related }}
+  <a href="{{ .RelPermalink }}" class="on-this-day-link">
+    <span class="on-this-day-year">{{ .Date.Format "2006" }}</span>
+    <span class="on-this-day-title">{{ .Title }}</span>
+  </a>
+  {{ end }}
+</div>
+{{ end }}
+{{ end }}
 
 {{/* 往年今日 */}}
 {{ if not .Date.IsZero }}
@@ -105,6 +128,9 @@
 (function(){
   var headings = document.querySelectorAll('.post-content h2, .post-content h3');
   var links = document.querySelectorAll('.toc-inner a');
+  document.querySelectorAll('.toc-mobile a').forEach(function(link) {
+    link.addEventListener('click', function() { link.closest('details').open = false; });
+  });
   if (!headings.length || !links.length) return;
   var toc = document.querySelector('.toc-inner');
 

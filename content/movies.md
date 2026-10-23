@@ -1,5 +1,5 @@
 +++
-title = "Movies"
+title = "电影"
 url = "/movies/"
 created = 2026-09-22
 updated = 2026-09-22

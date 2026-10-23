@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="list-header">
+  <h1>{{ .Title }}</h1>
+  <p>共 {{ len .Data.Terms }} 个标签，按文章数排列</p>
+</div>
+
+<div class="tag-cloud tag-cloud-page">
+  {{ range .Data.Terms.ByCount }}
+  <a href="{{ .Page.RelPermalink }}" class="tag-chip">
+    <span class="tag-name">#{{ .Page.Title }}</span>
+    <span class="tag-count">{{ .Count }}</span>
+  </a>
+  {{ end }}
+</div>
+{{ end }}

@@ -4,8 +4,10 @@
 baseURL = "https://liangmouyin.com"
 title = "梁某银"
 author = "梁某银"
-copyright = "Copyright © 2023-2026, 梁某银"
+copyright = "Copyright © 2018-2026, 梁某银"
 locale = "zh-CN"
+# 让 Hugo 正确统计中文字数、截取中文摘要
+hasCJKLanguage = true
 theme = 'lmy'
 
 # 生成 robots.txt，对 SEO 友好
@@ -33,25 +35,25 @@ enableRobotsTXT = true
 
   [[menu.main]]
     identifier = "essentials"
-    name = "Picks"
+    name = "精选"
     url = "/essentials/"
     weight = 20    # 精选文章
 
   [[menu.main]]
     identifier = "blog"
-    name = "Archives"
+    name = "归档"
     url = "/blog/"
     weight = 30    # 归档
 
   [[menu.main]]
     identifier = "now"
-    name = "Now"
+    name = "近况"
     url = "/now/"
     weight = 40    # 博主的近况
 
   [[menu.main]]
     identifier = "about"
-    name = "About"
+    name = "关于"
     url = "/about/"
     weight = 50
 
@@ -79,3 +81,29 @@ enableRobotsTXT = true
     lineNos = true
     lineNumbersInTable = false
     codeFences = true
+
+# ============================================================
+# 图片缩放 (Images)
+# 在 Cloudflare 打开 liangmouyin.com 的 Image Transformations 之后，
+# 把 resize 改成 true：卡片封面按 640px、正文图片按 1440px 输出 WebP/AVIF。
+# 没打开就设 true 会让图片全部 404。
+# ============================================================
+[params.imageCDN]
+  host = "https://img.liangmouyin.com"
+  resize = false
+  quality = 82
+
+# ============================================================
+# 相关文章 (Related)
+# 文章末尾的"相关文章"按标签匹配，日期相近的优先，新旧文章都算
+# ============================================================
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = true
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+  [[related.indices]]
+    name = "date"
+    weight = 10

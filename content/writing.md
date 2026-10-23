@@ -1,5 +1,5 @@
 +++
-title = "Writing"
+title = "写作"
 url = "/writing/"
 created = 2026-09-22
 updated = 2026-09-22
