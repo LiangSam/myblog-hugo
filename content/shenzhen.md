@@ -1,5 +1,5 @@
 +++
-title = "深圳"
+title = "Shenzhen"
 url = "/shenzhen/"
 created = 2026-09-22
 updated = 2026-09-22

@@ -1,5 +1,5 @@
 +++
-title = "书籍"
+title = "Books"
 url = "/books/"
 created = 2026-09-09
 updated = 2026-10-12
