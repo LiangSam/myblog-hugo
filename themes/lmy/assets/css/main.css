@@ -444,25 +444,17 @@ main {
 .archive-pick { color: var(--color-accent); font-size: 0.75rem; flex-shrink: 0; margin-left: -0.55rem; cursor: default; }
 
 /* Archives 页：月份小节 */
-.archive-month + .archive-month { margin-top: 0.9rem; }
+.archive-month + .archive-month { margin-top: 1.1rem; }
 .archive-month-label {
   display: flex;
   align-items: baseline;
-  gap: 0.6rem;
-  margin: 0 0 0.25rem;
+  gap: 0.45rem;
+  margin: 0 0 0.2rem;
   font-size: 0.8rem;
   font-weight: 600;
   color: var(--color-text-muted);
 }
-.archive-month-label::after {
-  content: "";
-  order: 1;
-  flex: 1;
-  align-self: center;
-  height: 1px;
-  background: var(--color-border);
-}
-.archive-month-count { order: 2; font-family: var(--font-mono); font-size: 0.72rem; font-weight: 400; }
+.archive-month-count { font-family: var(--font-mono); font-size: 0.7rem; font-weight: 400; opacity: 0.7; }
 
 /* Archives 页：吸顶的年份栏 */
 .archive-bar {
@@ -510,8 +502,10 @@ main {
 .archive-picks .archive-item:not([data-featured]),
 .archive-picks [data-no-picks],
 .archive-picks .archive-heat,
-.archive-picks .archive-month-count,
+.archive-picks .archive-month-label,
 .archive-picks .archive-year-meta { display: none; }
+/* 精选只有几十篇，不再按月分节，日期已经带着月份 */
+.archive-picks .archive-month + .archive-month { margin-top: 0; }
 
 /* Archives 页：每年的写作热力图（archive.js），一格一天，一周从周一开始 */
 .archive-heat { margin: 0.1rem 0 1.5rem; }
