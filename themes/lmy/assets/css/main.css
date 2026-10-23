@@ -192,13 +192,14 @@ main {
 .nav-link:hover { color: var(--color-text); background-color: var(--color-bg-soft); text-decoration: none; }
 .nav-link.active { color: var(--color-text); font-weight: 600; }
 
+/* 图标和导航文字用同一个节奏：About 到放大镜、放大镜到月亮的间距都和文字之间一样（约 21px）。
+   右边用负 margin 抵掉图标按钮的内边距，让月亮图标和正文右边缘对齐。 */
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 0.1rem;
-  margin-left: 0.35rem;
-  padding-left: 0.5rem;
-  border-left: 1px solid var(--color-border);
+  gap: 0.3rem;
+  margin-left: -0.8rem; /* 抵掉 .header-inner 的 1rem gap */
+  margin-right: -8.5px;
 }
 .header-icon {
   width: 34px;
@@ -286,8 +287,6 @@ main {
 }
 .section-title {
   font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
   color: var(--color-text);
   margin: 0;
   font-weight: 700;
@@ -1429,8 +1428,8 @@ content { display: block; }
   .main-nav > :first-child { margin-left: auto; }
   .main-nav::-webkit-scrollbar { display: none; }
   .nav-link { padding: 0.3rem 0.38rem; font-size: 0.875rem; }
-  .header-actions { margin-left: 0.15rem; padding-left: 0.25rem; }
-  .header-icon { width: 32px; height: 32px; }
+  .header-actions { gap: 0; margin-left: -0.25rem; margin-right: -6.5px; }
+  .header-icon { width: 30px; height: 30px; }
   main { padding: 1.75rem 1rem 4rem; }
   .card-grid { grid-template-columns: 1fr; gap: 0.75rem; }
   /* 手机上卡片改成左图右字的横条，免得三张大图把后面的内容推得太远 */
