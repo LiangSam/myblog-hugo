@@ -8,6 +8,8 @@ copyright = "Copyright © 2018-2026, 梁某银"
 locale = "zh-CN"
 # 让 Hugo 正确统计中文字数、截取中文摘要
 hasCJKLanguage = true
+# 文章只写日期时按北京时间理解，否则会被当成 UTC 零点（北京时间早上 8 点）
+timeZone = "Asia/Shanghai"
 theme = 'lmy'
 
 # 生成 robots.txt，对 SEO 友好

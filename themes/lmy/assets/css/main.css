@@ -588,6 +588,32 @@ main {
 .post-content a:hover { text-decoration: none; }
 .post-content img { border-radius: var(--radius); margin: 1.5rem auto; }
 .post-content figure img { margin-bottom: 0; }
+/* 图片点击放大（zoom.js） */
+.post-content img.is-zoomable { cursor: zoom-in; }
+.post-content img.is-zoomed { visibility: hidden; }
+.zoom-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: color-mix(in srgb, var(--color-bg) 97%, transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+  cursor: zoom-out;
+}
+.zoom-overlay.is-open { opacity: 1; }
+.zoom-image {
+  position: fixed;
+  z-index: 201;
+  max-width: none;
+  margin: 0;
+  border-radius: var(--radius);
+  transform-origin: 0 0;
+  transition: transform 0.32s cubic-bezier(0.2, 0, 0.2, 1);
+  cursor: zoom-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .zoom-overlay, .zoom-image { transition: none; }
+}
 .post-content figure { margin: 1.5rem 0; }
 .post-content figure figcaption {
   text-align: center;

@@ -6,7 +6,7 @@
     <generator>Hugo -- gohugo.io</generator>
     {{ with .Site.Language.Locale }}<language>{{.}}</language>{{end}}
     {{ with .Site.Copyright }}<copyright>{{.}}</copyright>{{end}}
-    {{ if not .Date.IsZero }}<lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{ end }}
+    <lastBuildDate>{{ (now.In site.Home.Date.Location).Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
     {{ with .OutputFormats.Get "RSS" }}
         {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{ end }}
@@ -26,7 +26,13 @@
     <item>
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}</link>
-      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+      {{/* 文章只写了日期时，按平时晚上 21:00 发布来算；构建时还没到 21:00 就用构建时间，免得时间跑到未来 */}}
+      {{- $pub := .Date -}}
+      {{- if and (eq $pub.Hour 0) (eq $pub.Minute 0) (eq $pub.Second 0) -}}
+        {{- $pub = $pub.Add (time.ParseDuration "21h") -}}
+        {{- if $pub.After now }}{{ $pub = now.In $pub.Location }}{{ end -}}
+      {{- end }}
+      <pubDate>{{ $pub.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
       <guid>{{ .Permalink }}</guid>
       <description>{{ .Content | html }}</description>
     </item>

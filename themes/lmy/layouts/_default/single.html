@@ -123,6 +123,11 @@
   {{ partial "comments.html" . }}
 {{ end }}
 
+{{ if strings.Contains .Content "<img" }}
+{{ $zoom := resources.Get "js/zoom.js" | minify | fingerprint }}
+<script src="{{ $zoom.RelPermalink }}" integrity="{{ $zoom.Data.Integrity }}" defer></script>
+{{ end }}
+
 {{ if strings.Contains .TableOfContents "<li>" }}
 <script>
 (function(){
