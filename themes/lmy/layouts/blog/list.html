@@ -8,6 +8,8 @@
   <p>共 {{ $total }} 篇</p>
 </div>
 
+{{/* 没有 JS 时按年份折叠；有 JS 时 archive-rail.js 会全部展开，左边的刻度条一篇对一格 */}}
+<div class="archive-root">
 {{ range $grouped }}
 {{ $isOpen := or (eq .Key $currentYear) (eq .Key $lastYear) }}
 <details class="archive-year-group" id="year-{{ .Key }}"{{ if $isOpen }} open{{ end }}>
@@ -17,12 +19,17 @@
   </summary>
   <ul class="archive-list">
     {{ range .Pages }}
-    <li class="archive-item">
+    <li class="archive-item" data-date="{{ .Date.Format "2006-01-02" }}"{{ if .Params.featured }} data-featured{{ end }}>
       <span class="archive-date">{{ .Date.Format "01-02" }}</span>
       <a href="{{ .RelPermalink }}" class="archive-link">{{ .Title }}</a>
+      {{ if .Params.featured }}<span class="archive-pick" title="精选文章" aria-label="精选文章">✦</span>{{ end }}
     </li>
     {{ end }}
   </ul>
 </details>
 {{ end }}
+</div>
+
+{{ $rail := resources.Get "js/archive-rail.js" | minify | fingerprint }}
+<script src="{{ $rail.RelPermalink }}" integrity="{{ $rail.Data.Integrity }}" defer></script>
 {{ end }}

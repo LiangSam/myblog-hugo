@@ -441,6 +441,57 @@ main {
 
 .archive-link { color: var(--color-text); font-size: 0.93rem; }
 .archive-link:hover { color: var(--color-accent); text-decoration: none; }
+.archive-pick { color: var(--color-accent); font-size: 0.75rem; flex-shrink: 0; margin-left: -0.55rem; cursor: default; }
+
+/* Archives 页的文章刻度条（archive-rail.js），一篇一格，精选是强调色 */
+.archive-rail {
+  position: fixed;
+  z-index: 90;
+  cursor: pointer;
+  touch-action: none;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.archive-rail.is-dragging { cursor: grabbing; }
+.archive-rail canvas { display: block; width: 100%; height: 100%; }
+.archive-rail-card {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 95;
+  max-width: 17rem;
+  padding: 0.45rem 0.7rem 0.5rem;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.18s;
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+.archive-rail-card.is-visible { opacity: 1; }
+.archive-rail-date { display: block; font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-text-muted); }
+.archive-rail-card.is-featured .archive-rail-date::after { content: " · ✦ 精选"; font-family: var(--font-body); color: var(--color-accent); }
+.archive-rail-title { display: block; color: var(--color-text); text-wrap: balance; }
+.archive-item.is-scrub { background: var(--color-bg-soft); box-shadow: -0.5rem 0 0 var(--color-bg-soft), 0.5rem 0 0 var(--color-bg-soft); border-radius: 2px; }
+@keyframes archive-flash {
+  from { background: color-mix(in srgb, var(--color-accent) 22%, transparent); }
+  to { background: transparent; }
+}
+.archive-item.is-flash { animation: archive-flash 1.4s ease-out; border-radius: 2px; }
+/* 刻度条贴右边缘时，给列表让出触摸热区 */
+.archive-rail-right .archive-root { padding-right: 1rem; }
+/* 有刻度条时年份全展开，折叠箭头就没用了 */
+.has-archive-rail .archive-year { cursor: default; pointer-events: none; }
+.has-archive-rail .archive-year-label::before { display: none; }
+@media (prefers-reduced-motion: reduce) {
+  .archive-item.is-flash { animation: none; }
+  .archive-rail-card { transition: none; }
+}
+@media print { .archive-rail, .archive-rail-card { display: none !important; } }
 
 /* === Single Post === */
 .post-header { margin-bottom: 2rem; }
