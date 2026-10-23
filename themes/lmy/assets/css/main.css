@@ -501,95 +501,12 @@ main {
 /* 只看精选 */
 .archive-picks .archive-item:not([data-featured]),
 .archive-picks [data-no-picks],
-.archive-picks .archive-heat,
 .archive-picks .archive-month-label,
 .archive-picks .archive-year-meta { display: none; }
 /* 精选只有几十篇，不再按月分节，日期已经带着月份 */
 .archive-picks .archive-month + .archive-month { margin-top: 0; }
 
-/* Archives 页：每年的写作热力图（archive.js），一格一天，一周从周一开始 */
-.archive-heat { margin: 0.1rem 0 1.5rem; }
-.archive-heat-months,
-.archive-heat-grid {
-  display: grid;
-  grid-template-columns: repeat(var(--weeks), minmax(0, 1fr));
-  column-gap: 3px;
-}
-.archive-heat-months { margin-bottom: 0.3rem; font-family: var(--font-mono); font-size: 0.66rem; line-height: 1; color: var(--color-text-muted); }
-.archive-heat-months span { grid-row: 1; white-space: nowrap; }
-.archive-heat-months i { font-style: normal; }
-.archive-heat-grid { grid-template-rows: repeat(7, auto); grid-auto-flow: column; row-gap: 3px; }
-.archive-heat-grid span,
-.archive-heat-legend i {
-  aspect-ratio: 1;
-  border-radius: 2px;
-  background: color-mix(in srgb, var(--color-text-muted) 9%, transparent);
-}
-.archive-heat-grid .archive-heat-pad { background: none; }
-.archive-heat-grid .is-future { background: none; box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-text-muted) 11%, transparent); }
-.archive-heat .is-on { background: color-mix(in srgb, var(--color-accent) 30%, transparent); }
-.archive-heat .is-many { background: color-mix(in srgb, var(--color-accent) 58%, transparent); }
-.archive-heat .is-pick { background: var(--color-accent); }
-.archive-heat-grid .is-on { cursor: pointer; transition: transform 0.12s; }
-.archive-heat-grid .is-on:hover { transform: scale(1.35); box-shadow: 0 0 0 1px var(--color-bg); }
-.archive-heat-foot {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.25rem 1rem;
-  margin-top: 0.55rem;
-  font-size: 0.75rem;
-  color: var(--color-text-muted);
-}
-.archive-heat-stats { font-variant-numeric: tabular-nums; }
-.archive-heat-legend { display: inline-flex; align-items: center; gap: 0.3rem; }
-.archive-heat-legend i { display: inline-block; width: 9px; }
-.archive-heat-legend i + i { margin-left: 0.45rem; }
-
-.archive-tip {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 95;
-  max-width: 17rem;
-  padding: 0.4rem 0.65rem 0.45rem;
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-md);
-  font-size: 0.82rem;
-  line-height: 1.45;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.15s;
-}
-.archive-tip.is-visible { opacity: 1; }
-.archive-tip span { display: block; }
-.archive-tip-date { font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-text-muted); }
-.archive-tip-empty { color: var(--color-text-muted); }
-.archive-tip-title { color: var(--color-text); text-wrap: balance; }
-.archive-tip-title.is-pick::after { content: " ✦"; color: var(--color-accent); }
-
-@keyframes archive-flash {
-  from { background: color-mix(in srgb, var(--color-accent) 22%, transparent); }
-  to { background: transparent; }
-}
-.archive-item.is-flash { animation: archive-flash 1.4s ease-out; border-radius: 2px; }
-
-@media (max-width: 680px) {
-  .archive-heat-months,
-  .archive-heat-grid { column-gap: 1px; }
-  .archive-heat-grid { row-gap: 1px; }
-  .archive-heat-months { font-size: 0.6rem; }
-  .archive-heat-months i { display: none; }
-  .archive-heat-grid .is-on:hover { transform: none; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .archive-item.is-flash { animation: none; }
-  .archive-tip, .archive-heat-grid .is-on { transition: none; }
-}
-@media print { .archive-bar, .archive-heat, .archive-tip { display: none !important; } }
+@media print { .archive-bar { display: none !important; } }
 
 /* === Single Post === */
 .post-header { margin-bottom: 2rem; }

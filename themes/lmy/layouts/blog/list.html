@@ -27,7 +27,7 @@
   <button type="button" class="archive-bar-filter" aria-pressed="false" hidden>✦ 只看精选</button>
 </nav>
 
-{{/* 没有 JS 时就是按年折叠的列表；archive.js 加上年份高亮、精选筛选和每年的写作热力图 */}}
+{{/* 没有 JS 时就是按年折叠的列表；archive.js 加上年份高亮和精选筛选 */}}
 <div class="archive-root">
 {{ range $grouped }}{{ if ge .Key $split }}
 {{ $isOpen := or (eq .Key $currentYear) (eq .Key $lastYear) }}
