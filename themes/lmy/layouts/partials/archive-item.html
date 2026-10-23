@@ -1,0 +1,5 @@
+<li class="archive-item" data-date="{{ .Date.Format "2006-01-02" }}"{{ if .Params.featured }} data-featured{{ end }}>
+  <span class="archive-date">{{ .Date.Format "01-02" }}</span>
+  <a href="{{ .RelPermalink }}" class="archive-link">{{ .Title }}</a>
+  {{ if .Params.featured }}<span class="archive-pick" title="精选文章" aria-label="精选文章">✦</span>{{ end }}
+</li>

@@ -1,0 +1,13 @@
+{{/*
+  img-src.html — 把图床原图地址换成 Cloudflare 缩放后的地址。
+  用法：partial "img-src.html" (dict "src" $url "width" 1440)
+  只在 hugo.toml 里 params.imageCDN.resize = true 时生效；GIF 保持原样以免丢动画。
+*/}}
+{{- $src := .src -}}
+{{- $cfg := site.Params.imageCDN -}}
+{{- $host := strings.TrimSuffix "/" ($cfg.host | default "") -}}
+{{- if and $cfg.resize $host (strings.HasPrefix $src (printf "%s/" $host)) (not (strings.HasSuffix (lower $src) ".gif")) -}}
+  {{- $path := strings.TrimPrefix (printf "%s/" $host) $src -}}
+  {{- $src = printf "%s/cdn-cgi/image/width=%d,fit=scale-down,format=auto,quality=%d/%s" $host (.width | default 1440) ($cfg.quality | default 82) $path -}}
+{{- end -}}
+{{- return $src -}}

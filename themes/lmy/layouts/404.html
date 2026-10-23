@@ -1,7 +1,23 @@
 {{ define "main" }}
 <div class="error-page">
   <p class="error-code">404</p>
-  <p class="error-msg">这个页面不存在，或者已经被移走了。</p>
-  <a href="{{ "/" | relURL }}" class="error-back">← 回首页</a>
+  <p class="error-msg">这个页面不存在，或者已经被移走了。可以搜搜看：</p>
+  <form class="error-search" action="{{ "/search/" | relURL }}" method="get" role="search">
+    <input type="search" name="q" placeholder="输入关键词…" aria-label="搜索文章" />
+    <button type="submit">搜索</button>
+  </form>
+  {{ $recent := first 5 (where site.RegularPages "Section" "blog").ByDate.Reverse }}
+  {{ with $recent }}
+  <p class="error-recent-title">最近的文章</p>
+  <ul class="post-list">
+    {{ range . }}
+    <li class="post-item">
+      <span class="post-date">{{ .Date.Format "01-02" }}</span>
+      <a href="{{ .RelPermalink }}" class="post-link">{{ .Title }}</a>
+    </li>
+    {{ end }}
+  </ul>
+  {{ end }}
+  <p><a href="{{ "/" | relURL }}" class="error-back">← 回首页</a></p>
 </div>
 {{ end }}

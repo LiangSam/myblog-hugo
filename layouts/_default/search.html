@@ -1,9 +1,9 @@
 {{ define "main" }}
-<content>
+<div class="search-page">
   <h1 class="page-title">文章搜索</h1>
-  
+
   <div class="search-container">
-    <input id="search-query" type="text" placeholder="输入关键词搜索文章…" autocomplete="off">
+    <input id="search-query" type="search" placeholder="输入关键词搜索文章，多个词用空格隔开…" autocomplete="off" aria-label="搜索文章">
   </div>
 
   <div class="search-suggestions">
@@ -19,68 +19,125 @@
     </div>
   </div>
 
-  <div id="search-results" class="blog-posts"></div>
-</content>
+  <div id="search-results" aria-live="polite"></div>
+</div>
 
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
 <script>
-  var fuse;
-  var searchInput = document.getElementById('search-query');
-  var searchResults = document.getElementById('search-results');
+(function() {
+  var input = document.getElementById('search-query');
+  var resultsBox = document.getElementById('search-results');
+  var suggestions = document.querySelector('.search-suggestions');
+  var MAX_RESULTS = 50;
+  var posts = null;
 
-  // ... (这里保留您原有的 JS 逻辑，不需要变) ...
-  
-  window.onload = function() {
-    fetch('/index.json')
-      .then(function(response) { return response.json(); })
-      .then(function(data) {
-        var options = {
-          shouldSort: true,
-          includeMatches: true,
-          threshold: 0.3,
-          tokenize: true,
-          location: 0,
-          distance: 100,
-          maxPatternLength: 32,
-          minMatchCharLength: 1,
-          keys: [
-            {name: "title", weight: 0.8},
-            {name: "content", weight: 0.5},
-            {name: "tags", weight: 0.3}
-          ]
-        };
-        fuse = new Fuse(data, options);
-      });
-  };
+  function escapeHTML(s) {
+    return String(s).replace(/[&<>"']/g, function(c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
 
-  searchInput.addEventListener('input', function(e) {
-    var query = e.target.value;
-    var suggestionsBox = document.querySelector('.search-suggestions'); // 获取标签区域
+  function highlight(text, terms) {
+    var html = escapeHTML(text);
+    terms.forEach(function(t) {
+      var re = new RegExp(escapeHTML(t).replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+      html = html.replace(re, function(m) { return '<mark>' + m + '</mark>'; });
+    });
+    return html;
+  }
 
-    if (query.length > 0) {
-      // 💡 体验优化：输入文字时，隐藏标签建议，避免干扰视线
-      if(suggestionsBox) suggestionsBox.style.display = 'none';
+  // 截取正文里第一个命中词附近的一段话
+  function snippet(post, terms) {
+    var lower = post._content;
+    var pos = -1;
+    terms.forEach(function(t) {
+      var i = lower.indexOf(t);
+      if (i !== -1 && (pos === -1 || i < pos)) pos = i;
+    });
+    if (pos === -1) return '';
+    var start = Math.max(0, pos - 30);
+    var text = post.content.slice(start, pos + 70).replace(/\s+/g, ' ');
+    return (start > 0 ? '…' : '') + text + '…';
+  }
 
-      var results = fuse.search(query);
-      var htmlContent = '';
-
-      if (results.length > 0) {
-        results.forEach(function(item) {
-          var post = item.item;
-          htmlContent += '<div class="post-list-item" style="margin-bottom:1em; display:flex; align-items:baseline;">' +
-            '<span class="post-date" style="color:#999; margin-right:12px; font-family:monospace; min-width:6em;">' + post.date + '</span>' +
-            '<a href="' + post.permalink + '">' + post.title + '</a>' +
-            '</div>';
-        });
-      } else {
-        htmlContent = '<p>没有找到相关文章。</p>';
+  function search(query) {
+    var terms = query.toLowerCase().split(/\s+/).filter(Boolean);
+    var hits = [];
+    posts.forEach(function(post) {
+      var score = 0;
+      for (var i = 0; i < terms.length; i++) {
+        var t = terms[i];
+        var inTitle = post._title.indexOf(t) !== -1;
+        var inTags = post._tags.indexOf(t) !== -1;
+        var inContent = post._content.indexOf(t) !== -1;
+        if (!inTitle && !inTags && !inContent) return;
+        score += (inTitle ? 10 : 0) + (inTags ? 5 : 0) + (inContent ? 1 : 0);
       }
-      searchResults.innerHTML = htmlContent;
-    } else {
-      // 💡 体验优化：清空输入时，重新显示标签建议
-      if(suggestionsBox) suggestionsBox.style.display = 'block';
-      searchResults.innerHTML = '';
+      hits.push({ post: post, score: score });
+    });
+    hits.sort(function(a, b) {
+      return b.score - a.score || (a.post.date < b.post.date ? 1 : -1);
+    });
+    return { terms: terms, hits: hits };
+  }
+
+  function render() {
+    var query = input.value.trim();
+    var url = new URL(window.location.href);
+    if (query) { url.searchParams.set('q', query); } else { url.searchParams.delete('q'); }
+    window.history.replaceState(null, '', url);
+
+    if (!query) {
+      suggestions.hidden = false;
+      resultsBox.innerHTML = '';
+      return;
     }
-  });
+    suggestions.hidden = true;
+    if (!posts) {
+      resultsBox.innerHTML = '<p class="search-meta">正在载入索引…</p>';
+      return;
+    }
+
+    var res = search(query);
+    if (!res.hits.length) {
+      resultsBox.innerHTML = '<p class="search-meta">没有找到相关文章。</p>';
+      return;
+    }
+    var html = '<p class="search-meta">找到 ' + res.hits.length + ' 篇' +
+      (res.hits.length > MAX_RESULTS ? '，显示前 ' + MAX_RESULTS + ' 篇' : '') + '</p>';
+    res.hits.slice(0, MAX_RESULTS).forEach(function(hit) {
+      var post = hit.post;
+      var snip = snippet(post, res.terms);
+      html += '<div class="search-result">' +
+        '<div class="search-result-head">' +
+          '<span class="post-date">' + escapeHTML(post.date) + '</span>' +
+          '<a class="search-result-title" href="' + escapeHTML(post.permalink) + '">' + highlight(post.title, res.terms) + '</a>' +
+        '</div>' +
+        (snip ? '<p class="search-result-snippet">' + highlight(snip, res.terms) + '</p>' : '') +
+      '</div>';
+    });
+    resultsBox.innerHTML = html;
+  }
+
+  var initial = new URLSearchParams(window.location.search).get('q');
+  if (initial) { input.value = initial; }
+  input.addEventListener('input', render);
+  render();
+
+  fetch('{{ "index.json" | relURL }}')
+    .then(function(response) { return response.json(); })
+    .then(function(data) {
+      posts = data.map(function(p) {
+        p.content = p.content || '';
+        p._title = (p.title || '').toLowerCase();
+        p._tags = (Array.isArray(p.tags) ? p.tags.join(' ') : String(p.tags || '')).toLowerCase();
+        p._content = p.content.toLowerCase();
+        return p;
+      });
+      render();
+    })
+    .catch(function() {
+      resultsBox.innerHTML = '<p class="search-meta">索引载入失败，请刷新重试。</p>';
+    });
+})();
 </script>
 {{ end }}

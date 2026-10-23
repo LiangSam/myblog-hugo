@@ -1,28 +1,70 @@
 {{ define "main" }}
 {{ $total := len .Pages }}
+{{ $picks := len (where .Pages "Params.featured" true) }}
 {{ $grouped := .Pages.GroupByDate "2006" }}
 {{ $currentYear := now.Format "2006" }}
 {{ $lastYear := (now.AddDate -1 0 0).Format "2006" }}
+{{/* 这一年之前文章很少，合成"更早"一组，按年分小节 */}}
+{{ $split := "2024" }}
+{{ $earlyCount := 0 }}
+{{ $earlyPicks := 0 }}
+{{ range $grouped }}{{ if lt .Key $split }}
+  {{ $earlyCount = add $earlyCount (len .Pages) }}
+  {{ $earlyPicks = add $earlyPicks (len (where .Pages "Params.featured" true)) }}
+{{ end }}{{ end }}
 <div class="list-header">
   <h1>{{ .Title }}</h1>
-  <p>共 {{ $total }} 篇</p>
+  <p>共 {{ $total }} 篇，其中精选 {{ $picks }} 篇</p>
 </div>
 
-{{ range $grouped }}
+<nav class="archive-bar" aria-label="按年份跳转">
+  <div class="archive-bar-years">
+    {{ range $grouped }}{{ if ge .Key $split }}
+    <a href="#year-{{ .Key }}" class="archive-bar-year" data-year="{{ .Key }}"{{ if not (where .Pages "Params.featured" true) }} data-no-picks{{ end }}>{{ .Key }}</a>
+    {{ end }}{{ end }}
+    {{ if $earlyCount }}<a href="#year-early" class="archive-bar-year" data-year="early"{{ if not $earlyPicks }} data-no-picks{{ end }}>更早</a>{{ end }}
+  </div>
+  <button type="button" class="archive-bar-filter" aria-pressed="false" hidden>✦ 只看精选</button>
+</nav>
+
+{{/* 没有 JS 时就是按年折叠的列表；archive.js 加上年份高亮和精选筛选 */}}
+<div class="archive-root">
+{{ range $grouped }}{{ if ge .Key $split }}
 {{ $isOpen := or (eq .Key $currentYear) (eq .Key $lastYear) }}
-<details class="archive-year-group" id="year-{{ .Key }}"{{ if $isOpen }} open{{ end }}>
+<details class="archive-year-group" id="year-{{ .Key }}" data-year="{{ .Key }}"{{ if not (where .Pages "Params.featured" true) }} data-no-picks{{ end }}{{ if $isOpen }} open{{ end }}>
   <summary class="archive-year">
     <span class="archive-year-label">{{ .Key }}</span>
     <span class="archive-year-meta">{{ len .Pages }} 篇</span>
   </summary>
-  <ul class="archive-list">
-    {{ range .Pages }}
-    <li class="archive-item">
-      <span class="archive-date">{{ .Date.Format "01-02" }}</span>
-      <a href="{{ .RelPermalink }}" class="archive-link">{{ .Title }}</a>
-    </li>
-    {{ end }}
-  </ul>
+  {{ range .Pages.GroupByDate "1" }}
+  <div class="archive-month"{{ if not (where .Pages "Params.featured" true) }} data-no-picks{{ end }}>
+    <h3 class="archive-month-label">{{ .Key }} 月<span class="archive-month-count">{{ len .Pages }}</span></h3>
+    <ul class="archive-list">
+      {{ range .Pages }}{{ partial "archive-item.html" . }}{{ end }}
+    </ul>
+  </div>
+  {{ end }}
+</details>
+{{ end }}{{ end }}
+
+{{ if $earlyCount }}
+<details class="archive-year-group" id="year-early" data-year="early"{{ if not $earlyPicks }} data-no-picks{{ end }}>
+  <summary class="archive-year">
+    <span class="archive-year-label">更早</span>
+    <span class="archive-year-meta">{{ $earlyCount }} 篇</span>
+  </summary>
+  {{ range $grouped }}{{ if lt .Key $split }}
+  <div class="archive-month"{{ if not (where .Pages "Params.featured" true) }} data-no-picks{{ end }}>
+    <h3 class="archive-month-label">{{ .Key }}<span class="archive-month-count">{{ len .Pages }}</span></h3>
+    <ul class="archive-list">
+      {{ range .Pages }}{{ partial "archive-item.html" . }}{{ end }}
+    </ul>
+  </div>
+  {{ end }}{{ end }}
 </details>
 {{ end }}
+</div>
+
+{{ $js := resources.Get "js/archive.js" | minify | fingerprint }}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
 {{ end }}

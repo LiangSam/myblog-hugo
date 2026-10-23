@@ -1,0 +1,22 @@
+{{/* 精选文章卡片：封面取 front matter 的 image，没有就取正文第一张图 */}}
+{{ $image := .Params.image }}
+{{ if not $image }}
+  {{ $matches := findRE `!\[.*?\]\((https?://[^)]+)\)` .RawContent 1 }}
+  {{ if $matches }}
+    {{ $urlMatches := findRE `https?://[^)\s]+` (index $matches 0) 1 }}
+    {{ if $urlMatches }}{{ $image = index $urlMatches 0 }}{{ end }}
+  {{ end }}
+{{ end }}
+{{ $colors := slice "#d4a373" "#a8c5da" "#c9b8d4" "#a8d4c5" "#d4b896" "#b8a8d4" "#c5c8a8" }}
+{{ $placeholderColor := index $colors (mod (len .Title) (len $colors)) }}
+<a href="{{ .RelPermalink }}" class="post-card">
+  {{ if $image }}
+  <img src="{{ partial "img-src.html" (dict "src" $image "width" 640) }}" alt="" class="card-cover" loading="lazy" decoding="async" />
+  {{ else }}
+  <div class="card-cover-placeholder" style="background: {{ $placeholderColor | safeCSS }};"></div>
+  {{ end }}
+  <div class="card-body">
+    <div class="card-title">{{ .Title }}</div>
+    <div class="card-date">{{ .Date.Format "2006-01-02" }}</div>
+  </div>
+</a>

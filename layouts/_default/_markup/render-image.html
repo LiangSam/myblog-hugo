@@ -1,9 +1,11 @@
 {{/*
   render-image.html
   覆盖默认的图片渲染方式，使其支持 <figure> 和 <figcaption>
+  第一张图立即加载，其余延迟加载；图床图片按 1440px 宽缩放（见 partials/img-src.html）
 */}}
+{{- $src := partial "img-src.html" (dict "src" .Destination "width" 1440) -}}
 <figure>
-    <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" />
+    <img src="{{ $src | safeURL }}" alt="{{ .Text }}"{{ if gt .Ordinal 0 }} loading="lazy"{{ end }} decoding="async" />
     {{/* 如果图片在 Markdown 中定义了 title，就用它作为 figcaption */}}
     {{ with .Title }}
         <figcaption>{{ . }}</figcaption>

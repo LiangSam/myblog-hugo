@@ -8,27 +8,7 @@
 {{ if $featured }}
 <div class="card-grid">
   {{ range $featured.ByDate.Reverse }}
-  {{ $image := .Params.image }}
-  {{ if not $image }}
-    {{ $matches := findRE `!\[.*?\]\((https?://[^)]+)\)` .RawContent 1 }}
-    {{ if $matches }}
-      {{ $urlMatches := findRE `https?://[^)]+` (index $matches 0) 1 }}
-      {{ if $urlMatches }}{{ $image = index $urlMatches 0 }}{{ end }}
-    {{ end }}
-  {{ end }}
-  {{ $colors := slice "#d4a373" "#a8c5da" "#c9b8d4" "#a8d4c5" "#d4b896" "#b8a8d4" "#c5c8a8" }}
-  {{ $placeholderColor := index $colors (mod (len .Title) (len $colors)) }}
-  <a href="{{ .RelPermalink }}" class="post-card">
-    {{ if $image }}
-    <img src="{{ $image }}" alt="{{ .Title }}" class="card-cover" loading="lazy" />
-    {{ else }}
-    <div class="card-cover-placeholder" style="background: {{ $placeholderColor }};"></div>
-    {{ end }}
-    <div class="card-body">
-      <div class="card-title">{{ .Title }}</div>
-      <div class="card-date">{{ .Date.Format "2006-01-02" }}</div>
-    </div>
-  </a>
+  {{ partial "post-card.html" . }}
   {{ end }}
 </div>
 {{ else }}
