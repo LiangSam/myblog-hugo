@@ -278,6 +278,8 @@ main {
 
 /* === Homepage: Sections === */
 .home-section { margin-bottom: 3rem; }
+/* 最后一节下面已经有 main 的底部留白，不再叠加 */
+.home-section:last-child { margin-bottom: 0; }
 
 .section-header {
   display: flex;
@@ -286,7 +288,7 @@ main {
   margin-bottom: 1rem;
 }
 .section-title {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--color-text);
   margin: 0;
   font-weight: 700;
