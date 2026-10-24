@@ -720,6 +720,8 @@ input#search-query:focus { border-color: var(--color-accent); }
 .tag-chip:hover { border-color: var(--color-accent); color: var(--color-accent); text-decoration: none; }
 .tag-name { opacity: 0.9; }
 .tag-count { font-size: 0.75em; color: var(--color-text-muted); font-family: var(--font-mono); }
+.tag-all { align-self: center; margin-left: 0.25rem; font-size: 0.82rem; color: var(--color-text-muted); text-decoration: none; }
+.tag-all:hover { color: var(--color-accent); }
 
 /* === Theme Map === */
 .map-main {

@@ -1,5 +1,6 @@
+{{- /* 搜索索引：只收博客文章和 notes，搜索页、留言板这些独立页面不进索引 */ -}}
 {{- $.Scratch.Add "index" slice -}}
-{{- range .Site.RegularPages -}}
+{{- range where .Site.RegularPages "Section" "in" (slice "blog" "notes") -}}
     {{- $.Scratch.Add "index" (dict "title" .Title "date" (.Date.Format "2006-01-02") "permalink" .Permalink "content" .Plain "tags" .Params.tags) -}}
 {{- end -}}
 {{- $.Scratch.Get "index" | jsonify -}}

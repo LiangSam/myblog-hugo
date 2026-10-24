@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="search-page">
-  <h1 class="page-title">文章搜索</h1>
+  <h1 class="page-title">Search</h1>
 
   <div class="search-container">
     <input id="search-query" type="search" placeholder="输入关键词搜索文章，多个词用空格隔开…" autocomplete="off" aria-label="搜索文章">
@@ -8,14 +8,15 @@
 
   <div class="search-suggestions">
     <div class="tag-cloud">
-      {{/* 获取所有标签，并按文章数量(Count)倒序排列 */}}
-      {{ range .Site.Taxonomies.tags.ByCount }}
+      {{/* 只放文章最多的几个标签当提示，完整列表在 /tags/ */}}
+      {{ range first 12 .Site.Taxonomies.tags.ByCount }}
         {{/* 这里的 .Page.Title 是标签名， .Count 是文章数 */}}
         <a href="{{ .Page.RelPermalink }}" class="tag-chip">
           <span class="tag-name">#{{ .Page.Title }}</span>
           <span class="tag-count">{{ .Count }}</span>
         </a>
       {{ end }}
+      <a href="{{ "/tags/" | relURL }}" class="tag-all">All tags →</a>
     </div>
   </div>
 
@@ -118,26 +119,35 @@
     resultsBox.innerHTML = html;
   }
 
+  // 索引有一两 MB，等真要搜的时候（点进输入框或带着 ?q= 进来）再下载
+  var loading = false;
+  function loadIndex() {
+    if (loading) return;
+    loading = true;
+    fetch('{{ "index.json" | relURL }}')
+      .then(function(response) { return response.json(); })
+      .then(function(data) {
+        posts = data.map(function(p) {
+          p.content = p.content || '';
+          p._title = (p.title || '').toLowerCase();
+          p._tags = (Array.isArray(p.tags) ? p.tags.join(' ') : String(p.tags || '')).toLowerCase();
+          p._content = p.content.toLowerCase();
+          return p;
+        });
+        render();
+      })
+      .catch(function() {
+        loading = false;
+        resultsBox.innerHTML = '<p class="search-meta">索引载入失败，请刷新重试。</p>';
+      });
+  }
+
   var initial = new URLSearchParams(window.location.search).get('q');
   if (initial) { input.value = initial; }
-  input.addEventListener('input', render);
+  input.addEventListener('focus', loadIndex);
+  input.addEventListener('input', function() { loadIndex(); render(); });
   render();
-
-  fetch('{{ "index.json" | relURL }}')
-    .then(function(response) { return response.json(); })
-    .then(function(data) {
-      posts = data.map(function(p) {
-        p.content = p.content || '';
-        p._title = (p.title || '').toLowerCase();
-        p._tags = (Array.isArray(p.tags) ? p.tags.join(' ') : String(p.tags || '')).toLowerCase();
-        p._content = p.content.toLowerCase();
-        return p;
-      });
-      render();
-    })
-    .catch(function() {
-      resultsBox.innerHTML = '<p class="search-meta">索引载入失败，请刷新重试。</p>';
-    });
+  if (initial) loadIndex();
 })();
 </script>
 {{ end }}
