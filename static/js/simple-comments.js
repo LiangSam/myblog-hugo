@@ -68,13 +68,23 @@
   function commentNode(comment, depth) {
     const article = el('article', 'simple-comment');
     article.style.setProperty('--comment-depth', Math.min(depth, 3));
-    if (comment.avatarUrl) {
+    const initialAvatar = () => {
+      const initial = Array.from((comment.nickname || '').trim())[0] || '?';
+      const span = el('span', 'simple-comment-avatar simple-comment-avatar-initial', initial.toUpperCase());
+      span.setAttribute('aria-hidden', 'true');
+      return span;
+    };
+    const avatarSrc = comment.isAuthor ? '/images/favicon.png' : comment.avatarUrl;
+    if (avatarSrc) {
       const avatar = el('img', 'simple-comment-avatar');
-      avatar.src = comment.avatarUrl;
+      avatar.src = avatarSrc;
       avatar.alt = '';
       avatar.loading = 'lazy';
       avatar.referrerPolicy = 'no-referrer';
+      avatar.addEventListener('error', () => avatar.replaceWith(initialAvatar()), { once: true });
       article.append(avatar);
+    } else {
+      article.append(initialAvatar());
     }
     const content = el('div', 'simple-comment-content');
     const meta = el('div', 'simple-comment-meta');
