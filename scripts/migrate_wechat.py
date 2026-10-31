@@ -12,7 +12,7 @@ from datetime import datetime
 from pathlib import Path
 
 SOURCE_FILE = "/Users/bob/Library/CloudStorage/OneDrive-Personal/myObsidian/04 Project/梁某银公众号推文.md"
-BLOG_DIR = "/Users/bob/HUGO/content/blog"
+BLOG_DIR = str(Path(__file__).resolve().parent.parent / "content" / "blog")
 
 def normalize(s):
     """标准化标题用于比较，去掉标点和空格"""

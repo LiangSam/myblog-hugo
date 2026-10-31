@@ -1,8 +1,0 @@
-node_modules/
-.wrangler/
-.dev.vars*
-.admin-password
-.seed.sql
-.backups/
-!public/
-!public/**

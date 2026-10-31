@@ -12,7 +12,7 @@
 
 给本地文章或管理页网址加上 `?comments-api=stage`，就会连接云端 Worker；不加参数时连接本地 Worker。云端 Worker 的管理员密码保存在未纳入 Git 的 `.stage-secrets`，文件仅供本机账户读取。正式博客不接受此测试参数。
 
-Worker `lmy-comments` 与此前的 Twikoo Worker 使用同一个 `lmy-comments-trial` D1。自建评论使用 `simple_comments`、`simple_comment_votes`、`simple_banned_ips` 和 `simple_post_limits` 四张表；Twikoo 的 `comment` 表不变。建表前的云端备份保存在未纳入 Git 的 `.backups/2026-10-17-before-simple-comments.sql`。云端导入旧评论时，使用 `npx wrangler d1 execute lmy-comments-trial --remote --file .legacy-import.sql`。现有数据库新增投票表时，运行 `npx wrangler d1 execute lmy-comments-trial --remote --file migrations/002-votes.sql`。
+Worker `lmy-comments` 沿用此前 Twikoo 试用时创建的 `lmy-comments-trial` D1，名字里的 trial 是历史遗留，这个库存着全部正式评论，不要删除。自建评论使用 `simple_comments`、`simple_comment_votes`、`simple_banned_ips` 和 `simple_post_limits` 四张表；Twikoo 的 `comment` 表不变。建表前的云端备份保存在未纳入 Git 的 `.backups/2026-10-17-before-simple-comments.sql`。云端导入旧评论时，使用 `npx wrangler d1 execute lmy-comments-trial --remote --file .legacy-import.sql`。现有数据库新增投票表时，运行 `npx wrangler d1 execute lmy-comments-trial --remote --file migrations/002-votes.sql`。
 
 新评论默认直接显示。昵称必填，邮箱选填；昵称和填写的邮箱原文只保存在读者浏览器的 localStorage。填写邮箱时，服务把邮箱转换成 Gravatar 摘要，再保存头像地址；不填邮箱时不生成头像。评论数据保存在 D1 的 `simple_comments` 表中。每条留言允许赞成或反对，重复点击已选方向会取消，页面显示两种票相抵后的数字。浏览器会保存随机投票编号；Worker 使用 `IP_SALT` 计算编号摘要，D1 的 `simple_comment_votes` 表只保存摘要。清除浏览器数据会产生新编号，因此匿名投票无法保证一人一票。管理员登录 `/comments-admin/` 后，可直接在每条留言下回复，也可删除、恢复留言，按评论的网络编号封禁、解除封禁。网络编号由 IP 和仅存在于 Worker 配置的 `IP_SALT` 计算，评论列表不公开 IP。
 
@@ -23,7 +23,7 @@ Worker `lmy-comments` 与此前的 Twikoo Worker 使用同一个 `lmy-comments-t
 脚本还会读取备份旁的 `giscus-comments.json`，按原评论 ID 恢复 GitHub 作者主页。旧备份已经导入本地 D1 时，先运行 `npx wrangler d1 execute lmy-comments-trial --local --file migrations/001-author-url.sql`，再重新生成和执行导入语句；重复导入只补充作者链接，不改动现有评论。新建 D1 时直接运行 `schema.sql`，无需执行这份字段更新文件。
 
 ```sh
-python3 scripts/import-legacy.py ../twikoo-trial/.backups/2026-10-16/d1-after-custom-domain.sql .legacy-import.sql
+python3 scripts/import-legacy.py .backups/2026-10-16-twikoo/d1-after-custom-domain.sql .legacy-import.sql
 npx wrangler d1 execute lmy-comments-trial --local --file .legacy-import.sql
 ```
 
@@ -31,11 +31,11 @@ npx wrangler d1 execute lmy-comments-trial --local --file .legacy-import.sql
 
 2026-10-17 已将公开的 46 个博客 Discussion 页面保存到未纳入 Git 的 `.backups/2026-10-17-giscus-refresh/github/`。本次提取到 85 条评论；与 2026-10-16 备份逐条比较，评论 ID、正文、作者、时间和回复关系均一致，没有新增、删除或修改。正式切换前，D1 导出保存在 `.backups/2026-10-17-before-production-switch.sql`，SHA-256 为 `a07477c56b2d6d00c38e5c96d306c013d615473fe849452067f3dbd9ae6d9e32`；导出包含这 85 条自建评论以及原 Twikoo 的 `comment` 表。切换前的 Worker 配置和文章模板保存在 `.backups/2026-10-17-cutover/`。以上备份均只保存在本机，未纳入 Git。
 
-## 切回 Giscus 或 Twikoo
+## 切回 Giscus
 
-只切回 Giscus 时，恢复 `themes/lmy/layouts/_default/single.html` 中原有的 Giscus 脚本并重新发布 Hugo 网站；`hugo.toml` 的 Giscus 参数和 GitHub Discussions 保留着。此操作只改变文章页面显示的评论区，D1 中的自建评论仍保留。
+切回 Giscus 时，恢复 `themes/lmy/layouts/_default/single.html` 中原有的 Giscus 脚本并重新发布 Hugo 网站；`hugo.toml` 的 Giscus 参数和 GitHub Discussions 保留着。此操作只改变文章页面显示的评论区，D1 中的自建评论仍保留。
 
-需要同时把 `comment.liangmouyin.com` 切回 Twikoo 时，先从 `services/comments/wrangler.jsonc` 移除 `routes` 并部署 `lmy-comments`，再从 `.backups/2026-10-17-cutover/twikoo-wrangler.jsonc` 恢复 `services/twikoo-trial/wrangler.jsonc` 的域名配置并部署 `lmy-comments-trial`。旧 Worker 的 `workers.dev` 地址仍为 `https://lmy-comments-trial.suihantarot.workers.dev`。回退页面或域名时，不要直接把旧 SQL 导出覆盖到 D1：切换后可能已经产生新留言，应先另行导出当前 D1 并核对差异。
+2026-10-31 已删除 Twikoo Worker `lmy-comments-trial` 和 `services/twikoo-trial` 目录，D1 及其中 Twikoo 的 `comment` 表保留。Twikoo 时期只存在本机的备份已移到 `.backups/2026-10-16-twikoo/`；项目代码可从提交 `0256abe` 找回。回退时不要直接把旧 SQL 导出覆盖到 D1：切换后可能已经产生新留言，应先另行导出当前 D1 并核对差异。
 
 ## 新留言 Telegram 通知
 
