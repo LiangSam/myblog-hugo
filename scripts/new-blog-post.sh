@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-# 新建博客文章：Blog Draft / Blog Template 两个 LaunchBar 动作共用。
+# 新建博客文章：Blog Draft / Blog Post 两个 LaunchBar 动作共用。
 # NEW_BLOG_DIR 指定存放文件夹，NEW_BLOG_DRAFT=true 时写成草稿。
 set -eu
 
