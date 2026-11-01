@@ -6,7 +6,8 @@
   2. 单独一行的图片路径         —— 把图片直接拖进编辑器时常见的样子
 
 上传全部成功才改写文件；改写前先备份原 md。成功后把原图收进
-~/Pictures/博客配图/YYYY-MM/ 归档（--keep 不动，--trash 扔进废纸篓）。
+~/Pictures/博客配图/YYYY-MM/ 归档：一篇文章有两张及以上的图，
+再按文章文件名建一层子文件夹（--keep 不动，--trash 扔进废纸篓）。
 
 用法：
   picup.py 文章.md [更多.md ...] [--dry-run] [--keep | --trash]
@@ -169,14 +170,27 @@ def main():
 
     moved = 0
     if not args.keep:
-        target = os.path.expanduser("~/.Trash") if args.trash else os.path.join(ARCHIVE, dt.date.today().strftime("%Y-%m"))
-        os.makedirs(target, exist_ok=True)
-        for p in images:
-            if os.path.isfile(p):
+        month = os.path.join(ARCHIVE, dt.date.today().strftime("%Y-%m"))
+        where = set()
+        for f, _, hits in jobs:
+            mine = []
+            for h in hits:
+                if h[3] not in mine and os.path.isfile(h[3]):
+                    mine.append(h[3])
+            if not mine:
+                continue
+            if args.trash:
+                target = os.path.expanduser("~/.Trash")
+            elif len(mine) >= 2:  # 两张及以上：按文章建子文件夹
+                target = os.path.join(month, os.path.splitext(os.path.basename(f))[0])
+            else:
+                target = month
+            os.makedirs(target, exist_ok=True)
+            for p in mine:
                 shutil.move(p, unique_dest(target, os.path.basename(p)))
                 moved += 1
-        where = "废纸篓" if args.trash else target
-        print("完成：上传 %d 张，原图 %d 张已移到 %s。" % (len(images), moved, where))
+            where.add("废纸篓" if args.trash else target)
+        print("完成：上传 %d 张，原图 %d 张已移到 %s。" % (len(images), moved, "、".join(sorted(where))))
     else:
         print("完成：上传 %d 张，原图未动。" % len(images))
     print("原文备份在 %s" % BACKUPS)
