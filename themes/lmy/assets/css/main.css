@@ -557,7 +557,7 @@ main {
 .post-tags a:hover { border-color: var(--color-accent); color: var(--color-accent); text-decoration: none; }
 
 /* === Prose (article content) === */
-.post-content { font-size: 1rem; line-height: var(--line-height); }
+.post-content { font-size: 1rem; line-height: var(--line-height); text-autospace: normal; }
 @media (min-width: 681px) {
   .post-content-article { font-size: 1.0625rem; }
 }
@@ -580,11 +580,13 @@ main {
   text-align: justify;
   text-align-last: left;
   text-justify: inter-character;
+  text-wrap: pretty;
 }
 .post-content li {
   text-align: justify;
   text-align-last: left;
   text-justify: inter-character;
+  text-wrap: pretty;
 }
 .post-content a { color: var(--color-link); text-decoration: underline; text-underline-offset: 3px; }
 .post-content a:hover { text-decoration: none; }
