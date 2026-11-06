@@ -2,7 +2,7 @@
 {{ $tools := slice
   (dict "icon" "📖" "name" "纯净阅读" "source" "bookmarklets/clean-reading.js" "summary" "提取正文，保留标题、作者和原文链接，适合阅读或打印。" "note" "需要联网载入 Readability；个别特殊网页可能无法识别。")
   (dict "icon" "🖨️" "name" "公众号打印" "source" "bookmarklets/wechat-print.js" "summary" "把公众号正文统一为 18px 黑字，解决打印后字号太小、颜色太浅。" "note" "再次点击可关闭。")
-  (dict "icon" "📋" "name" "复制到公众号" "source" "bookmarklets/wechat-copy.js" "summary" "在本站文章页点一下，正文连同样式复制到剪贴板，直接粘贴到公众号后台。" "note" "只对本站文章页有效；站外链接会转成文末参考链接。")
+  (dict "icon" "📋" "name" "复制到公众号" "source" "bookmarklets/wechat-copy.js" "summary" "在本站文章页点一下，正文套上公众号专用样式后复制到剪贴板，直接粘贴到公众号后台。" "note" "只对本站文章页有效；站外链接转成文末参考，博客链接保留文字，留给你手动替换。")
   (dict "icon" "🔎" "name" "点击缩图" "source" "bookmarklets/shrink-image-click.js" "summary" "开启后，每点击一次图片就缩小 10%，最小保留 50px。" "note" "适合只想调整一两张图片的文章。")
   (dict "icon" "🗜️" "name" "正文图片 -30%" "source" "bookmarklets/shrink-images-all.js" "summary" "一次缩小页面里的正文大图，并尽量跳过头像、Logo、图标和小图片。" "note" "每张图片只处理一次；刷新页面即可恢复。")
   (dict "icon" "🖋️" "name" "思源宋体" "source" "bookmarklets/source-serif.js" "summary" "把正文切换为思源宋体，标题和粗体使用更重字重。" "note" "电脑需要已经安装思源宋体或 Noto Serif CJK。")
