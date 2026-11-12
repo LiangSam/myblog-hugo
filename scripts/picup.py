@@ -164,7 +164,9 @@ def main():
                 lines[i] = "%s![](%s)" % (indent, urls[p])
             else:
                 line = lines[i]
-                lines[i] = line[:m.start()] + "![%s](%s)" % (m.group(1), urls[p]) + line[m.end():]
+                # 保留 ![](path "title") 里的 title，它会渲染成图注
+                title = re.search(r'\s+"[^"]*"\s*$', m.group(2))
+                lines[i] = line[:m.start()] + "![%s](%s%s)" % (m.group(1), urls[p], title.group(0).rstrip() if title else "") + line[m.end():]
         with open(f, "w", encoding="utf-8") as fh:
             fh.write("\n".join(lines))
 
