@@ -11,7 +11,7 @@ featured: false
 description: 从用 MacBook 以来，我几乎没有用过自带的 Apple Books，论阅读体验和功能齐全上，不及 Calibre，论海量书库、全平台同步，比不上微信读书。
 ---
 
-![](https://img.liangmouyin.com/2026/11/2158cc7d7a51e6af6c28fd3d7ef28e4b.png)
+![](https://img.liangmouyin.com/2026/11/3b8a06ae19eca3f2ee12d40854df621a.png)
 
 从用 MacBook 以来，我几乎没有用过自带的 Apple Books，论阅读体验和功能齐全上，不及 Calibre，论海量书库、全平台同步，比不上微信读书。
 
@@ -19,7 +19,7 @@ description: 从用 MacBook 以来，我几乎没有用过自带的 Apple Books�
 
 Books 功能简单，操作逻辑和惯用的微信读书、起点读书有所差异。后两者通常是点击界面后，底部就有一排按钮，可以查阅目录、翻看笔记、调节进度、更换主题、调整字号等等，右上角往往是书籍信息，微信读书右下角甚至还有听书和 AI 对话功能；Books 把这一切都塞进几个按钮中，关闭、书签、和右下角的三个点（点击后是目录、主题和搜索），看起来苹果并不鼓励你随时调整东西。
 
-![微信读书 vs Apple Books](https://img.liangmouyin.com/2026/11/e318f14ebb39e0fa6add1acc98884f27.png "微信读书 vs Apple Books")
+![微信读书 vs Apple Books](https://img.liangmouyin.com/2026/11/16b4ec3fb68e0ecd815538346ded2225.png "微信读书 vs Apple Books")
 
 这尚且只是交互差异，在阅读体验上还有些许区别。Apple Books 翻页方式可改为卷页、快速淡入淡出和滚动，默认是缓慢的左右覆盖，在想要快读翻页时比较磨人；微信读书好歹可以调味上下滑动或左右滑动，速度迅捷。我还不喜欢的是 Apple Books 会在每一页上面固定一个书名，占用不少屏幕空间，你说隐藏起来多少——实在不行你放在灵动岛背后呢。
 
