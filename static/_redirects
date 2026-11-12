@@ -345,3 +345,6 @@
 /tags/%E8%A6%81%E4%B8%8D%E8%A6%81/* /tags/%E6%B6%88%E8%B4%B9%E5%86%B3%E7%AD%96/ 301
 /tags/%E7%89%A9%E5%93%81/* /tags/%E7%89%A9%E5%93%81%E7%AE%A1%E7%90%86/ 301
 /tags/%E9%80%89%E6%8B%A9%E5%93%B2%E5%AD%A6/* /tags/%E5%86%B3%E7%AD%96/ 301
+
+# 分类页已停用，旧地址跳到 Archives
+/categories/* /blog/ 301

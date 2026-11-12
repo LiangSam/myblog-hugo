@@ -4,8 +4,12 @@
   第一张图立即加载，其余延迟加载；图床图片按 1440px 宽缩放（见 partials/img-src.html）
 */}}
 {{- $src := partial "img-src.html" (dict "src" .Destination "width" 1440) -}}
+{{- /* 文件名、“图片”/“Image”这类占位文字当 alt 没意义，读屏会念出一串乱码，留空 */ -}}
+{{- $alt := .Text -}}
+{{- $plain := string .Text -}}
+{{- if or (findRE `(?i)\.(png|jpe?g|webp|gif|heic|avif)$` $plain) (in (slice "图片" "Image" "image") $plain) (hasPrefix $plain "Uploading file") }}{{ $alt = "" }}{{ end -}}
 <figure>
-    <img src="{{ $src | safeURL }}" alt="{{ .Text }}"{{ if gt .Ordinal 0 }} loading="lazy"{{ end }} decoding="async" />
+    <img src="{{ $src | safeURL }}" alt="{{ $alt }}"{{ if gt .Ordinal 0 }} loading="lazy"{{ end }} decoding="async" />
     {{/* 如果图片在 Markdown 中定义了 title，就用它作为 figcaption */}}
     {{ with .Title }}
         <figcaption>{{ . }}</figcaption>
