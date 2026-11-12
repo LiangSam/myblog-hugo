@@ -513,6 +513,11 @@ main {
 /* === Single Post === */
 .post-header { margin-bottom: 2rem; }
 .page-header { margin-bottom: 1rem; }
+.spark-title-link { color: inherit; text-decoration: none; }
+.spark-title-link:hover { color: var(--color-accent); }
+.spark-back { margin-top: 3rem; font-size: 0.9rem; }
+.spark-back a { color: var(--color-text-muted); text-decoration: none; }
+.spark-back a:hover { color: var(--color-accent); }
 
 .page-dates {
   color: var(--color-text-soft);

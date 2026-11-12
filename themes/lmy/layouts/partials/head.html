@@ -1,9 +1,11 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+{{- $title := cond .IsHome .Site.Title .Title -}}
+{{- /* 单条 Sparks 没有标题，用日期区分：Sparks · 2026-10-10 */ -}}
+{{- if and .IsPage (eq .Section "notes") }}{{ $title = printf "Sparks · %s" (.Date.Format "2006-01-02") }}{{ end -}}
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ $title }} | {{ .Site.Title }}{{ end }}</title>
 {{- $desc := .Site.Params.description -}}
 {{- with .Description }}{{ $desc = . }}{{ else }}{{ if .IsPage }}{{ with .Summary | plainify | htmlUnescape | strings.TrimSpace }}{{ $desc = . | replaceRE `\s+` " " | truncate 120 }}{{ end }}{{ end }}{{ end -}}
-{{- $title := cond .IsHome .Site.Title .Title -}}
 {{- $image := "images/favicon.png" | absURL -}}
 {{- $hasCover := false -}}
 {{- with .Params.images }}{{ $image = index . 0 | absURL }}{{ $hasCover = true }}{{ else }}{{ if .IsPage }}{{ with findRESubmatch `<img[^>]+src="([^"]+)"` .Content 1 }}{{ $image = index (index . 0) 1 | absURL }}{{ $hasCover = true }}{{ end }}{{ end }}{{ end -}}

@@ -1,0 +1,25 @@
+{{ define "main" }}
+{{/* 单条 Sparks：只放内容，不要往年今日、相关文章和留言 */}}
+<article>
+  <div class="post-header">
+    <h1 class="post-title-main"><a href="{{ "/notes/" | relURL }}" class="spark-title-link">Sparks</a></h1>
+    <div class="post-meta">
+      <time datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">{{ .Date.Format "2006-01-02" }}</time>
+      <address class="post-author" rel="author">{{ .Site.Params.author }}</address>
+    </div>
+  </div>
+
+  <div class="post-content post-content-article">
+    {{ .Content }}
+  </div>
+</article>
+
+<nav class="spark-back">
+  <a href="{{ "/notes/" | relURL }}">← 所有 Sparks</a>
+</nav>
+
+{{ if strings.Contains .Content "<img" }}
+{{ $zoom := resources.Get "js/zoom.js" | minify | fingerprint }}
+<script src="{{ $zoom.RelPermalink }}" integrity="{{ $zoom.Data.Integrity }}" defer></script>
+{{ end }}
+{{ end }}
