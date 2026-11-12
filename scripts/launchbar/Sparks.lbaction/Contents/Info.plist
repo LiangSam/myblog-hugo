@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIconFile</key>
+	<string>font-awesome:fa-bolt</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.liangmouyin.LaunchBar.action.Sparks</string>
+	<key>CFBundleName</key>
+	<string>Sparks</string>
+	<key>LBDescription</key>
+	<dict>
+		<key>LBSummary</key>
+		<string>按空格输入一句话，直接发布成一条 Sparks；直接回车则新建空白 Sparks 用 CotEditor 打开。</string>
+	</dict>
+	<key>LBScripts</key>
+	<dict>
+		<key>LBDefaultScript</key>
+		<dict>
+			<key>LBAcceptedArgumentTypes</key>
+			<array>
+				<string>string</string>
+			</array>
+			<key>LBResultType</key>
+			<string>string</string>
+			<key>LBReturnsResult</key>
+			<true/>
+			<key>LBScriptName</key>
+			<string>default.sh</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
