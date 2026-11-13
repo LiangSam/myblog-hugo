@@ -6,7 +6,7 @@ tags:
   - macOS
 slug: why-how-homebrew-macos
 author:
-  - 梁某银
+  - 梁三川
 draft: false
 featured: true
 description: 用过之后你就会发现，比起优雅，它更看重的是有没有用。

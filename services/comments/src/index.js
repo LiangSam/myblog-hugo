@@ -170,7 +170,7 @@ async function pageTitle(path) {
     if (!res.ok) return path;
     const html = (await res.text()).slice(0, 50000);
     const og = html.match(/<meta\s+property="og:title"\s+content="([^"]*)"/i);
-    const title = og ? og[1] : (html.match(/<title>([^<]*)<\/title>/i) || [])[1]?.replace(/\s*\|\s*梁某银\s*$/, '');
+    const title = og ? og[1] : (html.match(/<title>([^<]*)<\/title>/i) || [])[1]?.replace(/\s*\|\s*(?:梁三川|梁某银)\s*$/, '');
     const clean = decodeEntities(title || '').trim();
     return clean ? Array.from(clean).slice(0, 100).join('') : path;
   } catch {
@@ -276,7 +276,7 @@ async function telegramWebhook(request, env) {
     const now = Date.now();
     const id = crypto.randomUUID();
     await env.DB.prepare('INSERT INTO simple_comments(id, page_path, parent_id, nickname, avatar_url, body, created_at, ip_key, is_author) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)')
-      .bind(id, parent.page_path, parent.id, '梁某银', '', body, now, 'telegram', 1).run();
+      .bind(id, parent.page_path, parent.id, '梁三川', '', body, now, 'telegram', 1).run();
     await reply('已回复 ✅');
   } catch (error) {
     console.error('Telegram webhook error', error?.message || error);
@@ -311,7 +311,7 @@ async function postComment(request, env, origin, ctx) {
     if (!permitted) return response({ error: '发送太频繁，请稍后再试。' }, 429, origin);
   }
   const row = {
-    id: crypto.randomUUID(), parent_id: parentId, nickname: admin ? '梁某银' : nickname,
+    id: crypto.randomUUID(), parent_id: parentId, nickname: admin ? '梁三川' : nickname,
     avatar_url: admin || !email ? '' : avatarFor(email),
     body, created_at: now, is_author: admin ? 1 : 0
   };

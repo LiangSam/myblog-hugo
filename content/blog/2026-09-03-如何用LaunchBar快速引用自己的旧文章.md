@@ -6,7 +6,7 @@ tags:
   - LaunchBar
 slug: copy-blog-links-with-launchbar
 author:
-  - 梁某银
+  - 梁三川
 draft: false
 featured: false
 description: 最近又 Vibe Coding 了啥？

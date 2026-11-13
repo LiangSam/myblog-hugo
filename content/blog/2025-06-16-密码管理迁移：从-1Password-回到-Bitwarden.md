@@ -5,7 +5,7 @@ tags:
   - 工具
 slug: 2025-06-16-password-manager-1password-back-to-bitwarden
 author:
-  - 梁某银
+  - 梁三川
 draft: false
 featured: false
 description:

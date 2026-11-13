@@ -1,4 +1,4 @@
-# 梁某银的博客
+# 梁三川的博客
 
 Hugo 站点，主题在 `themes/lmy`，部署在 Cloudflare Pages（`.github/workflows/schedule_build.yml` 每天北京时间 21:05 触发一次构建）。评论服务见 `services/comments/README.md`。
 

@@ -5,7 +5,7 @@ tags:
   - AI
 slug: html-vs-markdown
 author:
-  - 梁某银
+  - 梁三川
 draft: false
 featured: false
 description: HTML 只怕还无法流行起来，现在的声势浩大也只是一小群人的狂欢，无法蔓延到大洋彼岸的我们；Markdown 只怕也是这样，只属于我们这拨喜欢折腾笔记工具者的常用格式；但对于更多人，微信收藏、Word、思维导图、纸质本就能胜任生活中的所有场景。

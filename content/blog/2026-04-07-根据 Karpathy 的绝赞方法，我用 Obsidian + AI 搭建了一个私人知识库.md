@@ -5,7 +5,7 @@ tags:
   - AI
 slug: after-karpathy-llm-wiki
 author:
-  - 梁某银
+  - 梁三川
 draft: false
 featured: false
 description: 庄子曾言：「吾生有涯，而知无涯」，如今在 AI 井喷时代，折腾 AI 也无止境矣。

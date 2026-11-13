@@ -6,7 +6,7 @@ tags:
   - 生活随笔
 slug: goodbye-chandler-bing
 author:
-  - 梁某银
+  - 梁三川
 draft: false
 featured: false
 image: https://img.liangmouyin.com/2026/10/59e040a80ff7e6e0dd31dce49fd4be84.jpg

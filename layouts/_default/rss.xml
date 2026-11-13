@@ -1,6 +1,6 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ if .IsHome }}梁某银{{ else }}{{ .Title }} - 梁某银{{ end }}</title>
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
     <link>{{ .Permalink }}</link>
     <description>{{ .Site.Title }}的最新文章</description>
     <generator>Hugo -- gohugo.io</generator>

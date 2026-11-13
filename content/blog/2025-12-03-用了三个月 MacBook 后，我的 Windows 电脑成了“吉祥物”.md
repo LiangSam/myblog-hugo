@@ -4,7 +4,7 @@ date: 2025-12-03
 tags:
 slug: windows-pc-became-a-mascot
 author:
-  - 梁某银
+  - 梁三川
 categories:
 description:
 ---

@@ -5,7 +5,7 @@ tags:
   - iPhone
 slug: track-large-expenses-with-shortcuts
 author:
-  - 梁某银
+  - 梁三川
 draft: false
 featured: false
 description: 我现在就处于「完全不记」和「每笔都记」的中间值，小额过于频繁懒得记，而不记又会让我不知道钱流向哪里，所以折中只记大额，毕竟我即便一顿饭花个几十块钱并不影响生活，但要是隔三岔五就花几百块，那就不怪自己存不住钱了。

@@ -6,7 +6,7 @@ tags:
   - 工具
 slug: 2025-02-09-deepseek-alternatives-metaso-and-perplexity
 author:
-  - 梁某银
+  - 梁三川
 draft: false
 featured: false
 description:

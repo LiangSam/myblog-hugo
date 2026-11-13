@@ -6,7 +6,7 @@ tags:
   - 笔记
 slug: fsnotes-cjk-link-issue
 author:
-  - 梁某银
+  - 梁三川
 draft: false
 featured: false
 description: 似乎是从拥有 MacBook 以来，我的笔记软件就从 Obsidian 迁移到 FSNotes。具体时间我忘了，但理由清清楚楚，因为后者只有 macOS 和 iOS 才能使用，我此前并不具备条件。

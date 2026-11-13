@@ -7,7 +7,7 @@ tags:
   - 博客
 slug: launchbar-hugo-sync
 author:
-  - 梁某银
+  - 梁三川
 draft: false
 featured: false
 description: 本文也仅作为一种自动化的示例，并不复杂，甚至我对 LaunchBar 的用法也很简陋。但这并不妨碍我用它来解决遇到的问题，只要有一个需求，询问 AI，反复调整，直到它跑起来，这就够了。

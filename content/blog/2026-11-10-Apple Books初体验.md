@@ -5,7 +5,7 @@ tags:
   - iPhone
 slug: first-experience-with-apple-books
 author:
-  - 梁某银
+  - 梁三川
 draft: false
 featured: false
 description: 从用 MacBook 以来，我几乎没有用过自带的 Apple Books，论阅读体验和功能齐全上，不及 Calibre，论海量书库、全平台同步，比不上微信读书。
