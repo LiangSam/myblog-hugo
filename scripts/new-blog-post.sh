@@ -31,7 +31,7 @@ if [[ ! -e "$post_path" ]]; then
     '  - ' \
     'slug: ' \
     'author:' \
-    '  - 梁某银' \
+    '  - 梁三川' \
     "draft: ${draft}" \
     'featured: false' \
     'description: ' \
