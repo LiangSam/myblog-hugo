@@ -67,9 +67,9 @@
 
     var closeBtn = document.createElement('button');
     closeBtn.type = 'button';
-    closeBtn.className = 'zoom-close visually-hidden';
+    closeBtn.className = 'zoom-close';
     closeBtn.setAttribute('aria-label', '关闭大图');
-    closeBtn.textContent = '关闭';
+    closeBtn.textContent = '×';
     closeBtn.autofocus = true;
 
     dialog.appendChild(overlay);
