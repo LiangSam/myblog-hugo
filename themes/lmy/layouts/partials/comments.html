@@ -8,13 +8,13 @@
     <div class="simple-comments-actions">
       <div class="simple-comments-identity">
         <span class="simple-comments-as">以</span>
-        <button class="simple-comments-identity-toggle" type="button" aria-expanded="false">填写昵称</button>
+        <button class="simple-comments-identity-toggle" type="button" aria-expanded="false" aria-controls="simple-comments-fields">填写昵称</button>
         <span class="simple-comments-as">留言</span>
       </div>
       <span class="simple-comments-replying" hidden></span>
       <button class="simple-comments-send" type="submit">发送</button>
     </div>
-    <div class="simple-comments-fields" hidden>
+    <div class="simple-comments-fields" id="simple-comments-fields" hidden>
       <label><span class="visually-hidden">昵称</span><input name="nickname" type="text" maxlength="40" autocomplete="nickname" placeholder="昵称" required></label>
       <label><span class="visually-hidden">邮箱（选填）</span><input name="email" type="email" maxlength="254" autocomplete="email" placeholder="邮箱（选填）"></label>
       <p>邮箱不会公开；填写后头像取自 <a href="https://gravatar.com/emails" target="_blank" rel="noopener noreferrer">Gravatar</a>。</p>

@@ -18,7 +18,7 @@
     <h2 class="section-title">Recent</h2>
     <a href="{{ "/blog/" | relURL }}" class="section-more-link">More →</a>
   </div>
-  <ul class="post-list">
+  <ul class="post-list" role="list">
     {{ range $recent }}
     <li class="post-item">
       <span class="post-date">{{ .Date.Format "01-02" }}</span>
@@ -60,7 +60,7 @@
     {{ range $sparks }}
     <div class="witter-entry">
       <div class="witter-left">
-        {{ with $avatar }}<img src="{{ . | relURL }}" alt="" class="witter-avatar" />{{ end }}
+        {{ with $avatar }}<img src="{{ . | relURL }}" alt="" class="witter-avatar" width="40" height="40" loading="lazy" decoding="async" />{{ end }}
         <div class="witter-line"></div>
       </div>
       <div class="witter-right">

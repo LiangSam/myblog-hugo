@@ -1,9 +1,9 @@
 {{ define "main" }}
 {{ if strings.Contains .TableOfContents "<li>" }}
-<aside class="toc-sidebar">
+<aside class="toc-sidebar" aria-labelledby="toc-sidebar-title">
   <div class="toc-inner">
-    <div class="toc-title">目录</div>
-    {{ .TableOfContents }}
+    <div id="toc-sidebar-title" class="toc-title">目录</div>
+    {{ .TableOfContents | replaceRE `<nav id="TableOfContents">` `<nav id="TableOfContents" aria-labelledby="toc-sidebar-title">` | safeHTML }}
   </div>
 </aside>
 {{ end }}
@@ -43,7 +43,7 @@
   {{ if strings.Contains .TableOfContents "<li>" }}
   <details class="toc-mobile">
     <summary>目录</summary>
-    {{ .TableOfContents | replaceRE `<nav id="TableOfContents">` `<nav>` | safeHTML }}
+    {{ .TableOfContents | replaceRE `<nav id="TableOfContents">` `<nav aria-label="文章目录">` | safeHTML }}
   </details>
   {{ end }}
 
@@ -101,7 +101,7 @@
 {{ $prev := .PrevInSection }}
 {{ $next := .NextInSection }}
 {{ if or $prev $next }}
-<nav class="post-nav">
+<nav class="post-nav" aria-label="上一篇与下一篇">
   {{ if $prev }}
   <a href="{{ $prev.RelPermalink }}" class="post-nav-item prev">
     <span class="post-nav-label">← 上一篇</span>
@@ -128,11 +128,22 @@
 <script src="{{ $zoom.RelPermalink }}" integrity="{{ $zoom.Data.Integrity }}" defer></script>
 {{ end }}
 
+{{ if strings.Contains .Content "<pre" }}
+<script>
+document.querySelectorAll('.post-content pre').forEach(function(pre) {
+  if (!pre.hasAttribute('tabindex')) pre.setAttribute('tabindex', '0');
+  if (!pre.hasAttribute('role')) pre.setAttribute('role', 'region');
+  if (!pre.hasAttribute('aria-label')) pre.setAttribute('aria-label', '代码块');
+});
+</script>
+{{ end }}
+
 {{ if strings.Contains .TableOfContents "<li>" }}
 <script>
 (function(){
   var headings = document.querySelectorAll('.post-content h2, .post-content h3');
   var links = document.querySelectorAll('.toc-inner a');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
   document.querySelectorAll('.toc-mobile a').forEach(function(link) {
     link.addEventListener('click', function() { link.closest('details').open = false; });
   });
@@ -155,17 +166,24 @@
       if (!target || !target.id) return;
       event.preventDefault();
       window.history.pushState(null, '', '#' + target.id);
-      target.scrollIntoView({ block: 'start' });
+      target.scrollIntoView({ block: 'start', behavior: reduce.matches ? 'auto' : 'smooth' });
     });
   }
 
   var observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
       if (entry.isIntersecting) {
-        links.forEach(function(l) { l.classList.remove('toc-active'); });
+        links.forEach(function(l) {
+          l.classList.remove('toc-active');
+          l.removeAttribute('aria-current');
+        });
         var id = entry.target.getAttribute('id');
-        var active = document.querySelector('.toc-inner a[href="#' + id + '"]');
-        if (active) active.classList.add('toc-active');
+        var escId = (window.CSS && CSS.escape) ? CSS.escape(id) : id;
+        var active = document.querySelector('.toc-inner a[href="#' + escId + '"]');
+        if (active) {
+          active.classList.add('toc-active');
+          active.setAttribute('aria-current', 'true');
+        }
       }
     });
   }, { rootMargin: '-10% 0px -80% 0px' });

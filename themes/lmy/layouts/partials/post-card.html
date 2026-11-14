@@ -11,7 +11,7 @@
 {{ $placeholderColor := index $colors (mod (len .Title) (len $colors)) }}
 <a href="{{ .RelPermalink }}" class="post-card">
   {{ if $image }}
-  <img src="{{ partial "img-src.html" (dict "src" $image "width" 640) }}" alt="" class="card-cover" loading="lazy" decoding="async" />
+  <img src="{{ partial "img-src.html" (dict "src" $image "width" 640) }}" alt="" class="card-cover" width="640" height="360" loading="lazy" decoding="async" />
   {{ else }}
   <div class="card-cover-placeholder" style="background: {{ $placeholderColor | safeCSS }};"></div>
   {{ end }}

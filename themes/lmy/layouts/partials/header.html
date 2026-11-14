@@ -1,12 +1,13 @@
 <header class="site-header">
   <div class="header-inner">
     <a href="{{ "/" | relURL }}" class="site-title" aria-label="{{ .Site.Title }}">
-      {{ with .Site.Params.avatar }}<img src="{{ . | relURL }}" alt="" class="site-avatar" />{{ end }}
+      {{ with .Site.Params.avatar }}<img src="{{ . | relURL }}" alt="" class="site-avatar" width="32" height="32" />{{ end }}
       <span class="site-name">{{ .Site.Params.author | default .Site.Title }}</span>
     </a>
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="主导航">
       {{ range .Site.Menus.main }}
-      <a href="{{ .URL | relURL }}" class="nav-link{{ if eq $.RelPermalink (.URL | relURL) }} active{{ end }}">{{ .Name }}</a>
+      {{- $isCurrent := eq $.RelPermalink (.URL | relURL) -}}
+      <a href="{{ .URL | relURL }}" class="nav-link{{ if $isCurrent }} active{{ end }}"{{ if $isCurrent }} aria-current="page"{{ end }}>{{ .Name }}</a>
       {{ end }}
     </nav>
     <div class="header-actions">

@@ -46,11 +46,17 @@
   function zoomIn(img) {
     var t = target(img);
     var r = t.r;
+    var dialog = document.createElement('dialog');
+    dialog.className = 'zoom-dialog';
+    dialog.setAttribute('aria-label', img.alt ? '图片预览：' + img.alt : '图片预览');
+
     var overlay = document.createElement('div');
     overlay.className = 'zoom-overlay';
+
     var clone = img.cloneNode();
     clone.className = 'zoom-image';
     clone.removeAttribute('loading');
+    clone.removeAttribute('fetchpriority');
     clone.removeAttribute('srcset');
     clone.src = img.currentSrc;
     clone.alt = img.alt;
@@ -58,8 +64,19 @@
     clone.style.top = r.top + 'px';
     clone.style.width = r.width + 'px';
     clone.style.height = r.height + 'px';
-    document.body.appendChild(overlay);
-    document.body.appendChild(clone);
+
+    var closeBtn = document.createElement('button');
+    closeBtn.type = 'button';
+    closeBtn.className = 'zoom-close visually-hidden';
+    closeBtn.setAttribute('aria-label', '关闭大图');
+    closeBtn.textContent = '关闭';
+    closeBtn.autofocus = true;
+
+    dialog.appendChild(overlay);
+    dialog.appendChild(clone);
+    dialog.appendChild(closeBtn);
+    document.body.appendChild(dialog);
+    dialog.showModal();
     img.classList.add('is-zoomed');
 
     var tx = (window.innerWidth - r.width * t.s) / 2 - r.left;
@@ -76,9 +93,19 @@
       pre.src = big;
     }
 
-    open = { img: img, clone: clone, overlay: overlay, y: window.scrollY };
+    open = { img: img, clone: clone, overlay: overlay, dialog: dialog, y: window.scrollY };
     overlay.addEventListener('click', zoomOut);
     clone.addEventListener('click', zoomOut);
+    closeBtn.addEventListener('click', zoomOut);
+    dialog.addEventListener('cancel', function (e) {
+      e.preventDefault();
+      zoomOut();
+    });
+    dialog.addEventListener('close', function () {
+      if (open && open.dialog === dialog) open = null;
+      img.classList.remove('is-zoomed');
+      dialog.remove();
+    });
   }
 
   function zoomOut() {
@@ -93,8 +120,8 @@
     o.overlay.classList.remove('is-open');
     o.clone.style.transform = 'translate(' + dx + 'px,' + dy + 'px)';
     var done = function () {
-      o.clone.remove();
-      o.overlay.remove();
+      if (o.dialog.open) o.dialog.close();
+      o.dialog.remove();
       o.img.classList.remove('is-zoomed');
     };
     if (reduce.matches || !from.width) done();
@@ -104,9 +131,6 @@
     }
   }
 
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') zoomOut();
-  });
   window.addEventListener('scroll', function () {
     if (open && Math.abs(window.scrollY - open.y) > 40) zoomOut();
   }, { passive: true });

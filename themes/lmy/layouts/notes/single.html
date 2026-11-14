@@ -11,9 +11,19 @@
   </div>
 </article>
 
-<nav class="spark-back">
+<nav class="spark-back" aria-label="返回列表">
   <a href="{{ "/notes/" | relURL }}">← 所有 Sparks</a>
 </nav>
+
+{{ if strings.Contains .Content "<pre" }}
+<script>
+document.querySelectorAll('.post-content pre').forEach(function(pre) {
+  if (!pre.hasAttribute('tabindex')) pre.setAttribute('tabindex', '0');
+  if (!pre.hasAttribute('role')) pre.setAttribute('role', 'region');
+  if (!pre.hasAttribute('aria-label')) pre.setAttribute('aria-label', '代码块');
+});
+</script>
+{{ end }}
 
 {{ if strings.Contains .Content "<img" }}
 {{ $zoom := resources.Get "js/zoom.js" | minify | fingerprint }}

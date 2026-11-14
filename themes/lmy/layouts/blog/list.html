@@ -39,7 +39,7 @@
   {{ range .Pages.GroupByDate "1" }}
   <div class="archive-month"{{ if not (where .Pages "Params.featured" true) }} data-no-picks{{ end }}>
     <h3 class="archive-month-label">{{ .Key }} 月<span class="archive-month-count">{{ len .Pages }}</span></h3>
-    <ul class="archive-list">
+    <ul class="archive-list" role="list">
       {{ range .Pages }}{{ partial "archive-item.html" . }}{{ end }}
     </ul>
   </div>
@@ -56,7 +56,7 @@
   {{ range $grouped }}{{ if lt .Key $split }}
   <div class="archive-month"{{ if not (where .Pages "Params.featured" true) }} data-no-picks{{ end }}>
     <h3 class="archive-month-label">{{ .Key }}<span class="archive-month-count">{{ len .Pages }}</span></h3>
-    <ul class="archive-list">
+    <ul class="archive-list" role="list">
       {{ range .Pages }}{{ partial "archive-item.html" . }}{{ end }}
     </ul>
   </div>

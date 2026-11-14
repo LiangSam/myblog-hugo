@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language.Locale | default "zh-CN" }}" data-theme="light">
+<html lang="{{ .Site.Language.Locale | default "zh-CN" }}">
 <head>
 {{ partial "head.html" . }}
 {{ partial "style.html" . }}
 </head>
 <body class="site-wrapper">
-{{ if ne .Section "map" }}{{ partial "header.html" . }}{{ end }}
-<main class="{{ if .IsHome }}home-main{{ end }}{{ if eq .Section "map" }} map-main{{ end }}">
+{{ if ne .Section "map" }}
+<a href="#main-content" class="skip-link visually-hidden">跳到正文</a>
+{{ partial "header.html" . }}
+{{ end }}
+<main id="main-content" tabindex="-1" class="{{ if .IsHome }}home-main{{ end }}{{ if eq .Section "map" }} map-main{{ end }}">
 {{ block "main" . }}{{ end }}
 </main>
 {{ if ne .Section "map" }}{{ partial "footer.html" . }}{{ end }}

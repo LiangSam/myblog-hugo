@@ -11,7 +11,7 @@
   {{ range $notes }}
   <div class="witter-entry">
     <div class="witter-left">
-      {{ with $avatar }}<img src="{{ . | relURL }}" alt="{{ $author }}" class="witter-avatar" />{{ end }}
+      {{ with $avatar }}<img src="{{ . | relURL }}" alt="{{ $author }}" class="witter-avatar" width="40" height="40" loading="lazy" decoding="async" />{{ end }}
       <div class="witter-line"></div>
     </div>
     <div class="witter-right">

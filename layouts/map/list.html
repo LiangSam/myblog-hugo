@@ -1,3 +1,4 @@
+{{/* [备注] 早期构想的「主题地图（/map/）」实验页面，目前几乎不用、未在导航栏公开挂载。若后续彻底废弃，可连同 content/map/、data/theme_map.yaml 及 main.css 中的 .theme-map-* 样式一并移除。 */}}
 {{ define "main" }}
 {{ $map := hugo.Data.theme_map }}
 {{ $posts := where .Site.RegularPages "Section" "blog" }}
@@ -126,8 +127,21 @@
   };
 
   articles.forEach((article) => {
-    article.addEventListener('mouseenter', () => selectArticle(article));
+    let activeBeforeTap = null;
+    article.addEventListener('pointerenter', (e) => {
+      if (e.pointerType === 'mouse') selectArticle(article);
+    });
+    article.addEventListener('pointerdown', (e) => {
+      activeBeforeTap = e.pointerType !== 'mouse' ? article.classList.contains('is-active') : null;
+    });
     article.addEventListener('focus', () => selectArticle(article));
+    article.addEventListener('click', (e) => {
+      if (activeBeforeTap === false) {
+        e.preventDefault();
+        selectArticle(article);
+      }
+      activeBeforeTap = null;
+    });
   });
 
   if (articles[0]) selectArticle(articles[0]);

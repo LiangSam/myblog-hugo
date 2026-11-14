@@ -33,6 +33,7 @@
     emailInput.value = saved.email || '';
     fields.hidden = true;
     identityButton.textContent = saved.nickname;
+    identityButton.setAttribute('aria-label', `${saved.nickname}（点击修改留言身份）`);
   } else {
     fields.hidden = false;
     identityButton.setAttribute('aria-expanded', 'true');
@@ -228,6 +229,10 @@
   form.addEventListener('submit', async event => {
     event.preventDefault();
     message.textContent = '';
+    if (!form.checkValidity() && fields.hidden) {
+      fields.hidden = false;
+      identityButton.setAttribute('aria-expanded', 'true');
+    }
     if (!form.reportValidity()) return;
     const send = root.querySelector('.simple-comments-send');
     send.disabled = true;
@@ -241,8 +246,10 @@
       });
       const data = await result.json();
       if (!result.ok) throw new Error(data.error || '发送失败。');
-      try { localStorage.setItem('lmy-comment-identity', JSON.stringify({ nickname: nameInput.value.trim(), email: emailInput.value.trim() })); } catch {}
-      identityButton.textContent = nameInput.value.trim();
+      const nick = nameInput.value.trim();
+      try { localStorage.setItem('lmy-comment-identity', JSON.stringify({ nickname: nick, email: emailInput.value.trim() })); } catch {}
+      identityButton.textContent = nick;
+      identityButton.setAttribute('aria-label', `${nick}（点击修改留言身份）`);
       fields.hidden = true;
       identityButton.setAttribute('aria-expanded', 'false');
       form.elements.body.value = '';

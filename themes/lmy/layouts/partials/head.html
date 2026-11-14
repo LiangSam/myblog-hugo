@@ -1,5 +1,60 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="text-scale" content="scale" />
+<meta name="color-scheme" content="light dark" />
+<script>
+  (function() {
+    var meta = document.querySelector('meta[name="color-scheme"]');
+    var media = window.matchMedia('(prefers-color-scheme: dark)');
+
+    function systemTheme() {
+      return media.matches ? 'dark' : 'light';
+    }
+
+    function savedTheme() {
+      try {
+        var v = localStorage.getItem('lmy-theme');
+        return (v === 'light' || v === 'dark') ? v : null;
+      } catch (e) {
+        return null;
+      }
+    }
+
+    function applyTheme() {
+      var saved = savedTheme();
+      var resolved = saved || systemTheme();
+      if (meta) meta.content = saved || 'light dark';
+      document.documentElement.setAttribute('data-theme', resolved);
+    }
+
+    window.lmySetTheme = function(theme) {
+      var sys = systemTheme();
+      try {
+        if (!theme || theme === sys) {
+          localStorage.removeItem('lmy-theme');
+        } else {
+          localStorage.setItem('lmy-theme', theme);
+        }
+      } catch (e) {}
+      applyTheme();
+    };
+
+    window.lmyToggleTheme = function() {
+      var current = document.documentElement.getAttribute('data-theme') || systemTheme();
+      var target = current === 'dark' ? 'light' : 'dark';
+      window.lmySetTheme(target);
+    };
+
+    applyTheme();
+    media.addEventListener('change', function() {
+      if (!savedTheme()) applyTheme();
+    });
+    window.addEventListener('storage', function(e) {
+      if (!e.key || e.key === 'lmy-theme') applyTheme();
+    });
+  })();
+</script>
+{{- with .Site.Params.imageCDN.host }}<link rel="preconnect" href="{{ strings.TrimSuffix "/" . }}" crossorigin />{{ end -}}
 {{- $title := cond .IsHome .Site.Title .Title -}}
 {{- /* 单条 Sparks 没有标题，用日期区分：Sparks · 2026-10-10 */ -}}
 {{- if and .IsPage (eq .Section "notes") }}{{ $title = printf "Sparks · %s" (.Date.Format "2006-01-02") }}{{ end -}}
@@ -33,40 +88,17 @@
 {{- $ld := dict "@context" "https://schema.org" "@graph" (slice $website $person) -}}
 <script type="application/ld+json">{{ $ld | jsonify | safeJS }}</script>
 {{- end }}
-<script>
-  (function() {
-    var media = window.matchMedia('(prefers-color-scheme: dark)');
-
-    function setTheme(theme) {
-      document.documentElement.setAttribute('data-theme', theme);
-    }
-
-    function systemTheme() {
-      return media.matches ? 'dark' : 'light';
-    }
-
-    function savedTheme() {
-      try {
-        return localStorage.getItem('lmy-theme');
-      } catch (e) {
-        return null;
-      }
-    }
-
-    window.lmySetTheme = setTheme;
-    window.lmyToggleTheme = function() {
-      var theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      try {
-        localStorage.setItem('lmy-theme', theme);
-      } catch (e) {}
-      setTheme(theme);
-    };
-
-    setTheme(savedTheme() || systemTheme());
-    media.addEventListener('change', function() {
-      if (!savedTheme()) {
-        setTheme(systemTheme());
-      }
-    });
-  })();
+<script type="speculationrules">
+{
+  "prefetch": [{
+    "where": {
+      "and": [
+        { "href_matches": "/*" },
+        { "not": { "href_matches": "/index.xml" } },
+        { "not": { "href_matches": "/comments-admin/*" } }
+      ]
+    },
+    "eagerness": "moderate"
+  }]
+}
 </script>
