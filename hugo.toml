@@ -72,7 +72,7 @@ enableRobotsTXT = true
 [params]
   # 配色方案：warm（暖色琥珀）或 indigo（靛青冷峻）
   colorScheme = "indigo"
-  description = "记录，分享，成长"
+  description = "梁三川（原名梁某银）的个人网站，记录生活小事、读书笔记与工具折腾。"
   favicon = "images/favicon.png"
   images = ["images/favicon.png"]
   author = "梁三川"

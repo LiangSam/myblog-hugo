@@ -27,6 +27,12 @@
 <meta name="twitter:title" content="{{ $title }}" />
 <meta name="twitter:description" content="{{ $desc }}" />
 <meta name="twitter:image" content="{{ $image }}" />
+{{- if .IsHome }}
+{{- $person := dict "@type" "Person" "@id" "https://liangmouyin.com/#person" "name" .Site.Params.author "alternateName" "梁某银" "url" .Site.BaseURL "sameAs" (slice "https://weibo.com/u/2774785564" "https://t.me/liangmouyin" "https://github.com/LiangSam") -}}
+{{- $website := dict "@type" "WebSite" "@id" "https://liangmouyin.com/#website" "name" .Site.Title "alternateName" (slice "梁某银" "梁三川的博客") "url" .Site.BaseURL "description" $desc "inLanguage" "zh-CN" "author" (dict "@id" "https://liangmouyin.com/#person") -}}
+{{- $ld := dict "@context" "https://schema.org" "@graph" (slice $website $person) -}}
+<script type="application/ld+json">{{ $ld | jsonify | safeJS }}</script>
+{{- end }}
 <script>
   (function() {
     var media = window.matchMedia('(prefers-color-scheme: dark)');
