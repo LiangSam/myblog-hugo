@@ -32,10 +32,10 @@ title = "About"
 	- 手机：[微信输入法](https://z.weixin.qq.com/) — 简单够用
 - 密码管理：[Bitwarden](https://bitwarden.com/) — 免费开源，足够省心
 - AI
-	- Google Gemini：之前白嫖过一年会员，最近又白嫖了一年，所以继续好用
-	- ChatGPT：离开 Gemini 后发现外面并没有下雨，画图的风格很好；原本觉得免费版够用，结果还是在 [2026 年 4 月开了会员](https://liangmouyin.com/blog/subscribe-to-openai-plus-2026/)，一直续订至今
-	- Claude：2026 年 3 月开会员，发现对话非常够味，一点也不惯着我，还会提问引导我一步步找到答案；客户端的 Claude Code 挺好用，我用它重新设计了博客（五月曾被封号，[十月又重新开了回来](https://liangmouyin.com/blog/back-to-claude/)）
-	- DeepSeek：物美价廉，便宜管饱！
+	- Google Gemini：之前白嫖过一年会员，最近又白嫖了一年，所以继续用。现在试过 Gemini 4 Argon 和Hydrogen，发现并不算差，文字工作还不错。
+	- DeepSeek：物美价廉
+	- ~~ChatGPT：离开 Gemini 后发现外面并没有下雨，画图的风格很好；原本觉得免费版够用，结果还是在 [2026 年 4 月开了会员](https://liangmouyin.com/blog/subscribe-to-openai-plus-2026/)，一直续订至今，十月有 Claude 后已取消订阅~~
+	- ~~Claude：2026 年 3 月开会员，发现对话非常够味，一点也不惯着我，还会提问引导我一步步找到答案；客户端的 Claude Code 挺好用，我用它重新设计了博客（五月曾被封号，[十月又重新开了回来](https://liangmouyin.com/blog/back-to-claude/)），十一月又弹出 KYC，干脆放弃~~
 - RSS：[NetNewsWire](https://netnewswire.com) — 怎么会有如此简洁好用还免费的 RSS 工具？唯一要注意的是，RSS 虽好，不可贪多，否则攒出一堆 Unread 也会让人无从下嘴
 
 ## 联系我
