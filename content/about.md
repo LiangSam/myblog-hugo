@@ -31,7 +31,7 @@ title = "About"
 	- 语音：[Typeless](https://www.typeless.com/refer?code=C4Q5VJ4) — 语音识别足够准确，很适合提高语音写作效率（链接带有邀请码）
 	- 手机：[微信输入法](https://z.weixin.qq.com/) — 简单够用
 - 密码管理：[Bitwarden](https://bitwarden.com/) — 免费开源，足够省心
-- AI（堪称我的四大将）
+- AI
 	- Google Gemini：之前白嫖过一年会员，最近又白嫖了一年，所以继续好用
 	- ChatGPT：离开 Gemini 后发现外面并没有下雨，画图的风格很好；原本觉得免费版够用，结果还是在 [2026 年 4 月开了会员](https://liangmouyin.com/blog/subscribe-to-openai-plus-2026/)，一直续订至今
 	- Claude：2026 年 3 月开会员，发现对话非常够味，一点也不惯着我，还会提问引导我一步步找到答案；客户端的 Claude Code 挺好用，我用它重新设计了博客（五月曾被封号，[十月又重新开了回来](https://liangmouyin.com/blog/back-to-claude/)）
