@@ -9,8 +9,6 @@ dated_lists = true
 
 这里收着我的观影记录，也有几篇关于电影的闲聊。
 
-<!-- 手动增删链接即可，也可以在条目下面补充几句感想。 -->
-
 - [推荐几个影视解说博主](/blog/2024-07-10-film-explainer-creators/)
 - [烂片预订](/blog/2024-07-17-bad-movie-prediction/)
 - [还有一部春节档电影没看](/blog/2025-02-03-one-spring-festival-movie-left/)
@@ -19,6 +17,7 @@ dated_lists = true
 
 下面按文章发布日期排列，日期不一定是观影那天。点击片名可以读对应的文章；同一篇谈到多部电影时，会分别列出。
 
+- 2026-11-08 [《激战》](/blog/unbeatable-movie/)
 - 2026-08-15 [《欢迎来龙餐馆》](/blog/welcome-to-the-dragon-restaurant-review/)
 - 2026-08-10 [《一一》](/blog/two-tomorrows/)
 - 2026-07-04 [《给阿嬷的情书》](/blog/finally-watched-letter-to-grandma/)
