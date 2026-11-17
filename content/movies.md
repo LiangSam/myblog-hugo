@@ -2,7 +2,7 @@
 title = "Movies"
 url = "/movies/"
 created = 2026-09-22
-updated = 2026-09-22
+updated = 2026-11-17
 comments = false
 dated_lists = true
 +++
